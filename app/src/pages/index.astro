@@ -3,7 +3,8 @@ import Layout from '../components/Layout.astro';
 import JurisdictionCard from '../components/JurisdictionCard.astro';
 import PracticeLauncher from '../components/PracticeLauncher.astro';
 import Illustrations from '../components/Illustrations.astro';
-import { getBank, getSiteConfig } from '../lib/content';
+import UpcomingTestCard from '../components/UpcomingTestCard.astro';
+import { getBank, getSiteConfig, getUpcomingTests } from '../lib/content';
 import { absoluteUrl, getSiteRuntime } from '../lib/site';
 import { topicLabel } from '../lib/topics';
 
@@ -13,6 +14,7 @@ const cards = config.jurisdictions.map((j) => ({
   jurisdiction: j,
   bank: getBank(j.bankId),
 }));
+const upcomingTests = getUpcomingTests();
 const questionCount = cards[0]?.bank.questions.length ?? 20;
 const sampleTopics = [
   ...new Set(cards.flatMap((c) => c.bank.questions.map((q) => q.topic))),
@@ -33,7 +35,7 @@ const jsonLd = [
     name: 'Prepará tu examen teórico de conducir',
     inLanguage: runtime.locale,
     description:
-      'Practicá para autos con una muestra introductoria de 20 preguntas explicadas por jurisdicción: CABA y Córdoba Capital.',
+      'Practicá para autos con una ampliación intermedia de preguntas explicadas por jurisdicción: CABA y Córdoba Capital.',
     ...(pageUrl ? { url: pageUrl } : {}),
   },
 ];
@@ -41,7 +43,7 @@ const jsonLd = [
 
 <Layout
   title="Test de conducir: practicá para CABA y Córdoba Capital"
-  description="Practicá el examen teórico de conducir para autos con preguntas explicadas. Muestra introductoria de 20 ítems por jurisdicción: CABA y Córdoba Capital."
+  description={`Practicá el examen teórico de conducir para autos con preguntas explicadas. Ampliación intermedia de ${questionCount} ítems por jurisdicción: CABA y Córdoba Capital.`}
   pathname="/"
   jsonLd={jsonLd}
   fullBleed={true}
@@ -51,12 +53,13 @@ const jsonLd = [
     <h1>Prepará tu examen teórico de conducir</h1>
     <p class="lede">
       Practicá para autos con preguntas explicadas. Elegí CABA o Córdoba Capital y avanzá a tu ritmo.
-      Muestra introductoria B1: {questionCount} preguntas por ciudad — no es el temario completo ni un
+      Ampliación intermedia B1: {questionCount} preguntas por ciudad — no es el temario completo ni un
       examen oficial.
     </p>
 
     <PracticeLauncher
       jurisdictions={config.jurisdictions}
+      upcomingTests={upcomingTests}
       questionCount={questionCount}
       notice="Material de práctica independiente"
     />
@@ -77,7 +80,7 @@ const jsonLd = [
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M8 17V9m4 8V5m4 12v-4"/></svg>
         </div>
         <h3>Modo Aprender</h3>
-        <p>10 o 20 preguntas, con explicación y fuente después de cada respuesta.</p>
+        <p>10, 20 o {questionCount} preguntas, con explicación y fuente después de cada respuesta.</p>
         <a href="#como-practicar">Cómo funciona →</a>
       </article>
       <article class="step-card">
@@ -85,8 +88,8 @@ const jsonLd = [
         <div class="step-card__icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>
         </div>
-        <h3>Práctica de 20</h3>
-        <p>Corrección al final, con aciertos, sin responder y temas a repasar.</p>
+        <h3>Práctica</h3>
+        <p>20 o {questionCount} preguntas. Corrección al final, con aciertos y temas a repasar.</p>
         <a href="#como-practicar">Ver modalidades →</a>
       </article>
       <article class="step-card">
@@ -111,8 +114,8 @@ const jsonLd = [
           prácticas queda en tu dispositivo.
         </p>
         <p class="muted">
-          Cobertura actual: <strong>autos (B1 introductorio)</strong>. Motos, camiones y otras clases
-          quedan para cuando haya bancos revisados — no aparecen como opciones vacías.
+          Cobertura actual: <strong>autos (B1, ampliación intermedia)</strong>. Los tests de categoría A, E y D
+          ya están anunciados como próximamente y todavía no se pueden practicar.
         </p>
       </div>
       <div class="split__visual">
@@ -125,7 +128,7 @@ const jsonLd = [
     <div class="container split split--reverse">
       <div class="split__copy">
         <p class="kicker">Alcance real</p>
-        <h2 id="requisitos">Una muestra introductoria, con fuentes a la vista</h2>
+        <h2 id="requisitos">Una ampliación intermedia, con fuentes a la vista</h2>
         <p class="lede">
           Son {questionCount} preguntas originales por jurisdicción, contrastadas con normas y guías
           oficiales. No reproducen un banco de examen ni garantizan la aprobación.
@@ -166,7 +169,8 @@ const jsonLd = [
           <div>
             <h3>Aprender con corrección inmediata</h3>
             <p>
-              Elegís 10 o 20 preguntas. Después de responder ves la explicación y el enlace a la fuente.
+              Elegís 10, 20 o {questionCount} preguntas. Después de responder ves la explicación y el
+              enlace a la fuente.
             </p>
             <a href="#empezar">Empezar en modo Aprender →</a>
           </div>
@@ -174,10 +178,10 @@ const jsonLd = [
         <article class="timeline-item">
           <div class="timeline-item__num" aria-hidden="true">03</div>
           <div>
-            <h3>Práctica de 20 preguntas</h3>
+            <h3>Práctica con corrección al final</h3>
             <p>
-              Usás las 20 del banco. Al final ves aciertos, porcentaje, ítems sin responder y temas a
-              repasar. Es práctica, no un veredicto oficial.
+              Podés hacer 20 o las {questionCount} del banco. Al final ves aciertos, porcentaje, ítems
+              sin responder y temas a repasar. Es práctica, no un veredicto oficial.
             </p>
             <a href="#empezar">Configurar práctica →</a>
           </div>
@@ -187,8 +191,8 @@ const jsonLd = [
           <div>
             <h3>Estudiá el banco completo</h3>
             <p>
-              Las 20 preguntas de cada ciudad están en HTML, con respuesta y fuente, para repasar sin
-              JavaScript.
+              Las {questionCount} preguntas de cada ciudad están en HTML, con respuesta y fuente, para
+              repasar sin JavaScript.
             </p>
             <a href="/test-de-conducir/">Abrir directorio de tests →</a>
           </div>
@@ -216,12 +220,28 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section-block section-block--soft" aria-labelledby="faq-titulo">
+  <section id="proximamente" class="section-block section-block--soft" aria-labelledby="proximamente-titulo">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Próximamente</p>
+        <h2 id="proximamente-titulo">Otras categorías, todavía sin banco</h2>
+        <p class="lede">
+          Estos tests teóricos ya tienen lugar en el sitio. No hay preguntas publicadas ni se pueden
+          empezar.
+        </p>
+      </div>
+      <div class="card-grid">
+        {upcomingTests.map((test) => <UpcomingTestCard test={test} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-block--paper" aria-labelledby="faq-titulo">
     <div class="container">
       <div class="section-head">
         <p class="kicker">Dudas frecuentes</p>
         <h2 id="faq-titulo">Preguntas frecuentes</h2>
-        <p class="lede">Respuestas breves sobre el alcance real de esta muestra.</p>
+        <p class="lede">Respuestas breves sobre el alcance real de esta ampliación intermedia.</p>
       </div>
       <div class="faq">
         <details open>
@@ -234,15 +254,17 @@ const jsonLd = [
         <details>
           <summary>¿Cuántas preguntas hay?</summary>
           <p>
-            {questionCount} por jurisdicción (CABA y Córdoba Capital). Si elegís una práctica de 20,
-            usás todas las del banco — no son 20 preguntas nuevas cada vez.
+            {questionCount} por jurisdicción (CABA y Córdoba Capital). Si elegís {questionCount}, usás
+            todas las del banco — no son {questionCount} preguntas nuevas cada vez. También podés
+            practicar con 10 o 20.
           </p>
         </details>
         <details>
-          <summary>¿Por qué solo autos?</summary>
+          <summary>¿Por qué solo se puede practicar autos?</summary>
           <p>
-            El primer build cubre B1 introductorio. Otras clases (A, C, D, E) se sumarán cuando exista
-            un banco revisado para cada una.
+            El banco publicado es B1 en ampliación intermedia. Los tests de categoría A (motovehículos de dos
+            ruedas), E (carga, camiones y maquinaria no agrícola) y D (transporte de pasajeros) figuran
+            como próximamente, sin preguntas todavía.
           </p>
         </details>
         <details>

@@ -1,7 +1,8 @@
 ---
-import { getSiteConfig } from '../lib/content';
+import { getSiteConfig, getUpcomingTests } from '../lib/content';
 
 const config = getSiteConfig();
+const upcomingTests = getUpcomingTests();
 ---
 
 <footer class="site-footer">
@@ -19,7 +20,7 @@ const config = getSiteConfig();
           <span aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
           </span>
-          Práctica de 20
+          Práctica
         </div>
         <div class="site-footer__cta-item">
           <span aria-hidden="true">
@@ -69,11 +70,17 @@ const config = getSiteConfig();
       </ul>
     </div>
     <div>
-      <h3>Alcance</h3>
+      <h3>Próximamente</h3>
       <ul>
-        <li>Autos · B1 introductorio</li>
-        <li>20 preguntas por ciudad</li>
-        <li>Sin registro</li>
+        {
+          upcomingTests.map((test) => (
+            <li>
+              <a href={`/test-de-conducir/${test.slug}/`}>
+                Categoría {test.licenseClass} · {test.subtitle}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>

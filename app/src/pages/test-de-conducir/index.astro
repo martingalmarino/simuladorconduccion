@@ -2,7 +2,8 @@
 import Layout from '../../components/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import JurisdictionCard from '../../components/JurisdictionCard.astro';
-import { getBank, getSiteConfig } from '../../lib/content';
+import UpcomingTestCard from '../../components/UpcomingTestCard.astro';
+import { getBank, getSiteConfig, getUpcomingTests } from '../../lib/content';
 import { absoluteUrl, getSiteRuntime } from '../../lib/site';
 
 const config = getSiteConfig();
@@ -11,6 +12,7 @@ const cards = config.jurisdictions.map((j) => ({
   jurisdiction: j,
   bank: getBank(j.bankId),
 }));
+const upcomingTests = getUpcomingTests();
 const pageUrl = absoluteUrl('/test-de-conducir/');
 
 const jsonLd = [
@@ -46,7 +48,7 @@ const jsonLd = [
 
 <Layout
   title="Tests de conducir por jurisdicción: elegí dónde practicar"
-  description="Elegí el banco de práctica según dónde vas a rendir: CABA o Córdoba Capital. Cada ciudad tiene 20 preguntas introductorias para autos, con explicación y fuente."
+  description="Elegí el banco de práctica según dónde vas a rendir: CABA o Córdoba Capital. Cada ciudad tiene una ampliación intermedia de preguntas para autos, con explicación y fuente."
   pathname="/test-de-conducir/"
   jsonLd={jsonLd}
 >
@@ -61,7 +63,8 @@ const jsonLd = [
   <h1>Elegí dónde vas a rendir</h1>
   <p class="lede">
     Cada jurisdicción tiene su propio banco. No mezclamos normas de CABA con las de Córdoba Capital, ni
-    presentamos un banco nacional genérico. Cobertura actual: autos, muestra B1 introductoria.
+    presentamos un banco nacional genérico. Cobertura actual: autos, ampliación intermedia B1. Más
+    abajo están los tests de otras categorías, marcados como próximamente.
   </p>
 
   <div class="card-grid">
@@ -71,6 +74,16 @@ const jsonLd = [
       ))
     }
   </div>
+
+  <section class="section" aria-labelledby="proximamente-directorio">
+    <h2 id="proximamente-directorio">Próximamente</h2>
+    <p class="lede">
+      Categorías anunciadas, sin banco de preguntas. No se pueden practicar todavía.
+    </p>
+    <div class="card-grid">
+      {upcomingTests.map((test) => <UpcomingTestCard test={test} />)}
+    </div>
+  </section>
 
   <section class="section notice">
     <p style="margin:0;">

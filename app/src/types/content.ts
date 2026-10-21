@@ -83,6 +83,17 @@ export interface JurisdictionConfig {
   fullSyllabus: boolean;
 }
 
+export type UpcomingTestStatus = 'proximamente';
+
+export interface UpcomingTest {
+  id: string;
+  slug: string;
+  licenseClass: string;
+  title: string;
+  subtitle: string;
+  status: UpcomingTestStatus;
+}
+
 export interface SiteConfig {
   siteName: string;
   locale: string;
@@ -96,6 +107,7 @@ export interface SiteConfig {
   practiceModes: PracticeModeConfig[];
   jurisdictions: JurisdictionConfig[];
   plannedClasses: string[];
+  upcomingTests: UpcomingTest[];
   notice: string;
   launchReview: {
     humanContentReviewComplete: boolean;

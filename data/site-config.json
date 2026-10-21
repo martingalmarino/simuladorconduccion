@@ -13,19 +13,14 @@
       "id": "learn",
       "label": "Aprender",
       "feedback": "immediate",
-      "questionCounts": [
-        10,
-        20
-      ],
+      "questionCounts": [10, 20, 50],
       "timeLimitSeconds": null
     },
     {
       "id": "practice",
-      "label": "Práctica de 20 preguntas",
+      "label": "Práctica",
       "feedback": "at-end",
-      "questionCounts": [
-        20
-      ],
+      "questionCounts": [20, 50],
       "timeLimitSeconds": null
     }
   ],
@@ -36,9 +31,7 @@
       "slug": "caba",
       "bankId": "caba-b1",
       "geographicScope": "Ciudad Autónoma de Buenos Aires",
-      "licenseClasses": [
-        "B1"
-      ],
+      "licenseClasses": ["B1"],
       "fullSyllabus": false
     },
     {
@@ -47,17 +40,36 @@
       "slug": "cordoba-capital",
       "bankId": "cordoba-capital-b1",
       "geographicScope": "Ciudad de Córdoba; no toda la provincia",
-      "licenseClasses": [
-        "B1"
-      ],
+      "licenseClasses": ["B1"],
       "fullSyllabus": false
     }
   ],
-  "plannedClasses": [
-    "A",
-    "C",
-    "D",
-    "E"
+  "plannedClasses": ["A", "C", "D", "E"],
+  "upcomingTests": [
+    {
+      "id": "upcoming-a",
+      "slug": "categoria-a",
+      "licenseClass": "A",
+      "title": "Test teórico categoría A",
+      "subtitle": "Motovehículos de dos ruedas",
+      "status": "proximamente"
+    },
+    {
+      "id": "upcoming-e",
+      "slug": "categoria-e",
+      "licenseClass": "E",
+      "title": "Test teórico categoría E",
+      "subtitle": "Carga, Camiones y maquinaria no agrícola",
+      "status": "proximamente"
+    },
+    {
+      "id": "upcoming-d",
+      "slug": "categoria-d",
+      "licenseClass": "D",
+      "title": "Test teórico categoría D",
+      "subtitle": "Transporte de pasajeros",
+      "status": "proximamente"
+    }
   ],
   "notice": "Material de práctica independiente. No es un examen oficial ni garantiza la aprobación.",
   "launchReview": {

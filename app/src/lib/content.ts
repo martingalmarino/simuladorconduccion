@@ -9,6 +9,7 @@ import type {
   SessionQuestion,
   SiteConfig,
   Source,
+  UpcomingTest,
 } from '../types/content';
 import { validateContentBundle } from './validate';
 
@@ -85,6 +86,14 @@ export function getAssets(): Asset[] {
 
 export function getContentVersion(): string {
   return loadBundle().contentVersion;
+}
+
+export function getUpcomingTests(): UpcomingTest[] {
+  return getSiteConfig().upcomingTests ?? [];
+}
+
+export function getUpcomingTestBySlug(slug: string): UpcomingTest | undefined {
+  return getUpcomingTests().find((test) => test.slug === slug);
 }
 
 export function getJurisdictionBySlug(slug: string): JurisdictionConfig | undefined {

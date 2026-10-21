@@ -27,7 +27,7 @@ Todos los títulos, descripciones y H1 deben describir el alcance real. Plantill
 | CABA | Test de conducir CABA: preguntas explicadas para autos | Practicá el test de conducir de autos en CABA |
 | Córdoba Capital | Test de conducir Córdoba Capital: práctica para autos | Practicá el test de conducir en Córdoba Capital |
 
-La bajada debe decir que hay una muestra introductoria de 20 preguntas por ciudad. No usar “todos los tests”, “banco oficial”, “preguntas exactas del examen” o “actualizado 2026” como reclamo automático.
+La bajada debe decir que hay una ampliación intermedia (~50 preguntas por ciudad) y que no es el temario completo. No usar “todos los tests”, “banco oficial”, “preguntas exactas del examen” o “actualizado 2026” como reclamo automático.
 
 Cada página: una jerarquía clara, encabezados descriptivos, enlaces internos útiles, textos alternativos y descripción social propia. Los conteos vienen del banco. Las respuestas usan lenguaje preciso, sin repeticiones artificiales de palabras clave. Crear nuevas páginas solo cuando resuelvan una necesidad distinta con contenido suficiente.
 
@@ -79,7 +79,7 @@ Las visitas referidas por asistentes pueden medirse cuando el referente está di
 
 ## 7. Criterios para aprobar el build
 
-- El HTML recibido sin ejecutar JavaScript contiene las 20 preguntas de cada página local, sus respuestas y fuentes.
+- El HTML recibido sin ejecutar JavaScript contiene las ~50 preguntas de cada página local, sus respuestas y fuentes.
 - Todas las preguntas tienen ancla estable; las fuentes son enlaces utilizables.
 - Titles y descripciones son distintos; el canonical usa el dominio real en producción.
 - Staging y prácticas llevan noindex; el sitemap excluye prácticas y errores.

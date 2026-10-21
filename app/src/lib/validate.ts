@@ -60,8 +60,8 @@ export function validateContentBundle(input: {
       errors.push(`Banco ausente para ${jurisdiction.id}: ${jurisdiction.bankId}`);
       continue;
     }
-    if (bank.questions.length !== 20) {
-      errors.push(`El banco ${bank.bankId} debe tener 20 preguntas (tiene ${bank.questions.length}).`);
+    if (bank.questions.length !== 50) {
+      errors.push(`El banco ${bank.bankId} debe tener 50 preguntas (tiene ${bank.questions.length}).`);
     }
     for (const question of bank.questions) {
       if (allQuestionIds.has(question.id)) {
@@ -111,6 +111,21 @@ export function validateContentBundle(input: {
 
   if (input.siteConfig.officialExamMode.enabled) {
     errors.push('El modo de examen oficial está habilitado sin perfiles verificados.');
+  }
+
+  const jurisdictionSlugs = new Set(input.siteConfig.jurisdictions.map((j) => j.slug));
+  const upcomingSlugs = new Set<string>();
+  for (const test of input.siteConfig.upcomingTests ?? []) {
+    if (test.status !== 'proximamente') {
+      errors.push(`Estado inesperado en test anunciado: ${test.id}`);
+    }
+    if (!test.slug.trim() || !test.title.trim() || !test.subtitle.trim()) {
+      errors.push(`Faltan datos del test anunciado: ${test.id}`);
+    }
+    if (upcomingSlugs.has(test.slug) || jurisdictionSlugs.has(test.slug)) {
+      errors.push(`Slug de test anunciado en conflicto: ${test.slug}`);
+    }
+    upcomingSlugs.add(test.slug);
   }
 
   if (errors.length > 0) {

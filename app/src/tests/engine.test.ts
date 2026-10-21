@@ -63,21 +63,21 @@ const practiceModes = [
     id: 'learn' as const,
     label: 'Aprender',
     feedback: 'immediate' as const,
-    questionCounts: [10, 20],
+    questionCounts: [10, 20, 50],
     timeLimitSeconds: null,
   },
   {
     id: 'practice' as const,
     label: 'Práctica',
     feedback: 'at-end' as const,
-    questionCounts: [20],
+    questionCounts: [20, 50],
     timeLimitSeconds: null,
   },
 ];
 
 describe('selectQuestionIds', () => {
   it('no duplica IDs', () => {
-    const questions = Array.from({ length: 20 }, (_, i) =>
+    const questions = Array.from({ length: 50 }, (_, i) =>
       makePrepared({
         id: `q-${i}`,
         topic: `t-${i % 5}`,
@@ -88,12 +88,21 @@ describe('selectQuestionIds', () => {
     expect(new Set(ids).size).toBe(10);
   });
 
-  it('usa todas las preguntas en práctica de 20', () => {
-    const questions = Array.from({ length: 20 }, (_, i) =>
+  it('usa todas las preguntas en práctica de banco completo', () => {
+    const questions = Array.from({ length: 50 }, (_, i) =>
       makePrepared({ id: `q-${i}`, topic: `t-${i % 4}` }),
     );
-    const ids = selectQuestionIds(questions, 20, seededRandom(3));
+    const ids = selectQuestionIds(questions, 50, seededRandom(3));
     expect(ids.sort()).toEqual(questions.map((q) => q.id).sort());
+  });
+
+  it('permite muestras de 20 sobre un banco de 50', () => {
+    const questions = Array.from({ length: 50 }, (_, i) =>
+      makePrepared({ id: `q-${i}`, topic: `t-${i % 6}` }),
+    );
+    const ids = selectQuestionIds(questions, 20, seededRandom(9));
+    expect(ids).toHaveLength(20);
+    expect(new Set(ids).size).toBe(20);
   });
 });
 

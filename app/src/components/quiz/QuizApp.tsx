@@ -88,8 +88,9 @@ export default function QuizApp(props: QuizAppProps) {
   }, [jurisdiction.slug, contentVersion]);
 
   useEffect(() => {
-    if (mode === 'practice') setCount(20);
-    else if (!availableCounts.includes(count)) setCount(availableCounts[0] ?? 10);
+    if (!availableCounts.includes(count)) {
+      setCount(availableCounts[availableCounts.length - 1] ?? availableCounts[0] ?? 10);
+    }
   }, [mode, availableCounts, count]);
 
   const sessionRef = useRef(session);
@@ -247,7 +248,7 @@ export default function QuizApp(props: QuizAppProps) {
         <span>Autos · {jurisdiction.licenseClasses.join(', ')}</span>
         {session && (
           <span>
-            {session.mode === 'learn' ? 'Aprender' : 'Práctica de 20'} ·{' '}
+            {session.mode === 'learn' ? 'Aprender' : 'Práctica'} ·{' '}
             {session.questionCount} preguntas
           </span>
         )}
@@ -265,8 +266,8 @@ export default function QuizApp(props: QuizAppProps) {
           </h1>
           <p className="muted">{notice}</p>
           <p className="muted">
-            Banco de {questions.length} preguntas. Si elegís 20, usás todas las del banco (no son 20
-            nuevas cada vez).
+            Banco de {questions.length} preguntas. Si elegís {questions.length}, usás todas las del
+            banco (no son {questions.length} nuevas cada vez).
           </p>
 
           <label id="mode-label">Modalidad</label>
@@ -289,24 +290,21 @@ export default function QuizApp(props: QuizAppProps) {
               : 'Sin tiempo. Corrección al final. Es práctica, no un examen oficial.'}
           </p>
 
-          {mode === 'learn' && (
-            <>
-              <label id="count-label">Cantidad</label>
-              <div className="count-grid" role="group" aria-labelledby="count-label">
-                {availableCounts.map((n) => (
-                  <button
-                    key={n}
-                    type="button"
-                    className="quiz-choice"
-                    aria-pressed={count === n}
-                    onClick={() => setCount(n)}
-                  >
-                    {n} preguntas
-                  </button>
-                ))}
-              </div>
-            </>
-          )}
+          <label id="count-label">Cantidad</label>
+          <div className="count-grid" role="group" aria-labelledby="count-label">
+            {availableCounts.map((n) => (
+              <button
+                key={n}
+                type="button"
+                className="quiz-choice"
+                aria-pressed={count === n}
+                onClick={() => setCount(n)}
+              >
+                {n} preguntas
+                {n === questions.length ? ' (banco completo)' : ''}
+              </button>
+            ))}
+          </div>
 
           <div className="btn-row">
             <button type="button" className="btn btn--primary" onClick={startNew}>

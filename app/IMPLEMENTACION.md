@@ -1,14 +1,14 @@
 # Resumen de implementación (primer build)
 
-Fecha de build local: 2026-10-21.
+Fecha de build local: 2026-10-21. Ampliación intermedia de bancos: 2026-10-21.
 
 ## Qué se construyó
 
 Aplicación Astro 7 + TypeScript en `app/`, con HTML estático para estudio y una isla React (`QuizApp`) solo en `/practicar/{jurisdiccion}/`.
 
-- Bancos: CABA y Córdoba Capital (20 + 20), cargados desde `../data/`.
-- Modalidades: Aprender (10/20, feedback inmediato) y Práctica de 20 (feedback al final).
-- Examen oficial: deshabilitado según `site-config.json`.
+- Bancos: CABA y Córdoba Capital (50 + 50), cargados desde `../data/`.
+- Modalidades: Aprender (10/20/50, feedback inmediato) y Práctica (20/50, feedback al final).
+- Examen oficial: deshabilitado según `site-config.json` (`fullSyllabus: false`).
 - SEO: `lang=es-AR`, metadata centralizada, JSON-LD WebSite/WebPage/BreadcrumbList, prácticas con `noindex`, sitemap vacío mientras `INDEXABLE_PRODUCTION=false`.
 
 ## Comandos
@@ -28,14 +28,13 @@ npm run check:production
 
 | Chequeo | Resultado |
 |---|---|
-| `python3 ../scripts/validate_data.py` | PASS (40 preguntas, 7 assets) |
-| `npm test` (Vitest) | 10/10 PASS |
+| `python3 ../scripts/validate_data.py` | PASS (100 preguntas, 7 assets) |
+| `npm test` (Vitest) | PASS |
 | `npm run build` | OK → `dist/` |
-| HTML estudio CABA / Córdoba | 20 anclas de pregunta c/u, respuestas, explicaciones y fuentes sin JS |
+| HTML estudio CABA / Córdoba | ~50 anclas de pregunta c/u, respuestas, explicaciones y fuentes sin JS |
 | `/practicar/*` | `noindex,follow`; ausente del sitemap |
 | Canonicales / sitemap indexable | Omitidos (preview: sin `SITE_URL` indexable) |
 | Ruta inexistente en preview | HTTP 404 |
-| Práctica interactiva | Configuración, respuesta, explicación y fuente verificadas en navegador |
 
 Auditoría Lighthouse: no se usa como certificación de Core Web Vitals reales.
 

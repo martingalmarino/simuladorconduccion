@@ -1,0 +1,58 @@
+---
+import Layout from '../../components/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { getUpcomingTests } from '../../lib/content';
+import type { UpcomingTest } from '../../types/content';
+
+export function getStaticPaths() {
+  return getUpcomingTests().map((test) => ({
+    params: { slug: test.slug },
+    props: { test },
+  }));
+}
+
+interface Props {
+  test: UpcomingTest;
+}
+
+const { test } = Astro.props;
+const pathname = `/test-de-conducir/${test.slug}/`;
+---
+
+<Layout
+  title={`${test.title}: próximamente`}
+  description={`${test.title} (${test.subtitle}) está en preparación. Todavía no hay banco de preguntas ni práctica disponible.`}
+  pathname={pathname}
+  noindex={true}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Inicio', href: '/' },
+      { label: 'Tests', href: '/test-de-conducir/' },
+      { label: test.title },
+    ]}
+  />
+
+  <p class="kicker">Test teórico · Categoría {test.licenseClass}</p>
+  <div class="upcoming-page__status">
+    <h1>{test.title}</h1>
+    <span class="badge badge--soon">Próximamente</span>
+  </div>
+  <p class="lede">{test.subtitle}</p>
+
+  <section class="card upcoming-page__notice" aria-labelledby="estado-test">
+    <h2 id="estado-test">Este test todavía no está disponible</h2>
+    <p>
+      Lo estamos preparando. Cuando haya un banco de preguntas revisado, va a publicarse en esta
+      página. Hoy no hay ítems para estudiar ni una práctica para empezar.
+    </p>
+    <p class="muted" style="margin-bottom:0;">
+      No es un examen oficial ni representa el temario completo de la categoría {test.licenseClass}.
+    </p>
+  </section>
+
+  <div class="btn-row" style="margin-top:1.5rem;">
+    <a class="btn btn--primary" href="/test-de-conducir/">Ver tests disponibles</a>
+    <a class="btn btn--secondary" href="/#empezar">Practicar autos (B1)</a>
+  </div>
+</Layout>

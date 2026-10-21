@@ -12,6 +12,16 @@ const TOPIC_LABELS: Record<string, string> = {
   documentacion: 'Documentación',
   luces: 'Luces',
   giros: 'Giros',
+  alcohol: 'Alcohol',
+  fatiga: 'Fatiga',
+  distracciones: 'Distracciones',
+  estacionamiento: 'Estacionamiento',
+  scoring: 'Scoring',
+  incidentes: 'Incidentes',
+  'seguridad-vehicular': 'Seguridad del vehículo',
+  bicicletas: 'Bicicletas',
+  adversas: 'Condiciones adversas',
+  preventiva: 'Conducción preventiva',
 };
 
 export function topicLabel(topic: string): string {

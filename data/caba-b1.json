@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "bankId": "caba-b1",
-  "title": "CABA — Autos: muestra de práctica B1",
-  "coverage": "Muestra introductoria de 20 preguntas. No cubre el temario completo ni reproduce un examen oficial.",
+  "title": "CABA — Autos: práctica B1 (ampliación intermedia)",
+  "coverage": "Ampliación intermedia de 50 preguntas originales para práctica de B1. No cubre el temario oficial completo ni reproduce un examen oficial.",
   "questions": [
     {
       "id": "caba-b1-001",
@@ -759,6 +759,1146 @@
       ],
       "contentStatus": "source-checked-draft",
       "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-021",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "alcohol",
+      "prompt": "En CABA, ¿qué implica conducir un auto particular con alcohol en sangre por encima del límite legal vigente?",
+      "options": [
+        {
+          "id": "caba-b1-021-o1",
+          "text": "Nada, si no hubo siniestro."
+        },
+        {
+          "id": "caba-b1-021-o2",
+          "text": "Configura una infracción y puede implicar sanciones conforme al régimen aplicable."
+        },
+        {
+          "id": "caba-b1-021-o3",
+          "text": "Solo una advertencia verbal sin consecuencias."
+        }
+      ],
+      "correctOptionId": "caba-b1-021-o2",
+      "explanation": "Superar el límite legal de alcoholemia es infracción. El material de estudio trata el alcohol como factor de riesgo y de responsabilidad del conductor.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "Régimen de alcoholemia / sanciones"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-022",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "alcohol",
+      "prompt": "Un control de alcoholemia en CABA te solicita el test. ¿Qué corresponde?",
+      "options": [
+        {
+          "id": "caba-b1-022-o1",
+          "text": "Podés negarte si no hubo siniestro."
+        },
+        {
+          "id": "caba-b1-022-o2",
+          "text": "Debés someterte al control conforme a la normativa vigente."
+        },
+        {
+          "id": "caba-b1-022-o3",
+          "text": "Solo es obligatorio para conductores profesionales."
+        }
+      ],
+      "correctOptionId": "caba-b1-022-o2",
+      "explanation": "Los controles de alcoholemia forman parte del régimen de fiscalización. La negativa injustificada se sanciona; no es un trámite opcional según el ánimo del conductor.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "Régimen de controles de alcoholemia"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-023",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "fatiga",
+      "prompt": "Notás sueño intenso mientras conducís por avenidas de CABA. ¿Cuál es la conducta más segura según el material de estudio?",
+      "options": [
+        {
+          "id": "caba-b1-023-o1",
+          "text": "Acelerar para llegar antes y descansar en destino."
+        },
+        {
+          "id": "caba-b1-023-o2",
+          "text": "Detenerte en un lugar seguro y descansar antes de continuar."
+        },
+        {
+          "id": "caba-b1-023-o3",
+          "text": "Subir el volumen de la radio y seguir sin parar."
+        }
+      ],
+      "correctOptionId": "caba-b1-023-o2",
+      "explanation": "El sueño y la fatiga degradan la atención y el tiempo de reacción. El manual insiste en no conducir en esas condiciones y detenerse a recuperarse.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 4 — Sueño y fatiga"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-024",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "distracciones",
+      "prompt": "Estás manejando en CABA y te llega un mensaje al celular. ¿Qué corresponde?",
+      "options": [
+        {
+          "id": "caba-b1-024-o1",
+          "text": "Leerlo solo en semáforos en rojo."
+        },
+        {
+          "id": "caba-b1-024-o2",
+          "text": "Usar el teléfono con una mano apoyada en el volante."
+        },
+        {
+          "id": "caba-b1-024-o3",
+          "text": "No manipular el teléfono; la distracción aumenta el riesgo de siniestro."
+        }
+      ],
+      "correctOptionId": "caba-b1-024-o3",
+      "explanation": "Las distracciones —incluido el uso del teléfono— reducen la capacidad de percibir riesgos. El material de estudio las trata como factor crítico de inseguridad vial.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 4 — Distracciones"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-025",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "luces",
+      "prompt": "Circulás de noche por una calle de CABA sin iluminación suficiente. ¿Qué luces debés usar como regla general?",
+      "options": [
+        {
+          "id": "caba-b1-025-o1",
+          "text": "Solo las de posición."
+        },
+        {
+          "id": "caba-b1-025-o2",
+          "text": "Las bajas o altas según corresponda, manteniendo visibilidad sin encandilar indebidamente."
+        },
+        {
+          "id": "caba-b1-025-o3",
+          "text": "Balizas intermitentes de forma continua."
+        }
+      ],
+      "correctOptionId": "caba-b1-025-o2",
+      "explanation": "El uso correcto de luces es una norma básica de conducción: alumbrar la vía y evitar encandilar a otros cuando las condiciones lo exijan.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 3 — Uso de luces"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-026",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "luces",
+      "prompt": "En CABA, ¿cuándo corresponde encender las luces bajas durante el día?",
+      "options": [
+        {
+          "id": "caba-b1-026-o1",
+          "text": "Nunca: de día está prohibido usar luces."
+        },
+        {
+          "id": "caba-b1-026-o2",
+          "text": "Cuando la visibilidad esté reducida o la norma lo exija (por ejemplo, condiciones adversas o vías específicas)."
+        },
+        {
+          "id": "caba-b1-026-o3",
+          "text": "Solo si llueve con intensidad máxima."
+        }
+      ],
+      "correctOptionId": "caba-b1-026-o2",
+      "explanation": "Las luces no se limitan a la noche: la normativa y el manual contemplan su uso cuando la visibilidad o el tipo de vía lo requieren.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "Normas de alumbrado / luces"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-027",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "estacionamiento",
+      "prompt": "En CABA querés estacionar en doble fila “un minuto” frente a un comercio. ¿Es correcto?",
+      "options": [
+        {
+          "id": "caba-b1-027-o1",
+          "text": "Sí, si dejás a alguien dentro del auto."
+        },
+        {
+          "id": "caba-b1-027-o2",
+          "text": "No: la doble fila obstruye la circulación y no está permitida como estacionamiento ocasional."
+        },
+        {
+          "id": "caba-b1-027-o3",
+          "text": "Sí, fuera de horario pico."
+        }
+      ],
+      "correctOptionId": "caba-b1-027-o2",
+      "explanation": "Estacionar u ocupar la calzada en doble fila interfiere con el tránsito y está prohibido. La brevedad del detenerse no lo habilita.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "Detención y estacionamiento"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-028",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "estacionamiento",
+      "prompt": "Llegás a una senda peatonal en CABA. ¿Podés estacionar sobre ella si no hay peatones?",
+      "options": [
+        {
+          "id": "caba-b1-028-o1",
+          "text": "Sí, fuera del horario escolar."
+        },
+        {
+          "id": "caba-b1-028-o2",
+          "text": "No: la senda peatonal debe permanecer libre."
+        },
+        {
+          "id": "caba-b1-028-o3",
+          "text": "Sí, con balizas encendidas."
+        }
+      ],
+      "correctOptionId": "caba-b1-028-o2",
+      "explanation": "La senda peatonal es espacio reservado al cruce. Estacionar sobre ella pone en riesgo a quienes cruzan y viola las reglas de detención.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 3 — Detención y estacionamiento"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-029",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "giros",
+      "prompt": "Vas a girar a la derecha en una intersección de CABA. ¿Qué debés hacer antes?",
+      "options": [
+        {
+          "id": "caba-b1-029-o1",
+          "text": "Girar sin señalizar si no hay tránsito visible."
+        },
+        {
+          "id": "caba-b1-029-o2",
+          "text": "Señalizar con anticipación, ubicar el vehículo correctamente y ceder el paso a quien corresponda."
+        },
+        {
+          "id": "caba-b1-029-o3",
+          "text": "Acelerar para completar el giro antes que el semáforo cambie."
+        }
+      ],
+      "correctOptionId": "caba-b1-029-o2",
+      "explanation": "Los giros requieren señalización, posición adecuada y respeto de prioridades. Improvisar el giro aumenta el riesgo de colisión.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 3 — Giros en intersecciones"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-030",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "giros",
+      "prompt": "En una intersección de CABA sin semáforo, un vehículo gira a la izquierda cruzando tu sentido. ¿Quién suele tener prioridad si ambos llegan en condiciones normales y no hay otra señal?",
+      "options": [
+        {
+          "id": "caba-b1-030-o1",
+          "text": "Siempre el que gira a la izquierda."
+        },
+        {
+          "id": "caba-b1-030-o2",
+          "text": "Depende: se aplica el régimen de prioridades de la normativa local (por ejemplo, quien viene por la derecha u otras reglas específicas)."
+        },
+        {
+          "id": "caba-b1-030-o3",
+          "text": "El más grande del cruce."
+        }
+      ],
+      "correctOptionId": "caba-b1-030-o2",
+      "explanation": "Las prioridades en intersecciones sin semáforo se resuelven según el Código (prioridad normativa y de paso), no por el tamaño del vehículo ni por la intención de girar.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "Prioridades de paso / giros"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-031",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "scoring",
+      "prompt": "¿Qué es el scoring en el régimen de CABA, según el material de estudio?",
+      "options": [
+        {
+          "id": "caba-b1-031-o1",
+          "text": "Un puntaje deportivo opcional para conductores."
+        },
+        {
+          "id": "caba-b1-031-o2",
+          "text": "Un sistema de puntos vinculados a infracciones que puede afectar la habilitación para conducir."
+        },
+        {
+          "id": "caba-b1-031-o3",
+          "text": "Un descuento en el seguro del auto."
+        }
+      ],
+      "correctOptionId": "caba-b1-031-o2",
+      "explanation": "El scoring forma parte del enfoque de responsabilidad del conductor: las infracciones impactan en un esquema de puntos asociado a la licencia.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 2 — Scoring"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-032",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "documentacion",
+      "prompt": "Además de la licencia, ¿qué documentación suele exigirse al circular con un auto en CABA?",
+      "options": [
+        {
+          "id": "caba-b1-032-o1",
+          "text": "Solo el DNI del conductor."
+        },
+        {
+          "id": "caba-b1-032-o2",
+          "text": "Documentación del vehículo y seguros/obligaciones vigentes según la normativa (por ejemplo, cédula y seguro obligatorio cuando corresponda)."
+        },
+        {
+          "id": "caba-b1-032-o3",
+          "text": "Únicamente la factura de compra del auto."
+        }
+      ],
+      "correctOptionId": "caba-b1-032-o2",
+      "explanation": "Conducir implica portar la documentación habilitante del conductor y del vehículo. El manual detalla responsabilidades legales y documentación obligatoria.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 2 — Documentación obligatoria"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-033",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "incidentes",
+      "prompt": "Participás de un siniestro vial en CABA con lesionados. ¿Cuál es una conducta correcta?",
+      "options": [
+        {
+          "id": "caba-b1-033-o1",
+          "text": "Retirarte de inmediato para no trabar el tránsito."
+        },
+        {
+          "id": "caba-b1-033-o2",
+          "text": "Auxiliar según tus posibilidades, dar aviso a las autoridades y no abandonar el lugar indebidamente."
+        },
+        {
+          "id": "caba-b1-033-o3",
+          "text": "Mover siempre todos los vehículos antes de cualquier llamado."
+        }
+      ],
+      "correctOptionId": "caba-b1-033-o2",
+      "explanation": "Ante un incidente con personas heridas priorizá la asistencia y la denuncia a la autoridad. Abandonar el lugar puede agravar la responsabilidad.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 2 — Obligaciones en caso de incidentes viales"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-034",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad-vehicular",
+      "prompt": "En un auto particular en CABA, ¿el uso del cinturón de seguridad es obligatorio para?",
+      "options": [
+        {
+          "id": "caba-b1-034-o1",
+          "text": "Solo el conductor en avenidas."
+        },
+        {
+          "id": "caba-b1-034-o2",
+          "text": "Conductor y ocupantes, conforme a la normativa de seguridad vial aplicable."
+        },
+        {
+          "id": "caba-b1-034-o3",
+          "text": "Solo los asientos delanteros si hay airbags."
+        }
+      ],
+      "correctOptionId": "caba-b1-034-o2",
+      "explanation": "El cinturón es un elemento de seguridad obligatorio. Su uso no se exceptúa por la presencia de airbags ni por el tipo de calle.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Anexo II — Elementos de seguridad"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-035",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad-vehicular",
+      "prompt": "Transportás a un niño pequeño en auto en CABA. ¿Qué corresponde respecto al sistema de retención?",
+      "options": [
+        {
+          "id": "caba-b1-035-o1",
+          "text": "Puede ir en brazos de un adulto en el asiento trasero."
+        },
+        {
+          "id": "caba-b1-035-o2",
+          "text": "Debe viajar con el sistema de retención infantil adecuado a su edad/talla, según la normativa vigente."
+        },
+        {
+          "id": "caba-b1-035-o3",
+          "text": "Solo necesita cinturón de adulto si el viaje es corto."
+        }
+      ],
+      "correctOptionId": "caba-b1-035-o2",
+      "explanation": "Los sistemas de retención infantil son obligatorios para proteger a los menores. Llevarlos en brazos o con cinturón de adulto no cumple esa protección.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Anexo II — Elementos de seguridad / retención infantil"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-036",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "bicicletas",
+      "prompt": "Circulás en CABA y hay un ciclista en un carril contiguo. ¿Cuál es la conducta adecuada?",
+      "options": [
+        {
+          "id": "caba-b1-036-o1",
+          "text": "Tocarle bocina de cerca para que se aparte."
+        },
+        {
+          "id": "caba-b1-036-o2",
+          "text": "Respetar su espacio, mantener distancia lateral segura y no invadir bicisendas indebidamente."
+        },
+        {
+          "id": "caba-b1-036-o3",
+          "text": "Adelantarlo rozando el manubrio si vas con prisa."
+        }
+      ],
+      "correctOptionId": "caba-b1-036-o2",
+      "explanation": "La movilidad sustentable prioriza la convivencia: ciclistas y peatones requieren respeto de espacio y de la infraestructura dedicada.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 1 — Bicicleta / prioridad peatonal"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-037",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "peatones",
+      "prompt": "Un peatón está cruzando por la senda en CABA con semáforo peatonal en verde. ¿Qué debés hacer?",
+      "options": [
+        {
+          "id": "caba-b1-037-o1",
+          "text": "Avanzar si el auto de atrás toca bocina."
+        },
+        {
+          "id": "caba-b1-037-o2",
+          "text": "Detenerte y permitir el cruce; el peatón tiene prioridad en esa situación."
+        },
+        {
+          "id": "caba-b1-037-o3",
+          "text": "Pasar rápido antes de que termine de cruzar."
+        }
+      ],
+      "correctOptionId": "caba-b1-037-o2",
+      "explanation": "La prioridad peatonal en sendas habilitadas es central en el enfoque de movilidad de la Ciudad. Forzar el paso es riesgoso e incorrecto.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 1 — Prioridad peatonal"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-038",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "adversas",
+      "prompt": "Llueve fuerte y la calzada está resbaladiza en CABA. ¿Qué conviene?",
+      "options": [
+        {
+          "id": "caba-b1-038-o1",
+          "text": "Mantener la misma velocidad que en seco."
+        },
+        {
+          "id": "caba-b1-038-o2",
+          "text": "Reducir la velocidad, aumentar la distancia y extremar la precaución."
+        },
+        {
+          "id": "caba-b1-038-o3",
+          "text": "Usar solo balizas y no frenar nunca."
+        }
+      ],
+      "correctOptionId": "caba-b1-038-o2",
+      "explanation": "En situaciones adversas disminuye la adherencia y la visibilidad. El manual recomienda adaptar velocidad y distancia a las condiciones.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 3 — Conducción en situaciones adversas"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-039",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "preventiva",
+      "prompt": "¿Qué describe mejor la conducción preventiva según el material de estudio de CABA?",
+      "options": [
+        {
+          "id": "caba-b1-039-o1",
+          "text": "Conducir siempre al límite máximo permitido."
+        },
+        {
+          "id": "caba-b1-039-o2",
+          "text": "Anticipar riesgos, observar el entorno y ajustar la conducción para evitar siniestros."
+        },
+        {
+          "id": "caba-b1-039-o3",
+          "text": "Confiar solo en los frenos ABS del vehículo."
+        }
+      ],
+      "correctOptionId": "caba-b1-039-o2",
+      "explanation": "La conducción preventiva combina actitud y técnica: mirar lejos, anticipar y decidir a tiempo. No se reduce a la tecnología del auto.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 5 — Conducción preventiva y eficiente"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-040",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades",
+      "prompt": "En una rotonda de CABA, ¿quién tiene prioridad de paso en la regla general de circulación?",
+      "options": [
+        {
+          "id": "caba-b1-040-o1",
+          "text": "Quien quiere ingresar, siempre."
+        },
+        {
+          "id": "caba-b1-040-o2",
+          "text": "Quien ya circula por la rotonda, salvo señalización en contrario."
+        },
+        {
+          "id": "caba-b1-040-o3",
+          "text": "El vehículo más rápido."
+        }
+      ],
+      "correctOptionId": "caba-b1-040-o2",
+      "explanation": "Como regla general, tiene prioridad quien circula dentro de la rotonda. Las señales locales pueden modificar el régimen; hay que observarlas.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "Prioridades de paso — rotondas"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-041",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidad",
+      "prompt": "En una zona escolar de CABA debidamente señalizada, ¿cómo debés adaptar la velocidad?",
+      "options": [
+        {
+          "id": "caba-b1-041-o1",
+          "text": "Mantener 60 km/h si no ves niños."
+        },
+        {
+          "id": "caba-b1-041-o2",
+          "text": "Respetar el límite específico de la zona y extremar la atención."
+        },
+        {
+          "id": "caba-b1-041-o3",
+          "text": "Acelerar para salir rápido del área."
+        }
+      ],
+      "correctOptionId": "caba-b1-041-o2",
+      "explanation": "Las zonas escolares tienen límites y deber de precaución reforzada. La ausencia momentánea de niños no autoriza a ignorar la señalización.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "Velocidades máximas / zonas especiales"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-042",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "adelantamiento",
+      "prompt": "Querés adelantar en una avenida de CABA con línea discontinua y visibilidad. ¿Qué condición es indispensable?",
+      "options": [
+        {
+          "id": "caba-b1-042-o1",
+          "text": "Que el vehículo de atrás te habilite con luces."
+        },
+        {
+          "id": "caba-b1-042-o2",
+          "text": "Que el adelantamiento sea seguro, esté permitido por la demarcación/señales y no ponga en riesgo a terceros."
+        },
+        {
+          "id": "caba-b1-042-o3",
+          "text": "Que suenes la bocina de forma continua."
+        }
+      ],
+      "correctOptionId": "caba-b1-042-o2",
+      "explanation": "El adelantamiento solo procede si la vía y las condiciones lo permiten. La línea y la visibilidad no reemplazan el juicio de seguridad.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 3 — Adelantamiento y sobrepaso"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-043",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "senalizacion",
+      "prompt": "Una señal reglamentaria circular con borde rojo en CABA, ¿qué tipo de mensaje transmite en general?",
+      "options": [
+        {
+          "id": "caba-b1-043-o1",
+          "text": "Solo información turística."
+        },
+        {
+          "id": "caba-b1-043-o2",
+          "text": "Una obligación o restricción de circulación (reglamentaria)."
+        },
+        {
+          "id": "caba-b1-043-o3",
+          "text": "Una sugerencia opcional de estacionamiento."
+        }
+      ],
+      "correctOptionId": "caba-b1-043-o2",
+      "explanation": "Las señales reglamentarias imponen deberes o prohibiciones. No son meras sugerencias; su forma y color ayudan a identificarlas.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Anexo V — Señales reglamentarias"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-044",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "distancia",
+      "prompt": "Circulás detrás de otro auto en una avenida transitada de CABA. ¿Qué criterio de distancia es el adecuado?",
+      "options": [
+        {
+          "id": "caba-b1-044-o1",
+          "text": "Pegarte para “ahorrar espacio”."
+        },
+        {
+          "id": "caba-b1-044-o2",
+          "text": "Mantener una distancia que permita frenar a tiempo ante una detención imprevista."
+        },
+        {
+          "id": "caba-b1-044-o3",
+          "text": "Una distancia fija de 1 metro sin importar la velocidad."
+        }
+      ],
+      "correctOptionId": "caba-b1-044-o2",
+      "explanation": "La distancia de seguimiento debe crecer con la velocidad y las condiciones. Circular muy cerca anula el margen de reacción.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 3 / conducción preventiva — distancia"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-045",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "circulacion",
+      "prompt": "En CABA, ¿por qué carril conviene circular en una avenida multicarril si vas a velocidad moderada y no vas a adelantar?",
+      "options": [
+        {
+          "id": "caba-b1-045-o1",
+          "text": "Siempre el más izquierdo, aunque no adelantes."
+        },
+        {
+          "id": "caba-b1-045-o2",
+          "text": "Preferentemente el derecho o el que indique la señalización, dejando libres los de adelantamiento cuando corresponda."
+        },
+        {
+          "id": "caba-b1-045-o3",
+          "text": "El del medio sin mirar la señalización."
+        }
+      ],
+      "correctOptionId": "caba-b1-045-o2",
+      "explanation": "La circulación ordenada usa los carriles según destino y velocidad: no ocupar innecesariamente el de adelantamiento facilita el flujo.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "Circulación por carriles"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-046",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad",
+      "prompt": "Antes de iniciar la marcha en CABA, ¿qué control básico de seguridad corresponde?",
+      "options": [
+        {
+          "id": "caba-b1-046-o1",
+          "text": "Solo mirar el espejo retrovisor interior."
+        },
+        {
+          "id": "caba-b1-046-o2",
+          "text": "Verificar entorno, espejos, cinturones y que no haya obstáculos o personas alrededor del vehículo."
+        },
+        {
+          "id": "caba-b1-046-o3",
+          "text": "Encender las balizas aunque no haya peligro."
+        }
+      ],
+      "correctOptionId": "caba-b1-046-o2",
+      "explanation": "La seguridad empieza antes de mover el auto: percepción del entorno y uso de elementos de retención. Las balizas no reemplazan esa verificación.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Anexo II / actitudes preventivas"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-047",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "alcohol",
+      "prompt": "¿Por qué el material de estudio insiste en no combinar alcohol y conducción?",
+      "options": [
+        {
+          "id": "caba-b1-047-o1",
+          "text": "Porque el alcohol mejora los reflejos a dosis bajas."
+        },
+        {
+          "id": "caba-b1-047-o2",
+          "text": "Porque altera percepción, juicio y tiempo de reacción, elevando el riesgo de siniestros."
+        },
+        {
+          "id": "caba-b1-047-o3",
+          "text": "Solo porque aumenta el consumo de combustible."
+        }
+      ],
+      "correctOptionId": "caba-b1-047-o2",
+      "explanation": "El alcohol afecta capacidades críticas para conducir. El capítulo de capacidad natural lo trata como factor de riesgo, no como detalle menor.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 4 — Ingesta de alcohol y drogas"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-048",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "distracciones",
+      "prompt": "Comer, maquillarte o discutir con intensidad mientras manejás en CABA se considera:",
+      "options": [
+        {
+          "id": "caba-b1-048-o1",
+          "text": "Una práctica recomendada para viajes largos."
+        },
+        {
+          "id": "caba-b1-048-o2",
+          "text": "Una distracción que puede reducir la atención a la vía."
+        },
+        {
+          "id": "caba-b1-048-o3",
+          "text": "Irrelevante si conocés el recorrido."
+        }
+      ],
+      "correctOptionId": "caba-b1-048-o2",
+      "explanation": "Cualquier actividad que desvíe la atención del tránsito es una distracción. Conocer el camino no elimina ese riesgo.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Capítulo 4 — Distracciones"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-049",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "estacionamiento",
+      "prompt": "Encontrás una rampa de acceso para personas con movilidad reducida en CABA. ¿Podés estacionar delante “un instante”?",
+      "options": [
+        {
+          "id": "caba-b1-049-o1",
+          "text": "Sí, con balizas."
+        },
+        {
+          "id": "caba-b1-049-o2",
+          "text": "No: ese espacio debe permanecer libre."
+        },
+        {
+          "id": "caba-b1-049-o3",
+          "text": "Sí, si es de noche."
+        }
+      ],
+      "correctOptionId": "caba-b1-049-o2",
+      "explanation": "Los espacios reservados y las rampas de accesibilidad no son estacionamiento improvisado. Obstruirlos afecta derechos de circulación peatonal.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "Estacionamiento — restricciones y reservas"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-050",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "senalizacion",
+      "prompt": "Una señal preventiva (generalmente triangular con borde rojo o fondo amarillo según el tipo) en CABA, ¿para qué sirve?",
+      "options": [
+        {
+          "id": "caba-b1-050-o1",
+          "text": "Para indicar la máxima velocidad obligatoria en toda la ciudad."
+        },
+        {
+          "id": "caba-b1-050-o2",
+          "text": "Para advertir un peligro o situación particular en la vía."
+        },
+        {
+          "id": "caba-b1-050-o3",
+          "text": "Para autorizar el estacionamiento libre."
+        }
+      ],
+      "correctOptionId": "caba-b1-050-o2",
+      "explanation": "Las señales preventivas alertan; no fijan por sí solas un límite urbano general ni habilitan estacionar. Anticipan riesgos para adaptar la conducción.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-manual-2023",
+          "locator": "Anexo V — Señales preventivas"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
       "humanReviewedAt": null,
       "humanReviewer": null,
       "authorship": "original-editorial",

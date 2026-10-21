@@ -1,0 +1,371 @@
+{
+  "schemaVersion": "1.0.0",
+  "mappedAt": "2026-10-21",
+  "note": "Cobertura orientativa tras ampliación intermedia (~50). No certifica temario oficial completo.",
+  "jurisdictions": [
+    {
+      "id": "ar-caba",
+      "bankId": "caba-b1",
+      "targetTopics": [
+        {
+          "topic": "semaforos",
+          "status": "covered",
+          "questionIds": [
+            "caba-b1-001",
+            "caba-b1-002",
+            "caba-b1-003"
+          ]
+        },
+        {
+          "topic": "senalizacion",
+          "status": "covered",
+          "questionIds": [
+            "caba-b1-004",
+            "caba-b1-043",
+            "caba-b1-050"
+          ]
+        },
+        {
+          "topic": "adelantamiento",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-005",
+            "caba-b1-042"
+          ]
+        },
+        {
+          "topic": "seguridad",
+          "status": "covered",
+          "questionIds": [
+            "caba-b1-006",
+            "caba-b1-007",
+            "caba-b1-008",
+            "caba-b1-046"
+          ]
+        },
+        {
+          "topic": "circulacion",
+          "status": "covered",
+          "questionIds": [
+            "caba-b1-009",
+            "caba-b1-010",
+            "caba-b1-011",
+            "caba-b1-045"
+          ]
+        },
+        {
+          "topic": "autopistas",
+          "status": "covered",
+          "questionIds": [
+            "caba-b1-012",
+            "caba-b1-013",
+            "caba-b1-014"
+          ]
+        },
+        {
+          "topic": "distancia",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-015",
+            "caba-b1-044"
+          ]
+        },
+        {
+          "topic": "prioridades",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-016",
+            "caba-b1-040"
+          ]
+        },
+        {
+          "topic": "velocidad",
+          "status": "covered",
+          "questionIds": [
+            "caba-b1-017",
+            "caba-b1-018",
+            "caba-b1-041"
+          ]
+        },
+        {
+          "topic": "peatones",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-019",
+            "caba-b1-037"
+          ]
+        },
+        {
+          "topic": "documentacion",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-020",
+            "caba-b1-032"
+          ]
+        },
+        {
+          "topic": "alcohol",
+          "status": "covered",
+          "questionIds": [
+            "caba-b1-021",
+            "caba-b1-022",
+            "caba-b1-047"
+          ]
+        },
+        {
+          "topic": "fatiga",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-023"
+          ]
+        },
+        {
+          "topic": "distracciones",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-024",
+            "caba-b1-048"
+          ]
+        },
+        {
+          "topic": "luces",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-025",
+            "caba-b1-026"
+          ]
+        },
+        {
+          "topic": "estacionamiento",
+          "status": "covered",
+          "questionIds": [
+            "caba-b1-027",
+            "caba-b1-028",
+            "caba-b1-049"
+          ]
+        },
+        {
+          "topic": "giros",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-029",
+            "caba-b1-030"
+          ]
+        },
+        {
+          "topic": "scoring",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-031"
+          ]
+        },
+        {
+          "topic": "incidentes",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-033"
+          ]
+        },
+        {
+          "topic": "seguridad-vehicular",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-034",
+            "caba-b1-035"
+          ]
+        },
+        {
+          "topic": "bicicletas",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-036"
+          ]
+        },
+        {
+          "topic": "adversas",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-038"
+          ]
+        },
+        {
+          "topic": "preventiva",
+          "status": "partial",
+          "questionIds": [
+            "caba-b1-039"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ar-x-cordoba-capital",
+      "bankId": "cordoba-capital-b1",
+      "targetTopics": [
+        {
+          "topic": "semaforos",
+          "status": "covered",
+          "questionIds": [
+            "cordoba-capital-b1-001",
+            "cordoba-capital-b1-002",
+            "cordoba-capital-b1-003",
+            "cordoba-capital-b1-045"
+          ]
+        },
+        {
+          "topic": "prioridades",
+          "status": "covered",
+          "questionIds": [
+            "cordoba-capital-b1-004",
+            "cordoba-capital-b1-010",
+            "cordoba-capital-b1-011",
+            "cordoba-capital-b1-012",
+            "cordoba-capital-b1-038",
+            "cordoba-capital-b1-046"
+          ]
+        },
+        {
+          "topic": "senalizacion",
+          "status": "covered",
+          "questionIds": [
+            "cordoba-capital-b1-006",
+            "cordoba-capital-b1-007",
+            "cordoba-capital-b1-008",
+            "cordoba-capital-b1-009",
+            "cordoba-capital-b1-039",
+            "cordoba-capital-b1-040"
+          ]
+        },
+        {
+          "topic": "peatones",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-005",
+            "cordoba-capital-b1-037"
+          ]
+        },
+        {
+          "topic": "circulacion",
+          "status": "covered",
+          "questionIds": [
+            "cordoba-capital-b1-013",
+            "cordoba-capital-b1-019",
+            "cordoba-capital-b1-041",
+            "cordoba-capital-b1-042"
+          ]
+        },
+        {
+          "topic": "seguridad",
+          "status": "covered",
+          "questionIds": [
+            "cordoba-capital-b1-014",
+            "cordoba-capital-b1-015",
+            "cordoba-capital-b1-043",
+            "cordoba-capital-b1-050"
+          ]
+        },
+        {
+          "topic": "luces",
+          "status": "covered",
+          "questionIds": [
+            "cordoba-capital-b1-016",
+            "cordoba-capital-b1-017",
+            "cordoba-capital-b1-034"
+          ]
+        },
+        {
+          "topic": "adelantamiento",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-018",
+            "cordoba-capital-b1-036"
+          ]
+        },
+        {
+          "topic": "giros",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-020",
+            "cordoba-capital-b1-035"
+          ]
+        },
+        {
+          "topic": "velocidad",
+          "status": "covered",
+          "questionIds": [
+            "cordoba-capital-b1-021",
+            "cordoba-capital-b1-022",
+            "cordoba-capital-b1-047"
+          ]
+        },
+        {
+          "topic": "distancia",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-023"
+          ]
+        },
+        {
+          "topic": "documentacion",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-024",
+            "cordoba-capital-b1-049"
+          ]
+        },
+        {
+          "topic": "estacionamiento",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-025",
+            "cordoba-capital-b1-026"
+          ]
+        },
+        {
+          "topic": "alcohol",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-027",
+            "cordoba-capital-b1-028"
+          ]
+        },
+        {
+          "topic": "fatiga",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-029"
+          ]
+        },
+        {
+          "topic": "distracciones",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-030",
+            "cordoba-capital-b1-048"
+          ]
+        },
+        {
+          "topic": "seguridad-vehicular",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-031",
+            "cordoba-capital-b1-032"
+          ]
+        },
+        {
+          "topic": "adversas",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-033"
+          ]
+        },
+        {
+          "topic": "autopistas",
+          "status": "partial",
+          "questionIds": [
+            "cordoba-capital-b1-044"
+          ]
+        }
+      ]
+    }
+  ]
+}

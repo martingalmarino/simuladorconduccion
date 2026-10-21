@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "bankId": "cordoba-capital-b1",
-  "title": "Córdoba Capital — Autos: muestra de práctica B1",
-  "coverage": "Muestra introductoria de 20 preguntas. No cubre el temario completo ni reproduce un examen oficial.",
+  "title": "Córdoba Capital — Autos: práctica B1 (ampliación intermedia)",
+  "coverage": "Ampliación intermedia de 50 preguntas originales para práctica de B1 en la ciudad de Córdoba. No representa a toda la provincia ni un examen oficial.",
   "questions": [
     {
       "id": "cordoba-capital-b1-001",
@@ -759,6 +759,1146 @@
       ],
       "contentStatus": "source-checked-draft",
       "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-021",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidad",
+      "prompt": "En Córdoba Capital, frente a una señal de velocidad máxima, ¿qué debés hacer?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-021-o1",
+          "text": "Tomarla como sugerencia si el tránsito fluye más rápido."
+        },
+        {
+          "id": "cordoba-capital-b1-021-o2",
+          "text": "No superar el valor indicado, salvo que otra norma o señal más específica lo modifique."
+        },
+        {
+          "id": "cordoba-capital-b1-021-o3",
+          "text": "Circular siempre 20 km/h por debajo del número mostrado."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-021-o2",
+      "explanation": "La señal de máxima impone un techo de velocidad. El flujo de otros vehículos no autoriza a incumplirla.",
+      "imageId": "velocidad-maxima-40",
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Señales de velocidad máxima; página física de señales"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-022",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidad",
+      "prompt": "En una zona urbana de Córdoba Capital sin señal que indique otro valor, ¿cómo debés regular la velocidad?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-022-o1",
+          "text": "A la máxima que permita el vehículo."
+        },
+        {
+          "id": "cordoba-capital-b1-022-o2",
+          "text": "Según los límites generales de la ordenanza y las condiciones de la vía, peatones y tránsito."
+        },
+        {
+          "id": "cordoba-capital-b1-022-o3",
+          "text": "Solo mirando lo que hace el auto de adelante."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-022-o2",
+      "explanation": "La velocidad adecuada combina límites legales y condiciones reales. Imitar al de adelante no reemplaza esa evaluación.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Normas de velocidad"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-023",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "distancia",
+      "prompt": "Circulás detrás de otro vehículo en una avenida de Córdoba Capital. ¿Qué distancia corresponde?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-023-o1",
+          "text": "La mínima posible para que no se “meta” nadie."
+        },
+        {
+          "id": "cordoba-capital-b1-023-o2",
+          "text": "Una distancia que permita detenerte si el de adelante frena de golpe."
+        },
+        {
+          "id": "cordoba-capital-b1-023-o3",
+          "text": "Siempre exactamente dos metros."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-023-o2",
+      "explanation": "La distancia de seguridad depende de la velocidad y el estado de la calzada. Circular muy cerca elimina el margen de frenado.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Circulación segura / distancia"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-024",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "documentacion",
+      "prompt": "Para circular con un auto en Córdoba Capital, ¿qué debés llevar además de saber manejar?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-024-o1",
+          "text": "Solo el teléfono con foto de la licencia."
+        },
+        {
+          "id": "cordoba-capital-b1-024-o2",
+          "text": "La licencia habilitante y la documentación del vehículo exigida por la normativa vigente."
+        },
+        {
+          "id": "cordoba-capital-b1-024-o3",
+          "text": "Únicamente la tarjeta de crédito del titular."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-024-o2",
+      "explanation": "La habilitación para conducir y la documentación del vehículo son requisitos de circulación. Una foto informal no reemplaza los instrumentos exigidos.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Documentación / requisitos de circulación"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-025",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "estacionamiento",
+      "prompt": "En Córdoba Capital, ¿podés estacionar sobre una senda peatonal si “es por poco tiempo”?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-025-o1",
+          "text": "Sí, con balizas."
+        },
+        {
+          "id": "cordoba-capital-b1-025-o2",
+          "text": "No: la senda debe quedar libre."
+        },
+        {
+          "id": "cordoba-capital-b1-025-o3",
+          "text": "Sí, los domingos."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-025-o2",
+      "explanation": "La senda peatonal es para el cruce de personas. Estacionar sobre ella es incorrecto aunque la detención sea breve.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Estacionamiento y detención"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-026",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "estacionamiento",
+      "prompt": "Querés dejar el auto en doble fila frente a un colegio en Córdoba Capital. ¿Es correcto?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-026-o1",
+          "text": "Sí, en horario de entrada."
+        },
+        {
+          "id": "cordoba-capital-b1-026-o2",
+          "text": "No: la doble fila obstruye y no es un estacionamiento válido."
+        },
+        {
+          "id": "cordoba-capital-b1-026-o3",
+          "text": "Sí, si el motor queda en marcha."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-026-o2",
+      "explanation": "La doble fila interrumpe la circulación y genera riesgo, especialmente cerca de escuelas. No está habilitada como estacionamiento momentáneo.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Prohibiciones de estacionamiento"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-027",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "alcohol",
+      "prompt": "Antes de manejar en Córdoba Capital consumiste alcohol. ¿Cuál es la conducta correcta?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-027-o1",
+          "text": "Manejar igual si “te sentís bien”."
+        },
+        {
+          "id": "cordoba-capital-b1-027-o2",
+          "text": "No conducir si superás los límites legales de alcoholemia o si no estás en condiciones seguras."
+        },
+        {
+          "id": "cordoba-capital-b1-027-o3",
+          "text": "Manejar solo por calles secundarias."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-027-o2",
+      "explanation": "La alcoholemia tiene límites legales y, además, afecta la capacidad real de conducir. Sentirse bien no es un indicador confiable.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Alcohol y conducción"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-028",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "alcohol",
+      "prompt": "En un control de alcoholemia en Córdoba Capital te piden el test. ¿Qué corresponde?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-028-o1",
+          "text": "Negarte si no hubo accidente."
+        },
+        {
+          "id": "cordoba-capital-b1-028-o2",
+          "text": "Someterte al control según el procedimiento vigente."
+        },
+        {
+          "id": "cordoba-capital-b1-028-o3",
+          "text": "Elegir hacerlo otro día."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-028-o2",
+      "explanation": "Los controles de alcoholemia son parte de la fiscalización del tránsito. La negativa injustificada tiene consecuencias.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Controles de alcoholemia"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-029",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "fatiga",
+      "prompt": "Venís de un viaje largo y llegás muy cansado a Córdoba Capital. ¿Qué es lo más seguro?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-029-o1",
+          "text": "Seguir hasta casa a toda velocidad."
+        },
+        {
+          "id": "cordoba-capital-b1-029-o2",
+          "text": "Descansar antes de seguir conduciendo si la fatiga es importante."
+        },
+        {
+          "id": "cordoba-capital-b1-029-o3",
+          "text": "Tomar café y no reducir nunca la velocidad."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-029-o2",
+      "explanation": "La fatiga aumenta el riesgo de siniestro. Descansar es una medida preventiva concreta, no un lujo.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Conducta segura / factores humanos"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-030",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "distracciones",
+      "prompt": "Mientras manejás en Córdoba Capital, ¿es correcto escribir mensajes en el celular?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-030-o1",
+          "text": "Sí, en semáforos."
+        },
+        {
+          "id": "cordoba-capital-b1-030-o2",
+          "text": "No: distrae y eleva el riesgo de colisión."
+        },
+        {
+          "id": "cordoba-capital-b1-030-o3",
+          "text": "Sí, si usás el dedo meñique."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-030-o2",
+      "explanation": "Manipular el teléfono desvía la vista y la atención. Aunque el auto esté detenido en rojo, la práctica genera hábitos peligrosos y puede estar restringida.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Distracciones al conducir"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-031",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad-vehicular",
+      "prompt": "En Córdoba Capital, el cinturón de seguridad en un auto particular:",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-031-o1",
+          "text": "Es opcional si el airbag funciona."
+        },
+        {
+          "id": "cordoba-capital-b1-031-o2",
+          "text": "Debe usarse según la obligación vigente para conductor y ocupantes."
+        },
+        {
+          "id": "cordoba-capital-b1-031-o3",
+          "text": "Solo es obligatorio en rutas."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-031-o2",
+      "explanation": "El cinturón es un elemento básico de retención. El airbag complementa; no lo reemplaza.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Elementos de seguridad / cinturón"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-032",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad-vehicular",
+      "prompt": "Llevás a un menor en auto en Córdoba Capital. ¿Qué debés usar?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-032-o1",
+          "text": "El regazo de un adulto."
+        },
+        {
+          "id": "cordoba-capital-b1-032-o2",
+          "text": "El sistema de retención infantil adecuado."
+        },
+        {
+          "id": "cordoba-capital-b1-032-o3",
+          "text": "Solo el cinturón de adulto en viajes cortos."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-032-o2",
+      "explanation": "Los niños deben viajar con el dispositivo de retención que corresponda a su edad y talla. El regazo no es un sistema de seguridad.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Seguridad / retención infantil"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-033",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "adversas",
+      "prompt": "Hay niebla densa en Córdoba Capital. ¿Cómo debés conducir?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-033-o1",
+          "text": "Con luces altas fijas para “ver más lejos”."
+        },
+        {
+          "id": "cordoba-capital-b1-033-o2",
+          "text": "Con velocidad reducida, luces adecuadas y mayor distancia de seguimiento."
+        },
+        {
+          "id": "cordoba-capital-b1-033-o3",
+          "text": "Sin luces para no encandilar."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-033-o2",
+      "explanation": "La niebla reduce la visibilidad. Se requiere adaptar velocidad, alumbrado (evitar encandilar) y distancia.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Conducción en condiciones adversas"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-034",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "luces",
+      "prompt": "De noche, en una calle poco iluminada de Córdoba Capital, otro auto viene de frente. ¿Qué luces conviene usar al cruzarlo?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-034-o1",
+          "text": "Altas para imponer respeto."
+        },
+        {
+          "id": "cordoba-capital-b1-034-o2",
+          "text": "Bajas, para no encandilar."
+        },
+        {
+          "id": "cordoba-capital-b1-034-o3",
+          "text": "Solo balizas."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-034-o2",
+      "explanation": "Las luces altas encandilan al sentido contrario. Al cruzarse corresponde pasar a bajas.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Uso de luces"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-035",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "giros",
+      "prompt": "Vas a girar a la izquierda en Córdoba Capital. ¿Qué debés hacer?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-035-o1",
+          "text": "Girar desde cualquier carril sin aviso."
+        },
+        {
+          "id": "cordoba-capital-b1-035-o2",
+          "text": "Señalizar, ubicarte correctamente y ceder el paso a quien corresponda."
+        },
+        {
+          "id": "cordoba-capital-b1-035-o3",
+          "text": "Detenerte en el medio de la intersección sin mirar."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-035-o2",
+      "explanation": "Un giro seguro combina señalización, posición y respeto de prioridades. Improvisar el carril genera conflictos.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Giros"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-036",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "adelantamiento",
+      "prompt": "Hay doble línea continua amarilla en el centro de la calzada en Córdoba Capital. ¿Podés adelantar?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-036-o1",
+          "text": "Sí, si no viene nadie."
+        },
+        {
+          "id": "cordoba-capital-b1-036-o2",
+          "text": "No: esa demarcación prohíbe traspasar/adelantar en ese tramo."
+        },
+        {
+          "id": "cordoba-capital-b1-036-o3",
+          "text": "Sí, con balizas."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-036-o2",
+      "explanation": "La doble continua indica prohibición de adelantar o invadir el sentido contrario. La ausencia momentánea de tránsito no la anula.",
+      "imageId": "doble-linea-continua",
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Demarcación horizontal / adelantamiento"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-037",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "peatones",
+      "prompt": "Un peatón cruza por la esquina en Córdoba Capital con tu semáforo en verde pero él ya inició el cruce. ¿Qué corresponde?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-037-o1",
+          "text": "Pasar porque tu semáforo está en verde."
+        },
+        {
+          "id": "cordoba-capital-b1-037-o2",
+          "text": "Permitirle completar el cruce con precaución; no atropellar ni forzar."
+        },
+        {
+          "id": "cordoba-capital-b1-037-o3",
+          "text": "Tocarle bocina para que vuelva."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-037-o2",
+      "explanation": "Aunque tengas luz verde, debés cuidar a quien ya está cruzando. La prioridad de no dañar prevalece sobre “tener permiso de avanzar”.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Peatones / intersecciones"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-038",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades",
+      "prompt": "Llegás a un cruce sin semáforo en Córdoba Capital y otro vehículo se acerca por tu derecha. ¿Qué suele aplicar?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-038-o1",
+          "text": "Prioridad siempre para quien viene de la izquierda."
+        },
+        {
+          "id": "cordoba-capital-b1-038-o2",
+          "text": "La regla de prioridad a la derecha, salvo señalización o norma específica en contrario."
+        },
+        {
+          "id": "cordoba-capital-b1-038-o3",
+          "text": "Prioridad para el que toque bocina primero."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-038-o2",
+      "explanation": "En ausencia de semáforo u otra señal, la prioridad a la derecha es el criterio habitual. Hay que verificar excepciones señalizadas.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Prioridad de paso"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-039",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "senalizacion",
+      "prompt": "Ante una señal PARE en Córdoba Capital, ¿alcanza con reducir la velocidad sin detenerse si no hay nadie?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-039-o1",
+          "text": "Sí."
+        },
+        {
+          "id": "cordoba-capital-b1-039-o2",
+          "text": "No: debés detenerte y recién continuar cuando sea seguro."
+        },
+        {
+          "id": "cordoba-capital-b1-039-o3",
+          "text": "Solo de noche."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-039-o2",
+      "explanation": "PARE exige detención efectiva. La ausencia aparente de tránsito no convierte la señal en un simple aviso de precaución.",
+      "imageId": "pare",
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Señal PARE; página física de señales"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-040",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "senalizacion",
+      "prompt": "La señal CEDA EL PASO en Córdoba Capital te indica:",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-040-o1",
+          "text": "Que tenés prioridad absoluta."
+        },
+        {
+          "id": "cordoba-capital-b1-040-o2",
+          "text": "Que debés ceder el paso a quienes tienen prioridad y avanzar solo si no los afectás."
+        },
+        {
+          "id": "cordoba-capital-b1-040-o3",
+          "text": "Que podés estacionar en la esquina."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-040-o2",
+      "explanation": "CEDA no es un stop necesariamente, pero sí obliga a no interferir con quienes tienen prioridad. Si hace falta, te detenés.",
+      "imageId": "ceda-el-paso",
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Señal CEDA EL PASO"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-041",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "circulacion",
+      "prompt": "En una calle de un solo sentido en Córdoba Capital, ¿podés circular en contra?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-041-o1",
+          "text": "Sí, de madrugada."
+        },
+        {
+          "id": "cordoba-capital-b1-041-o2",
+          "text": "No: debés respetar el sentido de circulación."
+        },
+        {
+          "id": "cordoba-capital-b1-041-o3",
+          "text": "Sí, si es por una cuadra."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-041-o2",
+      "explanation": "El sentido de la vía es obligatorio. Circular a contramano es una infracción grave y muy peligrosa.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Sentido de circulación"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-042",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "circulacion",
+      "prompt": "Un agente de tránsito en Córdoba Capital te indica detenerte aunque el semáforo esté en verde. ¿Qué prevalece?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-042-o1",
+          "text": "El semáforo."
+        },
+        {
+          "id": "cordoba-capital-b1-042-o2",
+          "text": "La indicación del agente."
+        },
+        {
+          "id": "cordoba-capital-b1-042-o3",
+          "text": "Tu criterio personal."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-042-o2",
+      "explanation": "Las indicaciones de la autoridad de control prevalecen sobre las señales automáticas en ese momento.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Jerarquía de las indicaciones"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-043",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad",
+      "prompt": "Antes de abrir la puerta del auto en Córdoba Capital junto al tránsito, ¿qué debés controlar?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-043-o1",
+          "text": "Nada: la puerta tiene prioridad."
+        },
+        {
+          "id": "cordoba-capital-b1-043-o2",
+          "text": "Que no se acerquen vehículos, ciclistas o monopatines por ese lado."
+        },
+        {
+          "id": "cordoba-capital-b1-043-o3",
+          "text": "Solo el espejo interior."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-043-o2",
+      "explanation": "Abrir la puerta sin mirar puede provocar un siniestro con quienes circulan al costado. Es una precaución básica de convivencia.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Seguridad al ascender/descender"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-044",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "autopistas",
+      "prompt": "Si circulás por una vía rápida de acceso en el ámbito de Córdoba Capital, ¿qué conducta es adecuada?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-044-o1",
+          "text": "Detenerte sobre la calzada para ver el mapa."
+        },
+        {
+          "id": "cordoba-capital-b1-044-o2",
+          "text": "Mantener velocidad acorde, usar los carriles correctamente y no circular ni detenerte de forma indebida sobre la vía."
+        },
+        {
+          "id": "cordoba-capital-b1-044-o3",
+          "text": "Circular por la banquina para “ir más rápido”."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-044-o2",
+      "explanation": "En vías rápidas la detención indebida y el mal uso de carriles/banquina son especialmente peligrosos.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Vías de circulación rápida / prohibiciones"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-045",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos",
+      "prompt": "El semáforo está en amarillo fijo (no intermitente) al llegar a un cruce en Córdoba Capital y podés detenerme con seguridad. ¿Qué corresponde?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-045-o1",
+          "text": "Acelerar para pasar sí o sí."
+        },
+        {
+          "id": "cordoba-capital-b1-045-o2",
+          "text": "Detenerte si es seguro hacerlo; el amarillo advierte el cambio a rojo."
+        },
+        {
+          "id": "cordoba-capital-b1-045-o3",
+          "text": "Tratarlo como verde."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-045-o2",
+      "explanation": "El amarillo fijo advierte la transición. Si podés frenar con seguridad, debés hacerlo; acelerar es la conducta riesgosa.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Semáforos — luz amarilla"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-046",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades",
+      "prompt": "En un cruce de Córdoba Capital hay señal PARE solo para tu calle. El otro flujo no tiene PARE. ¿Quién avanza primero?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-046-o1",
+          "text": "Vos, porque llegaste antes."
+        },
+        {
+          "id": "cordoba-capital-b1-046-o2",
+          "text": "Quienes circulan por la vía sin obligación de PARE, luego vos tras detenerte y verificar."
+        },
+        {
+          "id": "cordoba-capital-b1-046-o3",
+          "text": "El que tenga el auto más nuevo."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-046-o2",
+      "explanation": "PARE te impone detención y cesión. La otra corriente no tiene esa obligación por esa señal.",
+      "imageId": "pare",
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "PARE y prioridades"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-047",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidad",
+      "prompt": "La señal indica máxima 40 y el tránsito “empuja” a ir más rápido en Córdoba Capital. ¿Qué hacés?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-047-o1",
+          "text": "Adaptarte al más rápido."
+        },
+        {
+          "id": "cordoba-capital-b1-047-o2",
+          "text": "Respetar la máxima señalizada."
+        },
+        {
+          "id": "cordoba-capital-b1-047-o3",
+          "text": "Ir a 60 “para no entorpecer”."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-047-o2",
+      "explanation": "La máxima señalizada es el límite legal del tramo. La presión del tránsito no la deroga.",
+      "imageId": "velocidad-maxima-40",
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Velocidad máxima señalizada"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-048",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "distracciones",
+      "prompt": "Ajustar el GPS con el vehículo en movimiento en una avenida céntrica de Córdoba Capital es:",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-048-o1",
+          "text": "Recomendable para no perderte."
+        },
+        {
+          "id": "cordoba-capital-b1-048-o2",
+          "text": "Una distracción; conviene configurarlo detenido en lugar seguro."
+        },
+        {
+          "id": "cordoba-capital-b1-048-o3",
+          "text": "Obligatorio por ordenanza."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-048-o2",
+      "explanation": "Configurar dispositivos en marcha resta atención a la vía. La práctica segura es hacerlo antes o detenido donde esté permitido.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Distracciones"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-049",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "documentacion",
+      "prompt": "Tu licencia está vencida y querés manejar igual “hasta renovarla la semana que viene” en Córdoba Capital. ¿Es correcto?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-049-o1",
+          "text": "Sí, con DNI."
+        },
+        {
+          "id": "cordoba-capital-b1-049-o2",
+          "text": "No: necesitás estar habilitado con licencia vigente."
+        },
+        {
+          "id": "cordoba-capital-b1-049-o3",
+          "text": "Sí, si el auto tiene seguro."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-049-o2",
+      "explanation": "La licencia vigente es el instrumento que habilita a conducir. El seguro del vehículo no sustituye esa habilitación personal.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Licencia de conducir"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-050",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad",
+      "prompt": "Detectás una falla grave de frenos antes de salir en Córdoba Capital. ¿Qué corresponde?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-050-o1",
+          "text": "Salir igual a baja velocidad."
+        },
+        {
+          "id": "cordoba-capital-b1-050-o2",
+          "text": "No circular hasta resolver la falla de seguridad."
+        },
+        {
+          "id": "cordoba-capital-b1-050-o3",
+          "text": "Usar solo el freno de mano en cada esquina."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-050-o2",
+      "explanation": "Circular con frenos en mal estado es un riesgo inaceptable. La seguridad del vehículo es condición previa a manejar.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Condiciones de seguridad del vehículo"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
       "humanReviewedAt": null,
       "humanReviewer": null,
       "authorship": "original-editorial",

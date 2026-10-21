@@ -1,13 +1,14 @@
 ---
-import type { JurisdictionConfig } from '../types/content';
+import type { JurisdictionConfig, UpcomingTest } from '../types/content';
 
 interface Props {
   jurisdictions: JurisdictionConfig[];
+  upcomingTests: UpcomingTest[];
   questionCount: number;
   notice: string;
 }
 
-const { jurisdictions, questionCount, notice } = Astro.props;
+const { jurisdictions, upcomingTests, questionCount, notice } = Astro.props;
 const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
 ---
 
@@ -21,6 +22,19 @@ const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
       </svg>
       <span class="launch-select__value">Autos · Clase B1</span>
     </div>
+    {
+      upcomingTests.length > 0 && (
+        <p class="launch-upcoming-note">
+          Próximamente:{' '}
+          {upcomingTests.map((test, index) => (
+            <span>
+              {index > 0 ? ' · ' : ''}
+              <a href={`/test-de-conducir/${test.slug}/`}>Categoría {test.licenseClass}</a>
+            </span>
+          ))}
+        </p>
+      )
+    }
   </div>
 
   <div class="launch-field">
@@ -61,6 +75,15 @@ const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
   .launch-select__value {
     font-weight: 600;
     color: var(--td-ink);
+  }
+  .launch-upcoming-note {
+    margin: 0.55rem 0 0;
+    font-size: 0.82rem;
+    color: var(--td-muted);
+    line-height: 1.45;
+  }
+  .launch-upcoming-note a {
+    font-weight: 700;
   }
 </style>
 

@@ -15,8 +15,8 @@ Preparado el 20 de octubre de 2026 para desarrollar en Cursor.
 | Entregable | Contenido |
 |---|---|
 | `CURSOR_PROMPT.txt` | Instrucciones de implementación en inglés; toda la interfaz será en español argentino |
-| `data/caba-b1.json` | 20 preguntas originales de práctica para autos en CABA |
-| `data/cordoba-capital-b1.json` | 20 preguntas originales de práctica para autos en Córdoba Capital |
+| `data/caba-b1.json` | 50 preguntas originales de práctica para autos en CABA |
+| `data/cordoba-capital-b1.json` | 50 preguntas originales de práctica para autos en Córdoba Capital |
 | `data/sources.json` | Fuentes oficiales con URL y fecha de consulta |
 | `data/assets.json` y `public/images/questions/` | 7 ilustraciones SVG propias, dimensiones y texto alternativo |
 | `data/site-config.json` | Alcance, modalidades y configuración de publicación |

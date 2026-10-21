@@ -16,8 +16,8 @@ Indexación indicada para producción; en preview todas llevan noindex.
 |---|---|---|
 | `/` | Presentación y elección de jurisdicción | Sí |
 | `/test-de-conducir/` | Directorio de bancos; explicar sus alcances y cómo elegir | Sí, con contenido distinto de inicio |
-| `/test-de-conducir/caba/` | Estudio y práctica de autos en CABA; 20 preguntas en HTML | Sí |
-| `/test-de-conducir/cordoba-capital/` | Estudio y práctica de autos en la ciudad de Córdoba; 20 preguntas en HTML | Sí |
+| `/test-de-conducir/caba/` | Estudio y práctica de autos en CABA; ~50 preguntas en HTML | Sí |
+| `/test-de-conducir/cordoba-capital/` | Estudio y práctica de autos en la ciudad de Córdoba; ~50 preguntas en HTML | Sí |
 | `/fuentes-y-metodologia/` | Procedencia, revisión, alcance y correcciones | Sí |
 | `/practicar/caba/` | Sesión interactiva de CABA | No |
 | `/practicar/cordoba-capital/` | Sesión interactiva de Córdoba Capital | No |
@@ -42,7 +42,7 @@ La referencia HTML conserva el concepto anterior. Su alcance era más amplio: la
 | Tipografía | Sistema al principio; mínimo 16 px para contenido y controles |
 | Interacción | Foco visible, estados seleccionados y feedback con texto |
 
-Inicio sugerido: “Prepará tu examen teórico de conducir”. Bajada: “Practicá para autos con preguntas explicadas. Elegí CABA o Córdoba Capital y empezá a repasar.” Aclarar cerca del selector que es una muestra introductoria, con el conteo calculado del banco.
+Inicio sugerido: “Prepará tu examen teórico de conducir”. Bajada: “Practicá para autos con preguntas explicadas. Elegí CABA o Córdoba Capital y empezá a repasar.” Aclarar cerca del selector que es una ampliación intermedia, con el conteo calculado del banco.
 
 Dos tarjetas de jurisdicción permiten elegir de inmediato. Autos es el alcance activo; no pedir al usuario elegir entre categorías vacías. CTA: “Empezar a practicar”. Acceso secundario: “Estudiar las preguntas”.
 

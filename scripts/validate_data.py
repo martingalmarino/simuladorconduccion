@@ -61,7 +61,7 @@ def main():
         check(bank['bankId'] == j['bankId'], 'Bank ID mismatch')
         check(bank['schemaVersion'] == '1.0.0', 'Unknown schema version')
         questions = bank['questions']
-        check(len(questions) == 20, f"Starter bank needs 20 questions: {j['bankId']}")
+        check(len(questions) == 50, f"Intermediate bank needs 50 questions: {j['bankId']}")
         prompts = set()
         positions = Counter()
         for q in questions:
@@ -101,7 +101,7 @@ def main():
     check(used_assets == set(assets), 'Unreferenced assets')
     check(config['officialExamMode']['enabled'] is False, 'Official mode enabled without verification')
     check(config['indexableProduction'] is False and config['siteUrl'] is None, 'Starter publication defaults changed')
-    check(len(all_ids) == 40, 'Total must be 40 questions')
+    check(len(all_ids) == 100, 'Total must be 100 questions')
     if errors:
         print('\n'.join('ERROR: '+e for e in errors), file=sys.stderr)
         return 1

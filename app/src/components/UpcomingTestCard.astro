@@ -1,0 +1,26 @@
+---
+import type { UpcomingTest } from '../types/content';
+
+interface Props {
+  test: UpcomingTest;
+}
+
+const { test } = Astro.props;
+const href = `/test-de-conducir/${test.slug}/`;
+---
+
+<article class="card upcoming-card">
+  <div class="upcoming-card__top">
+    <p class="kicker">Test teórico</p>
+    <span class="badge badge--soon">Próximamente</span>
+  </div>
+  <h2>
+    <a href={href}>{test.title}</a>
+  </h2>
+  <p class="upcoming-card__subtitle">{test.subtitle}</p>
+  <p class="muted">
+    Categoría {test.licenseClass}. El banco de preguntas todavía no está publicado, así que esta
+    práctica no se puede empezar.
+  </p>
+  <a class="btn btn--secondary" href={href}>Ver el anuncio</a>
+</article>

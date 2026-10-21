@@ -33,30 +33,6 @@
   ],
   "jurisdictions": [
     {
-      "id": "ar-caba",
-      "label": "CABA",
-      "slug": "caba",
-      "bankId": "caba-b1",
-      "geographicScope": "Ciudad Autónoma de Buenos Aires",
-      "licenseClasses": [
-        "B1"
-      ],
-      "fullSyllabus": false,
-      "scopeKind": "local"
-    },
-    {
-      "id": "ar-x-cordoba-capital",
-      "label": "Córdoba Capital",
-      "slug": "cordoba-capital",
-      "bankId": "cordoba-capital-b1",
-      "geographicScope": "Ciudad de Córdoba; no toda la provincia",
-      "licenseClasses": [
-        "B1"
-      ],
-      "fullSyllabus": false,
-      "scopeKind": "local"
-    },
-    {
       "id": "ar-nacional",
       "label": "Argentina — práctica general",
       "slug": "argentina",
@@ -102,6 +78,30 @@
         "scopeLabel": "Marco nacional · Autos",
         "sourceCheckedAt": "2026-10-21"
       }
+    },
+    {
+      "id": "ar-caba",
+      "label": "CABA",
+      "slug": "caba",
+      "bankId": "caba-b1",
+      "geographicScope": "Ciudad Autónoma de Buenos Aires",
+      "licenseClasses": [
+        "B1"
+      ],
+      "fullSyllabus": false,
+      "scopeKind": "local"
+    },
+    {
+      "id": "ar-x-cordoba-capital",
+      "label": "Córdoba Capital",
+      "slug": "cordoba-capital",
+      "bankId": "cordoba-capital-b1",
+      "geographicScope": "Ciudad de Córdoba; no toda la provincia",
+      "licenseClasses": [
+        "B1"
+      ],
+      "fullSyllabus": false,
+      "scopeKind": "local"
     }
   ],
   "plannedClasses": [

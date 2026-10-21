@@ -32,18 +32,18 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Prepará tu examen teórico de conducir',
+    name: 'Test de conducir Argentina | Practicá el examen teórico',
     inLanguage: runtime.locale,
     description:
-      'Practicá el teórico de autos para CABA y Córdoba Capital, con preguntas explicadas y fuentes.',
+      'Prepará el examen teórico de conducir con tests por jurisdicción, respuestas explicadas y preguntas con imágenes. Practicá online y repasá tus errores.',
     ...(pageUrl ? { url: pageUrl } : {}),
   },
 ];
 ---
 
 <Layout
-  title="Test de conducir: practicá para CABA y Córdoba Capital"
-  description={`Practicá el teórico de conducir para autos con ${questionCount} preguntas explicadas por ciudad: CABA y Córdoba Capital. No es un examen oficial.`}
+  title="Test de conducir Argentina | Practicá el examen teórico"
+  description="Prepará el examen teórico de conducir con tests por jurisdicción, respuestas explicadas y preguntas con imágenes. Practicá online y repasá tus errores."
   pathname="/"
   jsonLd={jsonLd}
   fullBleed={true}

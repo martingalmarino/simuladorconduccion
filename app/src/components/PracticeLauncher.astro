@@ -48,12 +48,15 @@ const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
         {
           jurisdictions.map((j) => (
             <option value={j.slug} selected={j.slug === defaultSlug}>
-              {j.label} — {j.geographicScope}
+              {j.label}
             </option>
           ))
         }
       </select>
     </div>
+    <p class="launch-scope" id="launch-scope" aria-live="polite">
+      {jurisdictions.find((j) => j.slug === defaultSlug)?.geographicScope}
+    </p>
   </div>
 
   <button class="btn btn--primary btn--block btn--lg" type="submit">
@@ -85,14 +88,31 @@ const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
   .launch-upcoming-note a {
     font-weight: 700;
   }
+  .launch-scope {
+    margin: 0.45rem 0 0;
+    font-size: 0.82rem;
+    color: var(--td-muted);
+    line-height: 1.4;
+  }
+  .launch-select select {
+    text-overflow: ellipsis;
+  }
 </style>
 
-<script>
+<script
+  define:vars={{
+    scopes: Object.fromEntries(jurisdictions.map((j) => [j.slug, j.geographicScope])),
+  }}
+>
   const form = document.getElementById('empezar');
   const place = document.getElementById('launch-place');
+  const scope = document.getElementById('launch-scope');
   if (form instanceof HTMLFormElement && place instanceof HTMLSelectElement) {
     const sync = () => {
       form.action = `/practicar/${place.value}/`;
+      if (scope) {
+        scope.textContent = scopes[place.value] ?? '';
+      }
     };
     place.addEventListener('change', sync);
     sync();

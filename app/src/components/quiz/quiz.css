@@ -134,6 +134,36 @@
   margin-top: 1.25rem;
 }
 
+@media (max-width: 560px) {
+  .quiz-app .card,
+  .quiz-setup,
+  .quiz-card,
+  .results-summary {
+    padding: 1.1rem;
+  }
+
+  .quiz-setup .mode-grid,
+  .quiz-setup .count-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-nav {
+    flex-direction: column;
+  }
+
+  .quiz-nav .btn {
+    width: 100%;
+  }
+
+  .quiz-option {
+    padding: 0.9rem 0.85rem;
+  }
+
+  .quiz-card h2 {
+    font-size: 1.1rem;
+  }
+}
+
 .quiz-setup label {
   display: block;
   font-weight: 700;

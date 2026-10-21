@@ -3,7 +3,7 @@
   "bankId": "argentina-b1",
   "selectorEntry": {
     "id": "ar-nacional",
-    "label": "Argentina — práctica general",
+    "label": "Argentina: práctica general",
     "slug": "argentina",
     "bankId": "argentina-b1",
     "scopeKind": "national-framework",
@@ -47,7 +47,7 @@
   },
   "page": {
     "title": "Test de conducir nacional: 50 preguntas explicadas",
-    "h1": "Test de conducir Argentina — práctica general",
+    "h1": "Test de conducir Argentina: práctica general",
     "description": "Practicá con 50 preguntas para autos sobre normativa nacional, señales y seguridad vial. Respuestas explicadas y fuentes para preparar el examen teórico.",
     "intro": "Practicá conocimientos generales para conducir autos con 50 preguntas basadas en la Ley Nacional de Tránsito y su reglamentación. Cada respuesta incluye una explicación y la fuente consultada.",
     "notice": "Práctica independiente sobre el marco nacional. No es un examen oficial ni reemplaza la preparación específica de tu jurisdicción.",

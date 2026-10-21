@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "bankId": "caba-b1",
-  "title": "CABA — Autos: práctica B1",
+  "title": "CABA: práctica B1 para autos",
   "coverage": "Práctica para autos en CABA. No es el temario completo del examen ni un examen oficial.",
   "questions": [
     {
@@ -868,7 +868,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 4 — Sueño y fatiga"
+          "locator": "Capítulo 4: Sueño y fatiga"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -901,12 +901,12 @@
         }
       ],
       "correctOptionId": "caba-b1-024-o3",
-      "explanation": "Las distracciones —incluido el uso del teléfono— reducen la capacidad de percibir riesgos. El material de estudio las trata como factor crítico de inseguridad vial.",
+      "explanation": "Las distracciones, incluido el uso del teléfono, reducen la capacidad de percibir riesgos. El material de estudio las trata como factor crítico de inseguridad vial.",
       "imageId": null,
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 4 — Distracciones"
+          "locator": "Capítulo 4: Distracciones"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -944,7 +944,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 3 — Uso de luces"
+          "locator": "Capítulo 3: Uso de luces"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1058,7 +1058,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 3 — Detención y estacionamiento"
+          "locator": "Capítulo 3: Detención y estacionamiento"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1096,7 +1096,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 3 — Giros en intersecciones"
+          "locator": "Capítulo 3: Giros en intersecciones"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1172,7 +1172,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 2 — Scoring"
+          "locator": "Capítulo 2: Scoring"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1210,7 +1210,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 2 — Documentación obligatoria"
+          "locator": "Capítulo 2: Documentación obligatoria"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1248,7 +1248,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 2 — Obligaciones en caso de incidentes viales"
+          "locator": "Capítulo 2: Obligaciones en caso de incidentes viales"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1286,7 +1286,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Anexo II — Elementos de seguridad"
+          "locator": "Anexo II: Elementos de seguridad"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1324,7 +1324,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Anexo II — Elementos de seguridad / retención infantil"
+          "locator": "Anexo II: Elementos de seguridad / retención infantil"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1362,7 +1362,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 1 — Bicicleta / prioridad peatonal"
+          "locator": "Capítulo 1: Bicicleta / prioridad peatonal"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1400,7 +1400,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 1 — Prioridad peatonal"
+          "locator": "Capítulo 1: Prioridad peatonal"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1438,7 +1438,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 3 — Conducción en situaciones adversas"
+          "locator": "Capítulo 3: Conducción en situaciones adversas"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1476,7 +1476,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 5 — Conducción preventiva y eficiente"
+          "locator": "Capítulo 5: Conducción preventiva y eficiente"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1514,7 +1514,7 @@
       "sources": [
         {
           "sourceId": "caba-2148",
-          "locator": "Prioridades de paso — rotondas"
+          "locator": "Prioridades de paso: rotondas"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1590,7 +1590,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 3 — Adelantamiento y sobrepaso"
+          "locator": "Capítulo 3: Adelantamiento y sobrepaso"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1628,7 +1628,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Anexo V — Señales reglamentarias"
+          "locator": "Anexo V: Señales reglamentarias"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1666,7 +1666,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 3 / conducción preventiva — distancia"
+          "locator": "Capítulo 3 / conducción preventiva: distancia"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1780,7 +1780,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 4 — Ingesta de alcohol y drogas"
+          "locator": "Capítulo 4: Ingesta de alcohol y drogas"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1818,7 +1818,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Capítulo 4 — Distracciones"
+          "locator": "Capítulo 4: Distracciones"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1856,7 +1856,7 @@
       "sources": [
         {
           "sourceId": "caba-2148",
-          "locator": "Estacionamiento — restricciones y reservas"
+          "locator": "Estacionamiento: restricciones y reservas"
         }
       ],
       "contentStatus": "source-checked-draft",
@@ -1894,7 +1894,7 @@
       "sources": [
         {
           "sourceId": "caba-manual-2023",
-          "locator": "Anexo V — Señales preventivas"
+          "locator": "Anexo V: Señales preventivas"
         }
       ],
       "contentStatus": "source-checked-draft",

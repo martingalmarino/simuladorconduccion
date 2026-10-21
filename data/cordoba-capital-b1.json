@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "bankId": "cordoba-capital-b1",
-  "title": "Córdoba Capital — Autos: práctica B1",
+  "title": "Córdoba Capital: práctica B1 para autos",
   "coverage": "Práctica para autos en la ciudad de Córdoba. No aplica a toda la provincia ni es un examen oficial.",
   "questions": [
     {
@@ -1704,7 +1704,7 @@
       "sources": [
         {
           "sourceId": "cordoba-9981",
-          "locator": "Semáforos — luz amarilla"
+          "locator": "Semáforos: luz amarilla"
         }
       ],
       "contentStatus": "source-checked-draft",

@@ -443,6 +443,11 @@ a.btn--ghost {
   font-size: 0.95rem;
 }
 
+.notice + .btn-row,
+.btn-row + .notice {
+  margin-top: 1.5rem;
+}
+
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;

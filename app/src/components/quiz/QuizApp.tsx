@@ -545,8 +545,7 @@ export default function QuizApp(props: QuizAppProps) {
                   return (
                     <li key={id} className="card" style={{ boxShadow: 'none' }}>
                       <p className="muted" style={{ margin: '0 0 0.35rem', fontSize: '0.85rem' }}>
-                        {unanswered ? 'Sin responder' : 'Incorrecta'} · {topicLabel(q.topic)} ·{' '}
-                        {id}
+                        {unanswered ? 'Sin responder' : 'Incorrecta'} · {topicLabel(q.topic)}
                       </p>
                       <p style={{ margin: '0 0 0.5rem', fontWeight: 600 }}>{q.prompt}</p>
                       <p>

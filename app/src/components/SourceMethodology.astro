@@ -1,0 +1,52 @@
+---
+import { getSiteConfig, getSources } from '../lib/content';
+
+const config = getSiteConfig();
+const sources = getSources();
+---
+
+<section class="stack" aria-labelledby="metodologia-titulo">
+  <h2 id="metodologia-titulo">Cómo se armó este material</h2>
+  <p>
+    Las preguntas son redacciones educativas originales para práctica de autos (alcance B1 introductorio)
+    en dos jurisdicciones: CABA y Córdoba Capital. Cada ítem indica la fuente y el localizador (artículo o
+    página) usados al contrastar la respuesta.
+  </p>
+  <p>
+    Estado editorial actual: <strong>borrador contrastado con fuentes</strong>
+    (<code>source-checked-draft</code>). Eso significa que la preparación cotejó la respuesta con la norma o
+    guía citada. <strong>No</strong> equivale a una revisión humana especializada: los campos de revisor
+    humano están vacíos a propósito.
+  </p>
+  <p>{config.launchReview.note}</p>
+  <p>
+    Esta muestra no cubre el temario completo del examen ni reproduce un banco oficial. El modo de
+    simulacro con tiempo y nota de aprobación oficiales permanece deshabilitado hasta verificar esos
+    requisitos por jurisdicción.
+  </p>
+
+  <h3>Fuentes consultadas</h3>
+  <ul class="source-list">
+    {
+      sources.map((source) => (
+        <li>
+          <a href={source.url} rel="noopener noreferrer" target="_blank">
+            {source.title}
+          </a>
+          <span class="muted">
+            {' '}
+            · {source.publisher} · consultado {source.accessedAt}
+            {source.usage ? ` · ${source.usage}` : ''}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h3>Correcciones y reportes</h3>
+  <p>
+    Todavía no hay un formulario de contacto configurado. Si encontrás un error, copiá el ID de la
+    pregunta (por ejemplo <code>caba-b1-001</code>) y conservalo para enviarlo cuando el sitio publique
+    un canal de reporte.
+  </p>
+</section>

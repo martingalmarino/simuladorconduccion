@@ -1,0 +1,67 @@
+{
+  "siteName": "Test de conducir",
+  "locale": "es-AR",
+  "siteUrl": null,
+  "indexableProduction": false,
+  "officialExamMode": {
+    "enabled": false,
+    "reason": "Formato, duración y umbral oficial no verificados por jurisdicción.",
+    "profiles": []
+  },
+  "practiceModes": [
+    {
+      "id": "learn",
+      "label": "Aprender",
+      "feedback": "immediate",
+      "questionCounts": [
+        10,
+        20
+      ],
+      "timeLimitSeconds": null
+    },
+    {
+      "id": "practice",
+      "label": "Práctica de 20 preguntas",
+      "feedback": "at-end",
+      "questionCounts": [
+        20
+      ],
+      "timeLimitSeconds": null
+    }
+  ],
+  "jurisdictions": [
+    {
+      "id": "ar-caba",
+      "label": "CABA",
+      "slug": "caba",
+      "bankId": "caba-b1",
+      "geographicScope": "Ciudad Autónoma de Buenos Aires",
+      "licenseClasses": [
+        "B1"
+      ],
+      "fullSyllabus": false
+    },
+    {
+      "id": "ar-x-cordoba-capital",
+      "label": "Córdoba Capital",
+      "slug": "cordoba-capital",
+      "bankId": "cordoba-capital-b1",
+      "geographicScope": "Ciudad de Córdoba; no toda la provincia",
+      "licenseClasses": [
+        "B1"
+      ],
+      "fullSyllabus": false
+    }
+  ],
+  "plannedClasses": [
+    "A",
+    "C",
+    "D",
+    "E"
+  ],
+  "notice": "Material de práctica independiente. No es un examen oficial ni garantiza la aprobación.",
+  "launchReview": {
+    "humanContentReviewComplete": false,
+    "note": "Fuente contrastada durante preparación; pendiente revisión editorial humana antes de lanzamiento público."
+  }
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Las prácticas llevan noindex en meta robots; no se bloquean aquí
+# para que el rastreador pueda leer esa directiva.

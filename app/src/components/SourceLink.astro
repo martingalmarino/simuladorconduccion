@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  url: string;
+  locator: string;
+  accessedAt: string;
+  publisher?: string;
+}
+
+const { title, url, locator, accessedAt, publisher } = Astro.props;
+---
+
+<a href={url} rel="noopener noreferrer" target="_blank">
+  {title}
+</a>
+{' '}
+<span class="muted">
+  ({locator}
+  {publisher ? ` · ${publisher}` : ''}
+  {' · '}
+  consultado {accessedAt})
+</span>

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "caba-2148",
+    "title": "Código de Tránsito y Transporte de CABA — Ley 2148, texto actualizado",
+    "publisher": "Argentina.gob.ar — Normativa",
+    "jurisdictionId": "ar-caba",
+    "url": "https://www.argentina.gob.ar/normativa/provincial/ley-2148-123456789-0abc-defg-841-2000xvorpyel/actualizacion",
+    "type": "legislation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "cordoba-9981",
+    "title": "Ordenanza 9981 — Código de Tránsito, texto actualizado online",
+    "publisher": "Municipalidad de Córdoba — Digesto",
+    "jurisdictionId": "ar-x-cordoba-capital",
+    "url": "https://static.cordoba.gov.ar/DigestoWeb/pdf/024e6916-4340-43ae-ac55-6c5ffb449e43/TEX_9981.pdf",
+    "type": "legislation",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "cordoba-guia",
+    "title": "Guía de estudio — Normativa general",
+    "publisher": "Municipalidad de Córdoba",
+    "jurisdictionId": "ar-x-cordoba-capital",
+    "url": "https://cordoba.gob.ar/wp-content/uploads/2025/11/Guia-de-estudio-Normativa-general-1.pdf",
+    "type": "official-study-guide",
+    "accessedAt": "2026-10-20"
+  },
+  {
+    "id": "cordoba-preguntero",
+    "title": "Preguntero para conductores",
+    "publisher": "Municipalidad de Córdoba",
+    "jurisdictionId": "ar-x-cordoba-capital",
+    "url": "https://cordoba.gob.ar/wp-content/uploads/2025/11/Preguntero-para-Conductores.pdf",
+    "type": "official-questionnaire",
+    "accessedAt": "2026-10-20",
+    "usage": "Referencia de formato y contraste. No se importa el banco ni se copian sus ilustraciones."
+  }
+]

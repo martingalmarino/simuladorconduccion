@@ -1,0 +1,79 @@
+---
+import type { Question } from '../types/content';
+import { getAsset, resolveQuestionSources } from '../lib/content';
+import { topicLabel } from '../lib/topics';
+import SourceLink from './SourceLink.astro';
+
+interface Props {
+  question: Question;
+  index: number;
+}
+
+const { question, index } = Astro.props;
+const image = getAsset(question.imageId);
+const sources = resolveQuestionSources(question);
+---
+
+<article class="card study-question" id={question.id}>
+  <p class="muted" style="margin:0 0 0.35rem; font-size:0.9rem;">
+    Pregunta {index} · {topicLabel(question.topic)}
+  </p>
+  <h3 style="font-size:1.05rem; letter-spacing:-0.02em;">{question.prompt}</h3>
+
+  {
+    image && (
+      <figure class="question-image">
+        <img
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+    )
+  }
+
+  <ol class="study-options">
+    {
+      question.options.map((option) => (
+        <li data-correct={option.id === question.correctOptionId ? 'true' : 'false'}>
+          {option.text}
+          {option.id === question.correctOptionId && (
+            <span class="sr-only"> (respuesta correcta)</span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+
+  <details>
+    <summary>Ver respuesta y explicación</summary>
+    <div class="stack" style="margin-top:0.75rem;">
+      <p>
+        <strong>Respuesta correcta:</strong>{' '}
+        {question.options.find((o) => o.id === question.correctOptionId)?.text}
+      </p>
+      <p>{question.explanation}</p>
+      <p class="muted" style="font-size:0.9rem; margin:0;">
+        Fecha de consulta de fuente: {question.sourceCheckedAt}
+      </p>
+      <ul class="source-list">
+        {
+          sources.map((source) => (
+            <li>
+              <SourceLink
+                title={source.title}
+                url={source.url}
+                locator={source.locator}
+                accessedAt={source.accessedAt}
+                publisher={source.publisher}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </details>
+</article>

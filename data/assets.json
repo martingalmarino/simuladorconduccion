@@ -1,0 +1,72 @@
+[
+  {
+    "id": "semaforo-rojo",
+    "src": "/images/questions/semaforo-rojo.svg",
+    "alt": "Semáforo de tres luces con la luz superior roja encendida.",
+    "width": 640,
+    "height": 400,
+    "origin": "original-vector",
+    "createdAt": "2026-10-20",
+    "note": "Ilustración educativa simplificada; no es un plano técnico de fabricación."
+  },
+  {
+    "id": "semaforo-amarillo-intermitente",
+    "src": "/images/questions/semaforo-amarillo-intermitente.svg",
+    "alt": "Semáforo con la luz central amarilla y la indicación de que funciona de forma intermitente.",
+    "width": 640,
+    "height": 400,
+    "origin": "original-vector",
+    "createdAt": "2026-10-20",
+    "note": "Ilustración educativa simplificada; no es un plano técnico de fabricación."
+  },
+  {
+    "id": "semaforo-rojo-intermitente",
+    "src": "/images/questions/semaforo-rojo-intermitente.svg",
+    "alt": "Semáforo con la luz superior roja y la indicación de que funciona de forma intermitente.",
+    "width": 640,
+    "height": 400,
+    "origin": "original-vector",
+    "createdAt": "2026-10-20",
+    "note": "Ilustración educativa simplificada; no es un plano técnico de fabricación."
+  },
+  {
+    "id": "doble-linea-continua",
+    "src": "/images/questions/doble-linea-continua.svg",
+    "alt": "Calzada con dos líneas amarillas continuas paralelas en el centro.",
+    "width": 640,
+    "height": 400,
+    "origin": "original-vector",
+    "createdAt": "2026-10-20",
+    "note": "Ilustración educativa simplificada; no es un plano técnico de fabricación."
+  },
+  {
+    "id": "pare",
+    "src": "/images/questions/pare.svg",
+    "alt": "Señal octogonal roja con borde blanco y la palabra PARE.",
+    "width": 640,
+    "height": 400,
+    "origin": "original-vector",
+    "createdAt": "2026-10-20",
+    "note": "Ilustración educativa simplificada; no es un plano técnico de fabricación."
+  },
+  {
+    "id": "ceda-el-paso",
+    "src": "/images/questions/ceda-el-paso.svg",
+    "alt": "Señal triangular con la punta hacia abajo, centro blanco y borde rojo.",
+    "width": 640,
+    "height": 400,
+    "origin": "original-vector",
+    "createdAt": "2026-10-20",
+    "note": "Ilustración educativa simplificada; no es un plano técnico de fabricación."
+  },
+  {
+    "id": "velocidad-maxima-40",
+    "src": "/images/questions/velocidad-maxima-40.svg",
+    "alt": "Señal circular blanca con borde rojo y el número 40 en negro.",
+    "width": 640,
+    "height": 400,
+    "origin": "original-vector",
+    "createdAt": "2026-10-20",
+    "note": "Ilustración educativa simplificada; no es un plano técnico de fabricación."
+  }
+]

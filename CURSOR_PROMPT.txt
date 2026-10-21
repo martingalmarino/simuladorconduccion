@@ -1,0 +1,63 @@
+Build the first working version of an Argentine driving theory practice website from this package. Do the implementation, not just a plan. All user-facing copy must use natural Argentine Spanish. Do not publish or deploy automatically.
+
+READ FIRST
+Read LEEME.md, docs/ARQUITECTURA-Y-DISENO.md, docs/SEO-GEO-AEO.md, docs/FUENTES-Y-ALCANCE.md, all data/*.json, and reference/concepto-visual-aprobado.html. Treat the reference HTML as visual direction only. The current scope and data configuration override the broader mockup options. Preserve the supplied package. Create the application in app/ unless this is already an existing application, in which case inspect its conventions and integrate without overwriting unrelated work.
+
+PRODUCT
+This is an independent practice resource, initially for passenger-car learners in CABA and Córdoba Capital. There are exactly two banks with 20 questions each. Coverage is introductory B1-related material, not a complete B1 syllabus, not B2 towing training, and not an official examination bank. Do not invent additional questions, official requirements, counts, testimonials, teachers, approvals, pass rates, or institutional endorsements. Do not enable other jurisdictions or vehicle classes just because they appear in the old concept.
+
+Build two experiences:
+1. Aprender: the user chooses 10 or 20 questions; correction, explanation and source appear after each submitted answer. No timer.
+2. Práctica de 20 preguntas: correction appears at the end. No official pass/fail threshold, no timer. Show correct answers / total, percentage, unanswered questions and topics to revisit. Clearly describe this as practice.
+
+Keep the official-exam mode disabled according to site-config.json. Future official profiles must have jurisdiction, supported class, question count, time limit, passing criteria, primary source and verification date. Do not fabricate those values.
+
+TECHNICAL DIRECTION
+For a new project, use Astro with TypeScript, pre-rendered public pages and a small interactive quiz component. Use a React island only if it makes the stateful quiz materially simpler; do not hydrate the whole page. Use current compatible dependencies from official documentation and create a lockfile. If an existing project uses an appropriate SSR framework, preserve it and achieve equivalent server-readable HTML.
+
+The first build does not need authentication, a database, payments, an external CMS or an AI API. Use the supplied JSON as the single source of truth. Keep content loading, validation, session logic and UI separate. Never execute or render arbitrary HTML from JSON. Copy the supplied SVG files into the app's public/images/questions directory without modifying the traffic symbols.
+
+Suggested boundaries: shared Layout, SEOHead, Header, Footer, Breadcrumbs, JurisdictionCard, PracticeConfigurator, QuestionCard, AnswerOption, ExplanationPanel, SourceLink, SessionProgress, ResultsSummary, StudyQuestion and SourceMethodology. Define TypeScript types matching the JSON schema. Validate data at build time and fail with a useful message for missing assets, invalid answer IDs or unresolved sources.
+
+QUESTION ENGINE
+Filter by bank/jurisdiction before selecting questions. Never mix jurisdictions silently. Sample unique question IDs without replacement. For a 10-question practice, distribute selections across available topics when possible. A 20-question practice uses all questions from the selected bank; do not claim these are 20 new questions each time.
+
+Shuffle answer objects while preserving their stable IDs. Compare selected option IDs with correctOptionId, never with their displayed position. Never mutate the imported bank. Store session answers by question ID. A submitted answer in learn mode cannot be changed to improve its score. In end-feedback mode allow revisiting unanswered or answered questions before finishing. Ask for confirmation before ending with unanswered items. Show unanswered items separately, and count them as not correct in the total score.
+
+Freeze question order and option order for each attempt. Refresh may resume a versioned local session, but changed content versions must invalidate incompatible state gracefully. Guard browser storage errors. Keep practice history local, offer an explicit clear-history action, and collect no personal details. A new attempt resets answer state. Back, next and keyboard navigation must work without losing answers. No external request is required to grade an answer.
+
+Show the jurisdiction, class scope and question progress throughout. Resolve optional imageId through assets.json; render an image only when supplied, with its real alt, width and height. Explain corrections using the supplied explanation and an ordinary visible link to the source, including its locator. Display sourceCheckedAt as a source-check date, never as a fictional expert review. Human reviewer fields are null and must not be shown as an approval.
+
+DESIGN
+Use the approved reference's restrained blue-and-white direction, improved for clarity and mobile use. Navy text #14233E; primary blue #234FE4; pale background #F5F7FB; white cards; muted text #53647D; border #DCE3EF. Use readable typography, generous spacing, 12–16px card radii and subtle borders. A system font stack is sufficient; if using a licensed local font, keep the number of weights small and use font-display: swap. Avoid heavy hero photography, gradients everywhere, oversized empty sections and decorative road imagery that competes with the quiz.
+
+Home: concise introduction, two jurisdiction cards with accurate coverage, a direct practice entry, how learning works, topic examples and links to sources. Keep the main action near the top. Initial vehicle scope is Autos, with B1 introductory coverage explained. Do not show five enabled vehicle tabs or a generic national bank that does not exist.
+
+Jurisdiction page: breadcrumb, specific H1, short answer-first description of what is available, practice CTA, exact bank count, topics, useful study content, source links, date and limitations. Render all 20 study questions with options, correct answer and explanation in initial HTML, grouped by topic. Native details elements are acceptable for answers if the content is already in the HTML. Give questions stable fragment IDs so they can be linked directly. Do not create 40 thin pages for individual questions.
+
+Quiz: single focused question card, clear radio-style options, visible selection and submission states, image area with reserved dimensions, unobtrusive progress and an accessible next action. Explanations appear in a readable panel. Error/success states require text or icons as well as color. Results: score, missed items, source-backed explanations and restart/review actions. Do not label a result 'Aprobado' using an invented official threshold.
+
+Support 360px mobile, 768px tablet and desktop layouts without horizontal overflow. Use semantic form controls, fieldset/legend where appropriate, visible keyboard focus, sufficient contrast and touch targets of at least 44px where practical. Move focus intentionally after a question transition and announce feedback politely, not the entire page. Respect reduced-motion preferences. Avoid flashing animations for intermittent lights: the provided static images and text state the condition.
+
+ROUTES AND SEO FROM THE FIRST COMMIT
+Implement the route matrix in docs/ARQUITECTURA-Y-DISENO.md. Public educational content must be delivered as meaningful HTML before JavaScript runs. Navigation links must be real anchors. Practice sessions and results must have noindex and must not appear in the sitemap. Do not create infinite crawlable URLs from options, scores or random sessions.
+
+Use a centralized SEO component with per-page title, description, canonical, robots and social metadata. Set html lang to es-AR. Generate production canonicals and absolute sitemap URLs only from a validated production SITE_URL. Do not fabricate a domain. Default INDEXABLE_PRODUCTION to false and apply noindex to preview builds. Do not output placeholder canonical or social URLs. Add explicit environment documentation and a production readiness check. Do not block noindexed sessions in robots.txt if the crawler must read their meta robots.
+
+Use WebSite and WebPage JSON-LD plus BreadcrumbList where there are real visible breadcrumbs. Use Article only for an actual editorial guide, with real metadata. Optional Quiz/Question markup must accurately match visible educational content; it does not guarantee a Google rich result. No fabricated Organization identity, Person, ratings, FAQ rich-result promise or QAPage for authored study questions. Do not invent a search action for a search function that does not exist.
+
+Follow the supplied SEO/GEO/AEO document. These are implementation and editorial requirements, not a promise of ranking or AI citations. Answer-first summaries, clear jurisdiction, specific sources, consistent entities and accessible HTML form the core of the approach. No special 'GEO schema' or llms.txt is required for the first build. No hidden content written only for bots; humans and crawlers get the same factual material.
+
+CONTENT AND TRUST
+Create a concise methodology page explaining original educational questions, the two jurisdictions, source-check dates, introductory coverage and how corrections will be handled. A working contact/report-error link may be configured once the owner supplies a real destination. Until then, do not pretend a form sends anything; offer copying the question ID for feedback. Do not invent an author or reviewer. Use truthful dates; never update them on every deployment.
+
+The source repository was investigated but its questions and images are not inputs for this build. Do not scrape/import it. The current package uses newly written questions and new SVG illustrations. Do not reproduce official logos or suggest a government affiliation. All sources are linked, not packaged PDFs.
+
+No ad scripts, dummy advertisements, analytics trackers, email collection or cookie banner unless the actual corresponding service has been deliberately configured. Structure the layout so future advertisements can reserve stable space without displacing questions. Future analytics hooks can exist behind disabled configuration, without collecting answer text or personal information.
+
+VERIFICATION AND HANDOFF
+Run the supplied Python integrity validator. Add focused meaningful tests for the engine: no duplicate selection, no cross-jurisdiction questions, correct grading after option shuffle, unchanged grading after resume, unanswered scoring, new attempt reset and corrupt-storage fallback. Verify that the public page HTML includes questions, answers, sources and metadata without executing JavaScript. Check that practice pages are noindex and absent from the sitemap, production canonicals use the configured domain and missing routes return a true 404.
+
+Run the app's production build, inspect mobile and desktop layouts, and test a complete attempt in each jurisdiction. Use a lab performance audit as a diagnostic, and distinguish it from actual-user Core Web Vitals. Fix substantial accessibility, overflow, hydration, link and asset errors. Do not claim a field performance pass from Lighthouse alone.
+
+Deliver the working local app, exact install/development/build commands, a short implementation summary, test results and a precise list of unresolved launch inputs. The site must remain locally runnable with the supplied data even when a real brand, domain, analytics ID or contact address has not been supplied. Do not stop the local build to ask about those optional inputs.

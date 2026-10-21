@@ -1,0 +1,77 @@
+---
+import type { JurisdictionConfig } from '../types/content';
+
+interface Props {
+  jurisdictions: JurisdictionConfig[];
+  questionCount: number;
+  notice: string;
+}
+
+const { jurisdictions, questionCount, notice } = Astro.props;
+const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
+---
+
+<form class="card launch-card" id="empezar" method="get" action={`/practicar/${defaultSlug}/`}>
+  <div class="launch-field">
+    <span class="launch-label" id="launch-vehicle-label">Categoría</span>
+    <div class="launch-select" role="group" aria-labelledby="launch-vehicle-label">
+      <svg class="launch-select__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <path d="M3 13l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5"></path>
+        <path d="M5 13h14v4a1 1 0 0 1-1 1h-1a2 2 0 0 1-4 0H9a2 2 0 0 1-4 0H4a1 1 0 0 1-1-1v-4z"></path>
+      </svg>
+      <span class="launch-select__value">Autos · Clase B1</span>
+    </div>
+  </div>
+
+  <div class="launch-field">
+    <label for="launch-place">¿Dónde vas a rendir?</label>
+    <div class="launch-select">
+      <svg class="launch-select__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"></path>
+        <circle cx="12" cy="10" r="2.5"></circle>
+      </svg>
+      <select id="launch-place" name="place">
+        {
+          jurisdictions.map((j) => (
+            <option value={j.slug} selected={j.slug === defaultSlug}>
+              {j.label} — {j.geographicScope}
+            </option>
+          ))
+        }
+      </select>
+    </div>
+  </div>
+
+  <button class="btn btn--primary btn--block btn--lg" type="submit">
+    Empezar a practicar
+  </button>
+  <p class="launch-hint">
+    {questionCount} preguntas por ciudad · Sin registro · {notice}
+  </p>
+</form>
+
+<style>
+  .launch-label {
+    display: block;
+    font-size: 0.84rem;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+    color: var(--td-ink);
+  }
+  .launch-select__value {
+    font-weight: 600;
+    color: var(--td-ink);
+  }
+</style>
+
+<script>
+  const form = document.getElementById('empezar');
+  const place = document.getElementById('launch-place');
+  if (form instanceof HTMLFormElement && place instanceof HTMLSelectElement) {
+    const sync = () => {
+      form.action = `/practicar/${place.value}/`;
+    };
+    place.addEventListener('change', sync);
+    sync();
+  }
+</script>

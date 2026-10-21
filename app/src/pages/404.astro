@@ -1,0 +1,20 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout
+  title="Página no encontrada"
+  description="La página que buscás no existe en este sitio de práctica del test de conducir."
+  pathname="/404"
+  noindex={true}
+>
+  <h1>No encontramos esa página</h1>
+  <p class="lede">
+    Puede que el enlace esté desactualizado o que la dirección tenga un error. Volvé al inicio o elegí
+    una jurisdicción para practicar.
+  </p>
+  <div class="btn-row">
+    <a class="btn btn--primary" href="/">Ir al inicio</a>
+    <a class="btn btn--secondary" href="/test-de-conducir/">Ver tests</a>
+  </div>
+</Layout>

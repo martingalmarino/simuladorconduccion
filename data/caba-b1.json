@@ -1,0 +1,768 @@
+{
+  "schemaVersion": "1.0.0",
+  "bankId": "caba-b1",
+  "title": "CABA — Autos: muestra de práctica B1",
+  "coverage": "Muestra introductoria de 20 preguntas. No cubre el temario completo ni reproduce un examen oficial.",
+  "questions": [
+    {
+      "id": "caba-b1-001",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos",
+      "prompt": "Llegás a una esquina de CABA con el semáforo en rojo y sin indicaciones de un agente. ¿Dónde debés detener el auto?",
+      "options": [
+        {
+          "id": "caba-b1-001-o1",
+          "text": "Antes de la línea de detención o de la senda peatonal."
+        },
+        {
+          "id": "caba-b1-001-o2",
+          "text": "Sobre la senda peatonal, si no hay personas cruzando."
+        },
+        {
+          "id": "caba-b1-001-o3",
+          "text": "Dentro de la intersección, dejando libre el carril transversal."
+        }
+      ],
+      "correctOptionId": "caba-b1-001-o1",
+      "explanation": "La detención debe dejar libre el espacio de cruce peatonal. La ausencia de peatones no autoriza a avanzar con rojo.",
+      "imageId": "semaforo-rojo",
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.10 b"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-002",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos",
+      "prompt": "En CABA, un semáforo funciona con luz amarilla intermitente. ¿Cómo debés encarar el cruce?",
+      "options": [
+        {
+          "id": "caba-b1-002-o1",
+          "text": "Como si tuvieras una luz verde y prioridad asegurada."
+        },
+        {
+          "id": "caba-b1-002-o2",
+          "text": "Con precaución, atendiendo al riesgo de la intersección."
+        },
+        {
+          "id": "caba-b1-002-o3",
+          "text": "Acelerando para permanecer menos tiempo en el cruce."
+        }
+      ],
+      "correctOptionId": "caba-b1-002-o2",
+      "explanation": "La luz amarilla intermitente advierte un cruce riesgoso. No equivale a una habilitación de paso con prioridad.",
+      "imageId": "semaforo-amarillo-intermitente",
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.10 d"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-003",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos",
+      "prompt": "Encontrás una luz roja intermitente en un cruce de CABA. ¿Qué secuencia corresponde?",
+      "options": [
+        {
+          "id": "caba-b1-003-o1",
+          "text": "Reducir un poco la velocidad y continuar sin detenerte."
+        },
+        {
+          "id": "caba-b1-003-o2",
+          "text": "Avanzar si el auto que viene detrás toca bocina."
+        },
+        {
+          "id": "caba-b1-003-o3",
+          "text": "Detenerte y reanudar la marcha únicamente cuando no exista riesgo."
+        }
+      ],
+      "correctOptionId": "caba-b1-003-o3",
+      "explanation": "La señal exige detener la marcha. Después de detenerte, debés comprobar que podés continuar sin generar riesgo.",
+      "imageId": "semaforo-rojo-intermitente",
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.10 e"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-004",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "senalizacion",
+      "prompt": "Un agente que dirige el tránsito en CABA te indica una maniobra distinta de la señal fija. ¿Qué instrucción prevalece?",
+      "options": [
+        {
+          "id": "caba-b1-004-o1",
+          "text": "La indicación del agente de control."
+        },
+        {
+          "id": "caba-b1-004-o2",
+          "text": "La señal fija, en todos los casos."
+        },
+        {
+          "id": "caba-b1-004-o3",
+          "text": "La que elijan los demás conductores."
+        }
+      ],
+      "correctOptionId": "caba-b1-004-o1",
+      "explanation": "La autoridad de control ocupa el primer lugar en el orden de prioridad de las indicaciones de tránsito.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "2.3.4"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-005",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "adelantamiento",
+      "prompt": "Querés sobrepasar a otro auto y para hacerlo tendrías que cruzar la doble línea central continua. ¿Está permitido?",
+      "options": [
+        {
+          "id": "caba-b1-005-o1",
+          "text": "Sí, si el vehículo de adelante circula lento."
+        },
+        {
+          "id": "caba-b1-005-o2",
+          "text": "No, esa demarcación impide realizar el sobrepaso."
+        },
+        {
+          "id": "caba-b1-005-o3",
+          "text": "Sí, si encendés las balizas durante la maniobra."
+        }
+      ],
+      "correctOptionId": "caba-b1-005-o2",
+      "explanation": "El Código de CABA prohíbe el adelantamiento cuando la demarcación horizontal continua lo impide. Las luces no convierten la maniobra en permitida.",
+      "imageId": "doble-linea-continua",
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.12 c.1"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-006",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad",
+      "prompt": "En un auto particular de CABA viajan tres personas adultas. ¿Quiénes deben usar cinturón?",
+      "options": [
+        {
+          "id": "caba-b1-006-o1",
+          "text": "Solamente quien conduce y quien ocupa el asiento delantero."
+        },
+        {
+          "id": "caba-b1-006-o2",
+          "text": "Únicamente quien conduce."
+        },
+        {
+          "id": "caba-b1-006-o3",
+          "text": "Las tres personas, incluido quien viaja atrás."
+        }
+      ],
+      "correctOptionId": "caba-b1-006-o3",
+      "explanation": "La obligación de llevar el cinturón abrochado alcanza al conductor y a los demás ocupantes del automóvil.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.3"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-007",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad",
+      "prompt": "Tu auto tiene airbags. ¿Eso te permite viajar sin cinturón de seguridad en CABA?",
+      "options": [
+        {
+          "id": "caba-b1-007-o1",
+          "text": "No; los airbags no reemplazan el cinturón."
+        },
+        {
+          "id": "caba-b1-007-o2",
+          "text": "Sí, en los asientos que tengan airbag."
+        },
+        {
+          "id": "caba-b1-007-o3",
+          "text": "Sí, cuando el recorrido sea corto."
+        }
+      ],
+      "correctOptionId": "caba-b1-007-o1",
+      "explanation": "El Código exige el cinturón aun en las plazas con airbag. Son dispositivos complementarios de protección.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.3 c"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-008",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad",
+      "prompt": "¿Cómo debe quedar un apoyacabezas regulable según el Código de CABA?",
+      "options": [
+        {
+          "id": "caba-b1-008-o1",
+          "text": "Lo más bajo posible, a la altura de los hombros."
+        },
+        {
+          "id": "caba-b1-008-o2",
+          "text": "Con su parte superior a la altura de la parte superior de la cabeza."
+        },
+        {
+          "id": "caba-b1-008-o3",
+          "text": "Inclinado hacia atrás y separado todo lo posible de la cabeza."
+        }
+      ],
+      "correctOptionId": "caba-b1-008-o2",
+      "explanation": "El ajuste en altura debe corresponder a la cabeza de la persona que ocupa esa plaza; no se elige solo por comodidad.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.4"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-009",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "circulacion",
+      "prompt": "Salís con el auto de un garaje privado hacia la calle en CABA. ¿A qué ritmo debés hacerlo?",
+      "options": [
+        {
+          "id": "caba-b1-009-o1",
+          "text": "A la velocidad máxima permitida en la calle."
+        },
+        {
+          "id": "caba-b1-009-o2",
+          "text": "Acelerando para incorporarte antes que otros vehículos."
+        },
+        {
+          "id": "caba-b1-009-o3",
+          "text": "A paso de hombre, pudiendo detenerte inmediatamente."
+        }
+      ],
+      "correctOptionId": "caba-b1-009-o3",
+      "explanation": "La salida de un lugar privado exige una marcha muy lenta que permita detener el auto en el acto cuando corresponda.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.7"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-010",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "circulacion",
+      "prompt": "En una avenida de CABA con tres carriles por mano, ¿cómo debés circular dentro del carril elegido?",
+      "options": [
+        {
+          "id": "caba-b1-010-o1",
+          "text": "Por su centro, sin ocupar simultáneamente dos carriles."
+        },
+        {
+          "id": "caba-b1-010-o2",
+          "text": "Sobre la línea divisoria para poder cambiar más rápido."
+        },
+        {
+          "id": "caba-b1-010-o3",
+          "text": "Alternando entre dos carriles aunque no necesites cambiar."
+        }
+      ],
+      "correctOptionId": "caba-b1-010-o1",
+      "explanation": "En las arterias multicarriles el vehículo debe mantenerse centrado en su carril. Ocupar dos carriles dificulta que otros prevean su trayectoria.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.8 c"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-011",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "circulacion",
+      "prompt": "En una avenida de CABA con tres carriles por mano, querés cambiar de carril. ¿Cuándo debés señalizarlo?",
+      "options": [
+        {
+          "id": "caba-b1-011-o1",
+          "text": "Solo después de haber entrado al otro carril."
+        },
+        {
+          "id": "caba-b1-011-o2",
+          "text": "Con anticipación a la maniobra."
+        },
+        {
+          "id": "caba-b1-011-o3",
+          "text": "Solo si es de noche."
+        }
+      ],
+      "correctOptionId": "caba-b1-011-o2",
+      "explanation": "La señal debe permitir que los demás adviertan el cambio antes de que ocurra. Señalizar no elimina la obligación de comprobar que sea seguro.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.8 d"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-012",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "autopistas",
+      "prompt": "Pasaste por error la salida de una autopista de CABA. ¿Podés retroceder para tomarla?",
+      "options": [
+        {
+          "id": "caba-b1-012-o1",
+          "text": "Sí, si usás las balizas."
+        },
+        {
+          "id": "caba-b1-012-o2",
+          "text": "Sí, por la banquina y a muy baja velocidad."
+        },
+        {
+          "id": "caba-b1-012-o3",
+          "text": "No, está prohibido circular marcha atrás en la autopista."
+        }
+      ],
+      "correctOptionId": "caba-b1-012-o3",
+      "explanation": "La prohibición de marcha atrás en autopistas impide corregir una salida perdida retrocediendo. Debés continuar hasta una salida habilitada.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.9 a.10"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-013",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "autopistas",
+      "prompt": "Vas a abandonar una autopista de CABA por una salida que tiene carril de desaceleración. ¿Qué debés usar?",
+      "options": [
+        {
+          "id": "caba-b1-013-o1",
+          "text": "El carril de desaceleración para efectuar la salida."
+        },
+        {
+          "id": "caba-b1-013-o2",
+          "text": "La banquina para frenar antes de llegar a la salida."
+        },
+        {
+          "id": "caba-b1-013-o3",
+          "text": "El carril izquierdo hasta el último momento."
+        }
+      ],
+      "correctOptionId": "caba-b1-013-o1",
+      "explanation": "El carril de desaceleración está previsto para preparar la salida de la vía rápida. La maniobra debe anticiparse y realizarse sin movimientos bruscos.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.9 a.9"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-014",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "autopistas",
+      "prompt": "¿Está permitida la circulación de bicicletas por las autopistas de CABA?",
+      "options": [
+        {
+          "id": "caba-b1-014-o1",
+          "text": "Sí, si llevan luces encendidas."
+        },
+        {
+          "id": "caba-b1-014-o2",
+          "text": "No, está prohibida."
+        },
+        {
+          "id": "caba-b1-014-o3",
+          "text": "Sí, por el carril más próximo a la derecha."
+        }
+      ],
+      "correctOptionId": "caba-b1-014-o2",
+      "explanation": "Las autopistas excluyen a las bicicletas entre los tipos de tránsito que no pueden ingresar. Disponer de luces no modifica esa prohibición.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.9 a.7"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-015",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "distancia",
+      "prompt": "Según el Código de CABA, ¿qué separación temporal mínima debés conservar con el vehículo que va delante en tu carril?",
+      "options": [
+        {
+          "id": "caba-b1-015-o1",
+          "text": "Siempre un segundo, cualquiera sea el estado de la calzada."
+        },
+        {
+          "id": "caba-b1-015-o2",
+          "text": "La longitud de medio auto, aunque aumente la velocidad."
+        },
+        {
+          "id": "caba-b1-015-o3",
+          "text": "Por lo menos dos segundos, considerando además la velocidad, la calzada y el clima."
+        }
+      ],
+      "correctOptionId": "caba-b1-015-o3",
+      "explanation": "La referencia mínima es de dos segundos. Las condiciones de circulación pueden exigir una distancia mayor para conservar un margen prudente.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.13"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-016",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades",
+      "prompt": "Sin señalización que disponga otra cosa, querés entrar a una rotonda en CABA y se aproxima un auto que ya circula por ella. ¿Quién tiene prioridad entre ambos?",
+      "options": [
+        {
+          "id": "caba-b1-016-o1",
+          "text": "El auto que ya circula alrededor de la rotonda."
+        },
+        {
+          "id": "caba-b1-016-o2",
+          "text": "El auto que intenta ingresar."
+        },
+        {
+          "id": "caba-b1-016-o3",
+          "text": "El que toque primero la bocina."
+        }
+      ],
+      "correctOptionId": "caba-b1-016-o1",
+      "explanation": "Quien circula por la rotonda tiene prioridad sobre quien ingresa. La norma también contempla ceder a quien egresa, salvo señalización en contrario.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.15"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-017",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidad",
+      "prompt": "En CABA, la lluvia reduce la visibilidad. ¿Alcanza con circular exactamente al máximo permitido?",
+      "options": [
+        {
+          "id": "caba-b1-017-o1",
+          "text": "Sí, porque la máxima indicada siempre es una velocidad segura."
+        },
+        {
+          "id": "caba-b1-017-o2",
+          "text": "No; debés adaptar la velocidad a las condiciones para mantener el dominio del vehículo."
+        },
+        {
+          "id": "caba-b1-017-o3",
+          "text": "Sí, siempre que mantengas encendidas las balizas."
+        }
+      ],
+      "correctOptionId": "caba-b1-017-o2",
+      "explanation": "La velocidad máxima es un límite, no una obligación de circular a ese ritmo. El estado de la vía, el clima y la visibilidad también condicionan la velocidad segura.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.2.1"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-018",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidad",
+      "prompt": "En una calle común de CABA, sin señalización especial ni otra situación que imponga un límite menor, ¿cuál es la velocidad máxima general?",
+      "options": [
+        {
+          "id": "caba-b1-018-o1",
+          "text": "60 km/h."
+        },
+        {
+          "id": "caba-b1-018-o2",
+          "text": "80 km/h."
+        },
+        {
+          "id": "caba-b1-018-o3",
+          "text": "40 km/h."
+        }
+      ],
+      "correctOptionId": "caba-b1-018-o3",
+      "explanation": "El límite general para calles es de 40 km/h. Puede corresponder una velocidad menor por señalización o por las condiciones y situaciones particulares de circulación.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.2.2 c"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-019",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "peatones",
+      "prompt": "En CABA, el semáforo peatonal empieza a mostrar luz anaranjada titilante antes de que hayas iniciado el cruce. ¿Qué corresponde?",
+      "options": [
+        {
+          "id": "caba-b1-019-o1",
+          "text": "No comenzar a cruzar."
+        },
+        {
+          "id": "caba-b1-019-o2",
+          "text": "Iniciar el cruce corriendo."
+        },
+        {
+          "id": "caba-b1-019-o3",
+          "text": "Cruzar si el vehículo más cercano está detenido."
+        }
+      ],
+      "correctOptionId": "caba-b1-019-o1",
+      "explanation": "La luz anaranjada titilante no habilita el inicio del cruce peatonal. La pregunta se refiere a una persona que todavía no ingresó a la calzada.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.11 a"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "caba-b1-020",
+      "jurisdictionId": "ar-caba",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "documentacion",
+      "prompt": "¿Qué licencia necesitás portar para conducir legalmente un automóvil en CABA?",
+      "options": [
+        {
+          "id": "caba-b1-020-o1",
+          "text": "Cualquier licencia vigente, aunque sea de otra clase."
+        },
+        {
+          "id": "caba-b1-020-o2",
+          "text": "Una licencia vigente que habilite la clase correspondiente al vehículo."
+        },
+        {
+          "id": "caba-b1-020-o3",
+          "text": "Una licencia vencida si conservás el comprobante del curso."
+        }
+      ],
+      "correctOptionId": "caba-b1-020-o2",
+      "explanation": "El requisito combina vigencia y habilitación para la clase del vehículo. Poseer una licencia de otra clase no cumple por sí solo esa condición.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "caba-2148",
+          "locator": "6.1.2 a"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    }
+  ]
+}

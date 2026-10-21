@@ -1,0 +1,32 @@
+---
+import { getSiteConfig } from '../lib/content';
+
+const config = getSiteConfig();
+const path = Astro.url.pathname;
+---
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="/">
+      <span class="brand__mark" aria-hidden="true">TC</span>
+      <span>{config.siteName}</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a
+        href="/test-de-conducir/"
+        aria-current={path.startsWith('/test-de-conducir') ? 'page' : undefined}
+      >
+        Tests
+      </a>
+      <a href="/#como-practicar">Cómo practicar</a>
+      <a
+        href="/fuentes-y-metodologia/"
+        aria-current={path.startsWith('/fuentes-y-metodologia') ? 'page' : undefined}
+      >
+        Fuentes
+      </a>
+      <a class="btn btn--primary nav__cta" href="/#empezar">Empezar</a>
+    </nav>
+  </div>
+</header>

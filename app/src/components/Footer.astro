@@ -1,0 +1,84 @@
+---
+import { getSiteConfig } from '../lib/content';
+
+const config = getSiteConfig();
+---
+
+<footer class="site-footer">
+  <div class="site-footer__cta">
+    <div class="container">
+      <h2>¿Listo para practicar el teórico?</h2>
+      <div class="site-footer__cta-grid">
+        <div class="site-footer__cta-item">
+          <span aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M7 16V8m5 8V5m5 11v-6"/></svg>
+          </span>
+          Aprender
+        </div>
+        <div class="site-footer__cta-item">
+          <span aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          Práctica de 20
+        </div>
+        <div class="site-footer__cta-item">
+          <span aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5V6a2 2 0 0 1 2-2h9l5 5v10.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.5z"/><path d="M14 4v5h5"/></svg>
+          </span>
+          Fuentes citadas
+        </div>
+        <div class="site-footer__cta-item">
+          <span aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </span>
+          CABA y Córdoba
+        </div>
+      </div>
+      <div class="btn-row" style="justify-content:center; margin-top:1.5rem;">
+        <a class="btn btn--primary btn--lg" href="/#empezar">Empezar a practicar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="brand" href="/">
+        <span class="brand__mark" aria-hidden="true">TC</span>
+        <span>{config.siteName}</span>
+      </a>
+      <p>
+        Práctica independiente del teórico de autos para CABA y Córdoba Capital. No es un organismo
+        público ni un examen oficial.
+      </p>
+    </div>
+    <div>
+      <h3>Práctica</h3>
+      <ul>
+        <li><a href="/test-de-conducir/caba/">Test CABA</a></li>
+        <li><a href="/test-de-conducir/cordoba-capital/">Test Córdoba Capital</a></li>
+        <li><a href="/practicar/caba/">Practicar CABA</a></li>
+        <li><a href="/practicar/cordoba-capital/">Practicar Córdoba</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Sitio</h3>
+      <ul>
+        <li><a href="/test-de-conducir/">Tests por ciudad</a></li>
+        <li><a href="/#como-practicar">Cómo practicar</a></li>
+        <li><a href="/fuentes-y-metodologia/">Fuentes y metodología</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Alcance</h3>
+      <ul>
+        <li>Autos · B1 introductorio</li>
+        <li>20 preguntas por ciudad</li>
+        <li>Sin registro</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <p style="margin:0;">{config.notice}</p>
+  </div>
+</footer>

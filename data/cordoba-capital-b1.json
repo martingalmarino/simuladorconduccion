@@ -1,0 +1,768 @@
+{
+  "schemaVersion": "1.0.0",
+  "bankId": "cordoba-capital-b1",
+  "title": "Córdoba Capital — Autos: muestra de práctica B1",
+  "coverage": "Muestra introductoria de 20 preguntas. No cubre el temario completo ni reproduce un examen oficial.",
+  "questions": [
+    {
+      "id": "cordoba-capital-b1-001",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos",
+      "prompt": "En Córdoba Capital llegás a una intersección con luz amarilla intermitente. ¿Cómo debés cruzarla?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-001-o1",
+          "text": "A mínima velocidad y con máxima precaución."
+        },
+        {
+          "id": "cordoba-capital-b1-001-o2",
+          "text": "Sin reducir la marcha porque tenés prioridad."
+        },
+        {
+          "id": "cordoba-capital-b1-001-o3",
+          "text": "Con las balizas encendidas y acelerando."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-001-o1",
+      "explanation": "La ordenanza municipal usa esa señal para advertir cruces riesgosos y exige extrema precaución al atravesarlos.",
+      "imageId": "semaforo-amarillo-intermitente",
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 68 a.4; página física 40"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-002",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos",
+      "prompt": "Una luz roja intermitente regula un cruce en Córdoba Capital. ¿Qué debés hacer primero?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-002-o1",
+          "text": "Continuar si el vehículo de adelante ya cruzó."
+        },
+        {
+          "id": "cordoba-capital-b1-002-o2",
+          "text": "Detener completamente la marcha."
+        },
+        {
+          "id": "cordoba-capital-b1-002-o3",
+          "text": "Tocar bocina y avanzar despacio."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-002-o2",
+      "explanation": "Después de detenerte, solo podés reiniciar la marcha cuando observes que no existe riesgo. La luz no se interpreta como un simple aviso para bajar la velocidad.",
+      "imageId": "semaforo-rojo-intermitente",
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 68 a.5; página física 40"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-003",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos",
+      "prompt": "El semáforo está en rojo en Córdoba Capital. Hay una línea de detención pintada antes de la senda. ¿Dónde corresponde parar?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-003-o1",
+          "text": "Sobre la senda, para ver mejor el cruce."
+        },
+        {
+          "id": "cordoba-capital-b1-003-o2",
+          "text": "Después de la senda, sin entrar al carril transversal."
+        },
+        {
+          "id": "cordoba-capital-b1-003-o3",
+          "text": "Antes de la línea de detención."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-003-o3",
+      "explanation": "La línea fija el lugar previo al cruce donde debe quedar detenido el vehículo. Debés mantener libres la senda y las zonas de detención que correspondan.",
+      "imageId": "semaforo-rojo",
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 68 a.2; página física 40"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-004",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades",
+      "prompt": "Estás por ingresar a una rotonda en Córdoba Capital. Un auto ya circula alrededor de la zona central. ¿Qué debés hacer?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-004-o1",
+          "text": "Cederle el paso al auto que ya circula por la rotonda."
+        },
+        {
+          "id": "cordoba-capital-b1-004-o2",
+          "text": "Ingresar porque el que entra tiene prioridad."
+        },
+        {
+          "id": "cordoba-capital-b1-004-o3",
+          "text": "Obligarlo a frenar con una señal de luces."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-004-o1",
+      "explanation": "La ordenanza da prioridad al que circula alrededor de la zona central frente al que ingresa. También establece prioridad para quien egresa respecto de quien continúa girando.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 66; página física 40"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-005",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "peatones",
+      "prompt": "Un peatón ya comenzó a cruzar por la senda en una esquina sin semáforo de Córdoba Capital. ¿Cómo debés actuar?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-005-o1",
+          "text": "Pasar delante de él si calculás que hay espacio."
+        },
+        {
+          "id": "cordoba-capital-b1-005-o2",
+          "text": "Cederle el paso y detenerte si hace falta para que cruce normalmente."
+        },
+        {
+          "id": "cordoba-capital-b1-005-o3",
+          "text": "Tocar bocina para que espere en medio del cruce."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-005-o2",
+      "explanation": "En una encrucijada no semaforizada, el conductor debe permitir que el peatón que inició el cruce por la senda lo complete sin molestias.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 64; página física 39"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-006",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "senalizacion",
+      "prompt": "En Córdoba Capital te encontrás con la señal de la imagen. ¿Qué acción exige antes de continuar?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-006-o1",
+          "text": "Solo bajar la velocidad si ves otro auto."
+        },
+        {
+          "id": "cordoba-capital-b1-006-o2",
+          "text": "Mantener la marcha si el cruce parece libre."
+        },
+        {
+          "id": "cordoba-capital-b1-006-o3",
+          "text": "Detener totalmente el vehículo."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-006-o3",
+      "explanation": "PARE exige una detención completa. Ver la calle despejada no elimina esa obligación.",
+      "imageId": "pare",
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Página física 13, señales PARE y CEDA EL PASO"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-007",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "senalizacion",
+      "prompt": "¿Qué obligación expresa esta señal triangular invertida?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-007-o1",
+          "text": "Ceder el paso."
+        },
+        {
+          "id": "cordoba-capital-b1-007-o2",
+          "text": "Detenerse obligatoriamente en todos los casos."
+        },
+        {
+          "id": "cordoba-capital-b1-007-o3",
+          "text": "Circular a una velocidad mínima."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-007-o1",
+      "explanation": "CEDA EL PASO obliga a respetar la prioridad del otro tránsito. Puede requerir detenerse para cumplirla, pero no equivale a PARE.",
+      "imageId": "ceda-el-paso",
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Página física 13, señales PARE y CEDA EL PASO"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-008",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "senalizacion",
+      "prompt": "Ves esta señal circular con el número 40. ¿Qué indica?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-008-o1",
+          "text": "Una velocidad mínima de 40 km/h."
+        },
+        {
+          "id": "cordoba-capital-b1-008-o2",
+          "text": "Una velocidad máxima de 40 km/h."
+        },
+        {
+          "id": "cordoba-capital-b1-008-o3",
+          "text": "Una distancia de 40 metros hasta el próximo cruce."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-008-o2",
+      "explanation": "El número dentro del círculo blanco con borde rojo establece un límite máximo de velocidad. Las condiciones pueden exigir circular más despacio.",
+      "imageId": "velocidad-maxima-40",
+      "sources": [
+        {
+          "sourceId": "cordoba-guia",
+          "locator": "Página física 14, señal R.15 (velocidad máxima); el valor 40 es ilustrativo"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-009",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "senalizacion",
+      "prompt": "Un inspector identificado dirige el tránsito en Córdoba Capital y te indica avanzar aunque el semáforo esté en rojo. ¿Qué prevalece?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-009-o1",
+          "text": "El semáforo, sin excepciones."
+        },
+        {
+          "id": "cordoba-capital-b1-009-o2",
+          "text": "La decisión del conductor que está detrás."
+        },
+        {
+          "id": "cordoba-capital-b1-009-o3",
+          "text": "La indicación del inspector."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-009-o3",
+      "explanation": "La ordenanza establece que las indicaciones de los inspectores tienen prioridad sobre los demás sistemas de control del tránsito.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 90; página física 51"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-010",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades",
+      "prompt": "Dos autos llegan a un cruce sin semáforos de Córdoba Capital. No hay señales en contrario ni se aplica una excepción. ¿A quién debés ceder el paso?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-010-o1",
+          "text": "Al vehículo que se presenta por tu derecha."
+        },
+        {
+          "id": "cordoba-capital-b1-010-o2",
+          "text": "Al vehículo que se presenta por tu izquierda."
+        },
+        {
+          "id": "cordoba-capital-b1-010-o3",
+          "text": "Solo al vehículo de mayor tamaño."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-010-o1",
+      "explanation": "La regla general exige reducir la velocidad y ceder al vehículo de la derecha. Tiene excepciones, por ejemplo para emergencias y rotondas.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 65; página física 39"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-011",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades",
+      "prompt": "Una ambulancia cumple una emergencia y solicita paso con sirena y luces en Córdoba Capital. ¿Conservás tu prioridad por venir desde su derecha?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-011-o1",
+          "text": "Sí, la prioridad de la derecha nunca tiene excepciones."
+        },
+        {
+          "id": "cordoba-capital-b1-011-o2",
+          "text": "No; debés ceder el paso al vehículo de emergencia."
+        },
+        {
+          "id": "cordoba-capital-b1-011-o3",
+          "text": "Sí, salvo que un inspector esté presente."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-011-o2",
+      "explanation": "Los vehículos del servicio público de urgencias que cumplen una emergencia y lo requieren con señales acústicas y luminosas son una excepción expresa a la prioridad de la derecha.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 65 c; página física 39"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-012",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades",
+      "prompt": "Llegás desde una calle de tierra a una pavimentada en Córdoba Capital. ¿Podés exigir prioridad por aparecer por la derecha?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-012-o1",
+          "text": "Sí, el tipo de superficie nunca modifica la prioridad."
+        },
+        {
+          "id": "cordoba-capital-b1-012-o2",
+          "text": "Sí, si encendés las luces altas."
+        },
+        {
+          "id": "cordoba-capital-b1-012-o3",
+          "text": "No; esa situación es una excepción a la prioridad de la derecha."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-012-o3",
+      "explanation": "La ordenanza prevé la pérdida de esa prioridad al desembocar desde una vía de tierra en una pavimentada.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 65 e.1; página física 39"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-013",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "circulacion",
+      "prompt": "Mientras circulás por un carril demarcado en Córdoba Capital, ¿dónde debés ubicar el vehículo?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-013-o1",
+          "text": "Por el centro del carril, manteniendo su posición."
+        },
+        {
+          "id": "cordoba-capital-b1-013-o2",
+          "text": "Sobre la línea que separa dos carriles."
+        },
+        {
+          "id": "cordoba-capital-b1-013-o3",
+          "text": "Cambiando constantemente de posición para ser más visible."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-013-o1",
+      "explanation": "La forma de circulación prevista conserva la derecha de la calzada y el centro del carril, respetando el sentido y las restricciones señalizadas.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 47; página física 33"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-014",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad",
+      "prompt": "En un viaje urbano en auto por Córdoba Capital, ¿quiénes deben llevar el cinturón colocado?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-014-o1",
+          "text": "Solo los ocupantes delanteros."
+        },
+        {
+          "id": "cordoba-capital-b1-014-o2",
+          "text": "Todos los ocupantes durante el trayecto."
+        },
+        {
+          "id": "cordoba-capital-b1-014-o3",
+          "text": "Solo quienes viajan por avenidas."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-014-o2",
+      "explanation": "La obligación municipal alcanza a todos los ocupantes del automóvil en movimiento; no depende de que el recorrido sea breve o por calles.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 49 e; página física 33"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-015",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "seguridad",
+      "prompt": "¿Podés sostener el teléfono para conversar mientras conducís en Córdoba Capital?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-015-o1",
+          "text": "Sí, si sostenés el volante con la otra mano."
+        },
+        {
+          "id": "cordoba-capital-b1-015-o2",
+          "text": "Sí, si circulás a menos de 30 km/h."
+        },
+        {
+          "id": "cordoba-capital-b1-015-o3",
+          "text": "No, está prohibida la comunicación telefónica manual durante la conducción."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-015-o3",
+      "explanation": "La norma prohíbe los sistemas de comunicación telefónica manual al conducir. Una velocidad baja no habilita esa conducta.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 49 g; página física 33"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-016",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "luces",
+      "prompt": "De noche, circulás con luz alta y se aproxima otro vehículo de frente en Córdoba Capital. ¿Qué corresponde?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-016-o1",
+          "text": "Cambiar a luz baja antes del cruce con el otro vehículo."
+        },
+        {
+          "id": "cordoba-capital-b1-016-o2",
+          "text": "Mantener la luz alta hasta haberlo pasado."
+        },
+        {
+          "id": "cordoba-capital-b1-016-o3",
+          "text": "Apagar todas las luces."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-016-o1",
+      "explanation": "La luz alta debe cambiarse por baja antes de cruzarse con otro vehículo. La norma también lo exige al aproximarse al que circula delante.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 70 b; página física 42"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-017",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "luces",
+      "prompt": "Vas a girar en pleno día en Córdoba Capital. ¿Debés usar la luz de giro?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-017-o1",
+          "text": "No, si hay suficiente luz natural."
+        },
+        {
+          "id": "cordoba-capital-b1-017-o2",
+          "text": "Sí, con la anticipación necesaria para advertir la maniobra."
+        },
+        {
+          "id": "cordoba-capital-b1-017-o3",
+          "text": "Solo cuando el vehículo de atrás esté muy cerca."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-017-o2",
+      "explanation": "Las luces de giro se utilizan también de día. La anticipación permite que conductores y peatones conozcan la maniobra prevista.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 70 f; página física 42"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-018",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "adelantamiento",
+      "prompt": "Terminaste de sobrepasar a un vehículo en Córdoba Capital y vas a volver a la derecha. ¿Cómo debés hacerlo?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-018-o1",
+          "text": "Con las balizas, entrando inmediatamente delante de él."
+        },
+        {
+          "id": "cordoba-capital-b1-018-o2",
+          "text": "Sin señalizar, porque el sobrepaso ya terminó."
+        },
+        {
+          "id": "cordoba-capital-b1-018-o3",
+          "text": "Sin interferir su marcha y usando el indicador de giro derecho."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-018-o3",
+      "explanation": "El retorno al lugar de circulación forma parte de la maniobra y debe advertirse con el giro derecho, dejando espacio para no interferir al vehículo sobrepasado.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 71; página física 43"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-019",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "circulacion",
+      "prompt": "Hay congestión en una vía de Córdoba Capital. ¿Podés usar la banquina para avanzar si no existe una emergencia?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-019-o1",
+          "text": "No, la congestión no habilita a circular por la banquina."
+        },
+        {
+          "id": "cordoba-capital-b1-019-o2",
+          "text": "Sí, mientras los demás estén detenidos."
+        },
+        {
+          "id": "cordoba-capital-b1-019-o3",
+          "text": "Sí, si encendés las balizas."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-019-o1",
+      "explanation": "La prohibición de circular fuera de la calzada contempla la banquina en caso de emergencia. Ahorrar tiempo en una congestión no es esa excepción.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 74 c; página física 44"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    },
+    {
+      "id": "cordoba-capital-b1-020",
+      "jurisdictionId": "ar-x-cordoba-capital",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "giros",
+      "prompt": "Querés girar en una esquina de Córdoba Capital. ¿Cómo debés reducir la velocidad al aproximarte?",
+      "options": [
+        {
+          "id": "cordoba-capital-b1-020-o1",
+          "text": "Bruscamente justo al comenzar el giro."
+        },
+        {
+          "id": "cordoba-capital-b1-020-o2",
+          "text": "Paulatinamente, sin comprometer la seguridad y respetando las prioridades."
+        },
+        {
+          "id": "cordoba-capital-b1-020-o3",
+          "text": "Después de entrar en la nueva calle."
+        }
+      ],
+      "correctOptionId": "cordoba-capital-b1-020-o2",
+      "explanation": "La preparación del giro incluye reducir progresivamente la velocidad. También exige respetar la prioridad peatonal y, cuando corresponda, la de otros vehículos.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "cordoba-9981",
+          "locator": "Art. 69 c; página física 41"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-20",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1
+    }
+  ]
+}

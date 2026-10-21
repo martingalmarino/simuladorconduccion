@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-20",
+  "dataIntegrity": {
+    "status": "PASS",
+    "totalQuestions": 40,
+    "assets": 7,
+    "banks": [
+      {
+        "bank": "caba-b1",
+        "questions": 20,
+        "illustratedQuestions": 4,
+        "topics": 11
+      },
+      {
+        "bank": "cordoba-capital-b1",
+        "questions": 20,
+        "illustratedQuestions": 6,
+        "topics": 9
+      }
+    ],
+    "scope": "Structural and semantic data integrity only; no app, SEO or legal certification."
+  },
+  "svgRendering": "7/7 renderizados y revisados visualmente",
+  "notTested": [
+    "Aplicación: implementación pendiente en Cursor",
+    "SEO desplegado: pendiente de dominio y build",
+    "Core Web Vitals de usuarios reales: sin sitio publicado",
+    "Revisión humana especializada del contenido: pendiente"
+  ]
+}

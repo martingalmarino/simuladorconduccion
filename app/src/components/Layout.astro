@@ -1,0 +1,54 @@
+---
+import SEOHead from './SEOHead.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import { getSiteRuntime } from '../lib/site';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  pathname: string;
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  /** Si es true, el contenido controla el ancho (home full-bleed). */
+  fullBleed?: boolean;
+}
+
+const runtime = getSiteRuntime();
+const {
+  title,
+  description,
+  pathname,
+  noindex = false,
+  jsonLd,
+  fullBleed = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={runtime.locale}>
+  <head>
+    <SEOHead
+      title={title}
+      description={description}
+      pathname={pathname}
+      noindex={noindex}
+      jsonLd={jsonLd}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Header />
+    <main id="contenido" class:list={['site-main', !fullBleed && 'page-shell']}>
+      <slot />
+    </main>
+    <div class="ad-slot-reserve" aria-hidden="true"></div>
+    <Footer />
+  </body>
+</html>

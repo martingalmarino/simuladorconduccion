@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Starter driving-practice question bank",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "bankId",
+    "title",
+    "coverage",
+    "questions"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "bankId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coverage": {
+      "type": "string",
+      "minLength": 1
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "jurisdictionId",
+          "licenseClasses",
+          "topic",
+          "prompt",
+          "options",
+          "correctOptionId",
+          "explanation",
+          "imageId",
+          "sources",
+          "contentStatus",
+          "sourceCheckedAt",
+          "humanReviewedAt",
+          "humanReviewer",
+          "authorship",
+          "version"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "jurisdictionId": {
+            "enum": [
+              "ar-caba",
+              "ar-x-cordoba-capital"
+            ]
+          },
+          "licenseClasses": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "B1"
+              ]
+            }
+          },
+          "topic": {
+            "type": "string",
+            "minLength": 1
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "options": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "text"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "correctOptionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "imageId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "sourceId",
+                "locator"
+              ],
+              "properties": {
+                "sourceId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "contentStatus": {
+            "enum": [
+              "source-checked-draft"
+            ]
+          },
+          "sourceCheckedAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "humanReviewedAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "humanReviewer": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "authorship": {
+            "const": "original-editorial"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    }
+  },
+  "$comment": "Cross-reference, unique ID and image-path checks are performed by scripts/validate_data.py. Extend enums and editorial states intentionally when expanding coverage."
+}

@@ -1,0 +1,42 @@
+---
+import Layout from '../../../components/Layout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import QuizApp from '../../../components/quiz/QuizApp';
+import {
+  getContentVersion,
+  getQuestionsForSlug,
+  getSiteConfig,
+  prepareQuestionsForClient,
+  requireJurisdiction,
+} from '../../../lib/content';
+
+const slug = 'caba';
+const jurisdiction = requireJurisdiction(slug);
+const config = getSiteConfig();
+const prepared = prepareQuestionsForClient(getQuestionsForSlug(slug));
+const contentVersion = getContentVersion();
+---
+
+<Layout
+  title={`Practicar test de conducir · ${jurisdiction.label}`}
+  description={`Sesión interactiva de práctica para autos en ${jurisdiction.label}. No indexable.`}
+  pathname={`/practicar/${slug}/`}
+  noindex={true}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Inicio', href: '/' },
+      { label: 'CABA', href: `/test-de-conducir/${slug}/` },
+      { label: 'Practicar' },
+    ]}
+  />
+
+  <QuizApp
+    client:load
+    jurisdiction={jurisdiction}
+    questions={prepared}
+    practiceModes={config.practiceModes}
+    contentVersion={contentVersion}
+    notice={config.notice}
+  />
+</Layout>

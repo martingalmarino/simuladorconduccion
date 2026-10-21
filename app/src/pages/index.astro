@@ -1,0 +1,265 @@
+---
+import Layout from '../components/Layout.astro';
+import JurisdictionCard from '../components/JurisdictionCard.astro';
+import PracticeLauncher from '../components/PracticeLauncher.astro';
+import Illustrations from '../components/Illustrations.astro';
+import { getBank, getSiteConfig } from '../lib/content';
+import { absoluteUrl, getSiteRuntime } from '../lib/site';
+import { topicLabel } from '../lib/topics';
+
+const config = getSiteConfig();
+const runtime = getSiteRuntime();
+const cards = config.jurisdictions.map((j) => ({
+  jurisdiction: j,
+  bank: getBank(j.bankId),
+}));
+const questionCount = cards[0]?.bank.questions.length ?? 20;
+const sampleTopics = [
+  ...new Set(cards.flatMap((c) => c.bank.questions.map((q) => q.topic))),
+].slice(0, 8);
+
+const pageUrl = absoluteUrl('/');
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: config.siteName,
+    inLanguage: runtime.locale,
+    ...(pageUrl ? { url: pageUrl } : {}),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Prepará tu examen teórico de conducir',
+    inLanguage: runtime.locale,
+    description:
+      'Practicá para autos con una muestra introductoria de 20 preguntas explicadas por jurisdicción: CABA y Córdoba Capital.',
+    ...(pageUrl ? { url: pageUrl } : {}),
+  },
+];
+---
+
+<Layout
+  title="Test de conducir: practicá para CABA y Córdoba Capital"
+  description="Practicá el examen teórico de conducir para autos con preguntas explicadas. Muestra introductoria de 20 ítems por jurisdicción: CABA y Córdoba Capital."
+  pathname="/"
+  jsonLd={jsonLd}
+  fullBleed={true}
+>
+  <section class="hero container">
+    <p class="kicker">Práctica del teórico · Argentina</p>
+    <h1>Prepará tu examen teórico de conducir</h1>
+    <p class="lede">
+      Practicá para autos con preguntas explicadas. Elegí CABA o Córdoba Capital y avanzá a tu ritmo.
+      Muestra introductoria B1: {questionCount} preguntas por ciudad — no es el temario completo ni un
+      examen oficial.
+    </p>
+
+    <PracticeLauncher
+      jurisdictions={config.jurisdictions}
+      questionCount={questionCount}
+      notice="Material de práctica independiente"
+    />
+
+    <div class="step-cards" aria-label="Cómo funciona la práctica">
+      <article class="step-card">
+        <div class="step-card__label">Paso 01</div>
+        <div class="step-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        </div>
+        <h3>Elegí la ciudad</h3>
+        <p>CABA o Córdoba Capital. No mezclamos normas entre jurisdicciones.</p>
+        <a href="#jurisdicciones">Ver ciudades →</a>
+      </article>
+      <article class="step-card">
+        <div class="step-card__label">Paso 02</div>
+        <div class="step-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M8 17V9m4 8V5m4 12v-4"/></svg>
+        </div>
+        <h3>Modo Aprender</h3>
+        <p>10 o 20 preguntas, con explicación y fuente después de cada respuesta.</p>
+        <a href="#como-practicar">Cómo funciona →</a>
+      </article>
+      <article class="step-card">
+        <div class="step-card__label">Paso 03</div>
+        <div class="step-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+        </div>
+        <h3>Práctica de 20</h3>
+        <p>Corrección al final, con aciertos, sin responder y temas a repasar.</p>
+        <a href="#como-practicar">Ver modalidades →</a>
+      </article>
+      <article class="step-card">
+        <div class="step-card__label">Paso 04</div>
+        <div class="step-card__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5V6a2 2 0 0 1 2-2h9l5 5v10.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.5z"/><path d="M14 4v5h5"/></svg>
+        </div>
+        <h3>Repasá con fuentes</h3>
+        <p>Cada explicación enlaza la norma o guía consultada.</p>
+        <a href="/fuentes-y-metodologia/">Metodología →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-block section-block--soft" aria-labelledby="para-que">
+    <div class="container split">
+      <div class="split__copy">
+        <p class="kicker">Para qué sirve</p>
+        <h2 id="para-que">¿Qué necesitás para practicar acá?</h2>
+        <p class="lede">
+          Solo elegí tu ciudad y empezá. No pedimos registro ni datos personales. El historial de
+          prácticas queda en tu dispositivo.
+        </p>
+        <p class="muted">
+          Cobertura actual: <strong>autos (B1 introductorio)</strong>. Motos, camiones y otras clases
+          quedan para cuando haya bancos revisados — no aparecen como opciones vacías.
+        </p>
+      </div>
+      <div class="split__visual">
+        <Illustrations name="practice" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-block--paper" aria-labelledby="requisitos">
+    <div class="container split split--reverse">
+      <div class="split__copy">
+        <p class="kicker">Alcance real</p>
+        <h2 id="requisitos">Una muestra introductoria, con fuentes a la vista</h2>
+        <p class="lede">
+          Son {questionCount} preguntas originales por jurisdicción, contrastadas con normas y guías
+          oficiales. No reproducen un banco de examen ni garantizan la aprobación.
+        </p>
+        <div class="topic-chips" aria-label="Temas de ejemplo">
+          {sampleTopics.map((topic) => <span class="chip">{topicLabel(topic)}</span>)}
+        </div>
+        <div class="btn-row" style="margin-top:1.25rem;">
+          <a class="btn btn--secondary" href="/fuentes-y-metodologia/">Ver fuentes y metodología</a>
+        </div>
+      </div>
+      <div class="split__visual">
+        <Illustrations name="route" />
+      </div>
+    </div>
+  </section>
+
+  <section id="como-practicar" class="section-block section-block--soft" aria-labelledby="como-titulo">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Modalidades</p>
+        <h2 id="como-titulo">Los pasos para practicar bien</h2>
+        <p class="lede">
+          Dos recorridos claros, sin temporizador inventado y sin umbral oficial de “aprobado”.
+        </p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-item__num" aria-hidden="true">01</div>
+          <div>
+            <h3>Elegí jurisdicción</h3>
+            <p>CABA o Córdoba Capital. Cada banco responde a su propia normativa local.</p>
+            <a href="#jurisdicciones">Ir a las ciudades →</a>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-item__num" aria-hidden="true">02</div>
+          <div>
+            <h3>Aprender con corrección inmediata</h3>
+            <p>
+              Elegís 10 o 20 preguntas. Después de responder ves la explicación y el enlace a la fuente.
+            </p>
+            <a href="#empezar">Empezar en modo Aprender →</a>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-item__num" aria-hidden="true">03</div>
+          <div>
+            <h3>Práctica de 20 preguntas</h3>
+            <p>
+              Usás las 20 del banco. Al final ves aciertos, porcentaje, ítems sin responder y temas a
+              repasar. Es práctica, no un veredicto oficial.
+            </p>
+            <a href="#empezar">Configurar práctica →</a>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-item__num" aria-hidden="true">04</div>
+          <div>
+            <h3>Estudiá el banco completo</h3>
+            <p>
+              Las 20 preguntas de cada ciudad están en HTML, con respuesta y fuente, para repasar sin
+              JavaScript.
+            </p>
+            <a href="/test-de-conducir/">Abrir directorio de tests →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="jurisdicciones" class="section-block section-block--paper" aria-labelledby="jurisdicciones-titulo">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Jurisdicciones</p>
+        <h2 id="jurisdicciones-titulo">Elegí dónde vas a practicar</h2>
+        <p class="lede">
+          Alcance activo: autos. Dos bancos locales, sin un “banco nacional” genérico.
+        </p>
+      </div>
+      <div class="card-grid">
+        {
+          cards.map(({ jurisdiction, bank }) => (
+            <JurisdictionCard jurisdiction={jurisdiction} bank={bank} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-block--soft" aria-labelledby="faq-titulo">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Dudas frecuentes</p>
+        <h2 id="faq-titulo">Preguntas frecuentes</h2>
+        <p class="lede">Respuestas breves sobre el alcance real de esta muestra.</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>¿Esto es el examen oficial?</summary>
+          <p>
+            No. Es material de práctica independiente. No reproduce un examen oficial ni garantiza la
+            aprobación.
+          </p>
+        </details>
+        <details>
+          <summary>¿Cuántas preguntas hay?</summary>
+          <p>
+            {questionCount} por jurisdicción (CABA y Córdoba Capital). Si elegís una práctica de 20,
+            usás todas las del banco — no son 20 preguntas nuevas cada vez.
+          </p>
+        </details>
+        <details>
+          <summary>¿Por qué solo autos?</summary>
+          <p>
+            El primer build cubre B1 introductorio. Otras clases (A, C, D, E) se sumarán cuando exista
+            un banco revisado para cada una.
+          </p>
+        </details>
+        <details>
+          <summary>¿Córdoba Capital vale para toda la provincia?</summary>
+          <p>
+            No. El banco se apoya en la normativa de la ciudad de Córdoba. No extrapolamos esas reglas
+            a otros municipios.
+          </p>
+        </details>
+        <details>
+          <summary>¿De dónde salen las respuestas?</summary>
+          <p>
+            Cada pregunta cita la fuente y el localizador usados al contrastar la respuesta. El detalle
+            está en <a href="/fuentes-y-metodologia/">Fuentes y metodología</a>.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+</Layout>

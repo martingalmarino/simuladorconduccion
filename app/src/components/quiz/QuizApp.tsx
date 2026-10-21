@@ -62,7 +62,7 @@ export default function QuizApp(props: QuizAppProps) {
     if (!loaded.ok) {
       if (loaded.reason === 'incompatible') {
         setStorageMessage(
-          'Había un intento guardado de una versión anterior del contenido. Empezá uno nuevo.',
+          'Había una práctica a medias de una versión anterior. Empezá una nueva.',
         );
       } else if (loaded.reason === 'corrupt') {
         setStorageMessage(
@@ -266,8 +266,8 @@ export default function QuizApp(props: QuizAppProps) {
           </h1>
           <p className="muted">{notice}</p>
           <p className="muted">
-            Banco de {questions.length} preguntas. Si elegís {questions.length}, usás todas las del
-            banco (no son {questions.length} nuevas cada vez).
+            Hay {questions.length} preguntas disponibles. Si elegís {questions.length}, practicás
+            todas (no se generan {questions.length} nuevas cada vez).
           </p>
 
           <label id="mode-label">Modalidad</label>
@@ -301,7 +301,7 @@ export default function QuizApp(props: QuizAppProps) {
                 onClick={() => setCount(n)}
               >
                 {n} preguntas
-                {n === questions.length ? ' (banco completo)' : ''}
+                {n === questions.length ? ' (todas)' : ''}
               </button>
             ))}
           </div>
@@ -576,7 +576,7 @@ export default function QuizApp(props: QuizAppProps) {
               Nuevo intento
             </button>
             <a className="btn btn--secondary" href={`/test-de-conducir/${jurisdiction.slug}/`}>
-              Estudiar el banco
+              Estudiar las preguntas
             </a>
           </div>
         </section>

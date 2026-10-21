@@ -60,7 +60,7 @@ const jsonLd = [
 
 <Layout
   title="Test de conducir Córdoba Capital: práctica para autos"
-  description={`Ampliación intermedia de ${bank.questions.length} preguntas para el test teórico de autos en la ciudad de Córdoba, con explicación y fuente. No representa a toda la provincia.`}
+  description={`Practicá el teórico de autos en Córdoba Capital con ${bank.questions.length} preguntas explicadas y con fuente. Vale para la ciudad, no para toda la provincia.`}
   pathname={`/test-de-conducir/${slug}/`}
   jsonLd={jsonLd}
 >
@@ -74,9 +74,8 @@ const jsonLd = [
 
   <h1>Practicá el test de conducir en Córdoba Capital</h1>
   <p class="lede">
-    Hay una ampliación intermedia de <strong>{bank.questions.length} preguntas</strong> para autos
-    (B1) en la ciudad de Córdoba. No aplica automáticamente a otros municipios de la
-    provincia. {bank.coverage}
+    <strong>{bank.questions.length} preguntas</strong> para el teórico de autos (clase B1) en la
+    ciudad de Córdoba. Podés estudiarlas en esta página o abrir la práctica interactiva.
   </p>
 
   <div class="btn-row">
@@ -85,10 +84,10 @@ const jsonLd = [
   </div>
 
   <section class="section notice">
-    <p style="margin:0 0 0.5rem;">
-      <strong>Alcance:</strong> {jurisdiction.geographicScope}. Clases: {jurisdiction.licenseClasses.join(', ')}.
+    <p style="margin:0 0 0.5rem;">{bank.coverage}</p>
+    <p style="margin:0;" class="muted">
+      Alcance: {jurisdiction.geographicScope}. Fuentes consultadas: 2026-10-20.
     </p>
-    <p style="margin:0;" class="muted">Fecha de consulta de fuentes del banco: 2026-10-20.</p>
   </section>
 
   <section class="section" aria-labelledby="temas-cba">
@@ -122,8 +121,8 @@ const jsonLd = [
   <section id="banco-completo" class="section" aria-labelledby="banco-cba-titulo">
     <h2 id="banco-cba-titulo">Las {bank.questions.length} preguntas de estudio</h2>
     <p class="muted">
-      Respuestas y explicaciones están en el HTML inicial. Cada pregunta tiene un enlace directo con su ID
-      (por ejemplo <a href="#cordoba-capital-b1-001">#cordoba-capital-b1-001</a>).
+      Cada pregunta incluye la respuesta correcta, la explicación y la fuente. Podés enlazar una en
+      particular (por ejemplo <a href="#cordoba-capital-b1-001">#cordoba-capital-b1-001</a>).
     </p>
 
     {

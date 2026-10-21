@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "bankId": "caba-b1",
-  "title": "CABA — Autos: práctica B1 (ampliación intermedia)",
-  "coverage": "Ampliación intermedia de 50 preguntas originales para práctica de B1. No cubre el temario oficial completo ni reproduce un examen oficial.",
+  "title": "CABA — Autos: práctica B1",
+  "coverage": "Práctica para autos en CABA. No es el temario completo del examen ni un examen oficial.",
   "questions": [
     {
       "id": "caba-b1-001",

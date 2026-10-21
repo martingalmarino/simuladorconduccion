@@ -14,7 +14,7 @@ const jsonLd = [
     name: 'Fuentes y metodología',
     inLanguage: runtime.locale,
     description:
-      'Procedencia de las preguntas, fechas de consulta de fuentes, alcance introductorio y correcciones.',
+      'De dónde salen las preguntas, fechas de consulta de fuentes, alcance del material y cómo reportar errores.',
     ...(pageUrl ? { url: pageUrl } : {}),
   },
   {
@@ -40,7 +40,7 @@ const jsonLd = [
 
 <Layout
   title="Fuentes y metodología del test de conducir"
-  description="Cómo se redactaron las preguntas, qué jurisdicciones cubre la ampliación intermedia, fechas de consulta de fuentes y cómo reportar errores."
+  description="De dónde salen las preguntas del teórico, qué ciudades cubre el sitio, fechas de consulta de fuentes y cómo reportar errores."
   pathname="/fuentes-y-metodologia/"
   jsonLd={jsonLd}
 >
@@ -53,8 +53,7 @@ const jsonLd = [
 
   <h1>Fuentes y metodología</h1>
   <p class="lede">
-    Transparencia sobre el origen del material, sus límites y el estado de revisión. Sin sellos de
-    aprobación inventados.
+    De dónde sale el material, hasta dónde llega y con qué fuentes se contrastaron las respuestas.
   </p>
 
   <SourceMethodology />

@@ -115,7 +115,7 @@ export function validateContentBundle(input: {
 
   const jurisdictionSlugs = new Set(input.siteConfig.jurisdictions.map((j) => j.slug));
   const upcomingSlugs = new Set<string>();
-  for (const test of input.siteConfig.upcomingTests ?? []) {
+  for (const test of input.siteConfig.upcomingTests) {
     if (test.status !== 'proximamente') {
       errors.push(`Estado inesperado en test anunciado: ${test.id}`);
     }

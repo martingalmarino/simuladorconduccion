@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "bankId": "cordoba-capital-b1",
-  "title": "Córdoba Capital — Autos: práctica B1 (ampliación intermedia)",
-  "coverage": "Ampliación intermedia de 50 preguntas originales para práctica de B1 en la ciudad de Córdoba. No representa a toda la provincia ni un examen oficial.",
+  "title": "Córdoba Capital — Autos: práctica B1",
+  "coverage": "Práctica para autos en la ciudad de Córdoba. No aplica a toda la provincia ni es un examen oficial.",
   "questions": [
     {
       "id": "cordoba-capital-b1-001",

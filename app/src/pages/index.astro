@@ -35,7 +35,7 @@ const jsonLd = [
     name: 'Prepará tu examen teórico de conducir',
     inLanguage: runtime.locale,
     description:
-      'Practicá para autos con una ampliación intermedia de preguntas explicadas por jurisdicción: CABA y Córdoba Capital.',
+      'Practicá el teórico de autos para CABA y Córdoba Capital, con preguntas explicadas y fuentes.',
     ...(pageUrl ? { url: pageUrl } : {}),
   },
 ];
@@ -43,7 +43,7 @@ const jsonLd = [
 
 <Layout
   title="Test de conducir: practicá para CABA y Córdoba Capital"
-  description={`Practicá el examen teórico de conducir para autos con preguntas explicadas. Ampliación intermedia de ${questionCount} ítems por jurisdicción: CABA y Córdoba Capital.`}
+  description={`Practicá el teórico de conducir para autos con ${questionCount} preguntas explicadas por ciudad: CABA y Córdoba Capital. No es un examen oficial.`}
   pathname="/"
   jsonLd={jsonLd}
   fullBleed={true}
@@ -53,15 +53,14 @@ const jsonLd = [
     <h1>Prepará tu examen teórico de conducir</h1>
     <p class="lede">
       Practicá para autos con preguntas explicadas. Elegí CABA o Córdoba Capital y avanzá a tu ritmo.
-      Ampliación intermedia B1: {questionCount} preguntas por ciudad — no es el temario completo ni un
-      examen oficial.
+      Hay {questionCount} preguntas por ciudad. No es el temario completo ni un examen oficial.
     </p>
 
     <PracticeLauncher
       jurisdictions={config.jurisdictions}
       upcomingTests={upcomingTests}
       questionCount={questionCount}
-      notice="Material de práctica independiente"
+      notice="Práctica independiente"
     />
 
     <div class="step-cards" aria-label="Cómo funciona la práctica">
@@ -114,8 +113,8 @@ const jsonLd = [
           prácticas queda en tu dispositivo.
         </p>
         <p class="muted">
-          Cobertura actual: <strong>autos (B1, ampliación intermedia)</strong>. Los tests de categoría A, E y D
-          ya están anunciados como próximamente y todavía no se pueden practicar.
+          Hoy podés practicar <strong>autos (clase B1)</strong>. Las categorías A, E y D están
+          anunciadas y todavía no tienen preguntas.
         </p>
       </div>
       <div class="split__visual">
@@ -128,10 +127,10 @@ const jsonLd = [
     <div class="container split split--reverse">
       <div class="split__copy">
         <p class="kicker">Alcance real</p>
-        <h2 id="requisitos">Una ampliación intermedia, con fuentes a la vista</h2>
+        <h2 id="requisitos">Preguntas explicadas, con la fuente a la vista</h2>
         <p class="lede">
-          Son {questionCount} preguntas originales por jurisdicción, contrastadas con normas y guías
-          oficiales. No reproducen un banco de examen ni garantizan la aprobación.
+          Son {questionCount} preguntas por ciudad, armadas para practicar y contrastadas con normas y
+          guías oficiales. No reproducen el banco del examen ni garantizan la aprobación.
         </p>
         <div class="topic-chips" aria-label="Temas de ejemplo">
           {sampleTopics.map((topic) => <span class="chip">{topicLabel(topic)}</span>)}
@@ -152,7 +151,8 @@ const jsonLd = [
         <p class="kicker">Modalidades</p>
         <h2 id="como-titulo">Los pasos para practicar bien</h2>
         <p class="lede">
-          Dos recorridos claros, sin temporizador inventado y sin umbral oficial de “aprobado”.
+          Dos formas de practicar: con corrección al instante o al final. Sin reloj ni nota oficial de
+          “aprobado”.
         </p>
       </div>
       <div class="timeline">
@@ -180,8 +180,8 @@ const jsonLd = [
           <div>
             <h3>Práctica con corrección al final</h3>
             <p>
-              Podés hacer 20 o las {questionCount} del banco. Al final ves aciertos, porcentaje, ítems
-              sin responder y temas a repasar. Es práctica, no un veredicto oficial.
+              Podés hacer 20 o las {questionCount}. Al final ves aciertos, porcentaje, preguntas sin
+              responder y temas a repasar. Es práctica, no un veredicto oficial.
             </p>
             <a href="#empezar">Configurar práctica →</a>
           </div>
@@ -189,12 +189,12 @@ const jsonLd = [
         <article class="timeline-item">
           <div class="timeline-item__num" aria-hidden="true">04</div>
           <div>
-            <h3>Estudiá el banco completo</h3>
+            <h3>Estudiá todas las preguntas</h3>
             <p>
-              Las {questionCount} preguntas de cada ciudad están en HTML, con respuesta y fuente, para
-              repasar sin JavaScript.
+              En la página de cada ciudad podés leer las {questionCount} preguntas con respuesta y
+              fuente, sin necesidad de empezar una práctica.
             </p>
-            <a href="/test-de-conducir/">Abrir directorio de tests →</a>
+            <a href="/test-de-conducir/">Ver tests por ciudad →</a>
           </div>
         </article>
       </div>
@@ -207,7 +207,7 @@ const jsonLd = [
         <p class="kicker">Jurisdicciones</p>
         <h2 id="jurisdicciones-titulo">Elegí dónde vas a practicar</h2>
         <p class="lede">
-          Alcance activo: autos. Dos bancos locales, sin un “banco nacional” genérico.
+          Hoy hay práctica para autos en dos ciudades. Cada una usa su propia normativa local.
         </p>
       </div>
       <div class="card-grid">
@@ -224,10 +224,9 @@ const jsonLd = [
     <div class="container">
       <div class="section-head">
         <p class="kicker">Próximamente</p>
-        <h2 id="proximamente-titulo">Otras categorías, todavía sin banco</h2>
+        <h2 id="proximamente-titulo">Otras categorías, próximamente</h2>
         <p class="lede">
-          Estos tests teóricos ya tienen lugar en el sitio. No hay preguntas publicadas ni se pueden
-          empezar.
+          Estas categorías ya están anunciadas. Todavía no hay preguntas para practicarlas.
         </p>
       </div>
       <div class="card-grid">
@@ -241,44 +240,42 @@ const jsonLd = [
       <div class="section-head">
         <p class="kicker">Dudas frecuentes</p>
         <h2 id="faq-titulo">Preguntas frecuentes</h2>
-        <p class="lede">Respuestas breves sobre el alcance real de esta ampliación intermedia.</p>
+        <p class="lede">Lo esencial sobre qué es este sitio y hasta dónde llega.</p>
       </div>
       <div class="faq">
         <details open>
           <summary>¿Esto es el examen oficial?</summary>
           <p>
-            No. Es material de práctica independiente. No reproduce un examen oficial ni garantiza la
-            aprobación.
+            No. Es práctica independiente. No reproduce un examen oficial ni garantiza la aprobación.
           </p>
         </details>
         <details>
           <summary>¿Cuántas preguntas hay?</summary>
           <p>
-            {questionCount} por jurisdicción (CABA y Córdoba Capital). Si elegís {questionCount}, usás
-            todas las del banco — no son {questionCount} preguntas nuevas cada vez. También podés
-            practicar con 10 o 20.
+            {questionCount} por ciudad (CABA y Córdoba Capital). Podés practicar con 10, 20 o las{' '}
+            {questionCount}. Si elegís {questionCount}, usás todas las disponibles: no se generan
+            preguntas nuevas al azar.
           </p>
         </details>
         <details>
           <summary>¿Por qué solo se puede practicar autos?</summary>
           <p>
-            El banco publicado es B1 en ampliación intermedia. Los tests de categoría A (motovehículos de dos
-            ruedas), E (carga, camiones y maquinaria no agrícola) y D (transporte de pasajeros) figuran
-            como próximamente, sin preguntas todavía.
+            Por ahora el material publicado es para autos (clase B1). Las categorías A (motos), E
+            (carga) y D (pasajeros) están anunciadas y todavía no tienen preguntas.
           </p>
         </details>
         <details>
           <summary>¿Córdoba Capital vale para toda la provincia?</summary>
           <p>
-            No. El banco se apoya en la normativa de la ciudad de Córdoba. No extrapolamos esas reglas
+            No. El material se basa en la normativa de la ciudad de Córdoba. No aplica automáticamente
             a otros municipios.
           </p>
         </details>
         <details>
           <summary>¿De dónde salen las respuestas?</summary>
           <p>
-            Cada pregunta cita la fuente y el localizador usados al contrastar la respuesta. El detalle
-            está en <a href="/fuentes-y-metodologia/">Fuentes y metodología</a>.
+            Cada pregunta cita la fuente y el artículo o página usados para contrastar la respuesta.
+            El detalle está en <a href="/fuentes-y-metodologia/">Fuentes y metodología</a>.
           </p>
         </details>
       </div>

@@ -89,7 +89,7 @@ export function getContentVersion(): string {
 }
 
 export function getUpcomingTests(): UpcomingTest[] {
-  return getSiteConfig().upcomingTests ?? [];
+  return getSiteConfig().upcomingTests;
 }
 
 export function getUpcomingTestBySlug(slug: string): UpcomingTest | undefined {

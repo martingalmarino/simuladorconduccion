@@ -48,7 +48,7 @@ const jsonLd = [
 
 <Layout
   title="Tests de conducir por jurisdicción: elegí dónde practicar"
-  description="Elegí el banco de práctica según dónde vas a rendir: CABA o Córdoba Capital. Cada ciudad tiene una ampliación intermedia de preguntas para autos, con explicación y fuente."
+  description="Elegí dónde vas a practicar el teórico: CABA o Córdoba Capital. Cada ciudad tiene preguntas para autos, con explicación y fuente."
   pathname="/test-de-conducir/"
   jsonLd={jsonLd}
 >
@@ -62,9 +62,8 @@ const jsonLd = [
   <p class="kicker">Directorio de práctica</p>
   <h1>Elegí dónde vas a rendir</h1>
   <p class="lede">
-    Cada jurisdicción tiene su propio banco. No mezclamos normas de CABA con las de Córdoba Capital, ni
-    presentamos un banco nacional genérico. Cobertura actual: autos, ampliación intermedia B1. Más
-    abajo están los tests de otras categorías, marcados como próximamente.
+    Cada ciudad tiene su propio material. No mezclamos normas de CABA con las de Córdoba Capital.
+    Hoy hay práctica para autos (clase B1). Más abajo están otras categorías, todavía sin preguntas.
   </p>
 
   <div class="card-grid">
@@ -78,7 +77,7 @@ const jsonLd = [
   <section class="section" aria-labelledby="proximamente-directorio">
     <h2 id="proximamente-directorio">Próximamente</h2>
     <p class="lede">
-      Categorías anunciadas, sin banco de preguntas. No se pueden practicar todavía.
+      Categorías anunciadas. Todavía no hay preguntas para practicarlas.
     </p>
     <div class="card-grid">
       {upcomingTests.map((test) => <UpcomingTestCard test={test} />)}
@@ -87,8 +86,8 @@ const jsonLd = [
 
   <section class="section notice">
     <p style="margin:0;">
-      El simulacro con formato, tiempo y nota oficiales está deshabilitado:
-      {config.officialExamMode.reason}
+      Este sitio no ofrece un simulacro oficial con tiempo ni nota de aprobación. Es práctica para
+      repasar el teórico.
     </p>
   </section>
 </Layout>

@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Argentina national practice bank 1.1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "bankId",
+    "title",
+    "coverage",
+    "scopeKind",
+    "scopeNote",
+    "questions"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.1.0"
+    },
+    "bankId": {
+      "const": "argentina-b1"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coverage": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scopeKind": {
+      "const": "national-framework"
+    },
+    "scopeNote": {
+      "type": "string",
+      "minLength": 1
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 50,
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "jurisdictionId",
+          "topic",
+          "prompt",
+          "correctOptionId",
+          "explanation",
+          "contentStatus",
+          "sourceCheckedAt",
+          "authorship",
+          "scopeKind",
+          "scopeNote",
+          "licenseClasses",
+          "options",
+          "imageId",
+          "sources",
+          "humanReviewedAt",
+          "humanReviewer",
+          "version"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "jurisdictionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "topic": {
+            "type": "string",
+            "minLength": 1
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "correctOptionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contentStatus": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceCheckedAt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "authorship": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scopeKind": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scopeNote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "licenseClasses": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "options": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "text"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "imageId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "sourceId",
+                "locator"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "sourceId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "humanReviewedAt": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "humanReviewer": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    }
+  }
+}

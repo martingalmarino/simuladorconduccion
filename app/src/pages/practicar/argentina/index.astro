@@ -1,0 +1,45 @@
+---
+import Layout from '../../../components/Layout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import QuizApp from '../../../components/quiz/QuizApp';
+import {
+  getContentVersion,
+  getPracticeModesForJurisdiction,
+  getQuestionsForSlug,
+  prepareQuestionsForClient,
+  requireJurisdiction,
+} from '../../../lib/content';
+
+const slug = 'argentina';
+const jurisdiction = requireJurisdiction(slug);
+const prepared = prepareQuestionsForClient(getQuestionsForSlug(slug));
+const contentVersion = getContentVersion();
+const practiceModes = getPracticeModesForJurisdiction(jurisdiction);
+const notice =
+  jurisdiction.notice ??
+  'Práctica independiente sobre el marco nacional. No es un examen oficial ni reemplaza la preparación específica de tu jurisdicción.';
+---
+
+<Layout
+  title={`Practicar test de conducir · ${jurisdiction.label}`}
+  description={`Sesión interactiva de práctica general para autos (marco nacional). No indexable.`}
+  pathname={`/practicar/${slug}/`}
+  noindex={true}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Inicio', href: '/' },
+      { label: 'Argentina', href: `/test-de-conducir/${slug}/` },
+      { label: 'Practicar' },
+    ]}
+  />
+
+  <QuizApp
+    client:load
+    jurisdiction={jurisdiction}
+    questions={prepared}
+    practiceModes={practiceModes}
+    contentVersion={contentVersion}
+    notice={notice}
+  />
+</Layout>

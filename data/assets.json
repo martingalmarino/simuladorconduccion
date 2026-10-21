@@ -68,5 +68,53 @@
     "origin": "original-vector",
     "createdAt": "2026-10-20",
     "note": "Ilustración educativa simplificada; no es un plano técnico de fabricación."
+  },
+  {
+    "id": "ar50-semaforo-rojo",
+    "src": "/images/questions/ar50-semaforo-rojo.svg",
+    "alt": "Semáforo con luz roja fija.",
+    "width": 640,
+    "height": 400,
+    "origin": "original-vector",
+    "createdAt": "2026-10-21",
+    "sourceId": "ar-ley-24449",
+    "locator": "Artículo 44 a.2 a a.5",
+    "note": "Ilustración educativa original; la intermitencia se indica con texto, sin animación."
+  },
+  {
+    "id": "ar50-semaforo-amarillo",
+    "src": "/images/questions/ar50-semaforo-amarillo.svg",
+    "alt": "Semáforo con luz amarilla fija.",
+    "width": 640,
+    "height": 400,
+    "origin": "original-vector",
+    "createdAt": "2026-10-21",
+    "sourceId": "ar-ley-24449",
+    "locator": "Artículo 44 a.2 a a.5",
+    "note": "Ilustración educativa original; la intermitencia se indica con texto, sin animación."
+  },
+  {
+    "id": "ar50-semaforo-amarillo-intermitente",
+    "src": "/images/questions/ar50-semaforo-amarillo-intermitente.svg",
+    "alt": "Semáforo con luz amarilla intermitente.",
+    "width": 640,
+    "height": 400,
+    "origin": "original-vector",
+    "createdAt": "2026-10-21",
+    "sourceId": "ar-ley-24449",
+    "locator": "Artículo 44 a.2 a a.5",
+    "note": "Ilustración educativa original; la intermitencia se indica con texto, sin animación."
+  },
+  {
+    "id": "ar50-semaforo-rojo-intermitente",
+    "src": "/images/questions/ar50-semaforo-rojo-intermitente.svg",
+    "alt": "Semáforo con luz roja intermitente.",
+    "width": 640,
+    "height": 400,
+    "origin": "original-vector",
+    "createdAt": "2026-10-21",
+    "sourceId": "ar-ley-24449",
+    "locator": "Artículo 44 a.2 a a.5",
+    "note": "Ilustración educativa original; la intermitencia se indica con texto, sin animación."
   }
 ]

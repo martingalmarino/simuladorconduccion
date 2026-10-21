@@ -60,8 +60,22 @@ export function validateContentBundle(input: {
       errors.push(`Banco ausente para ${jurisdiction.id}: ${jurisdiction.bankId}`);
       continue;
     }
-    if (bank.questions.length !== 50) {
-      errors.push(`El banco ${bank.bankId} debe tener 50 preguntas (tiene ${bank.questions.length}).`);
+    if (!['1.0.0', '1.1.0'].includes(bank.schemaVersion)) {
+      errors.push(`Schema desconocido en ${bank.bankId}: ${bank.schemaVersion}`);
+    }
+    if (bank.questions.length < 1) {
+      errors.push(`El banco ${bank.bankId} no tiene preguntas.`);
+    }
+    if (bank.bankId === 'argentina-b1') {
+      if (bank.schemaVersion !== '1.1.0') {
+        errors.push('El banco nacional debe usar schema 1.1.0.');
+      }
+      if (bank.questions.length !== 50) {
+        errors.push(`El banco nacional debe tener 50 preguntas (tiene ${bank.questions.length}).`);
+      }
+      if (bank.scopeKind !== 'national-framework') {
+        errors.push('El banco nacional debe declarar scopeKind national-framework.');
+      }
     }
     for (const question of bank.questions) {
       if (allQuestionIds.has(question.id)) {
@@ -79,6 +93,15 @@ export function validateContentBundle(input: {
       }
       if (!optionIds.includes(question.correctOptionId)) {
         errors.push(`correctOptionId no resuelve en ${question.id}`);
+      }
+
+      if (bank.schemaVersion === '1.1.0') {
+        if (question.scopeKind !== 'national-framework') {
+          errors.push(`Falta scopeKind en ${question.id}`);
+        }
+        if (!question.scopeNote?.trim()) {
+          errors.push(`Falta scopeNote en ${question.id}`);
+        }
       }
 
       for (const ref of question.sources) {

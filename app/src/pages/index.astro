@@ -35,7 +35,7 @@ const jsonLd = [
     name: 'Test de conducir Argentina | Practicá el examen teórico',
     inLanguage: runtime.locale,
     description:
-      'Prepará el examen teórico de conducir con tests por jurisdicción, respuestas explicadas y preguntas con imágenes. Practicá online y repasá tus errores.',
+      'Prepará el examen teórico de conducir con práctica general y tests por jurisdicción. Preguntas con respuestas explicadas, imágenes y fuentes para estudiar.',
     ...(pageUrl ? { url: pageUrl } : {}),
   },
 ];
@@ -43,7 +43,7 @@ const jsonLd = [
 
 <Layout
   title="Test de conducir Argentina | Practicá el examen teórico"
-  description="Prepará el examen teórico de conducir con tests por jurisdicción, respuestas explicadas y preguntas con imágenes. Practicá online y repasá tus errores."
+  description="Prepará el examen teórico de conducir con práctica general y tests por jurisdicción. Preguntas con respuestas explicadas, imágenes y fuentes para estudiar."
   pathname="/"
   jsonLd={jsonLd}
   fullBleed={true}
@@ -52,8 +52,9 @@ const jsonLd = [
     <p class="kicker">Práctica del teórico · Argentina</p>
     <h1>Prepará tu examen teórico de conducir</h1>
     <p class="lede">
-      Practicá para autos con preguntas explicadas. Elegí CABA o Córdoba Capital y avanzá a tu ritmo.
-      Hay {questionCount} preguntas por ciudad. No es el temario completo ni un examen oficial.
+      Practicá para autos con preguntas explicadas. Elegí práctica general (marco nacional), CABA o
+      Córdoba Capital. Cada banco tiene {questionCount} preguntas. No es el temario completo ni un
+      examen oficial.
     </p>
 
     <PracticeLauncher
@@ -113,8 +114,8 @@ const jsonLd = [
           prácticas queda en tu dispositivo.
         </p>
         <p class="muted">
-          Hoy podés practicar <strong>autos (clase B1)</strong>. Las categorías A, E y D están
-          anunciadas y todavía no tienen preguntas.
+          Hoy podés practicar <strong>autos (clase B1)</strong> en práctica general, CABA y Córdoba
+          Capital. Las categorías A, E y D están anunciadas y todavía no tienen preguntas.
         </p>
       </div>
       <div class="split__visual">
@@ -252,9 +253,9 @@ const jsonLd = [
         <details>
           <summary>¿Cuántas preguntas hay?</summary>
           <p>
-            {questionCount} por ciudad (CABA y Córdoba Capital). Podés practicar con 10, 20 o las{' '}
-            {questionCount}. Si elegís {questionCount}, usás todas las disponibles: no se generan
-            preguntas nuevas al azar.
+            {questionCount} en cada banco (práctica general, CABA y Córdoba Capital). Podés practicar
+            con 10, 20 o las {questionCount}. Si elegís {questionCount}, usás todas las disponibles:
+            no se generan preguntas nuevas al azar.
           </p>
         </details>
         <details>

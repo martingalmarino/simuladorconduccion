@@ -1,0 +1,2018 @@
+{
+  "schemaVersion": "1.1.0",
+  "bankId": "argentina-b1",
+  "title": "Test de conducir Argentina — práctica general",
+  "coverage": "50 preguntas originales de práctica general para autos. Marco nacional de referencia; no es un banco oficial ni cubre todo el temario de B1.",
+  "scopeKind": "national-framework",
+  "scopeNote": "La Ley 24.449 establece su ámbito de aplicación y admite adhesión y disposiciones locales. Este banco no certifica equivalencia con todos los exámenes provinciales o municipales.",
+  "questions": [
+    {
+      "id": "argentina-b1-001",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "marco-y-requisitos",
+      "prompt": "Un agente de tránsito te indica detenerte aunque el semáforo esté en verde. Según la Ley 24.449, ¿qué indicación debés respetar primero?",
+      "options": [
+        {
+          "id": "argentina-b1-001-o1",
+          "text": "La luz verde, porque siempre prevalece."
+        },
+        {
+          "id": "argentina-b1-001-o2",
+          "text": "La del agente que dirige el tránsito."
+        },
+        {
+          "id": "argentina-b1-001-o3",
+          "text": "La maniobra del vehículo que circula adelante."
+        }
+      ],
+      "correctOptionId": "argentina-b1-001-o2",
+      "explanation": "El artículo 36 establece este orden: indicaciones de la autoridad, señales de tránsito y normas legales. La luz verde no permite ignorar al agente.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 36"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-002",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "marco-y-requisitos",
+      "prompt": "Antes de salir a la vía pública con un auto, ¿qué debés comprobar según la Ley 24.449?",
+      "options": [
+        {
+          "id": "argentina-b1-002-o1",
+          "text": "Que tanto vos como el vehículo estén en condiciones adecuadas de seguridad."
+        },
+        {
+          "id": "argentina-b1-002-o2",
+          "text": "Únicamente que haya combustible suficiente."
+        },
+        {
+          "id": "argentina-b1-002-o3",
+          "text": "Solo que las luces delanteras enciendan."
+        }
+      ],
+      "correctOptionId": "argentina-b1-002-o1",
+      "explanation": "La revisión previa incluye las condiciones del conductor y del vehículo. Poder poner en marcha el motor no demuestra que el conjunto sea seguro.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 39 a"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-003",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "marco-y-requisitos",
+      "prompt": "Según la Ley 24.449, ¿alcanza con tener una licencia de cualquier clase para manejar un automóvil?",
+      "options": [
+        {
+          "id": "argentina-b1-003-o1",
+          "text": "Sí, si la licencia todavía no venció."
+        },
+        {
+          "id": "argentina-b1-003-o2",
+          "text": "No; necesitás la habilitación correspondiente al tipo de vehículo."
+        },
+        {
+          "id": "argentina-b1-003-o3",
+          "text": "Sí, si el titular del auto viaja como acompañante."
+        }
+      ],
+      "correctOptionId": "argentina-b1-003-o2",
+      "explanation": "La habilitación debe corresponder al vehículo conducido. La presencia de su dueño no reemplaza esa autorización.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 40 a"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-004",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "marco-y-requisitos",
+      "prompt": "¿En qué formatos permite la Ley 24.449 exhibir el comprobante de seguro vigente?",
+      "options": [
+        {
+          "id": "argentina-b1-004-o1",
+          "text": "Solo en una impresión en color."
+        },
+        {
+          "id": "argentina-b1-004-o2",
+          "text": "Solo mediante el contrato original firmado por la aseguradora."
+        },
+        {
+          "id": "argentina-b1-004-o3",
+          "text": "En papel impreso o en formato digital mediante un dispositivo electrónico."
+        }
+      ],
+      "correctOptionId": "argentina-b1-004-o3",
+      "explanation": "El artículo 40 admite ambos formatos. La pregunta se refiere al comprobante de un seguro vigente, no a cualquier archivo o fotografía sin respaldo.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 40 c"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-005",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "marco-y-requisitos",
+      "prompt": "Según la Ley 24.449, ¿cómo deben encontrarse las patentes del vehículo para circular?",
+      "options": [
+        {
+          "id": "argentina-b1-005-o1",
+          "text": "Colocadas en los lugares reglamentarios, legibles y sin aditamentos."
+        },
+        {
+          "id": "argentina-b1-005-o2",
+          "text": "Guardadas dentro del auto para evitar su deterioro."
+        },
+        {
+          "id": "argentina-b1-005-o3",
+          "text": "Parcialmente cubiertas, siempre que se vea la última cifra."
+        }
+      ],
+      "correctOptionId": "argentina-b1-005-o1",
+      "explanation": "La identificación de dominio debe poder leerse y cumplir las características reglamentarias. Llevar las placas sueltas dentro del habitáculo no cumple esa exigencia.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 40 d"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-006",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "marco-y-requisitos",
+      "prompt": "¿Qué elementos exige la Ley 24.449 para circular en automóvil ante una eventual emergencia?",
+      "options": [
+        {
+          "id": "argentina-b1-006-o1",
+          "text": "Solo una linterna y un chaleco de cualquier tipo."
+        },
+        {
+          "id": "argentina-b1-006-o2",
+          "text": "Matafuego y balizas portátiles normalizados."
+        },
+        {
+          "id": "argentina-b1-006-o3",
+          "text": "Únicamente las balizas eléctricas del vehículo."
+        }
+      ],
+      "correctOptionId": "argentina-b1-006-o2",
+      "explanation": "El artículo 40 exige matafuego y balizas portátiles normalizados. Las luces intermitentes del auto no sustituyen las balizas portátiles.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 40 f"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-007",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "marco-y-requisitos",
+      "prompt": "Un auto tiene capacidad para cinco personas. Según la Ley 24.449, ¿podrían viajar seis si el recorrido es corto?",
+      "options": [
+        {
+          "id": "argentina-b1-007-o1",
+          "text": "Sí, si una persona viaja sobre las piernas de otra."
+        },
+        {
+          "id": "argentina-b1-007-o2",
+          "text": "Sí, si no se circula por una ruta."
+        },
+        {
+          "id": "argentina-b1-007-o3",
+          "text": "No; la cantidad de ocupantes debe respetar la capacidad del vehículo."
+        }
+      ],
+      "correctOptionId": "argentina-b1-007-o3",
+      "explanation": "La cantidad de ocupantes debe ser compatible con la capacidad del vehículo y no estorbar al conductor. La distancia del viaje no crea una excepción.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 40 g"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-008",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "marco-y-requisitos",
+      "prompt": "En un automóvil con cinturones instalados, ¿quiénes deben utilizarlos según la Ley 24.449?",
+      "options": [
+        {
+          "id": "argentina-b1-008-o1",
+          "text": "Solo quien conduce."
+        },
+        {
+          "id": "argentina-b1-008-o2",
+          "text": "Solo quienes viajan en los asientos delanteros."
+        },
+        {
+          "id": "argentina-b1-008-o3",
+          "text": "Todos sus ocupantes."
+        }
+      ],
+      "correctOptionId": "argentina-b1-008-o3",
+      "explanation": "El uso del cinturón alcanza a los ocupantes, incluidos quienes viajan atrás. La protección no depende de la ubicación dentro del auto.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 40 k"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-009",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "marco-y-requisitos",
+      "prompt": "Según la reglamentación nacional, ¿cómo debe viajar un niño de seis años en un automóvil particular?",
+      "options": [
+        {
+          "id": "argentina-b1-009-o1",
+          "text": "En el asiento trasero, con un sistema de retención infantil homologado adecuado a su peso y tamaño."
+        },
+        {
+          "id": "argentina-b1-009-o2",
+          "text": "En el asiento delantero, usando únicamente el cinturón para adultos."
+        },
+        {
+          "id": "argentina-b1-009-o3",
+          "text": "En brazos de un adulto que lleve el cinturón abrochado."
+        }
+      ],
+      "correctOptionId": "argentina-b1-009-o1",
+      "explanation": "El marco nacional contempla el asiento trasero y la retención infantil correspondiente. Para rendir en una jurisdicción específica, verificá también sus requisitos de edad y talla.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-decreto-779-anexo1",
+          "locator": "Artículo 77 u"
+        },
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 40 g"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-010",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "marco-y-requisitos",
+      "prompt": "Detectás una cubierta con fallas o sin la profundidad legal de dibujo. Según la Ley 24.449, ¿podés circular igualmente si vas despacio?",
+      "options": [
+        {
+          "id": "argentina-b1-010-o1",
+          "text": "Sí, mientras no llueva."
+        },
+        {
+          "id": "argentina-b1-010-o2",
+          "text": "Sí, por calles y hasta la próxima revisión técnica."
+        },
+        {
+          "id": "argentina-b1-010-o3",
+          "text": "No; circular con cubiertas en esas condiciones está prohibido."
+        }
+      ],
+      "correctOptionId": "argentina-b1-010-o3",
+      "explanation": "La prohibición se refiere al estado del neumático. Reducir la velocidad o contar con una revisión anterior no corrige el defecto.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 48 l"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-011",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades-y-maniobras",
+      "prompt": "En una encrucijada regida por la Ley 24.449, sin señales que indiquen otra cosa ni excepciones aplicables, ¿a quién debés ceder el paso?",
+      "options": [
+        {
+          "id": "argentina-b1-011-o1",
+          "text": "Al vehículo que cruza desde tu derecha."
+        },
+        {
+          "id": "argentina-b1-011-o2",
+          "text": "Al que se presenta por tu izquierda."
+        },
+        {
+          "id": "argentina-b1-011-o3",
+          "text": "Al de mayor tamaño."
+        }
+      ],
+      "correctOptionId": "argentina-b1-011-o1",
+      "explanation": "La prioridad de la derecha es la regla general, pero tiene excepciones expresas. La pregunta excluye esas situaciones especiales.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 41"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-012",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades-y-maniobras",
+      "prompt": "Según la Ley 24.449, llegás desde una vía de tierra a una pavimentada. ¿Conservás la prioridad por presentarte desde la derecha?",
+      "options": [
+        {
+          "id": "argentina-b1-012-o1",
+          "text": "No; esa situación es una excepción a la prioridad de la derecha."
+        },
+        {
+          "id": "argentina-b1-012-o2",
+          "text": "Sí, sin importar la superficie de ambas vías."
+        },
+        {
+          "id": "argentina-b1-012-o3",
+          "text": "Sí, si el otro vehículo es más pequeño."
+        }
+      ],
+      "correctOptionId": "argentina-b1-012-o1",
+      "explanation": "El ingreso desde tierra a pavimento figura entre las circunstancias que hacen perder esa prioridad. No debe aplicarse la regla de la derecha de forma aislada.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 41 g.1"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-013",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades-y-maniobras",
+      "prompt": "Un peatón cruza lícitamente por la senda. Según la Ley 24.449, ¿qué debés hacer si tu avance lo pone en peligro?",
+      "options": [
+        {
+          "id": "argentina-b1-013-o1",
+          "text": "Tocar bocina para que apresure el cruce."
+        },
+        {
+          "id": "argentina-b1-013-o2",
+          "text": "Pasar por delante si calculás que queda espacio."
+        },
+        {
+          "id": "argentina-b1-013-o3",
+          "text": "Detener el vehículo y cederle el paso."
+        }
+      ],
+      "correctOptionId": "argentina-b1-013-o3",
+      "explanation": "La prioridad del peatón que cruza lícitamente integra las excepciones a la prioridad vehicular. El conductor debe detenerse si su avance lo pone en peligro.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 41 e"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-014",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades-y-maniobras",
+      "prompt": "Según la Ley 24.449, un vehículo del servicio público de urgencia está cumpliendo su misión. ¿Podés exigirle paso solo porque venís desde su derecha?",
+      "options": [
+        {
+          "id": "argentina-b1-014-o1",
+          "text": "No; el servicio de urgencia en cumplimiento de su misión es una excepción a esa prioridad."
+        },
+        {
+          "id": "argentina-b1-014-o2",
+          "text": "Sí, porque la prioridad de la derecha nunca admite excepciones."
+        },
+        {
+          "id": "argentina-b1-014-o3",
+          "text": "Sí, salvo que sea un vehículo de mayor tamaño."
+        }
+      ],
+      "correctOptionId": "argentina-b1-014-o1",
+      "explanation": "La ley contempla expresamente a los servicios públicos de urgencia en cumplimiento de su misión. Esto no se extiende automáticamente a cualquier vehículo que use balizas.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 41 c"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-015",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades-y-maniobras",
+      "prompt": "Según la Ley 24.449 y sin señalización en contrario, ¿qué prioridad tiene un auto que ya circula en una rotonda frente a otro que intenta ingresar?",
+      "options": [
+        {
+          "id": "argentina-b1-015-o1",
+          "text": "Debe ceder siempre al que está entrando."
+        },
+        {
+          "id": "argentina-b1-015-o2",
+          "text": "Tiene prioridad sobre el que intenta ingresar."
+        },
+        {
+          "id": "argentina-b1-015-o3",
+          "text": "La prioridad depende de cuál sea más grande."
+        }
+      ],
+      "correctOptionId": "argentina-b1-015-o2",
+      "explanation": "El que circula por la rotonda tiene prioridad sobre el que ingresa. La misma norma indica que debe cederla al que egresa, salvo señalización en contrario.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 43 e"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-016",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades-y-maniobras",
+      "prompt": "Como regla general de la Ley 24.449, ¿por qué lado se realiza el adelantamiento a otro vehículo?",
+      "options": [
+        {
+          "id": "argentina-b1-016-o1",
+          "text": "Por la izquierda."
+        },
+        {
+          "id": "argentina-b1-016-o2",
+          "text": "Por la derecha en todos los casos."
+        },
+        {
+          "id": "argentina-b1-016-o3",
+          "text": "Por cualquiera de los dos lados, indistintamente."
+        }
+      ],
+      "correctOptionId": "argentina-b1-016-o1",
+      "explanation": "La regla general es sobrepasar por la izquierda. La ley contempla situaciones excepcionales de adelantamiento por la derecha, que no convierten esa alternativa en una elección libre.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 42, encabezado y h"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-017",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades-y-maniobras",
+      "prompt": "Antes de iniciar un sobrepaso por la izquierda, ¿qué exige comprobar la Ley 24.449?",
+      "options": [
+        {
+          "id": "argentina-b1-017-o1",
+          "text": "Solo que el vehículo de adelante circule más lento."
+        },
+        {
+          "id": "argentina-b1-017-o2",
+          "text": "Únicamente que el auto tenga potencia suficiente."
+        },
+        {
+          "id": "argentina-b1-017-o3",
+          "text": "Que haya distancia libre suficiente y que otro vehículo no te esté sobrepasando."
+        }
+      ],
+      "correctOptionId": "argentina-b1-017-o3",
+      "explanation": "La maniobra necesita espacio seguro y una comprobación de lo que ocurre detrás. La diferencia de velocidad por sí sola no autoriza a adelantar.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 42 a"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-018",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades-y-maniobras",
+      "prompt": "Te aproximás a una curva que limita la visibilidad. Según la Ley 24.449, ¿corresponde iniciar un sobrepaso?",
+      "options": [
+        {
+          "id": "argentina-b1-018-o1",
+          "text": "Sí, si encendés las luces altas."
+        },
+        {
+          "id": "argentina-b1-018-o2",
+          "text": "No; no debe iniciarse en esa aproximación peligrosa."
+        },
+        {
+          "id": "argentina-b1-018-o3",
+          "text": "Sí, si el otro conductor reduce su velocidad."
+        }
+      ],
+      "correctOptionId": "argentina-b1-018-o2",
+      "explanation": "La ley exige visibilidad suficiente y excluye iniciar el adelantamiento al aproximarse a curvas y otros lugares peligrosos. Señalizar no elimina el riesgo ni la prohibición.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 42 b"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-019",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades-y-maniobras",
+      "prompt": "Luego de sobrepasar, ¿cómo debés regresar a la derecha según la Ley 24.449?",
+      "options": [
+        {
+          "id": "argentina-b1-019-o1",
+          "text": "Entrando de inmediato delante del otro vehículo, sin señalizar."
+        },
+        {
+          "id": "argentina-b1-019-o2",
+          "text": "Con balizas, aunque obligues al otro auto a frenar."
+        },
+        {
+          "id": "argentina-b1-019-o3",
+          "text": "Con el giro derecho encendido y sin interferir la marcha del vehículo sobrepasado."
+        }
+      ],
+      "correctOptionId": "argentina-b1-019-o3",
+      "explanation": "El retorno debe señalizarse y dejar un margen que no interfiera con la circulación del vehículo adelantado. La maniobra no termina al quedar a su altura.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 42 d"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-020",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "prioridades-y-maniobras",
+      "prompt": "Otro conductor te advierte que va a sobrepasarte. Según la Ley 24.449, ¿qué corresponde hacer?",
+      "options": [
+        {
+          "id": "argentina-b1-020-o1",
+          "text": "Acelerar para impedir que termine el adelantamiento."
+        },
+        {
+          "id": "argentina-b1-020-o2",
+          "text": "Facilitar el sobrepaso, mantenerte a la derecha y mantener o reducir la velocidad si hace falta."
+        },
+        {
+          "id": "argentina-b1-020-o3",
+          "text": "Desplazarte hacia la izquierda para cerrar el espacio."
+        }
+      ],
+      "correctOptionId": "argentina-b1-020-o2",
+      "explanation": "El conductor sobrepasado también debe contribuir a la seguridad de la maniobra. Acelerar o cerrar el paso dificulta su finalización.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 42 e"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-021",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos-y-vias",
+      "prompt": "Según la Ley 24.449, el semáforo está en rojo y no hay un agente dando otra indicación. ¿Dónde debés detenerte?",
+      "options": [
+        {
+          "id": "argentina-b1-021-o1",
+          "text": "Sobre la senda, si no hay peatones."
+        },
+        {
+          "id": "argentina-b1-021-o2",
+          "text": "Dentro del cruce, sin llegar al otro carril."
+        },
+        {
+          "id": "argentina-b1-021-o3",
+          "text": "Antes de la línea de detención o de la senda peatonal."
+        }
+      ],
+      "correctOptionId": "argentina-b1-021-o3",
+      "explanation": "La luz roja exige detenerse antes del espacio reservado para el cruce. Que la senda esté momentáneamente vacía no habilita a ocuparla.",
+      "imageId": "ar50-semaforo-rojo",
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 44 a.2"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-022",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos-y-vias",
+      "prompt": "Según la Ley 24.449, aparece la luz amarilla fija y estimás que no terminarías de atravesar la intersección antes del rojo. ¿Qué corresponde?",
+      "options": [
+        {
+          "id": "argentina-b1-022-o1",
+          "text": "Acelerar para intentar pasar de todos modos."
+        },
+        {
+          "id": "argentina-b1-022-o2",
+          "text": "Detenerte antes de ingresar al cruce."
+        },
+        {
+          "id": "argentina-b1-022-o3",
+          "text": "Continuar porque el amarillo equivale al verde."
+        }
+      ],
+      "correctOptionId": "argentina-b1-022-o2",
+      "explanation": "La regla nacional ordena detenerse si se estima que no se alcanzará a transponer la encrucijada antes de la luz roja. No es una invitación a acelerar.",
+      "imageId": "ar50-semaforo-amarillo",
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 44 a.3"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-023",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos-y-vias",
+      "prompt": "Según la Ley 24.449, ¿cómo se atraviesa un cruce con luz amarilla intermitente?",
+      "options": [
+        {
+          "id": "argentina-b1-023-o1",
+          "text": "Con prioridad asegurada sobre todo el resto del tránsito."
+        },
+        {
+          "id": "argentina-b1-023-o2",
+          "text": "Acelerando para reducir el tiempo dentro del cruce."
+        },
+        {
+          "id": "argentina-b1-023-o3",
+          "text": "Con precaución, por tratarse de un cruce riesgoso."
+        }
+      ],
+      "correctOptionId": "argentina-b1-023-o3",
+      "explanation": "La luz amarilla intermitente advierte riesgo. No otorga por sí misma una prioridad que permita desatender a los demás usuarios.",
+      "imageId": "ar50-semaforo-amarillo-intermitente",
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 44 a.4"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-024",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos-y-vias",
+      "prompt": "Según la Ley 24.449, ¿qué exige una luz roja intermitente?",
+      "options": [
+        {
+          "id": "argentina-b1-024-o1",
+          "text": "Reducir un poco la velocidad sin detenerse."
+        },
+        {
+          "id": "argentina-b1-024-o2",
+          "text": "Continuar si el vehículo de atrás toca bocina."
+        },
+        {
+          "id": "argentina-b1-024-o3",
+          "text": "Detenerse y reiniciar la marcha solo cuando no exista riesgo."
+        }
+      ],
+      "correctOptionId": "argentina-b1-024-o3",
+      "explanation": "A diferencia de la amarilla intermitente, la roja exige una detención. Después es necesario comprobar que continuar no genere riesgo.",
+      "imageId": "ar50-semaforo-rojo-intermitente",
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 44 a.5"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-025",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos-y-vias",
+      "prompt": "Tenés luz verde, pero no hay espacio después de la intersección para que tu auto la despeje. Según la Ley 24.449, ¿qué debés hacer?",
+      "options": [
+        {
+          "id": "argentina-b1-025-o1",
+          "text": "Esperar antes de ingresar hasta disponer de espacio suficiente."
+        },
+        {
+          "id": "argentina-b1-025-o2",
+          "text": "Avanzar y quedarte en medio del cruce."
+        },
+        {
+          "id": "argentina-b1-025-o3",
+          "text": "Ingresar si mantenés encendidas las balizas."
+        }
+      ],
+      "correctOptionId": "argentina-b1-025-o1",
+      "explanation": "La luz verde no autoriza a bloquear la intersección. La ley exige que exista espacio suficiente del otro lado para completar el cruce.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 44 e"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-026",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos-y-vias",
+      "prompt": "En una vía con tres carriles de circulación por mano, ¿cómo indica la Ley 24.449 que debés mantener el auto dentro del carril?",
+      "options": [
+        {
+          "id": "argentina-b1-026-o1",
+          "text": "Sobre la línea divisoria para ocupar parcialmente dos carriles."
+        },
+        {
+          "id": "argentina-b1-026-o2",
+          "text": "Por el centro, permaneciendo en un mismo carril."
+        },
+        {
+          "id": "argentina-b1-026-o3",
+          "text": "Cambiando constantemente de carril aunque no sea necesario."
+        }
+      ],
+      "correctOptionId": "argentina-b1-026-o2",
+      "explanation": "Mantener una trayectoria definida facilita que los demás anticipen el movimiento del vehículo. Los cambios se realizan cuando corresponden y deben advertirse.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 45 b"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-027",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos-y-vias",
+      "prompt": "En una vía multicarril, ¿cuándo debés usar la luz de giro para cambiar de carril según la Ley 24.449?",
+      "options": [
+        {
+          "id": "argentina-b1-027-o1",
+          "text": "Antes de la maniobra, con anticipación."
+        },
+        {
+          "id": "argentina-b1-027-o2",
+          "text": "Solo después de ocupar el nuevo carril."
+        },
+        {
+          "id": "argentina-b1-027-o3",
+          "text": "Únicamente durante la noche."
+        }
+      ],
+      "correctOptionId": "argentina-b1-027-o1",
+      "explanation": "El aviso debe preceder al desplazamiento. Encender el giro no concede prioridad ni reemplaza comprobar que el cambio pueda hacerse con seguridad.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 45 c; 39 b"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-028",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos-y-vias",
+      "prompt": "En una autopista regida por la Ley 24.449, ¿podés detenerte sobre un carril para que baje un acompañante?",
+      "options": [
+        {
+          "id": "argentina-b1-028-o1",
+          "text": "Sí, durante unos segundos y con balizas."
+        },
+        {
+          "id": "argentina-b1-028-o2",
+          "text": "No; el ascenso o descenso solo puede hacerse en las dársenas construidas para ello, si existen."
+        },
+        {
+          "id": "argentina-b1-028-o3",
+          "text": "Sí, si elegís el carril derecho."
+        }
+      ],
+      "correctOptionId": "argentina-b1-028-o2",
+      "explanation": "La ley prohíbe detenerse o estacionar para esa finalidad fuera de los espacios previstos. Las balizas no habilitan una detención de conveniencia.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 46 c"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-029",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos-y-vias",
+      "prompt": "Según la Ley 24.449, ¿puede circular una bicicleta por una autopista?",
+      "options": [
+        {
+          "id": "argentina-b1-029-o1",
+          "text": "Sí, si lleva luces y casco."
+        },
+        {
+          "id": "argentina-b1-029-o2",
+          "text": "No; los vehículos propulsados por el conductor están excluidos."
+        },
+        {
+          "id": "argentina-b1-029-o3",
+          "text": "Sí, siempre que use la banquina."
+        }
+      ],
+      "correctOptionId": "argentina-b1-029-o2",
+      "explanation": "La autopista está reservada para los tipos de vehículos admitidos. El equipamiento de seguridad de una bicicleta no modifica esa exclusión.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 46 b"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-030",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "semaforos-y-vias",
+      "prompt": "Un auto es remolcado por una avería en una autopista. Según la Ley 24.449, ¿cuándo debe abandonar esa vía?",
+      "options": [
+        {
+          "id": "argentina-b1-030-o1",
+          "text": "En la primera salida."
+        },
+        {
+          "id": "argentina-b1-030-o2",
+          "text": "Solo cuando llegue a su destino final."
+        },
+        {
+          "id": "argentina-b1-030-o3",
+          "text": "Después de recorrer al menos diez kilómetros."
+        }
+      ],
+      "correctOptionId": "argentina-b1-030-o1",
+      "explanation": "Para los vehículos remolcados por avería o accidente, la ley establece la salida de la autopista en el primer egreso disponible.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 46 d"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-031",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidades",
+      "prompt": "Con lluvia y visibilidad reducida, ¿alcanza con respetar el máximo indicado para cumplir la velocidad precautoria de la Ley 24.449?",
+      "options": [
+        {
+          "id": "argentina-b1-031-o1",
+          "text": "No; debés adaptar la velocidad para conservar el dominio del vehículo."
+        },
+        {
+          "id": "argentina-b1-031-o2",
+          "text": "Sí; la máxima siempre es segura en cualquier condición."
+        },
+        {
+          "id": "argentina-b1-031-o3",
+          "text": "Sí, si circulás por el carril derecho."
+        }
+      ],
+      "correctOptionId": "argentina-b1-031-o1",
+      "explanation": "La velocidad precautoria considera visibilidad, vía, tránsito, vehículo y conductor. Puede ser necesario circular por debajo del máximo permitido.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 50"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-032",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidades",
+      "prompt": "Según el límite general de la Ley 24.449, ¿cuál es la máxima en una calle urbana, sin señalización ni situaciones que establezcan otro límite?",
+      "options": [
+        {
+          "id": "argentina-b1-032-o1",
+          "text": "40 km/h."
+        },
+        {
+          "id": "argentina-b1-032-o2",
+          "text": "60 km/h."
+        },
+        {
+          "id": "argentina-b1-032-o3",
+          "text": "80 km/h."
+        }
+      ],
+      "correctOptionId": "argentina-b1-032-o1",
+      "explanation": "La máxima general nacional para calles urbanas es 40 km/h. La señalización y las situaciones especiales pueden exigir una velocidad distinta; verificá también el régimen local.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 51 a.1"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-033",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidades",
+      "prompt": "Según el límite general de la Ley 24.449, ¿cuál es la máxima en una avenida urbana sin otra señalización, semaforización coordinada ni límite especial?",
+      "options": [
+        {
+          "id": "argentina-b1-033-o1",
+          "text": "40 km/h."
+        },
+        {
+          "id": "argentina-b1-033-o2",
+          "text": "60 km/h."
+        },
+        {
+          "id": "argentina-b1-033-o3",
+          "text": "90 km/h."
+        }
+      ],
+      "correctOptionId": "argentina-b1-033-o2",
+      "explanation": "El valor general nacional para avenidas es 60 km/h. No se debe trasladar este número a cualquier avenida sin revisar su señalización y las condiciones aplicables.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 51 a.2"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-034",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidades",
+      "prompt": "Según la Ley 24.449, ¿cuál es la máxima general para un automóvil particular sin remolque en un camino rural que no es autopista ni semiautopista, sin otro límite aplicable?",
+      "options": [
+        {
+          "id": "argentina-b1-034-o1",
+          "text": "130 km/h."
+        },
+        {
+          "id": "argentina-b1-034-o2",
+          "text": "80 km/h."
+        },
+        {
+          "id": "argentina-b1-034-o3",
+          "text": "110 km/h."
+        }
+      ],
+      "correctOptionId": "argentina-b1-034-o3",
+      "explanation": "La categoría de vehículo y el tipo de vía importan. Para este automóvil en zona rural, el máximo general es 110 km/h; no es un objetivo obligatorio de velocidad.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 51 b.1"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-035",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidades",
+      "prompt": "Según la Ley 24.449, ¿cuál es la máxima general para un automóvil particular sin remolque en una semiautopista, sin otra limitación aplicable?",
+      "options": [
+        {
+          "id": "argentina-b1-035-o1",
+          "text": "110 km/h."
+        },
+        {
+          "id": "argentina-b1-035-o2",
+          "text": "120 km/h."
+        },
+        {
+          "id": "argentina-b1-035-o3",
+          "text": "130 km/h."
+        }
+      ],
+      "correctOptionId": "argentina-b1-035-o2",
+      "explanation": "La ley fija para automóviles y motocicletas un máximo general de 120 km/h en semiautopistas. Deben respetarse los límites señalizados y la velocidad precautoria.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 51 c"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-036",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidades",
+      "prompt": "Según la Ley 24.449, ¿cuál es la máxima general para un automóvil particular sin remolque en una autopista, sin otra limitación aplicable?",
+      "options": [
+        {
+          "id": "argentina-b1-036-o1",
+          "text": "120 km/h."
+        },
+        {
+          "id": "argentina-b1-036-o2",
+          "text": "150 km/h."
+        },
+        {
+          "id": "argentina-b1-036-o3",
+          "text": "130 km/h."
+        }
+      ],
+      "correctOptionId": "argentina-b1-036-o3",
+      "explanation": "Ese máximo nacional corresponde a automóviles y motocicletas en autopistas. No significa que toda autopista permita circular a 130 km/h ni que otras categorías tengan el mismo límite.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 51 d"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-037",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidades",
+      "prompt": "Según la Ley 24.449, ¿qué velocidad corresponde al atravesar una encrucijada urbana sin semáforo?",
+      "options": [
+        {
+          "id": "argentina-b1-037-o1",
+          "text": "La máxima de la avenida, aunque sea superior a 30 km/h."
+        },
+        {
+          "id": "argentina-b1-037-o2",
+          "text": "Siempre 40 km/h, sin necesidad de reducir."
+        },
+        {
+          "id": "argentina-b1-037-o3",
+          "text": "Una velocidad precautoria que no supere 30 km/h."
+        }
+      ],
+      "correctOptionId": "argentina-b1-037-o3",
+      "explanation": "El máximo especial nacional para esta situación es 30 km/h. Además, debe elegirse una velocidad precautoria y respetarse la prioridad que corresponda.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 51 e.1"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-038",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidades",
+      "prompt": "Según la Ley 24.449, ¿cómo debés atravesar un paso a nivel sin barrera ni semáforos?",
+      "options": [
+        {
+          "id": "argentina-b1-038-o1",
+          "text": "A 40 km/h si no se escucha una bocina."
+        },
+        {
+          "id": "argentina-b1-038-o2",
+          "text": "Sin reducir, porque no hay barrera que obligue a parar."
+        },
+        {
+          "id": "argentina-b1-038-o3",
+          "text": "A velocidad precautoria no superior a 20 km/h, después de comprobar que no venga un tren."
+        }
+      ],
+      "correctOptionId": "argentina-b1-038-o3",
+      "explanation": "La ausencia de dispositivos no elimina el riesgo ferroviario. La ley combina un máximo especial de 20 km/h con la comprobación de que no se aproxime un tren.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 51 e.2"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-039",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "velocidades",
+      "prompt": "Según la Ley 24.449, al pasar cerca de una escuela durante su funcionamiento, ¿cuál es el límite especial indicado?",
+      "options": [
+        {
+          "id": "argentina-b1-039-o1",
+          "text": "Siempre 40 km/h, por ser una calle."
+        },
+        {
+          "id": "argentina-b1-039-o2",
+          "text": "60 km/h si se circula por una avenida."
+        },
+        {
+          "id": "argentina-b1-039-o3",
+          "text": "Velocidad precautoria no mayor a 20 km/h."
+        }
+      ],
+      "correctOptionId": "argentina-b1-039-o3",
+      "explanation": "El límite nacional especial durante el funcionamiento del establecimiento es 20 km/h. Se debe atender también a las personas, la señalización y las reglas locales aplicables.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 51 e.3"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-040",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "luces",
+      "prompt": "De día, en una ruta nacional y sin circunstancias que exijan otra iluminación, ¿qué admite la reglamentación nacional?",
+      "options": [
+        {
+          "id": "argentina-b1-040-o1",
+          "text": "Circular únicamente con las luces de posición."
+        },
+        {
+          "id": "argentina-b1-040-o2",
+          "text": "Circular con luces bajas o con luces diurnas DRL encendidas."
+        },
+        {
+          "id": "argentina-b1-040-o3",
+          "text": "Circular sin luces si hay buen sol."
+        }
+      ],
+      "correctOptionId": "argentina-b1-040-o2",
+      "explanation": "La reglamentación admite DRL como alternativa diurna en rutas nacionales. De noche exige luces bajas, salvo cuando corresponde utilizar altas; las luces de posición solas no cumplen la regla.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-decreto-779-anexo1",
+          "locator": "Artículo 47 a y h"
+        },
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 47 a y c"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-041",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "luces",
+      "prompt": "Circulás con luces altas y se aproxima un vehículo en sentido contrario. Según la reglamentación nacional, ¿qué debés hacer?",
+      "options": [
+        {
+          "id": "argentina-b1-041-o1",
+          "text": "Mantener las altas hasta quedar a su lado."
+        },
+        {
+          "id": "argentina-b1-041-o2",
+          "text": "Cambiar a bajas con distancia suficiente para no encandilar."
+        },
+        {
+          "id": "argentina-b1-041-o3",
+          "text": "Apagar todas las luces durante el cruce."
+        }
+      ],
+      "correctOptionId": "argentina-b1-041-o2",
+      "explanation": "El cambio debe hacerse antes de cruzarse y con anticipación suficiente. Se busca evitar que el otro conductor pierda visión por el encandilamiento.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-decreto-779-anexo1",
+          "locator": "Artículo 47 b"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-042",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "luces",
+      "prompt": "Según la Ley 24.449, ¿es necesario usar las luces de giro para una maniobra aunque sea pleno día?",
+      "options": [
+        {
+          "id": "argentina-b1-042-o1",
+          "text": "No; solo son obligatorias con poca visibilidad."
+        },
+        {
+          "id": "argentina-b1-042-o2",
+          "text": "Sí; deben usarse conforme a su finalidad aunque haya luz natural suficiente."
+        },
+        {
+          "id": "argentina-b1-042-o3",
+          "text": "Solo si el vehículo de atrás está muy cerca."
+        }
+      ],
+      "correctOptionId": "argentina-b1-042-o2",
+      "explanation": "Las luces de giro comunican una maniobra, no sirven únicamente para iluminar. Por eso deben funcionar también de día cuando corresponde señalizar.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 47 g"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-043",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "riesgos-y-convivencia",
+      "prompt": "Según el texto vigente del artículo 48 de la Ley 24.449, ¿qué nivel de alcohol en sangre está permitido para conducir?",
+      "options": [
+        {
+          "id": "argentina-b1-043-o1",
+          "text": "Hasta 0,5 g/l para cualquier automóvil particular."
+        },
+        {
+          "id": "argentina-b1-043-o2",
+          "text": "Cero: se prohíbe conducir con alcoholemia superior a cero."
+        },
+        {
+          "id": "argentina-b1-043-o3",
+          "text": "Hasta 0,2 g/l si el recorrido es corto."
+        }
+      ],
+      "correctOptionId": "argentina-b1-043-o2",
+      "explanation": "La Ley 27.714 modificó el artículo 48 e incorporó alcohol cero. Esta pregunta evalúa el marco nacional citado; no afirma que todos los regímenes locales tengan idéntica redacción.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 48 a"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-044",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "riesgos-y-convivencia",
+      "prompt": "Tomaste un medicamento que disminuye tu aptitud para conducir. Según la Ley 24.449, ¿podés manejar porque fue recetado?",
+      "options": [
+        {
+          "id": "argentina-b1-044-o1",
+          "text": "No; la prescripción no habilita a conducir con la aptitud disminuida."
+        },
+        {
+          "id": "argentina-b1-044-o2",
+          "text": "Sí, cualquier medicamento recetado permite manejar."
+        },
+        {
+          "id": "argentina-b1-044-o3",
+          "text": "Sí, siempre que vayas por debajo de 40 km/h."
+        }
+      ],
+      "correctOptionId": "argentina-b1-044-o1",
+      "explanation": "La prohibición incluye medicamentos que afecten la aptitud para conducir. Que un tratamiento sea legítimo no elimina sus posibles efectos sobre la conducción.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 48 a"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-045",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "riesgos-y-convivencia",
+      "prompt": "Mientras conducís, querés escribir y enviar un mensaje sosteniendo el celular. Según la Ley 24.449, ¿está permitido?",
+      "options": [
+        {
+          "id": "argentina-b1-045-o1",
+          "text": "No; implica utilizar manualmente un sistema de comunicación durante la conducción."
+        },
+        {
+          "id": "argentina-b1-045-o2",
+          "text": "Sí, si escribís con una sola mano."
+        },
+        {
+          "id": "argentina-b1-045-o3",
+          "text": "Sí, cuando el tránsito avanza lentamente."
+        }
+      ],
+      "correctOptionId": "argentina-b1-045-o1",
+      "explanation": "La norma prohíbe conducir utilizando sistemas de comunicación de operación manual continua. Ir despacio o sostener el volante con una mano no habilita esa conducta.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 48 x"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-046",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "riesgos-y-convivencia",
+      "prompt": "Hay una fila de autos detenidos y no existe una emergencia. Según la Ley 24.449, ¿podés avanzar por la banquina para evitarlos?",
+      "options": [
+        {
+          "id": "argentina-b1-046-o1",
+          "text": "Sí, si usás las balizas."
+        },
+        {
+          "id": "argentina-b1-046-o2",
+          "text": "No; la congestión no habilita a circular por la banquina."
+        },
+        {
+          "id": "argentina-b1-046-o3",
+          "text": "Sí, durante un máximo de cien metros."
+        }
+      ],
+      "correctOptionId": "argentina-b1-046-o2",
+      "explanation": "La excepción para circular por la banquina se refiere a emergencias. Evitar una demora no constituye esa circunstancia.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 48 c"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-047",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "riesgos-y-convivencia",
+      "prompt": "Según la reglamentación nacional, ¿qué separación temporal mínima debe mantener un auto respecto del vehículo que lo precede en su carril?",
+      "options": [
+        {
+          "id": "argentina-b1-047-o1",
+          "text": "Siempre un segundo, incluso con lluvia."
+        },
+        {
+          "id": "argentina-b1-047-o2",
+          "text": "Medio segundo si ambos autos tienen ABS."
+        },
+        {
+          "id": "argentina-b1-047-o3",
+          "text": "Por lo menos dos segundos, ampliándola si las condiciones lo requieren."
+        }
+      ],
+      "correctOptionId": "argentina-b1-047-o3",
+      "explanation": "El mínimo reglamentario es de dos segundos y debe resultar prudente según la velocidad, la calzada y el clima. El equipamiento no elimina la necesidad de distancia.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-decreto-779-anexo1",
+          "locator": "Artículo 48 g"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-048",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "riesgos-y-convivencia",
+      "prompt": "La barrera de un paso a nivel está bajando. Según la Ley 24.449, ¿podés cruzar si todavía queda espacio debajo?",
+      "options": [
+        {
+          "id": "argentina-b1-048-o1",
+          "text": "No; está prohibido cruzar con las barreras bajas o en movimiento."
+        },
+        {
+          "id": "argentina-b1-048-o2",
+          "text": "Sí, si no se ve el tren desde tu posición."
+        },
+        {
+          "id": "argentina-b1-048-o3",
+          "text": "Sí, si el vehículo de adelante acaba de pasar."
+        }
+      ],
+      "correctOptionId": "argentina-b1-048-o1",
+      "explanation": "La barrera en movimiento es una advertencia que impide iniciar el cruce. También está prohibido cruzar si la salida no está libre o se advierte la proximidad de un tren.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 48 k"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-049",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "siniestros",
+      "prompt": "Según la Ley 24.449, si participás en un siniestro de tránsito, ¿qué obligación inmediata tenés?",
+      "options": [
+        {
+          "id": "argentina-b1-049-o1",
+          "text": "Detenerte inmediatamente."
+        },
+        {
+          "id": "argentina-b1-049-o2",
+          "text": "Continuar si el daño parece pequeño."
+        },
+        {
+          "id": "argentina-b1-049-o3",
+          "text": "Alejarte y decidir después si corresponde informar."
+        }
+      ],
+      "correctOptionId": "argentina-b1-049-o1",
+      "explanation": "La obligación de detenerse alcanza a quienes participan del hecho. Un daño que parece menor no autoriza a abandonar el lugar sin cumplir las obligaciones legales.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 65 a"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    },
+    {
+      "id": "argentina-b1-050",
+      "jurisdictionId": "ar-nacional",
+      "licenseClasses": [
+        "B1"
+      ],
+      "topic": "siniestros",
+      "prompt": "Después de un siniestro, ¿qué datos exige la Ley 24.449 suministrar a la otra parte y a la autoridad interviniente?",
+      "options": [
+        {
+          "id": "argentina-b1-050-o1",
+          "text": "Los datos de la licencia de conducir y del seguro obligatorio."
+        },
+        {
+          "id": "argentina-b1-050-o2",
+          "text": "Solo un nombre de pila y un teléfono."
+        },
+        {
+          "id": "argentina-b1-050-o3",
+          "text": "Únicamente la marca y el color del vehículo."
+        }
+      ],
+      "correctOptionId": "argentina-b1-050-o1",
+      "explanation": "La ley exige identificar la licencia y el seguro. Si la otra parte no está presente, contempla dejar esos datos eficazmente adheridos al vehículo dañado.",
+      "imageId": null,
+      "sources": [
+        {
+          "sourceId": "ar-ley-24449",
+          "locator": "Artículo 65 b"
+        }
+      ],
+      "contentStatus": "source-checked-draft",
+      "sourceCheckedAt": "2026-10-21",
+      "humanReviewedAt": null,
+      "humanReviewer": null,
+      "authorship": "original-editorial",
+      "version": 1,
+      "scopeKind": "national-framework",
+      "scopeNote": "Pregunta sobre el marco nacional citado. Complementá con la normativa y el material de tu jurisdicción."
+    }
+  ]
+}

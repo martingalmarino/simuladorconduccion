@@ -1,0 +1,140 @@
+---
+import Layout from '../../../components/Layout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import StudyQuestion from '../../../components/StudyQuestion.astro';
+import {
+  getBankForSlug,
+  groupQuestionsByTopic,
+  requireJurisdiction,
+  sourcesForJurisdiction,
+} from '../../../lib/content';
+import { absoluteUrl, getSiteRuntime } from '../../../lib/site';
+import { topicLabel } from '../../../lib/topics';
+
+const slug = 'argentina';
+const jurisdiction = requireJurisdiction(slug);
+const bank = getBankForSlug(slug);
+const groups = groupQuestionsByTopic(bank.questions);
+const sources = sourcesForJurisdiction(jurisdiction.id);
+const page = jurisdiction.page!;
+const runtime = getSiteRuntime();
+const pageUrl = absoluteUrl(`/test-de-conducir/${slug}/`);
+let questionIndex = 0;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: page.h1,
+    inLanguage: runtime.locale,
+    description: page.description,
+    ...(pageUrl ? { url: pageUrl } : {}),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Inicio',
+        ...(absoluteUrl('/') ? { item: absoluteUrl('/') } : {}),
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Tests',
+        ...(absoluteUrl('/test-de-conducir/')
+          ? { item: absoluteUrl('/test-de-conducir/') }
+          : {}),
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Argentina',
+        ...(pageUrl ? { item: pageUrl } : {}),
+      },
+    ],
+  },
+];
+---
+
+<Layout
+  title={page.title}
+  description={page.description}
+  pathname={`/test-de-conducir/${slug}/`}
+  jsonLd={jsonLd}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Inicio', href: '/' },
+      { label: 'Tests', href: '/test-de-conducir/' },
+      { label: 'Argentina' },
+    ]}
+  />
+
+  <p class="kicker">{page.scopeLabel}</p>
+  <h1>{page.h1}</h1>
+  <p class="lede">{page.intro}</p>
+
+  <section class="section notice" aria-label="Alcance">
+    <p style="margin:0 0 0.5rem;">{page.notice}</p>
+    <p style="margin:0;" class="muted">
+      Complementá este material con la preparación específica de tu jurisdicción.
+      Fuentes consultadas: 21/10/2026.
+    </p>
+  </section>
+
+  <div class="btn-row">
+    <a class="btn btn--primary" href={`/practicar/${slug}/`}>Empezar a practicar</a>
+    <a class="btn btn--secondary" href="#banco-completo">Ver las {bank.questions.length} preguntas</a>
+    <a class="btn btn--ghost" href="/test-de-conducir/caba/">Práctica CABA</a>
+    <a class="btn btn--ghost" href="/test-de-conducir/cordoba-capital/">Práctica Córdoba</a>
+  </div>
+
+  <section class="section" aria-labelledby="temas-ar">
+    <h2 id="temas-ar">Temas incluidos</h2>
+    <div class="topic-chips">
+      {groups.map((g) => <span class="chip">{topicLabel(g.topic)} ({g.questions.length})</span>)}
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="fuentes-ar">
+    <h2 id="fuentes-ar">Fuentes útiles</h2>
+    <ul class="source-list">
+      {
+        sources.map((source) => (
+          <li>
+            <a href={source.url} rel="noopener noreferrer" target="_blank">
+              {source.title}
+            </a>
+            <span class="muted"> · consultado {source.accessedAt}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="muted">
+      Detalle de metodología y límites en
+      <a href="/fuentes-y-metodologia/">Fuentes y metodología</a>.
+    </p>
+  </section>
+
+  <section id="banco-completo" class="section" aria-labelledby="banco-ar-titulo">
+    <h2 id="banco-ar-titulo">Las {bank.questions.length} preguntas de estudio</h2>
+    <p class="muted">
+      Cada pregunta incluye la respuesta correcta, la explicación y la fuente.
+    </p>
+
+    {
+      groups.map((group) => (
+        <div class="stack" style="margin-top:1.5rem;">
+          <h3 style="font-size:1.15rem;">{topicLabel(group.topic)}</h3>
+          {group.questions.map((question) => {
+            questionIndex += 1;
+            return <StudyQuestion question={question} index={questionIndex} />;
+          })}
+        </div>
+      ))
+    }
+  </section>
+</Layout>

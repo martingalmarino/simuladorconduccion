@@ -22,6 +22,12 @@ const TOPIC_LABELS: Record<string, string> = {
   bicicletas: 'Bicicletas',
   adversas: 'Condiciones adversas',
   preventiva: 'Conducción preventiva',
+  'marco-y-requisitos': 'Marco y requisitos',
+  'prioridades-y-maniobras': 'Prioridades y maniobras',
+  'semaforos-y-vias': 'Semáforos y vías',
+  velocidades: 'Velocidades',
+  'riesgos-y-convivencia': 'Riesgos y convivencia',
+  siniestros: 'Siniestros',
 };
 
 export function topicLabel(topic: string): string {

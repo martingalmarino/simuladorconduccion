@@ -44,5 +44,23 @@
     "type": "official-questionnaire",
     "accessedAt": "2026-10-20",
     "usage": "Referencia de formato y contraste. No se importa el banco ni se copian sus ilustraciones."
+  },
+  {
+    "id": "ar-ley-24449",
+    "title": "Ley 24.449 — Ley de Tránsito, texto actualizado",
+    "publisher": "Argentina.gob.ar — Normativa",
+    "url": "https://www.argentina.gob.ar/normativa/nacional/818/actualizacion",
+    "type": "legislation",
+    "jurisdictionId": "ar-nacional",
+    "accessedAt": "2026-10-21"
+  },
+  {
+    "id": "ar-decreto-779-anexo1",
+    "title": "Decreto 779/1995 — Anexo 1, texto actualizado",
+    "publisher": "Argentina.gob.ar — Normativa",
+    "url": "https://www.argentina.gob.ar/normativa/recurso/30389/texactdto779-1995-anexo1/htm",
+    "type": "legislation",
+    "jurisdictionId": "ar-nacional",
+    "accessedAt": "2026-10-21"
   }
 ]

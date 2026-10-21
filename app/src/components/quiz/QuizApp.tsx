@@ -246,10 +246,12 @@ export default function QuizApp(props: QuizAppProps) {
       <div className="quiz-meta" aria-live="polite">
         <span>{jurisdiction.label}</span>
         <span>Autos · {jurisdiction.licenseClasses.join(', ')}</span>
+        {jurisdiction.contextLabel ? <span>{jurisdiction.contextLabel}</span> : null}
         {session && (
           <span>
-            {session.mode === 'learn' ? 'Aprender' : 'Práctica'} ·{' '}
-            {session.questionCount} preguntas
+            {(practiceModes.find((m) => m.id === session.mode)?.label ??
+              (session.mode === 'learn' ? 'Aprender' : 'Práctica'))}{' '}
+            · {session.questionCount} preguntas
           </span>
         )}
       </div>
@@ -425,6 +427,11 @@ export default function QuizApp(props: QuizAppProps) {
                 </strong>
               </p>
               <p>{current.explanation}</p>
+              {current.scopeNote ? (
+                <p className="muted" style={{ fontSize: '0.92rem' }}>
+                  {current.scopeNote}
+                </p>
+              ) : null}
               <p className="muted" style={{ fontSize: '0.9rem' }}>
                 Consulta de fuente: {current.sourceCheckedAt}
               </p>

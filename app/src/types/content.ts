@@ -1,4 +1,6 @@
-export type JurisdictionId = 'ar-caba' | 'ar-x-cordoba-capital';
+export type JurisdictionId = 'ar-caba' | 'ar-x-cordoba-capital' | 'ar-nacional';
+
+export type ScopeKind = 'local' | 'national-framework';
 
 export type LicenseClass = 'B1';
 
@@ -33,6 +35,8 @@ export interface Question {
   humanReviewer: string | null;
   authorship: 'original-editorial';
   version: number;
+  scopeKind?: ScopeKind;
+  scopeNote?: string;
 }
 
 export interface QuestionBank {
@@ -41,6 +45,8 @@ export interface QuestionBank {
   title: string;
   coverage: string;
   questions: Question[];
+  scopeKind?: ScopeKind;
+  scopeNote?: string;
 }
 
 export interface Source {
@@ -63,6 +69,8 @@ export interface Asset {
   origin: string;
   createdAt: string;
   note?: string;
+  sourceId?: string;
+  locator?: string;
 }
 
 export interface PracticeModeConfig {
@@ -73,6 +81,16 @@ export interface PracticeModeConfig {
   timeLimitSeconds: number | null;
 }
 
+export interface JurisdictionPageCopy {
+  title: string;
+  h1: string;
+  description: string;
+  intro: string;
+  notice: string;
+  scopeLabel: string;
+  sourceCheckedAt: string;
+}
+
 export interface JurisdictionConfig {
   id: JurisdictionId;
   label: string;
@@ -81,6 +99,11 @@ export interface JurisdictionConfig {
   geographicScope: string;
   licenseClasses: LicenseClass[];
   fullSyllabus: boolean;
+  scopeKind?: ScopeKind;
+  practiceModes?: PracticeModeConfig[];
+  notice?: string;
+  contextLabel?: string;
+  page?: JurisdictionPageCopy;
 }
 
 export type UpcomingTestStatus = 'proximamente';
@@ -135,6 +158,7 @@ export interface SessionQuestion {
   sources: ResolvedSource[];
   sourceCheckedAt: string;
   version: number;
+  scopeNote?: string | null;
 }
 
 export type SessionAnswerMap = Record<string, string | null>;

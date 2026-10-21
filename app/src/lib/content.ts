@@ -148,6 +148,14 @@ export function resolveQuestionSources(question: Question): ResolvedSource[] {
   });
 }
 
+export function getPracticeModesForJurisdiction(
+  jurisdiction: JurisdictionConfig,
+): SiteConfig['practiceModes'] {
+  return jurisdiction.practiceModes?.length
+    ? jurisdiction.practiceModes
+    : getSiteConfig().practiceModes;
+}
+
 export function toSessionQuestion(
   question: Question,
   shuffledOptions: Question['options'],
@@ -163,6 +171,7 @@ export function toSessionQuestion(
     sources: resolveQuestionSources(question),
     sourceCheckedAt: question.sourceCheckedAt,
     version: question.version,
+    scopeNote: question.scopeNote ?? null,
   };
 }
 
@@ -179,6 +188,7 @@ export function prepareQuestionsForClient(questions: Question[]) {
     sources: resolveQuestionSources(question),
     sourceCheckedAt: question.sourceCheckedAt,
     version: question.version,
+    scopeNote: question.scopeNote ?? null,
   }));
 }
 

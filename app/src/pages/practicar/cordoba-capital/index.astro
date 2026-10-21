@@ -4,6 +4,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import QuizApp from '../../../components/quiz/QuizApp';
 import {
   getContentVersion,
+  getPracticeModesForJurisdiction,
   getQuestionsForSlug,
   getSiteConfig,
   prepareQuestionsForClient,
@@ -15,6 +16,7 @@ const jurisdiction = requireJurisdiction(slug);
 const config = getSiteConfig();
 const prepared = prepareQuestionsForClient(getQuestionsForSlug(slug));
 const contentVersion = getContentVersion();
+const practiceModes = getPracticeModesForJurisdiction(jurisdiction);
 ---
 
 <Layout
@@ -35,8 +37,8 @@ const contentVersion = getContentVersion();
     client:load
     jurisdiction={jurisdiction}
     questions={prepared}
-    practiceModes={config.practiceModes}
+    practiceModes={practiceModes}
     contentVersion={contentVersion}
-    notice={config.notice}
+    notice={jurisdiction.notice ?? config.notice}
   />
 </Layout>

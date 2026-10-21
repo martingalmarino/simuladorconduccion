@@ -6,6 +6,7 @@ const INDEXABLE_PATHS = [
   '/test-de-conducir/',
   '/test-de-conducir/caba/',
   '/test-de-conducir/cordoba-capital/',
+  '/test-de-conducir/argentina/',
   '/fuentes-y-metodologia/',
 ];
 

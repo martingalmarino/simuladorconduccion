@@ -26,6 +26,7 @@ export interface PreparedQuestion {
   sources: SessionQuestion['sources'];
   sourceCheckedAt: string;
   version: number;
+  scopeNote?: string | null;
 }
 
 export function createPracticeSession(input: {
@@ -77,6 +78,7 @@ export function createPracticeSession(input: {
       sources: question.sources,
       sourceCheckedAt: question.sourceCheckedAt,
       version: question.version,
+      scopeNote: question.scopeNote ?? null,
     };
   });
 

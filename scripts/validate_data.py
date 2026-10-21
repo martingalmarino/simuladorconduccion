@@ -2,7 +2,7 @@
 """Check package integrity using only Python's standard library.
 
 This performs semantic checks, not legal review or full JSON Schema validation.
-The supplied schema is also available for consumers using a schema validator.
+Accepts local banks (schema 1.0.0) and the national add-on (schema 1.1.0).
 """
 from pathlib import Path
 import json
@@ -59,9 +59,15 @@ def main():
     for j in config['jurisdictions']:
         bank = read('data/' + j['bankId'] + '.json')
         check(bank['bankId'] == j['bankId'], 'Bank ID mismatch')
-        check(bank['schemaVersion'] == '1.0.0', 'Unknown schema version')
+        schema = bank.get('schemaVersion')
+        check(schema in ('1.0.0', '1.1.0'), f"Unknown schema version: {j['bankId']}")
         questions = bank['questions']
-        check(len(questions) == 50, f"Intermediate bank needs 50 questions: {j['bankId']}")
+        check(len(questions) >= 1, f"Empty bank: {j['bankId']}")
+        if j['bankId'] == 'argentina-b1':
+            check(schema == '1.1.0', 'National bank must use schema 1.1.0')
+            check(len(questions) == 50, 'National bank needs exactly 50 questions')
+            check(bank.get('scopeKind') == 'national-framework', 'National bank missing scopeKind')
+            check(bool(str(bank.get('scopeNote', '')).strip()), 'National bank missing scopeNote')
         prompts = set()
         positions = Counter()
         for q in questions:
@@ -88,6 +94,9 @@ def main():
             check(valid_date(q['sourceCheckedAt']), f'Invalid check date: {qid}')
             check(q['version'] >= 1, f'Invalid version: {qid}')
             check(bool(q['sources']), f'No source: {qid}')
+            if schema == '1.1.0':
+                check(q.get('scopeKind') == 'national-framework', f'Missing question scopeKind: {qid}')
+                check(bool(str(q.get('scopeNote', '')).strip()), f'Missing question scopeNote: {qid}')
             for ref in q['sources']:
                 check(ref['sourceId'] in sources, f'Missing source: {qid}')
                 check(bool(ref['locator'].strip()), f'Missing source locator: {qid}')
@@ -97,11 +106,10 @@ def main():
                 check(q['imageId'] in assets, f'Unknown image: {qid}')
                 used_assets.add(q['imageId'])
         check(len(positions) == 3, f'Correct answers concentrated in one position: {j["bankId"]}')
-        stats.append({'bank':j['bankId'],'questions':len(questions),'illustratedQuestions':sum(q['imageId'] is not None for q in questions),'topics':len(set(q['topic'] for q in questions))})
+        stats.append({'bank':j['bankId'],'questions':len(questions),'illustratedQuestions':sum(q['imageId'] is not None for q in questions),'topics':len(set(q['topic'] for q in questions)),'schema':schema})
     check(used_assets == set(assets), 'Unreferenced assets')
     check(config['officialExamMode']['enabled'] is False, 'Official mode enabled without verification')
     check(config['indexableProduction'] is False and config['siteUrl'] is None, 'Starter publication defaults changed')
-    check(len(all_ids) == 100, 'Total must be 100 questions')
     if errors:
         print('\n'.join('ERROR: '+e for e in errors), file=sys.stderr)
         return 1

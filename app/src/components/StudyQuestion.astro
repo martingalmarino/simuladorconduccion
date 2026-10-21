@@ -56,6 +56,13 @@ const sources = resolveQuestionSources(question);
         {question.options.find((o) => o.id === question.correctOptionId)?.text}
       </p>
       <p>{question.explanation}</p>
+      {
+        question.scopeNote && (
+          <p class="muted" style="font-size:0.92rem; margin:0;">
+            {question.scopeNote}
+          </p>
+        )
+      }
       <p class="muted" style="font-size:0.9rem; margin:0;">
         Fecha de consulta de fuente: {question.sourceCheckedAt}
       </p>

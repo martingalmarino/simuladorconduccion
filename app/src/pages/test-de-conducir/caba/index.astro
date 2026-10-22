@@ -8,7 +8,7 @@ import {
   requireJurisdiction,
   sourcesForJurisdiction,
 } from '../../../lib/content';
-import { absoluteUrl, getSiteRuntime } from '../../../lib/site';
+import { formatSourceDate, studyGraph, type FaqItem } from '../../../lib/studyGraph';
 import { topicLabel } from '../../../lib/topics';
 
 const slug = 'caba';
@@ -16,52 +16,77 @@ const jurisdiction = requireJurisdiction(slug);
 const bank = getBankForSlug(slug);
 const groups = groupQuestionsByTopic(bank.questions);
 const sources = sourcesForJurisdiction(jurisdiction.id);
-const runtime = getSiteRuntime();
-const pageUrl = absoluteUrl(`/test-de-conducir/${slug}/`);
+const updated = sources.map((source) => source.accessedAt).sort().at(-1) ?? '2026-10-20';
 let questionIndex = 0;
 
-const jsonLd = [
+const title = 'Test de conducir CABA 2026: simulador del examen teórico';
+const description =
+  'Practicá el examen teórico de CABA para auto (B1): 50 preguntas con respuesta explicada según la Ley 2148 y el manual oficial. Gratis y sin registro.';
+
+const faq: FaqItem[] = [
   {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Practicá el test de conducir de autos en CABA',
-    inLanguage: runtime.locale,
-    description: bank.coverage,
-    ...(pageUrl ? { url: pageUrl } : {}),
+    question: '¿Cuántas preguntas tiene el examen teórico de CABA?',
+    answer:
+      'Según el Gobierno de la Ciudad, el examen tiene 40 preguntas de opción múltiple y para aprobarlo tenés que contestar bien 34.',
   },
   {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Inicio',
-        ...(absoluteUrl('/') ? { item: absoluteUrl('/') } : {}),
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Tests',
-        ...(absoluteUrl('/test-de-conducir/')
-          ? { item: absoluteUrl('/test-de-conducir/') }
-          : {}),
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'CABA',
-        ...(pageUrl ? { item: pageUrl } : {}),
-      },
-    ],
+    question: '¿Qué pasa si no apruebo el teórico en CABA?',
+    answer:
+      'Podés reprogramar o volver a rendir pidiendo un turno de reevaluación, según la información del trámite en buenosaires.gob.ar.',
+  },
+  {
+    question: '¿Qué material tengo que estudiar para el teórico de auto en CABA?',
+    answer:
+      'El Manual de Conducción Vehicular Teórica que publica el Gobierno de la Ciudad, basado en el Código de Tránsito y Transporte (Ley 2148).',
+  },
+  {
+    question: '¿Tengo que llevar mi auto al examen práctico en CABA?',
+    answer:
+      'Para B1, la Ciudad informa que el práctico se hace en la calle con autos doble comando provistos por el Gobierno, manuales o automáticos. La modalidad elegida no se puede cambiar el día del examen.',
+  },
+  {
+    question: '¿Este test sirve para la Provincia de Buenos Aires?',
+    answer:
+      'No está pensado para eso. Las preguntas se basan en la normativa de la Ciudad Autónoma de Buenos Aires; para la base nacional usá el test de conducir de Argentina.',
+  },
+  {
+    question: '¿Este simulador es el examen oficial de CABA?',
+    answer: 'No. Es una práctica independiente con fuentes oficiales para que llegues mejor preparado.',
   },
 ];
+
+const extraSources = [
+  {
+    title: 'GCBA — Otorgamiento de licencia de conducir',
+    url: 'https://buenosaires.gob.ar/tramites/otorgamiento-de-licencia-de-conducir',
+  },
+  {
+    title: 'GCBA — Nueva modalidad de otorgamiento (Ley 6486)',
+    url: 'https://buenosaires.gob.ar/licenciasdeconducir/conoce-la-nueva-modalidad-de-otorgamiento-de-licencias-de-conducir',
+  },
+];
+
+const jsonLd = studyGraph({
+  pathname: `/test-de-conducir/${slug}/`,
+  title,
+  description,
+  dateModified: updated,
+  quizName: '50 preguntas del examen teórico de conducir de CABA (clase B1)',
+  legislationName: 'Código de Tránsito y Transporte de la Ciudad de Buenos Aires (Ley 2148)',
+  coverageType: 'AdministrativeArea',
+  coverageName: 'Ciudad Autónoma de Buenos Aires',
+  quizAbout: 'Normas de tránsito de CABA',
+  citations: [...sources.map((source) => source.url), ...extraSources.map((source) => source.url)],
+  breadcrumbName: 'CABA',
+  faq,
+});
 ---
 
 <Layout
-  title="Práctica Vial CABA: preguntas explicadas para autos"
-  description={`Practicá el teórico de autos en CABA con ${bank.questions.length} preguntas explicadas y con fuente. No es el temario completo ni un examen oficial.`}
+  title={title}
+  description={description}
   pathname={`/test-de-conducir/${slug}/`}
+  exactTitle={true}
   jsonLd={jsonLd}
 >
   <Breadcrumbs
@@ -72,11 +97,16 @@ const jsonLd = [
     ]}
   />
 
-  <h1>Practicá el test de conducir de autos en CABA</h1>
+  <h1>Test de conducir CABA: practicá el examen teórico de auto (B1)</h1>
   <p class="lede">
-    <strong>{bank.questions.length} preguntas</strong> para el teórico de autos (clase B1) en la
-    Ciudad Autónoma de Buenos Aires. Podés estudiarlas en esta página o abrir la práctica
-    interactiva.
+    Prepará el examen teórico de la licencia de conducir en la Ciudad de Buenos Aires con 50
+    preguntas para autos (clase B1). Están basadas en el Código de Tránsito y Transporte de CABA (Ley
+    2148) y en el Manual de Conducción Vehicular Teórica del Gobierno de la Ciudad. Cada respuesta
+    tiene explicación y fuente. Es una práctica independiente: no es el examen oficial ni el temario
+    completo.
+  </p>
+  <p class="muted">
+    Actualizado: <time datetime={updated}>{formatSourceDate(updated)}</time>
   </p>
 
   <div class="btn-row">
@@ -84,46 +114,51 @@ const jsonLd = [
     <a class="btn btn--secondary" href="#banco-completo">Ver las {bank.questions.length} preguntas</a>
   </div>
 
-  <section class="section notice">
-    <p style="margin:0 0 0.5rem;">{bank.coverage}</p>
-    <p style="margin:0;" class="muted">
-      Alcance: {jurisdiction.geographicScope}. Fuentes consultadas: 2026-10-20.
+  <section class="section" aria-labelledby="respuesta-rapida">
+    <h2 id="respuesta-rapida">Respuesta rápida: ¿cómo es el examen teórico en CABA?</h2>
+    <p>
+      Según el Gobierno de la Ciudad, el examen teórico es multiple choice: son 40 preguntas y para
+      aprobar tenés que responder bien 34. El material de estudio obligatorio para autos es el manual
+      de conducción de vehículos de cuatro ruedas, disponible online en buenosaires.gob.ar. Si no
+      aprobás, podés pedir turno de reevaluación.
+    </p>
+  </section>
+
+  <section class="section" aria-labelledby="como-es-el-examen">
+    <h2 id="como-es-el-examen">Cómo es el examen de conducir en CABA</h2>
+    <h3>Cantidad de preguntas y respuestas correctas para aprobar</h3>
+    <p>
+      Con la Ley de Convivencia Vial (Ley 6486), la Ciudad cambió la evaluación para B1: antes había
+      que acertar 23 de 30 preguntas y ahora 34 de 40. El examen es de opción múltiple.
+    </p>
+    <h3>Qué tenés que estudiar</h3>
+    <p>
+      Para autos, el material obligatorio es el Manual de Conducción Vehicular Teórica (anexo de la
+      Resolución SECTOP 508/23), basado en el Código de Tránsito y Transporte de la Ciudad. Los temas
+      que más se repiten son semáforos, prioridades, velocidades, alcohol, cinturón y retención
+      infantil, autopistas y estacionamiento.
+    </p>
+    <h3>Pasos del trámite de otorgamiento en la Ciudad</h3>
+    <p>
+      El trámite de otorgamiento incluye la evaluación psicofísica (psicología, visión, audición y
+      médica), el examen teórico y el examen práctico. Para B1, el práctico se hace en la calle con
+      autos doble comando que brinda el Gobierno de la Ciudad, con transmisión manual o automática a
+      elección. Verificá los requisitos actualizados en buenosaires.gob.ar antes de sacar turno.
     </p>
   </section>
 
   <section class="section" aria-labelledby="temas-caba">
-    <h2 id="temas-caba">Temas incluidos</h2>
+    <h2 id="temas-caba">Temas del examen teórico de CABA que practicás</h2>
     <div class="topic-chips">
       {groups.map((g) => <span class="chip">{topicLabel(g.topic)} ({g.questions.length})</span>)}
     </div>
   </section>
 
-  <section class="section" aria-labelledby="fuentes-caba">
-    <h2 id="fuentes-caba">Fuentes útiles</h2>
-    <ul class="source-list">
-      {
-        sources.map((source) => (
-          <li>
-            <a href={source.url} rel="noopener noreferrer" target="_blank">
-              {source.title}
-            </a>
-            <span class="muted"> · consultado {source.accessedAt}</span>
-          </li>
-        ))
-      }
-    </ul>
-    <p class="muted">
-      Detalle de metodología y límites en
-      <a href="/fuentes-y-metodologia/">Fuentes y metodología</a>.
-    </p>
-  </section>
-
   <section id="banco-completo" class="section" aria-labelledby="banco-caba-titulo">
-    <h2 id="banco-caba-titulo">Las {bank.questions.length} preguntas de estudio</h2>
+    <h2 id="banco-caba-titulo">50 preguntas del examen de conducir de CABA con respuestas</h2>
     <p class="muted">
       Cada pregunta incluye la respuesta correcta, la explicación y la fuente.
     </p>
-
     {
       groups.map((group) => (
         <div class="stack" style="margin-top:1.5rem;">
@@ -135,5 +170,54 @@ const jsonLd = [
         </div>
       ))
     }
+  </section>
+
+  <section class="section" aria-labelledby="faq">
+    <h2 id="faq">Preguntas frecuentes sobre el examen de conducir en CABA</h2>
+    {
+      faq.map((item) => (
+        <div>
+          <h3>{item.question}</h3>
+          <p>{item.answer}</p>
+        </div>
+      ))
+    }
+  </section>
+
+  <section class="section" aria-labelledby="fuentes-caba">
+    <h2 id="fuentes-caba">Fuentes oficiales consultadas</h2>
+    <ul class="source-list">
+      {
+        sources.map((source) => (
+          <li>
+            <a href={source.url} rel="noopener noreferrer" target="_blank">
+              {source.title}
+            </a>
+            <span class="muted"> · consultado {source.accessedAt}</span>
+          </li>
+        ))
+      }
+      {
+        extraSources.map((source) => (
+          <li>
+            <a href={source.url} rel="noopener noreferrer" target="_blank">
+              {source.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="otras-practicas">
+    <h2 id="otras-practicas">Otras prácticas</h2>
+    <ul>
+      <li>
+        <a href="/test-de-conducir/argentina/">Test de conducir Argentina (normativa nacional)</a>
+      </li>
+      <li><a href="/test-de-conducir/cordoba-capital/">Test de conducir Córdoba Capital</a></li>
+      <li><a href="/practicar/caba/">Práctica interactiva de CABA</a></li>
+      <li><a href="/fuentes-y-metodologia/">Fuentes y metodología</a></li>
+    </ul>
   </section>
 </Layout>

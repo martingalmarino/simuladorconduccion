@@ -10,6 +10,7 @@ interface Props {
   description: string;
   pathname: string;
   noindex?: boolean;
+  exactTitle?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   /** Si es true, el contenido controla el ancho (home full-bleed). */
   fullBleed?: boolean;
@@ -21,6 +22,7 @@ const {
   description,
   pathname,
   noindex = false,
+  exactTitle = false,
   jsonLd,
   fullBleed = false,
 } = Astro.props;
@@ -34,6 +36,7 @@ const {
       description={description}
       pathname={pathname}
       noindex={noindex}
+      exactTitle={exactTitle}
       jsonLd={jsonLd}
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

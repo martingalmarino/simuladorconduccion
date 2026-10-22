@@ -8,7 +8,7 @@ import {
   requireJurisdiction,
   sourcesForJurisdiction,
 } from '../../../lib/content';
-import { absoluteUrl, getSiteRuntime } from '../../../lib/site';
+import { formatSourceDate, studyGraph, type FaqItem } from '../../../lib/studyGraph';
 import { topicLabel } from '../../../lib/topics';
 
 const slug = 'argentina';
@@ -16,53 +16,78 @@ const jurisdiction = requireJurisdiction(slug);
 const bank = getBankForSlug(slug);
 const groups = groupQuestionsByTopic(bank.questions);
 const sources = sourcesForJurisdiction(jurisdiction.id);
-const page = jurisdiction.page!;
-const runtime = getSiteRuntime();
-const pageUrl = absoluteUrl(`/test-de-conducir/${slug}/`);
+const updated = sources.map((source) => source.accessedAt).sort().at(-1) ?? '2026-10-21';
 let questionIndex = 0;
 
-const jsonLd = [
+const title = 'Test de conducir Argentina 2026: 50 preguntas explicadas';
+const description =
+  'Practicá gratis el examen teórico de la Licencia Nacional de Conducir con 50 preguntas sobre la Ley 24.449, con respuesta explicada y fuente oficial.';
+
+const faq: FaqItem[] = [
   {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: page.h1,
-    inLanguage: runtime.locale,
-    description: page.description,
-    ...(pageUrl ? { url: pageUrl } : {}),
+    question: '¿El test de conducir es igual en todo el país?',
+    answer:
+      'No exactamente. La Ley Nacional de Tránsito 24.449 es la base común, pero cada municipio o jurisdicción toma el examen en su Centro de Emisión de Licencias y define cantidad de preguntas, tiempo y material de estudio. Por eso conviene practicar la normativa nacional y también la local.',
   },
   {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Inicio',
-        ...(absoluteUrl('/') ? { item: absoluteUrl('/') } : {}),
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Tests',
-        ...(absoluteUrl('/test-de-conducir/')
-          ? { item: absoluteUrl('/test-de-conducir/') }
-          : {}),
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Argentina',
-        ...(pageUrl ? { item: pageUrl } : {}),
-      },
-    ],
+    question: '¿Qué ley tengo que estudiar para el examen teórico?',
+    answer:
+      'La Ley 24.449 de Tránsito y Seguridad Vial y su reglamentación, el Decreto 779/95, más el código o la ordenanza de tránsito de tu jurisdicción si tiene uno propio.',
+  },
+  {
+    question: '¿A qué edad puedo sacar la licencia de conducir de auto?',
+    answer:
+      'La clase B1 se puede solicitar desde los 17 años con autorización de padre, madre o tutor, según la ANSV.',
+  },
+  {
+    question: '¿Es obligatorio hacer un curso para sacar la licencia por primera vez?',
+    answer:
+      'Sí. La Ley 24.449 exige un curso teórico-práctico de educación vial. La ANSV ofrece el Curso Nacional de Educación Vial Digital, gratuito y online, cuyo certificado se presenta en el CEL de tu domicilio.',
+  },
+  {
+    question: '¿Este test es el examen oficial?',
+    answer:
+      'No. Es una práctica independiente basada en fuentes oficiales para que estudies y detectes tus errores antes de rendir.',
+  },
+  {
+    question: '¿Puedo practicar online gratis?',
+    answer:
+      'Sí. Podés leer las 50 preguntas con sus explicaciones en esta página o hacer la práctica interactiva sin registrarte.',
   },
 ];
+
+const extraSources = [
+  {
+    title: 'ANSV — Clases y subclases de la Licencia Nacional de Conducir',
+    url: 'https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases',
+  },
+  {
+    title: 'Curso Nacional de Educación Vial',
+    url: 'https://www.argentina.gob.ar/servicio/realizar-el-curso-nacional-de-seguridad-vial-para-obtener-la-licencia',
+  },
+];
+
+const jsonLd = studyGraph({
+  pathname: `/test-de-conducir/${slug}/`,
+  title,
+  description,
+  dateModified: updated,
+  quizName: '50 preguntas del test de conducir Argentina (clase B1)',
+  legislationName: 'Ley 24.449 de Tránsito y Seguridad Vial',
+  coverageType: 'Country',
+  coverageName: 'Argentina',
+  quizAbout: 'Ley Nacional de Tránsito 24.449',
+  citations: [...sources.map((source) => source.url), ...extraSources.map((source) => source.url)],
+  breadcrumbName: 'Argentina',
+  faq,
+});
 ---
 
 <Layout
-  title={page.title}
-  description={page.description}
+  title={title}
+  description={description}
   pathname={`/test-de-conducir/${slug}/`}
+  exactTitle={true}
   jsonLd={jsonLd}
 >
   <Breadcrumbs
@@ -73,58 +98,77 @@ const jsonLd = [
     ]}
   />
 
-  <p class="kicker">{page.scopeLabel}</p>
-  <h1>{page.h1}</h1>
-  <p class="lede">{page.intro}</p>
-
-  <section class="section notice" aria-label="Alcance">
-    <p style="margin:0 0 0.5rem;">{page.notice}</p>
-    <p style="margin:0;" class="muted">
-      Complementá este material con la preparación específica de tu jurisdicción.
-      Fuentes consultadas: 21/10/2026.
-    </p>
-  </section>
+  <h1>Test de conducir Argentina: 50 preguntas del teórico nacional</h1>
+  <p class="lede">
+    Practicá para el examen teórico de la Licencia Nacional de Conducir con 50 preguntas para autos
+    (clase B1) basadas en la Ley Nacional de Tránsito 24.449 y su reglamentación (Decreto 779/95).
+    Cada pregunta tiene la respuesta correcta, una explicación breve y la fuente oficial. Es una
+    práctica gratuita e independiente: no es un examen oficial y conviene complementarla con el
+    material de tu municipio.
+  </p>
+  <p class="muted">
+    Actualizado: <time datetime={updated}>{formatSourceDate(updated)}</time>
+  </p>
 
   <div class="btn-row">
     <a class="btn btn--primary" href={`/practicar/${slug}/`}>Empezar a practicar</a>
     <a class="btn btn--secondary" href="#banco-completo">Ver las {bank.questions.length} preguntas</a>
-    <a class="btn btn--ghost" href="/test-de-conducir/caba/">Práctica CABA</a>
-    <a class="btn btn--ghost" href="/test-de-conducir/cordoba-capital/">Práctica Córdoba</a>
   </div>
 
+  <section class="section" aria-labelledby="respuesta-rapida">
+    <h2 id="respuesta-rapida">
+      Respuesta rápida: ¿qué se evalúa en el examen teórico de conducir en Argentina?
+    </h2>
+    <p>
+      Para sacar la Licencia Nacional de Conducir por primera vez tenés que aprobar un examen teórico
+      sobre conducción, señalamiento y legislación de tránsito, además del curso de educación vial, el
+      examen psicofísico, el de detección de fallas del vehículo y el práctico. La base común es la
+      Ley 24.449; cada municipio define el formato del examen.
+    </p>
+  </section>
+
+  <section class="section" aria-labelledby="como-es-el-examen">
+    <h2 id="como-es-el-examen">Cómo es el trámite de la Licencia Nacional de Conducir</h2>
+    <h3>Requisitos y etapas para la primera licencia</h3>
+    <p>
+      Según la Agencia Nacional de Seguridad Vial (ANSV), para una licencia particular necesitás DNI,
+      saber leer, la boleta de pago CENAT y, si sos menor, autorización de tu representante legal.
+      Las etapas son: curso teórico-práctico de educación vial, examen psicofísico, examen teórico,
+      examen de detección de fallas mecánicas y examen práctico de conducción.
+    </p>
+    <h3>¿Desde qué edad se puede sacar la licencia de auto (B1)?</h3>
+    <p>
+      La clase B1 (autos, camionetas y utilitarios hasta 3.500 kg) se puede pedir desde los 17 años,
+      con autorización de padre, madre o tutor. Las autoridades locales pueden fijar requisitos
+      adicionales.
+    </p>
+    <h3>El Curso Nacional de Educación Vial</h3>
+    <p>
+      Si vas a sacar tu primera licencia, tenés que hacer el curso de educación vial. La ANSV ofrece
+      el Curso Nacional de Educación Vial Digital, gratuito y en línea, en argentina.gob.ar; al
+      terminar recibís un certificado para presentar en el Centro de Emisión de Licencias de tu
+      domicilio. Consultá antes los requisitos de tu municipio.
+    </p>
+    <h3>Por qué conviene practicar también con la normativa local</h3>
+    <p>
+      El examen lo toma cada Centro de Emisión de Licencias (CEL), y algunas jurisdicciones tienen su
+      propio código, como la Ciudad de Buenos Aires (Ley 2148) o la ciudad de Córdoba (Ordenanza
+      9981). Si rendís ahí, usá también la práctica específica de CABA o de Córdoba Capital.
+    </p>
+  </section>
+
   <section class="section" aria-labelledby="temas-ar">
-    <h2 id="temas-ar">Temas incluidos</h2>
+    <h2 id="temas-ar">Temas del examen teórico nacional que practicás</h2>
     <div class="topic-chips">
       {groups.map((g) => <span class="chip">{topicLabel(g.topic)} ({g.questions.length})</span>)}
     </div>
   </section>
 
-  <section class="section" aria-labelledby="fuentes-ar">
-    <h2 id="fuentes-ar">Fuentes útiles</h2>
-    <ul class="source-list">
-      {
-        sources.map((source) => (
-          <li>
-            <a href={source.url} rel="noopener noreferrer" target="_blank">
-              {source.title}
-            </a>
-            <span class="muted"> · consultado {source.accessedAt}</span>
-          </li>
-        ))
-      }
-    </ul>
-    <p class="muted">
-      Detalle de metodología y límites en
-      <a href="/fuentes-y-metodologia/">Fuentes y metodología</a>.
-    </p>
-  </section>
-
   <section id="banco-completo" class="section" aria-labelledby="banco-ar-titulo">
-    <h2 id="banco-ar-titulo">Las {bank.questions.length} preguntas de estudio</h2>
+    <h2 id="banco-ar-titulo">50 preguntas del test de conducir con respuestas explicadas</h2>
     <p class="muted">
       Cada pregunta incluye la respuesta correcta, la explicación y la fuente.
     </p>
-
     {
       groups.map((group) => (
         <div class="stack" style="margin-top:1.5rem;">
@@ -136,5 +180,52 @@ const jsonLd = [
         </div>
       ))
     }
+  </section>
+
+  <section class="section" aria-labelledby="faq">
+    <h2 id="faq">Preguntas frecuentes sobre el test de conducir en Argentina</h2>
+    {
+      faq.map((item) => (
+        <div>
+          <h3>{item.question}</h3>
+          <p>{item.answer}</p>
+        </div>
+      ))
+    }
+  </section>
+
+  <section class="section" aria-labelledby="fuentes-ar">
+    <h2 id="fuentes-ar">Fuentes oficiales consultadas</h2>
+    <ul class="source-list">
+      {
+        sources.map((source) => (
+          <li>
+            <a href={source.url} rel="noopener noreferrer" target="_blank">
+              {source.title}
+            </a>
+            <span class="muted"> · consultado {source.accessedAt}</span>
+          </li>
+        ))
+      }
+      {
+        extraSources.map((source) => (
+          <li>
+            <a href={source.url} rel="noopener noreferrer" target="_blank">
+              {source.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="otras-practicas">
+    <h2 id="otras-practicas">Otras prácticas</h2>
+    <ul>
+      <li><a href="/test-de-conducir/caba/">Test de conducir CABA</a></li>
+      <li><a href="/test-de-conducir/cordoba-capital/">Test de conducir Córdoba Capital</a></li>
+      <li><a href="/practicar/argentina/">Práctica interactiva nacional</a></li>
+      <li><a href="/fuentes-y-metodologia/">Fuentes y metodología</a></li>
+    </ul>
   </section>
 </Layout>

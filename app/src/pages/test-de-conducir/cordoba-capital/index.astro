@@ -8,7 +8,7 @@ import {
   requireJurisdiction,
   sourcesForJurisdiction,
 } from '../../../lib/content';
-import { absoluteUrl, getSiteRuntime } from '../../../lib/site';
+import { formatSourceDate, studyGraph, type FaqItem } from '../../../lib/studyGraph';
 import { topicLabel } from '../../../lib/topics';
 
 const slug = 'cordoba-capital';
@@ -16,52 +16,77 @@ const jurisdiction = requireJurisdiction(slug);
 const bank = getBankForSlug(slug);
 const groups = groupQuestionsByTopic(bank.questions);
 const sources = sourcesForJurisdiction(jurisdiction.id);
-const runtime = getSiteRuntime();
-const pageUrl = absoluteUrl(`/test-de-conducir/${slug}/`);
+const updated = sources.map((source) => source.accessedAt).sort().at(-1) ?? '2026-10-20';
 let questionIndex = 0;
 
-const jsonLd = [
+const title = 'Test de conducir Córdoba 2026: preguntero y simulador';
+const description =
+  'Practicá el examen teórico de conducir de la ciudad de Córdoba: 50 preguntas para auto (B1) según la Ordenanza 9981, con respuesta explicada. Gratis.';
+
+const faq: FaqItem[] = [
   {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Practicá el test de conducir en Córdoba Capital',
-    inLanguage: runtime.locale,
-    description: bank.coverage,
-    ...(pageUrl ? { url: pageUrl } : {}),
+    question: '¿Qué tengo que estudiar para el examen teórico en Córdoba Capital?',
+    answer:
+      'La Guía de Estudio de la Municipalidad de Córdoba y el Código de Tránsito municipal (Ordenanza 9981). La guía está en cordoba.gob.ar/milicencia.',
   },
   {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Inicio',
-        ...(absoluteUrl('/') ? { item: absoluteUrl('/') } : {}),
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Tests',
-        ...(absoluteUrl('/test-de-conducir/')
-          ? { item: absoluteUrl('/test-de-conducir/') }
-          : {}),
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Córdoba Capital',
-        ...(pageUrl ? { item: pageUrl } : {}),
-      },
-    ],
+    question: '¿El teórico y el práctico se rinden el mismo día en Córdoba?',
+    answer:
+      'Según el procedimiento municipal, el día del turno se hace la revisión médica, luego el examen teórico y, si lo aprobás, el práctico.',
+  },
+  {
+    question: '¿Necesito hacer un curso para sacar la licencia de auto en Córdoba?',
+    answer:
+      'Según la Municipalidad, el Curso de Seguridad Vial es requisito para la primera licencia de moto y para licencias profesionales. Consultá la Guía de Trámites para tu caso.',
+  },
+  {
+    question: '¿Desde qué edad puedo sacar la licencia de auto en Córdoba?',
+    answer:
+      'La clase B1 se puede pedir desde los 17 años. Si sos menor de 18, necesitás examen de aptitud psicológica y autorización de padre, madre o tutor.',
+  },
+  {
+    question: '¿Este preguntero sirve para toda la provincia de Córdoba?',
+    answer:
+      'No. Está basado en la normativa de la ciudad de Córdoba. En otras localidades, consultá a tu municipio y practicá también con el test nacional.',
+  },
+  {
+    question: '¿Es el examen oficial de la Municipalidad?',
+    answer: 'No. Es una práctica independiente basada en fuentes oficiales.',
   },
 ];
+
+const extraSources = [
+  {
+    title: 'Municipalidad de Córdoba — Mi Licencia',
+    url: 'https://cordoba.gob.ar/milicencia/',
+  },
+  {
+    title: 'Guía de Trámites — Licencia por primera vez',
+    url: 'https://guiadetramites.cordoba.gob.ar/#/ciudadano/tramite/299',
+  },
+];
+
+const jsonLd = studyGraph({
+  pathname: `/test-de-conducir/${slug}/`,
+  title,
+  description,
+  dateModified: updated,
+  quizName: '50 preguntas del examen de manejo de Córdoba Capital (clase B1)',
+  legislationName: 'Ordenanza 9981 — Código de Tránsito de la Ciudad de Córdoba',
+  coverageType: 'City',
+  coverageName: 'Ciudad de Córdoba',
+  quizAbout: 'Normas de tránsito de la ciudad de Córdoba',
+  citations: [...sources.map((source) => source.url), ...extraSources.map((source) => source.url)],
+  breadcrumbName: 'Córdoba Capital',
+  faq,
+});
 ---
 
 <Layout
-  title="Práctica Vial Córdoba Capital: práctica para autos"
-  description={`Practicá el teórico de autos en Córdoba Capital con ${bank.questions.length} preguntas explicadas y con fuente. Vale para la ciudad, no para toda la provincia.`}
+  title={title}
+  description={description}
   pathname={`/test-de-conducir/${slug}/`}
+  exactTitle={true}
   jsonLd={jsonLd}
 >
   <Breadcrumbs
@@ -72,10 +97,15 @@ const jsonLd = [
     ]}
   />
 
-  <h1>Practicá el test de conducir en Córdoba Capital</h1>
+  <h1>Test de conducir Córdoba Capital: preguntero del examen teórico</h1>
   <p class="lede">
-    <strong>{bank.questions.length} preguntas</strong> para el teórico de autos (clase B1) en la
-    ciudad de Córdoba. Podés estudiarlas en esta página o abrir la práctica interactiva.
+    Prepará el examen teórico de manejo de la Municipalidad de Córdoba con 50 preguntas para autos
+    (clase B1). Están basadas en el Código de Tránsito municipal (Ordenanza 9981) y en la Guía de
+    Estudio oficial. Cada respuesta incluye explicación y fuente. Vale para la ciudad de Córdoba, no
+    para otras localidades de la provincia, y no es un examen oficial.
+  </p>
+  <p class="muted">
+    Actualizado: <time datetime={updated}>{formatSourceDate(updated)}</time>
   </p>
 
   <div class="btn-row">
@@ -83,22 +113,78 @@ const jsonLd = [
     <a class="btn btn--secondary" href="#banco-completo">Ver las {bank.questions.length} preguntas</a>
   </div>
 
-  <section class="section notice">
-    <p style="margin:0 0 0.5rem;">{bank.coverage}</p>
-    <p style="margin:0;" class="muted">
-      Alcance: {jurisdiction.geographicScope}. Fuentes consultadas: 2026-10-20.
+  <section class="section" aria-labelledby="respuesta-rapida">
+    <h2 id="respuesta-rapida">Respuesta rápida: ¿cómo es el examen de conducir en Córdoba Capital?</h2>
+    <p>
+      En la ciudad de Córdoba, el día del turno en el Centro de Emisión de Licencias hacés la revisión
+      médica, el examen teórico y, si lo aprobás, el práctico, según la Ordenanza 9981. Para estudiar,
+      la Municipalidad recomienda su Guía de Estudio, disponible en cordoba.gob.ar/milicencia.
+    </p>
+  </section>
+
+  <section class="section" aria-labelledby="como-es-el-examen">
+    <h2 id="como-es-el-examen">Cómo sacar la licencia de conducir en Córdoba por primera vez</h2>
+    <h3>Requisitos para la licencia B1 en la ciudad de Córdoba</h3>
+    <p>
+      Necesitás DNI con domicilio actualizado en la ciudad de Córdoba, declaración jurada de salud,
+      boleta de pago CENAT y, si tenés menos de 18 años, examen de aptitud psicológica y autorización
+      de padre, madre o tutor. La edad mínima para B1 es 17 años. También tenés que llevar un vehículo
+      acorde a la clase para el práctico.
+    </p>
+    <h3>Paso a paso del trámite</h3>
+    <p>
+      1) Sacá turno en el Turnero Digital de Vecino Digital (VeDi) o por teléfono. 2) Presentate con
+      la documentación. 3) Hacé la revisión médica. 4) Rendí el examen teórico. 5) Rendí el examen
+      práctico. 6) Pagá la tasa municipal y se emite la licencia. Verificá los requisitos vigentes en
+      la Guía de Trámites de la Municipalidad.
+    </p>
+    <h3>Guía de estudio y curso de seguridad vial</h3>
+    <p>
+      La Guía de Estudio municipal cubre señales, prioridades, velocidades, circulación, alcoholemia y
+      actuación ante siniestros. El Curso de Seguridad Vial municipal es obligatorio para la primera
+      licencia de moto y para licencias profesionales.
     </p>
   </section>
 
   <section class="section" aria-labelledby="temas-cba">
-    <h2 id="temas-cba">Temas incluidos</h2>
+    <h2 id="temas-cba">Temas del examen teórico de Córdoba que practicás</h2>
     <div class="topic-chips">
       {groups.map((g) => <span class="chip">{topicLabel(g.topic)} ({g.questions.length})</span>)}
     </div>
   </section>
 
+  <section id="banco-completo" class="section" aria-labelledby="banco-cba-titulo">
+    <h2 id="banco-cba-titulo">50 preguntas del examen de manejo de Córdoba con respuestas</h2>
+    <p class="muted">
+      Cada pregunta incluye la respuesta correcta, la explicación y la fuente.
+    </p>
+    {
+      groups.map((group) => (
+        <div class="stack" style="margin-top:1.5rem;">
+          <h3 style="font-size:1.15rem;">{topicLabel(group.topic)}</h3>
+          {group.questions.map((question) => {
+            questionIndex += 1;
+            return <StudyQuestion question={question} index={questionIndex} />;
+          })}
+        </div>
+      ))
+    }
+  </section>
+
+  <section class="section" aria-labelledby="faq">
+    <h2 id="faq">Preguntas frecuentes sobre el examen de conducir en Córdoba</h2>
+    {
+      faq.map((item) => (
+        <div>
+          <h3>{item.question}</h3>
+          <p>{item.answer}</p>
+        </div>
+      ))
+    }
+  </section>
+
   <section class="section" aria-labelledby="fuentes-cba">
-    <h2 id="fuentes-cba">Fuentes útiles</h2>
+    <h2 id="fuentes-cba">Fuentes oficiales consultadas</h2>
     <ul class="source-list">
       {
         sources.map((source) => (
@@ -111,29 +197,27 @@ const jsonLd = [
           </li>
         ))
       }
+      {
+        extraSources.map((source) => (
+          <li>
+            <a href={source.url} rel="noopener noreferrer" target="_blank">
+              {source.title}
+            </a>
+          </li>
+        ))
+      }
     </ul>
-    <p class="muted">
-      Detalle de metodología y límites en
-      <a href="/fuentes-y-metodologia/">Fuentes y metodología</a>.
-    </p>
   </section>
 
-  <section id="banco-completo" class="section" aria-labelledby="banco-cba-titulo">
-    <h2 id="banco-cba-titulo">Las {bank.questions.length} preguntas de estudio</h2>
-    <p class="muted">
-      Cada pregunta incluye la respuesta correcta, la explicación y la fuente.
-    </p>
-
-    {
-      groups.map((group) => (
-        <div class="stack" style="margin-top:1.5rem;">
-          <h3 style="font-size:1.15rem;">{topicLabel(group.topic)}</h3>
-          {group.questions.map((question) => {
-            questionIndex += 1;
-            return <StudyQuestion question={question} index={questionIndex} />;
-          })}
-        </div>
-      ))
-    }
+  <section class="section" aria-labelledby="otras-practicas">
+    <h2 id="otras-practicas">Otras prácticas</h2>
+    <ul>
+      <li>
+        <a href="/test-de-conducir/argentina/">Test de conducir Argentina (normativa nacional)</a>
+      </li>
+      <li><a href="/test-de-conducir/caba/">Test de conducir CABA</a></li>
+      <li><a href="/practicar/cordoba-capital/">Práctica interactiva de Córdoba</a></li>
+      <li><a href="/fuentes-y-metodologia/">Fuentes y metodología</a></li>
+    </ul>
   </section>
 </Layout>

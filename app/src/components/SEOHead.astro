@@ -6,17 +6,26 @@ interface Props {
   description: string;
   pathname: string;
   noindex?: boolean;
+  /** Si es true, el title no suma el nombre del sitio. Por defecto se mantiene el sufijo. */
+  exactTitle?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description, pathname, noindex = false, jsonLd } = Astro.props;
+const { title, description, pathname, noindex = false, exactTitle = false, jsonLd } = Astro.props;
 const runtime = getSiteRuntime();
 const shouldNoindex = noindex || !runtime.indexable;
 const robots = shouldNoindex ? 'noindex,follow' : 'index,follow';
 const canonical = runtime.indexable ? absoluteUrl(pathname) : null;
-const fullTitle = title.includes(runtime.siteName)
-  ? title
-  : `${title} | ${runtime.siteName}`;
+const fullTitle =
+  exactTitle || title.includes(runtime.siteName) ? title : `${title} | ${runtime.siteName}`;
+const jsonLdPayload =
+  jsonLd && !Array.isArray(jsonLd) && '@graph' in jsonLd
+    ? jsonLd
+    : jsonLd
+      ? Array.isArray(jsonLd)
+        ? jsonLd
+        : [jsonLd]
+      : null;
 ---
 
 <meta charset="utf-8" />
@@ -35,10 +44,10 @@ const fullTitle = title.includes(runtime.siteName)
 <meta name="twitter:description" content={description} />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 {
-  jsonLd && (
+  jsonLdPayload && (
     <script
       type="application/ld+json"
-      set:html={JSON.stringify(Array.isArray(jsonLd) ? jsonLd : [jsonLd])}
+      set:html={JSON.stringify(jsonLdPayload)}
     />
   )
 }

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import FactCards from '../../../components/FactCards.astro';
 import StudyQuestion from '../../../components/StudyQuestion.astro';
 import {
   getBankForSlug,
@@ -115,35 +116,72 @@ const jsonLd = studyGraph({
 
   <section class="section" aria-labelledby="respuesta-rapida">
     <h2 id="respuesta-rapida">¿Cómo es el examen de conducir en Córdoba Capital?</h2>
-    <p>
-      En la ciudad de Córdoba, el día del turno en el Centro de Emisión de Licencias hacés la revisión
-      médica, el examen teórico y, si lo aprobás, el práctico, según la Ordenanza 9981. Para estudiar,
-      la Municipalidad recomienda su Guía de Estudio, disponible en cordoba.gob.ar/milicencia.
-    </p>
+    <FactCards
+      cards={[
+        {
+          title: 'El día del turno',
+          icon: 'calendar',
+          items: ['Revisión médica', 'Examen teórico', 'Si lo aprobás, el práctico'],
+          note: 'En el Centro de Emisión de Licencias, según la Ordenanza 9981.',
+        },
+        {
+          title: 'Para estudiar',
+          icon: 'book',
+          items: ['Guía de Estudio de la Municipalidad'],
+          note: 'La recomienda la Municipalidad y está en cordoba.gob.ar/milicencia.',
+        },
+      ]}
+    />
   </section>
 
   <section class="section" aria-labelledby="como-es-el-examen">
     <h2 id="como-es-el-examen">Cómo sacar la licencia de conducir en Córdoba por primera vez</h2>
-    <h3>Requisitos para la licencia B1 en la ciudad de Córdoba</h3>
-    <p>
-      Necesitás DNI con domicilio actualizado en la ciudad de Córdoba, declaración jurada de salud,
-      boleta de pago CENAT y, si tenés menos de 18 años, examen de aptitud psicológica y autorización
-      de padre, madre o tutor. La edad mínima para B1 es 17 años. También tenés que llevar un vehículo
-      acorde a la clase para el práctico.
-    </p>
-    <h3>Paso a paso del trámite</h3>
-    <p>
-      1) Sacá turno en el Turnero Digital de Vecino Digital (VeDi) o por teléfono. 2) Presentate con
-      la documentación. 3) Hacé la revisión médica. 4) Rendí el examen teórico. 5) Rendí el examen
-      práctico. 6) Pagá la tasa municipal y se emite la licencia. Verificá los requisitos vigentes en
-      la Guía de Trámites de la Municipalidad.
-    </p>
-    <h3>Guía de estudio y curso de seguridad vial</h3>
-    <p>
-      La Guía de Estudio municipal cubre señales, prioridades, velocidades, circulación, alcoholemia y
-      actuación ante siniestros. El Curso de Seguridad Vial municipal es obligatorio para la primera
-      licencia de moto y para licencias profesionales.
-    </p>
+    <FactCards
+      cards={[
+        {
+          title: 'Requisitos para B1',
+          icon: 'user',
+          items: [
+            'DNI con domicilio actualizado en la ciudad de Córdoba',
+            'Declaración jurada de salud',
+            'Boleta de pago CENAT',
+            'Edad mínima: 17 años',
+            'Vehículo acorde a la clase para el práctico',
+          ],
+          note: 'Si tenés menos de 18 años, sumá examen de aptitud psicológica y autorización de padre, madre o tutor.',
+        },
+        {
+          title: 'Paso a paso',
+          icon: 'list',
+          items: [
+            'Sacá turno en el Turnero Digital de Vecino Digital (VeDi) o por teléfono',
+            'Presentate con la documentación',
+            'Hacé la revisión médica',
+            'Rendí el examen teórico',
+            'Rendí el examen práctico',
+            'Pagá la tasa municipal y se emite la licencia',
+          ],
+          note: 'Verificá los requisitos vigentes en la Guía de Trámites de la Municipalidad.',
+        },
+        {
+          title: 'Qué cubre la guía',
+          icon: 'book',
+          items: [
+            'Señales, prioridades y velocidades',
+            'Circulación y alcoholemia',
+            'Actuación ante siniestros',
+          ],
+        },
+        {
+          title: 'Curso de seguridad vial',
+          icon: 'list',
+          items: [
+            'Obligatorio para la primera licencia de moto',
+            'Obligatorio para licencias profesionales',
+          ],
+        },
+      ]}
+    />
   </section>
 
   <section class="section" aria-labelledby="temas-cba">

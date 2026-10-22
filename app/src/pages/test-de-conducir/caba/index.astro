@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import FactCards from '../../../components/FactCards.astro';
 import StudyQuestion from '../../../components/StudyQuestion.astro';
 import {
   getBankForSlug,
@@ -116,35 +117,72 @@ const jsonLd = studyGraph({
 
   <section class="section" aria-labelledby="respuesta-rapida">
     <h2 id="respuesta-rapida">¿Cómo es el examen teórico en CABA?</h2>
-    <p>
-      Según el Gobierno de la Ciudad, el examen teórico es multiple choice: son 40 preguntas y para
-      aprobar tenés que responder bien 34. El material de estudio obligatorio para autos es el manual
-      de conducción de vehículos de cuatro ruedas, disponible online en buenosaires.gob.ar. Si no
-      aprobás, podés pedir turno de reevaluación.
-    </p>
+    <FactCards
+      cards={[
+        {
+          title: 'Formato del teórico',
+          icon: 'list',
+          items: [
+            '40 preguntas de opción múltiple',
+            '34 respuestas correctas para aprobar',
+            'Si no aprobás, podés pedir turno de reevaluación',
+          ],
+          note: 'Según el Gobierno de la Ciudad. Con la Ley de Convivencia Vial (Ley 6486), antes había que acertar 23 de 30.',
+        },
+        {
+          title: 'Material de estudio',
+          icon: 'book',
+          items: ['Manual de conducción de vehículos de cuatro ruedas'],
+          note: 'Es el material obligatorio para autos y está online en buenosaires.gob.ar.',
+        },
+      ]}
+    />
   </section>
 
   <section class="section" aria-labelledby="como-es-el-examen">
     <h2 id="como-es-el-examen">Cómo es el examen de conducir en CABA</h2>
-    <h3>Cantidad de preguntas y respuestas correctas para aprobar</h3>
-    <p>
-      Con la Ley de Convivencia Vial (Ley 6486), la Ciudad cambió la evaluación para B1: antes había
-      que acertar 23 de 30 preguntas y ahora 34 de 40. El examen es de opción múltiple.
-    </p>
-    <h3>Qué tenés que estudiar</h3>
-    <p>
-      Para autos, el material obligatorio es el Manual de Conducción Vehicular Teórica (anexo de la
-      Resolución SECTOP 508/23), basado en el Código de Tránsito y Transporte de la Ciudad. Los temas
-      que más se repiten son semáforos, prioridades, velocidades, alcohol, cinturón y retención
-      infantil, autopistas y estacionamiento.
-    </p>
-    <h3>Pasos del trámite de otorgamiento en la Ciudad</h3>
-    <p>
-      El trámite de otorgamiento incluye la evaluación psicofísica (psicología, visión, audición y
-      médica), el examen teórico y el examen práctico. Para B1, el práctico se hace en la calle con
-      autos doble comando que brinda el Gobierno de la Ciudad, con transmisión manual o automática a
-      elección. Verificá los requisitos actualizados en buenosaires.gob.ar antes de sacar turno.
-    </p>
+    <FactCards
+      cards={[
+        {
+          title: 'Qué tenés que estudiar',
+          icon: 'book',
+          items: [
+            'Manual de Conducción Vehicular Teórica',
+            'Anexo de la Resolución SECTOP 508/23',
+            'Basado en el Código de Tránsito y Transporte',
+          ],
+        },
+        {
+          title: 'Temas que más se repiten',
+          icon: 'list',
+          items: [
+            'Semáforos y prioridades',
+            'Velocidades',
+            'Alcohol, cinturón y retención infantil',
+            'Autopistas y estacionamiento',
+          ],
+        },
+        {
+          title: 'Pasos del trámite',
+          icon: 'user',
+          items: [
+            'Evaluación psicofísica: psicología, visión, audición y médica',
+            'Examen teórico',
+            'Examen práctico',
+          ],
+          note: 'Verificá los requisitos actualizados en buenosaires.gob.ar antes de sacar turno.',
+        },
+        {
+          title: 'El práctico de B1',
+          icon: 'car',
+          items: [
+            'Se hace en la calle',
+            'Autos doble comando del Gobierno de la Ciudad',
+            'Transmisión manual o automática, a elección',
+          ],
+        },
+      ]}
+    />
   </section>
 
   <section class="section" aria-labelledby="temas-caba">

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../components/Layout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import FactCards from '../../../components/FactCards.astro';
 import StudyQuestion from '../../../components/StudyQuestion.astro';
 import {
   getBankForSlug,
@@ -117,42 +118,77 @@ const jsonLd = studyGraph({
 
   <section class="section" aria-labelledby="respuesta-rapida">
     <h2 id="respuesta-rapida">¿Qué se evalúa en el examen teórico de conducir en Argentina?</h2>
-    <p>
-      Para sacar la Licencia Nacional de Conducir por primera vez tenés que aprobar un examen teórico
-      sobre conducción, señalamiento y legislación de tránsito, además del curso de educación vial, el
-      examen psicofísico, el de detección de fallas del vehículo y el práctico. La base común es la
-      Ley 24.449; cada municipio define el formato del examen.
-    </p>
+    <FactCards
+      cards={[
+        {
+          title: 'Qué tenés que aprobar',
+          icon: 'list',
+          items: [
+            'Examen teórico de conducción, señalamiento y legislación',
+            'Curso de educación vial',
+            'Examen psicofísico',
+            'Detección de fallas del vehículo',
+            'Examen práctico',
+          ],
+          note: 'Aplica a la primera Licencia Nacional de Conducir.',
+        },
+        {
+          title: 'La base común',
+          icon: 'book',
+          items: ['Ley 24.449', 'Reglamentación: Decreto 779/95'],
+          note: 'Cada municipio define el formato del examen.',
+        },
+      ]}
+    />
   </section>
 
   <section class="section" aria-labelledby="como-es-el-examen">
     <h2 id="como-es-el-examen">Cómo es el trámite de la Licencia Nacional de Conducir</h2>
-    <h3>Requisitos y etapas para la primera licencia</h3>
-    <p>
-      Según la Agencia Nacional de Seguridad Vial (ANSV), para una licencia particular necesitás DNI,
-      saber leer, la boleta de pago CENAT y, si sos menor, autorización de tu representante legal.
-      Las etapas son: curso teórico-práctico de educación vial, examen psicofísico, examen teórico,
-      examen de detección de fallas mecánicas y examen práctico de conducción.
-    </p>
-    <h3>¿Desde qué edad se puede sacar la licencia de auto (B1)?</h3>
-    <p>
-      La clase B1 (autos, camionetas y utilitarios hasta 3.500 kg) se puede pedir desde los 17 años,
-      con autorización de padre, madre o tutor. Las autoridades locales pueden fijar requisitos
-      adicionales.
-    </p>
-    <h3>El Curso Nacional de Educación Vial</h3>
-    <p>
-      Si vas a sacar tu primera licencia, tenés que hacer el curso de educación vial. La ANSV ofrece
-      el Curso Nacional de Educación Vial Digital, gratuito y en línea, en argentina.gob.ar; al
-      terminar recibís un certificado para presentar en el Centro de Emisión de Licencias de tu
-      domicilio. Consultá antes los requisitos de tu municipio.
-    </p>
-    <h3>Por qué conviene practicar también con la normativa local</h3>
-    <p>
-      El examen lo toma cada Centro de Emisión de Licencias (CEL), y algunas jurisdicciones tienen su
-      propio código, como la Ciudad de Buenos Aires (Ley 2148) o la ciudad de Córdoba (Ordenanza
-      9981). Si rendís ahí, usá también la práctica específica de CABA o de Córdoba Capital.
-    </p>
+    <FactCards
+      cards={[
+        {
+          title: 'Requisitos',
+          icon: 'user',
+          items: [
+            'DNI',
+            'Saber leer',
+            'Boleta de pago CENAT',
+            'Si sos menor, autorización de tu representante legal',
+          ],
+          note: 'Según la ANSV, para una licencia particular.',
+        },
+        {
+          title: 'Edad para la clase B1',
+          icon: 'calendar',
+          items: [
+            'Desde los 17 años',
+            'Autorización de padre, madre o tutor',
+            'Autos, camionetas y utilitarios hasta 3.500 kg',
+          ],
+          note: 'Las autoridades locales pueden fijar requisitos adicionales.',
+        },
+        {
+          title: 'Curso nacional',
+          icon: 'book',
+          items: [
+            'Obligatorio para la primera licencia',
+            'Curso Nacional de Educación Vial Digital, gratuito y online',
+            'Certificado para el Centro de Emisión de Licencias de tu domicilio',
+          ],
+          note: 'Consultá antes los requisitos de tu municipio.',
+        },
+        {
+          title: 'También la normativa local',
+          icon: 'pin',
+          items: [
+            'El examen lo toma cada Centro de Emisión de Licencias',
+            'CABA tiene código propio: Ley 2148',
+            'Córdoba Capital tiene código propio: Ordenanza 9981',
+          ],
+          note: 'Si rendís ahí, usá también la práctica específica.',
+        },
+      ]}
+    />
   </section>
 
   <section class="section" aria-labelledby="temas-ar">

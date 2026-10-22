@@ -761,6 +761,7 @@ a.btn--ghost {
   border-radius: 14px;
   padding: 0.15rem 1.1rem;
   box-shadow: var(--td-shadow);
+  scroll-margin-top: 5.5rem;
 }
 
 .faq summary {
@@ -797,6 +798,15 @@ a.btn--ghost {
 .faq details p {
   margin: 0 0 1rem;
   color: var(--td-muted);
+}
+
+.page-shell .faq {
+  max-width: none;
+  margin: 1.25rem 0 0;
+}
+
+.page-shell h2 {
+  scroll-margin-top: 5.5rem;
 }
 
 .badge {

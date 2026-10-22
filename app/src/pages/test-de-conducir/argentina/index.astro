@@ -116,9 +116,7 @@ const jsonLd = studyGraph({
   </div>
 
   <section class="section" aria-labelledby="respuesta-rapida">
-    <h2 id="respuesta-rapida">
-      Respuesta rápida: ¿qué se evalúa en el examen teórico de conducir en Argentina?
-    </h2>
+    <h2 id="respuesta-rapida">¿Qué se evalúa en el examen teórico de conducir en Argentina?</h2>
     <p>
       Para sacar la Licencia Nacional de Conducir por primera vez tenés que aprobar un examen teórico
       sobre conducción, señalamiento y legislación de tránsito, además del curso de educación vial, el
@@ -184,14 +182,16 @@ const jsonLd = studyGraph({
 
   <section class="section" aria-labelledby="faq">
     <h2 id="faq">Preguntas frecuentes sobre el test de conducir en Argentina</h2>
-    {
-      faq.map((item) => (
-        <div>
-          <h3>{item.question}</h3>
-          <p>{item.answer}</p>
-        </div>
-      ))
-    }
+    <div class="faq">
+      {
+        faq.map((item, index) => (
+          <details open={index === 0}>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))
+      }
+    </div>
   </section>
 
   <section class="section" aria-labelledby="fuentes-ar">

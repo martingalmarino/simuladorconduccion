@@ -114,7 +114,7 @@ const jsonLd = studyGraph({
   </div>
 
   <section class="section" aria-labelledby="respuesta-rapida">
-    <h2 id="respuesta-rapida">Respuesta rápida: ¿cómo es el examen de conducir en Córdoba Capital?</h2>
+    <h2 id="respuesta-rapida">¿Cómo es el examen de conducir en Córdoba Capital?</h2>
     <p>
       En la ciudad de Córdoba, el día del turno en el Centro de Emisión de Licencias hacés la revisión
       médica, el examen teórico y, si lo aprobás, el práctico, según la Ordenanza 9981. Para estudiar,
@@ -173,14 +173,16 @@ const jsonLd = studyGraph({
 
   <section class="section" aria-labelledby="faq">
     <h2 id="faq">Preguntas frecuentes sobre el examen de conducir en Córdoba</h2>
-    {
-      faq.map((item) => (
-        <div>
-          <h3>{item.question}</h3>
-          <p>{item.answer}</p>
-        </div>
-      ))
-    }
+    <div class="faq">
+      {
+        faq.map((item, index) => (
+          <details open={index === 0}>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))
+      }
+    </div>
   </section>
 
   <section class="section" aria-labelledby="fuentes-cba">

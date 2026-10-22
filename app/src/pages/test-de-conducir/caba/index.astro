@@ -115,7 +115,7 @@ const jsonLd = studyGraph({
   </div>
 
   <section class="section" aria-labelledby="respuesta-rapida">
-    <h2 id="respuesta-rapida">Respuesta rápida: ¿cómo es el examen teórico en CABA?</h2>
+    <h2 id="respuesta-rapida">¿Cómo es el examen teórico en CABA?</h2>
     <p>
       Según el Gobierno de la Ciudad, el examen teórico es multiple choice: son 40 preguntas y para
       aprobar tenés que responder bien 34. El material de estudio obligatorio para autos es el manual
@@ -174,14 +174,16 @@ const jsonLd = studyGraph({
 
   <section class="section" aria-labelledby="faq">
     <h2 id="faq">Preguntas frecuentes sobre el examen de conducir en CABA</h2>
-    {
-      faq.map((item) => (
-        <div>
-          <h3>{item.question}</h3>
-          <p>{item.answer}</p>
-        </div>
-      ))
-    }
+    <div class="faq">
+      {
+        faq.map((item, index) => (
+          <details open={index === 0}>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))
+      }
+    </div>
   </section>
 
   <section class="section" aria-labelledby="fuentes-caba">

@@ -136,24 +136,12 @@ a:not(.btn):hover {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
   color: var(--td-ink);
   text-decoration: none;
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: -0.03em;
 }
 
-.brand__mark {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: linear-gradient(145deg, var(--td-blue), var(--td-blue-deep));
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 800;
+.brand:hover .brand-logo__name {
+  color: var(--td-blue);
 }
 
 .nav {

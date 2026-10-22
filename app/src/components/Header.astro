@@ -1,5 +1,6 @@
 ---
 import { getSiteConfig } from '../lib/content';
+import BrandLogo from './BrandLogo.astro';
 
 const config = getSiteConfig();
 const path = Astro.url.pathname;
@@ -8,9 +9,8 @@ const path = Astro.url.pathname;
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="brand" href="/">
-      <span class="brand__mark" aria-hidden="true">TC</span>
-      <span>{config.siteName}</span>
+    <a class="brand" href="/" aria-label={`${config.siteName} · practicavial.com.ar`}>
+      <BrandLogo />
     </a>
     <nav class="nav" aria-label="Principal">
       <a

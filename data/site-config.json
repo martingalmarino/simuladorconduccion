@@ -1,5 +1,5 @@
 {
-  "siteName": "Test de conducir",
+  "siteName": "Práctica Vial",
   "locale": "es-AR",
   "siteUrl": null,
   "indexableProduction": false,
@@ -70,8 +70,8 @@
       "notice": "Práctica independiente sobre el marco nacional. No es un examen oficial ni reemplaza la preparación específica de tu jurisdicción.",
       "contextLabel": "Marco nacional · Ley 24.449 y reglamentación",
       "page": {
-        "title": "Test de conducir nacional: 50 preguntas explicadas",
-        "h1": "Test de conducir Argentina: práctica general",
+        "title": "Práctica Vial nacional: 50 preguntas explicadas",
+        "h1": "Argentina: práctica general",
         "description": "Practicá con 50 preguntas para autos sobre normativa nacional, señales y seguridad vial. Respuestas explicadas y fuentes para preparar el examen teórico.",
         "intro": "Practicá conocimientos generales para conducir autos con 50 preguntas basadas en la Ley Nacional de Tránsito y su reglamentación. Cada respuesta incluye una explicación y la fuente consultada.",
         "notice": "Práctica independiente sobre el marco nacional. No es un examen oficial ni reemplaza la preparación específica de tu jurisdicción.",

@@ -46,8 +46,8 @@
     "timeLimitSeconds": null
   },
   "page": {
-    "title": "Test de conducir nacional: 50 preguntas explicadas",
-    "h1": "Test de conducir Argentina: práctica general",
+    "title": "Práctica Vial nacional: 50 preguntas explicadas",
+    "h1": "Argentina: práctica general",
     "description": "Practicá con 50 preguntas para autos sobre normativa nacional, señales y seguridad vial. Respuestas explicadas y fuentes para preparar el examen teórico.",
     "intro": "Practicá conocimientos generales para conducir autos con 50 preguntas basadas en la Ley Nacional de Tránsito y su reglamentación. Cada respuesta incluye una explicación y la fuente consultada.",
     "notice": "Práctica independiente sobre el marco nacional. No es un examen oficial ni reemplaza la preparación específica de tu jurisdicción.",
@@ -55,7 +55,7 @@
     "sourceCheckedAt": "2026-10-21"
   },
   "home": {
-    "suggestedTitle": "Test de conducir Argentina | Practicá el examen teórico",
+    "suggestedTitle": "Práctica Vial | Prepará tu examen teórico de conducir",
     "suggestedDescription": "Prepará el examen teórico de conducir con práctica general y tests por jurisdicción. Preguntas con respuestas explicadas, imágenes y fuentes para estudiar."
   },
   "sampling": {

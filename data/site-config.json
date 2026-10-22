@@ -1,8 +1,8 @@
 {
   "siteName": "Práctica Vial",
   "locale": "es-AR",
-  "siteUrl": null,
-  "indexableProduction": false,
+  "siteUrl": "https://www.practicavial.com.ar",
+  "indexableProduction": true,
   "officialExamMode": {
     "enabled": false,
     "reason": "Formato, duración y umbral oficial no verificados por jurisdicción.",

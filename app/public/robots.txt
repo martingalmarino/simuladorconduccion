@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 
-# Las prácticas llevan noindex en meta robots; no se bloquean aquí
+# /practicar/ lleva noindex en cada página. No se bloquea acá
 # para que el rastreador pueda leer esa directiva.
+
+Sitemap: https://www.practicavial.com.ar/sitemap.xml

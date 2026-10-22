@@ -109,7 +109,14 @@ def main():
         stats.append({'bank':j['bankId'],'questions':len(questions),'illustratedQuestions':sum(q['imageId'] is not None for q in questions),'topics':len(set(q['topic'] for q in questions)),'schema':schema})
     check(used_assets == set(assets), 'Unreferenced assets')
     check(config['officialExamMode']['enabled'] is False, 'Official mode enabled without verification')
-    check(config['indexableProduction'] is False and config['siteUrl'] is None, 'Starter publication defaults changed')
+    site_url = config.get('siteUrl')
+    check(config['indexableProduction'] is True, 'Production indexing is disabled')
+    check(isinstance(site_url, str) and site_url.startswith('https://'), 'siteUrl must be HTTPS')
+    if isinstance(site_url, str):
+        from urllib.parse import urlparse
+        parsed = urlparse(site_url)
+        check(parsed.netloc == 'www.practicavial.com.ar', 'Unexpected production host')
+        check(parsed.path in ('', '/'), 'siteUrl must not include a path')
     if errors:
         print('\n'.join('ERROR: '+e for e in errors), file=sys.stderr)
         return 1

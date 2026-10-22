@@ -12,7 +12,16 @@ const path = Astro.url.pathname;
     <a class="brand" href="/" aria-label={`${config.siteName} · practicavial.com.ar`}>
       <BrandLogo />
     </a>
-    <nav class="nav" aria-label="Principal">
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+      aria-label="Abrir menú"
+    >
+      <span class="nav-toggle__icon" aria-hidden="true"></span>
+    </button>
+    <nav id="menu-principal" class="nav" aria-label="Principal">
       <a
         href="/test-de-conducir/"
         aria-current={path.startsWith('/test-de-conducir') ? 'page' : undefined}
@@ -30,3 +39,39 @@ const path = Astro.url.pathname;
     </nav>
   </div>
 </header>
+<script>
+  const header = document.querySelector('.site-header');
+  const toggle = header?.querySelector<HTMLButtonElement>('.nav-toggle');
+  const nav = header?.querySelector<HTMLElement>('#menu-principal');
+
+  if (header && toggle && nav) {
+    const setOpen = (open: boolean) => {
+      header.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    };
+
+    toggle.addEventListener('click', () => {
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    nav.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Element) || !target.closest('a')) return;
+      window.setTimeout(() => setOpen(false), 0);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && header.classList.contains('is-open')) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Node) || header.contains(target)) return;
+      if (header.classList.contains('is-open')) setOpen(false);
+    });
+  }
+</script>

@@ -1,6 +1,5 @@
 ---
 import { getSiteConfig, getUpcomingTests } from '../lib/content';
-import BrandLogo from './BrandLogo.astro';
 
 const config = getSiteConfig();
 const upcomingTests = getUpcomingTests();
@@ -59,7 +58,13 @@ const isHome = Astro.url.pathname === '/';
               height="40"
             />
           ) : (
-            <BrandLogo />
+            <img
+              class="internal-logo internal-logo--footer"
+              src="/brand/practicavial-logo-oscuro.svg"
+              alt="Practicavial"
+              width="172"
+              height="40"
+            />
           )
         }
       </a>

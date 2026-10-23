@@ -11,6 +11,7 @@ import {
 } from '../../../lib/content';
 import { formatSourceDate, studyGraph, type FaqItem } from '../../../lib/studyGraph';
 import { topicLabel } from '../../../lib/topics';
+import RoadSigns from '../../../components/ui/RoadSigns.astro';
 
 const slug = 'caba';
 const jurisdiction = requireJurisdiction(slug);
@@ -90,6 +91,8 @@ const jsonLd = studyGraph({
   exactTitle={true}
   jsonLd={jsonLd}
 >
+  <div class="guide-hero">
+    <div>
   <Breadcrumbs
     items={[
       { label: 'Inicio', href: '/' },
@@ -113,6 +116,9 @@ const jsonLd = studyGraph({
   <div class="btn-row">
     <a class="btn btn--primary" href={`/practicar/${slug}/`}>Empezar a practicar</a>
     <a class="btn btn--secondary" href="#banco-completo">Ver las {bank.questions.length} preguntas</a>
+  </div>
+    </div>
+    <RoadSigns />
   </div>
 
   <section class="section" aria-labelledby="respuesta-rapida">

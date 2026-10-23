@@ -2,6 +2,7 @@
 import Layout from '../../components/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getUpcomingTests } from '../../lib/content';
+import RoadSigns from '../../components/ui/RoadSigns.astro';
 import type { UpcomingTest } from '../../types/content';
 
 export function getStaticPaths() {
@@ -35,6 +36,8 @@ const pathname = `/test-de-conducir/${test.slug}/`;
     ]}
   />
 
+  <div class="page-soon">
+  <RoadSigns variant="alert" />
   <p class="kicker">Test teórico · Categoría {test.licenseClass}</p>
   <div class="upcoming-page__status">
     <h1>{test.title}</h1>
@@ -56,5 +59,6 @@ const pathname = `/test-de-conducir/${test.slug}/`;
   <div class="btn-row" style="margin-top:1.5rem;">
     <a class="btn btn--primary" href="/test-de-conducir/">Ver tests disponibles</a>
     <a class="btn btn--secondary" href="/#empezar">Practicar autos (B1)</a>
+  </div>
   </div>
 </Layout>

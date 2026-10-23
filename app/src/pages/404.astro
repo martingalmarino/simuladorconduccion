@@ -1,5 +1,6 @@
 ---
 import Layout from '../components/Layout.astro';
+import RoadSigns from '../components/ui/RoadSigns.astro';
 ---
 
 <Layout
@@ -8,6 +9,8 @@ import Layout from '../components/Layout.astro';
   pathname="/404"
   noindex={true}
 >
+  <div class="not-found">
+  <RoadSigns variant="alert" />
   <h1>No encontramos esa página</h1>
   <p class="lede">
     Puede que el enlace esté desactualizado o que la dirección tenga un error. Volvé al inicio o elegí
@@ -16,5 +19,6 @@ import Layout from '../components/Layout.astro';
   <div class="btn-row">
     <a class="btn btn--primary" href="/">Ir al inicio</a>
     <a class="btn btn--secondary" href="/test-de-conducir/">Ver tests</a>
+  </div>
   </div>
 </Layout>

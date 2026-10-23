@@ -4,6 +4,7 @@ import Header from './Header.astro';
 import Footer from './Footer.astro';
 import { getSiteRuntime } from '../lib/site';
 import '../styles/global.css';
+import '../styles/internal.css';
 
 interface Props {
   title: string;
@@ -26,6 +27,8 @@ const {
   jsonLd,
   fullBleed = false,
 } = Astro.props;
+const isHome = pathname === '/';
+const isPractice = pathname.startsWith('/practicar/');
 ---
 
 <!doctype html>
@@ -41,13 +44,22 @@ const {
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    {
+      isHome ? (
+        <link
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      ) : (
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      )
+    }
     <slot name="head" />
   </head>
-  <body>
+  <body class:list={[!isHome && 'site-internal', isPractice && 'site-practice']}>
     <Header />
     <main id="contenido" class:list={['site-main', !fullBleed && 'page-shell']}>
       <slot />

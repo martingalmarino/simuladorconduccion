@@ -1,0 +1,35 @@
+---
+interface Props {
+  variant?: 'row' | 'alert';
+}
+
+const { variant = 'row' } = Astro.props;
+---
+
+<div class:list={['road-signs', variant === 'alert' && 'road-signs--alert']} aria-hidden="true">
+  {
+    variant === 'alert' ? (
+      <svg viewBox="0 0 80 80">
+        <polygon points="40,8 74,70 6,70" fill="#ffc83d" stroke="#1b2333" stroke-width="3" stroke-linejoin="round" />
+        <text x="40" y="58" text-anchor="middle" font-family="Nunito, sans-serif" font-size="28" font-weight="800" fill="#1b2333">!</text>
+      </svg>
+    ) : (
+      <>
+        <svg viewBox="0 0 80 80">
+          <polygon points="28,6 52,6 74,28 74,52 52,74 28,74 6,52 6,28" fill="#c51f32" stroke="#fff" stroke-width="3" />
+          <text x="40" y="46" text-anchor="middle" font-family="Nunito, sans-serif" font-size="16" font-weight="800" fill="#fff">PARE</text>
+        </svg>
+        <svg viewBox="0 0 80 80">
+          <rect x="28" y="8" width="24" height="64" rx="8" fill="#1b2333" />
+          <circle cx="40" cy="24" r="7" fill="#ef4444" />
+          <circle cx="40" cy="40" r="7" fill="#ffc83d" />
+          <circle cx="40" cy="56" r="7" fill="#1f9d6b" />
+        </svg>
+        <svg viewBox="0 0 80 80">
+          <circle cx="40" cy="40" r="30" fill="#fff" stroke="#c51f32" stroke-width="6" />
+          <text x="40" y="48" text-anchor="middle" font-family="Nunito, sans-serif" font-size="26" font-weight="800" fill="#1b2333">60</text>
+        </svg>
+      </>
+    )
+  }
+</div>

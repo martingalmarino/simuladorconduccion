@@ -15,10 +15,10 @@ const sources = resolveQuestionSources(question);
 ---
 
 <article class="card study-question" id={question.id}>
-  <p class="muted" style="margin:0 0 0.35rem; font-size:0.9rem;">
+  <p class="muted study-question__kicker">
     Pregunta {index} · {topicLabel(question.topic)}
   </p>
-  <h3 style="font-size:1.05rem; letter-spacing:-0.02em;">{question.prompt}</h3>
+  <h3>{question.prompt}</h3>
 
   {
     image && (

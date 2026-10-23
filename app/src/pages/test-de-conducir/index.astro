@@ -4,6 +4,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import JurisdictionCard from '../../components/JurisdictionCard.astro';
 import UpcomingTestCard from '../../components/UpcomingTestCard.astro';
 import CategoriaACard from '../../components/CategoriaACard.astro';
+import RoadSigns from '../../components/ui/RoadSigns.astro';
 import bancoCategoriaA from '../../data/preguntas-categoria-a.json';
 import { getBank, getSiteConfig, getUpcomingTests } from '../../lib/content';
 import { absoluteUrl, getSiteRuntime } from '../../lib/site';
@@ -54,19 +55,24 @@ const jsonLd = [
   pathname="/test-de-conducir/"
   jsonLd={jsonLd}
 >
-  <Breadcrumbs
-    items={[
-      { label: 'Inicio', href: '/' },
-      { label: 'Tests de conducir' },
-    ]}
-  />
+  <div class="guide-hero">
+    <div>
+      <Breadcrumbs
+        items={[
+          { label: 'Inicio', href: '/' },
+          { label: 'Tests de conducir' },
+        ]}
+      />
 
-  <p class="kicker">Directorio de práctica</p>
-  <h1>Elegí dónde vas a rendir</h1>
-  <p class="lede">
-    Hay un banco de práctica general sobre el marco nacional y bancos locales para CABA y Córdoba
-    Capital. No mezclamos normas entre ellos. También está el test de motos (categoría A).
-  </p>
+      <p class="kicker">Directorio de práctica</p>
+      <h1>Elegí dónde vas a rendir</h1>
+      <p class="lede">
+        Hay un banco de práctica general sobre el marco nacional y bancos locales para CABA y Córdoba
+        Capital. No mezclamos normas entre ellos. También está el test de motos (categoría A).
+      </p>
+    </div>
+    <RoadSigns />
+  </div>
 
   <div class="card-grid">
     {
@@ -87,7 +93,7 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section notice">
+  <section class="section notice callout">
     <p style="margin:0;">
       Este sitio no ofrece un simulacro oficial con tiempo ni nota de aprobación. Es práctica para
       repasar el teórico.

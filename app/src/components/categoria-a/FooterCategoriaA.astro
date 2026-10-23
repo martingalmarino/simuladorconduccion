@@ -1,6 +1,5 @@
 ---
 import { getSiteConfig, getUpcomingTests } from '../../lib/content';
-import BrandLogo from '../BrandLogo.astro';
 
 const config = getSiteConfig();
 const upcomingTests = getUpcomingTests();
@@ -48,7 +47,13 @@ const upcomingTests = getUpcomingTests();
   <div class="site-footer__inner">
     <div class="site-footer__brand">
       <a class="brand" href="/" aria-label={`${config.siteName} · practicavial.com.ar`}>
-        <BrandLogo />
+        <img
+          class="internal-logo internal-logo--footer"
+          src="/brand/practicavial-logo-oscuro.svg"
+          alt="Practicavial"
+          width="172"
+          height="40"
+        />
       </a>
       <p>
         practicavial.com.ar · Práctica independiente del examen teórico de conducir. No es un organismo

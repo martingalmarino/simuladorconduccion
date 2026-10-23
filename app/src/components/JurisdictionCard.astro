@@ -11,10 +11,14 @@ const { jurisdiction, bank } = Astro.props;
 const topics = [...new Set(bank.questions.map((q) => q.topic))];
 ---
 
-<article class="card jurisdiction-card">
-  <p class="kicker" style="margin-bottom:0.4rem;">
-    {jurisdiction.scopeKind === 'national-framework' ? 'Marco nacional · Autos' : 'Autos · B1'}
-  </p>
+<article class:list={['card', 'jurisdiction-card', `jurisdiction-card--${jurisdiction.slug}`]}>
+  {
+    jurisdiction.scopeKind !== 'national-framework' && (
+      <p class="kicker" style="margin-bottom:0.4rem;">
+        Autos · B1
+      </p>
+    )
+  }
   <h2>{jurisdiction.label}</h2>
   <p class="muted">{jurisdiction.geographicScope}</p>
   <p>

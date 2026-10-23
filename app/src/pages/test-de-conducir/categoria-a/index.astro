@@ -2,6 +2,7 @@
 import PageShell from '../../../components/categoria-a/PageShell.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import QuizCategoria from '../../../components/QuizCategoria.astro';
+import RoadSigns from '../../../components/ui/RoadSigns.astro';
 import banco from '../../../data/preguntas-categoria-a.json';
 
 const pathname = '/test-de-conducir/categoria-a/';
@@ -189,6 +190,8 @@ const jsonLd = {
       history.replaceState(null, '', location.pathname + location.hash);
     }
   </script>
+  <div class="guide-hero">
+    <div>
   <Breadcrumbs
     items={[
       { label: 'Inicio', href: '/' },
@@ -205,6 +208,8 @@ const jsonLd = {
     la edad mínima de cada una.
   </p>
 
+    </div>
+    <div class="guide-hero__aside">
   <aside class="card respuesta-rapida" aria-label="Respuesta rápida">
     <p class="kicker">Respuesta rápida</p>
     <p>
@@ -214,6 +219,9 @@ const jsonLd = {
       21 años (motos de más de 300 cc).
     </p>
   </aside>
+    <RoadSigns />
+    </div>
+  </div>
 
   <section class="section" aria-labelledby="test-moto">
     <h2 id="test-moto">{quizHeading}</h2>

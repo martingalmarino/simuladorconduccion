@@ -1,6 +1,5 @@
 ---
 import { getSiteConfig } from '../lib/content';
-import BrandLogo from './BrandLogo.astro';
 
 const config = getSiteConfig();
 const path = Astro.url.pathname;
@@ -21,7 +20,13 @@ const isHome = path === '/';
             height="44"
           />
         ) : (
-          <BrandLogo />
+          <img
+            class="internal-logo"
+            src="/brand/practicavial-logo.svg"
+            alt="Practicavial"
+            width="190"
+            height="44"
+          />
         )
       }
     </a>
@@ -52,7 +57,7 @@ const isHome = path === '/';
         class:list={['btn', 'btn--primary', 'nav__cta', isHome && 'home-nav-cta']}
         href="/#empezar"
       >
-        {isHome ? 'Empezar test' : 'Empezar'}
+        Empezar test
       </a>
     </nav>
   </div>

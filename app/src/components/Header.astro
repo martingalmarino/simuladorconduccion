@@ -4,13 +4,26 @@ import BrandLogo from './BrandLogo.astro';
 
 const config = getSiteConfig();
 const path = Astro.url.pathname;
+const isHome = path === '/';
 ---
 
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
-<header class="site-header">
+<header class:list={['site-header', isHome && 'site-header--home']}>
   <div class="site-header__inner">
     <a class="brand" href="/" aria-label={`${config.siteName} · practicavial.com.ar`}>
-      <BrandLogo />
+      {
+        isHome ? (
+          <img
+            class="home-logo"
+            src="/brand/practicavial-logo.svg"
+            alt="Practicavial"
+            width="190"
+            height="44"
+          />
+        ) : (
+          <BrandLogo />
+        )
+      }
     </a>
     <button
       class="nav-toggle"
@@ -35,7 +48,12 @@ const path = Astro.url.pathname;
       >
         Fuentes
       </a>
-      <a class="btn btn--primary nav__cta" href="/#empezar">Empezar</a>
+      <a
+        class:list={['btn', 'btn--primary', 'nav__cta', isHome && 'home-nav-cta']}
+        href="/#empezar"
+      >
+        {isHome ? 'Empezar test' : 'Empezar'}
+      </a>
     </nav>
   </div>
 </header>

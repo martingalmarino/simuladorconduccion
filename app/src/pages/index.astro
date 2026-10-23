@@ -1,14 +1,11 @@
 ---
 import Layout from '../components/Layout.astro';
-import JurisdictionCard from '../components/JurisdictionCard.astro';
 import PracticeLauncher from '../components/PracticeLauncher.astro';
-import Illustrations from '../components/Illustrations.astro';
-import UpcomingTestCard from '../components/UpcomingTestCard.astro';
-import CategoriaACard from '../components/CategoriaACard.astro';
 import bancoCategoriaA from '../data/preguntas-categoria-a.json';
-import { getBank, getSiteConfig, getUpcomingTests } from '../lib/content';
+import { getBank, getSiteConfig, getUpcomingTests, resolveQuestionSources } from '../lib/content';
 import { absoluteUrl, getSiteRuntime } from '../lib/site';
 import { topicLabel } from '../lib/topics';
+import '../styles/home.css';
 
 const config = getSiteConfig();
 const runtime = getSiteRuntime();
@@ -19,9 +16,22 @@ const cards = config.jurisdictions.map((j) => ({
 const upcomingTests = getUpcomingTests();
 const questionCount = cards[0]?.bank.questions.length ?? 20;
 const motoQuestionCount = bancoCategoriaA.preguntas.length;
-const sampleTopics = [
-  ...new Set(cards.flatMap((c) => c.bank.questions.map((q) => q.topic))),
-].slice(0, 8);
+const motoTopics = [...new Set(bancoCategoriaA.preguntas.map((item) => item.tema))].slice(0, 2);
+
+const argentinaBank = cards.find((card) => card.jurisdiction.slug === 'argentina')?.bank;
+const example = argentinaBank?.questions[0];
+const exampleSource = example ? resolveQuestionSources(example)[0] : undefined;
+
+const placeStyle: Record<string, { stripe: string; tag: string; title: string; subtitle: string }> = {
+  argentina: { stripe: 'azul', tag: 'Autos · B1', title: 'Argentina', subtitle: 'Marco nacional' },
+  caba: { stripe: 'amarillo', tag: 'Autos · B1', title: 'CABA', subtitle: 'Ciudad de Buenos Aires' },
+  'cordoba-capital': {
+    stripe: 'naranja',
+    tag: 'Autos · B1',
+    title: 'Córdoba Capital',
+    subtitle: 'Ciudad de Córdoba',
+  },
+};
 
 const pageUrl = absoluteUrl('/');
 const jsonLd = [
@@ -51,241 +61,344 @@ const jsonLd = [
   jsonLd={jsonLd}
   fullBleed={true}
 >
-  <section class="hero container">
-    <p class="kicker">Práctica Vial · Argentina</p>
-    <h1>Prepará tu examen teórico de conducir</h1>
-    <p class="lede">
-      Practicá con preguntas tipo test, entendé cada respuesta y descubrí qué necesitás repasar antes
-      de rendir.
-    </p>
+  <link slot="head" rel="preconnect" href="https://fonts.googleapis.com" />
+  <link slot="head" rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    slot="head"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito:wght@700;800;900&display=swap"
+    rel="stylesheet"
+  />
 
-    <PracticeLauncher
-      jurisdictions={config.jurisdictions}
-      upcomingTests={upcomingTests}
-      questionCount={questionCount}
-      motoQuestionCount={motoQuestionCount}
-      notice="Práctica independiente"
-    />
+  <div class="home">
+    <section class="home-hero" id="empezar">
+      <div class="home-wrap home-hero__grid">
+        <div>
+          <p class="home-kicker">Práctica Vial · Argentina</p>
+          <h1>
+            Prepará tu examen teórico de conducir
+            <span class="home-h1-accent">con confianza</span>
+          </h1>
+          <p class="home-lede">
+            Practicá con preguntas tipo test, entendé cada respuesta y descubrí qué necesitás
+            repasar antes de rendir.
+          </p>
+          <ul class="home-checks">
+            <li>
+              <span class="home-check" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5 10 17l9-10"/></svg>
+              </span>
+              Sin registro
+            </li>
+            <li>
+              <span class="home-check" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5 10 17l9-10"/></svg>
+              </span>
+              Gratis
+            </li>
+            <li>
+              <span class="home-check" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5 10 17l9-10"/></svg>
+              </span>
+              Explicación y fuente en cada pregunta
+            </li>
+          </ul>
+          <div class="home-signs" aria-hidden="true">
+            <svg viewBox="0 0 80 80">
+              <polygon points="28,6 52,6 74,28 74,52 52,74 28,74 6,52 6,28" fill="#c51f32" stroke="#fff" stroke-width="3"/>
+              <text x="40" y="46" text-anchor="middle" font-family="Nunito, sans-serif" font-size="16" font-weight="800" fill="#fff">PARE</text>
+            </svg>
+            <svg viewBox="0 0 80 80">
+              <rect x="28" y="8" width="24" height="64" rx="8" fill="#1b2333"/>
+              <circle cx="40" cy="24" r="7" fill="#ef4444"/>
+              <circle cx="40" cy="40" r="7" fill="#ffc83d"/>
+              <circle cx="40" cy="56" r="7" fill="#1f9d6b"/>
+            </svg>
+            <svg viewBox="0 0 80 80">
+              <polygon points="40,8 74,70 6,70" fill="#ffc83d" stroke="#1b2333" stroke-width="3" stroke-linejoin="round"/>
+              <text x="40" y="58" text-anchor="middle" font-family="Nunito, sans-serif" font-size="28" font-weight="800" fill="#1b2333">!</text>
+            </svg>
+            <svg viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="30" fill="#fff" stroke="#c51f32" stroke-width="6"/>
+              <text x="40" y="48" text-anchor="middle" font-family="Nunito, sans-serif" font-size="26" font-weight="800" fill="#1b2333">60</text>
+            </svg>
+          </div>
+        </div>
 
-    <div class="step-cards" aria-label="Cómo funciona la práctica">
-      <article class="step-card">
-        <div class="step-card__label">Paso 01</div>
-        <div class="step-card__icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-        </div>
-        <h3>Elegí la ciudad</h3>
-        <p>CABA o Córdoba Capital. No mezclamos normas entre jurisdicciones.</p>
-        <a href="#jurisdicciones">Ver ciudades →</a>
-      </article>
-      <article class="step-card">
-        <div class="step-card__label">Paso 02</div>
-        <div class="step-card__icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M8 17V9m4 8V5m4 12v-4"/></svg>
-        </div>
-        <h3>Modo Aprender</h3>
-        <p>10, 20 o {questionCount} preguntas, con explicación y fuente después de cada respuesta.</p>
-        <a href="#como-practicar">Cómo funciona →</a>
-      </article>
-      <article class="step-card">
-        <div class="step-card__label">Paso 03</div>
-        <div class="step-card__icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>
-        </div>
-        <h3>Práctica</h3>
-        <p>20 o {questionCount} preguntas. Corrección al final, con aciertos y temas a repasar.</p>
-        <a href="#como-practicar">Ver modalidades →</a>
-      </article>
-      <article class="step-card">
-        <div class="step-card__label">Paso 04</div>
-        <div class="step-card__icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5V6a2 2 0 0 1 2-2h9l5 5v10.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.5z"/><path d="M14 4v5h5"/></svg>
-        </div>
-        <h3>Repasá con fuentes</h3>
-        <p>Cada explicación enlaza la norma o guía consultada.</p>
-        <a href="/fuentes-y-metodologia/">Metodología →</a>
-      </article>
-    </div>
-  </section>
+        <PracticeLauncher
+          variant="home"
+          jurisdictions={config.jurisdictions}
+          upcomingTests={upcomingTests}
+          questionCount={questionCount}
+          motoQuestionCount={motoQuestionCount}
+          notice="Práctica independiente"
+        />
+      </div>
+      <div class="home-wrap">
+        <div class="home-road" aria-hidden="true"></div>
+      </div>
+    </section>
 
-  <section class="section-block section-block--soft" aria-labelledby="para-que">
-    <div class="container split">
-      <div class="split__copy">
-        <p class="kicker">Para qué sirve</p>
-        <h2 id="para-que">¿Qué necesitás para practicar acá?</h2>
-        <p class="lede">
-          Solo elegí tu ciudad y empezá. No pedimos registro ni datos personales. El historial de
-          prácticas queda en tu dispositivo.
-        </p>
-        <p class="muted">
-          Hoy podés practicar <strong>autos (clase B1)</strong> en práctica general, CABA y Córdoba
-          Capital, y <strong>motos (categoría A)</strong>. Las categorías E y D están anunciadas y
-          todavía no tienen preguntas.
-        </p>
-      </div>
-      <div class="split__visual">
-        <Illustrations name="practice" />
-      </div>
-    </div>
-  </section>
-
-  <section class="section-block section-block--paper" aria-labelledby="requisitos">
-    <div class="container split split--reverse">
-      <div class="split__copy">
-        <p class="kicker">Alcance real</p>
-        <h2 id="requisitos">Preguntas explicadas, con la fuente a la vista</h2>
-        <p class="lede">
-          Son {questionCount} preguntas por ciudad, armadas para practicar y contrastadas con normas y
-          guías oficiales. No reproducen el banco del examen ni garantizan la aprobación.
-        </p>
-        <div class="topic-chips" aria-label="Temas de ejemplo">
-          {sampleTopics.map((topic) => <span class="chip">{topicLabel(topic)}</span>)}
+    <section id="como-practicar" class="home-section home-section--white" aria-labelledby="como-titulo">
+      <div class="home-wrap">
+        <div class="home-head">
+          <p class="home-kicker">Modalidades</p>
+          <h2 id="como-titulo">Los pasos para practicar bien</h2>
+          <p class="home-lede">
+            Dos formas de practicar: con corrección al instante o al final. Sin reloj ni nota oficial
+            de “aprobado”.
+          </p>
         </div>
-        <div class="btn-row" style="margin-top:1.25rem;">
-          <a class="btn btn--secondary" href="/fuentes-y-metodologia/">Ver fuentes y metodología</a>
-        </div>
-      </div>
-      <div class="split__visual">
-        <Illustrations name="route" />
-      </div>
-    </div>
-  </section>
-
-  <section id="como-practicar" class="section-block section-block--soft" aria-labelledby="como-titulo">
-    <div class="container">
-      <div class="section-head">
-        <p class="kicker">Modalidades</p>
-        <h2 id="como-titulo">Los pasos para practicar bien</h2>
-        <p class="lede">
-          Dos formas de practicar: con corrección al instante o al final. Sin reloj ni nota oficial de
-          “aprobado”.
-        </p>
-      </div>
-      <div class="timeline">
-        <article class="timeline-item">
-          <div class="timeline-item__num" aria-hidden="true">01</div>
-          <div>
+        <div class="home-steps">
+          <article class="home-step">
+            <div class="home-ico home-ico--azul" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </div>
             <h3>Elegí jurisdicción</h3>
             <p>CABA o Córdoba Capital. Cada banco responde a su propia normativa local.</p>
             <a href="#jurisdicciones">Ir a las ciudades →</a>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-item__num" aria-hidden="true">02</div>
-          <div>
+          </article>
+          <article class="home-step">
+            <div class="home-ico home-ico--amarillo" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M8 17V9m4 8V5m4 12v-4"/></svg>
+            </div>
             <h3>Aprender con corrección inmediata</h3>
             <p>
               Elegís 10, 20 o {questionCount} preguntas. Después de responder ves la explicación y el
               enlace a la fuente.
             </p>
             <a href="#empezar">Empezar en modo Aprender →</a>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-item__num" aria-hidden="true">03</div>
-          <div>
+          </article>
+          <article class="home-step">
+            <div class="home-ico home-ico--naranja" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+            </div>
             <h3>Práctica con corrección al final</h3>
             <p>
               Podés hacer 20 o las {questionCount}. Al final ves aciertos, porcentaje, preguntas sin
               responder y temas a repasar. Es práctica, no un veredicto oficial.
             </p>
             <a href="#empezar">Configurar práctica →</a>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-item__num" aria-hidden="true">04</div>
-          <div>
+          </article>
+          <article class="home-step">
+            <div class="home-ico home-ico--verde" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5V6a2 2 0 0 1 2-2h9l5 5v10.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.5z"/><path d="M14 4v5h5"/></svg>
+            </div>
             <h3>Estudiá todas las preguntas</h3>
             <p>
               En la página de cada ciudad podés leer las {questionCount} preguntas con respuesta y
               fuente, sin necesidad de empezar una práctica.
             </p>
             <a href="/test-de-conducir/">Ver tests por ciudad →</a>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="jurisdicciones" class="section-block section-block--paper" aria-labelledby="jurisdicciones-titulo">
-    <div class="container">
-      <div class="section-head">
-        <p class="kicker">Jurisdicciones</p>
-        <h2 id="jurisdicciones-titulo">Elegí dónde vas a practicar</h2>
-        <p class="lede">
-          Hoy hay práctica para autos en dos ciudades y para motos (categoría A). Cada ciudad usa su
-          propia normativa local.
-        </p>
+    <section id="jurisdicciones" class="home-section" aria-labelledby="jurisdicciones-titulo">
+      <div class="home-wrap">
+        <div class="home-head">
+          <p class="home-kicker">Jurisdicciones</p>
+          <h2 id="jurisdicciones-titulo">Elegí dónde vas a practicar</h2>
+          <p class="home-lede">
+            Hoy hay práctica para autos en dos ciudades y para motos (categoría A). Cada ciudad usa
+            su propia normativa local.
+          </p>
+        </div>
+        <div class="home-places">
+          {
+            cards.map(({ jurisdiction, bank }) => {
+              const style = placeStyle[jurisdiction.slug] ?? {
+                stripe: 'azul',
+                tag: 'Autos · B1',
+                title: jurisdiction.label,
+                subtitle: jurisdiction.geographicScope,
+              };
+              const topics = [...new Set(bank.questions.map((q) => q.topic))].slice(0, 2);
+              return (
+                <article class="home-place">
+                  <div class={`home-place__bar home-place__bar--${style.stripe}`}></div>
+                  <div class="home-place__body">
+                    <div class={`home-ico home-ico--${style.stripe}`} aria-hidden="true">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                    </div>
+                    <p class={`home-place__tag home-place__tag--${style.stripe}`}>{style.tag}</p>
+                    <h3>{style.title}</h3>
+                    <p class="home-place__sub">{style.subtitle}</p>
+                    <p class="home-place__count">
+                      <strong>{bank.questions.length}</strong>
+                      preguntas
+                    </p>
+                    <div class="home-chips" aria-label="Temas incluidos">
+                      {topics.map((topic) => <span class="home-chip">{topicLabel(topic)}</span>)}
+                    </div>
+                    <div class="home-place__actions">
+                      <a class="home-btn home-btn--primary" href={`/practicar/${jurisdiction.slug}/`}>Practicar</a>
+                      <a class="home-btn home-btn--secondary" href={`/test-de-conducir/${jurisdiction.slug}/`}>Estudiar</a>
+                    </div>
+                  </div>
+                </article>
+              );
+            })
+          }
+          <article class="home-place">
+            <div class="home-place__bar home-place__bar--verde"></div>
+            <div class="home-place__body">
+              <div class="home-ico home-ico--verde" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="17.5" cy="16.5" r="2.5"/><path d="M6.5 16.5h3l2.2-6h4.2l1.6 3.2H17.5"/><path d="M9.2 10.5 8 7.5h3"/></svg>
+              </div>
+              <p class="home-place__tag home-place__tag--verde">Motos</p>
+              <h3>Categoría A</h3>
+              <p class="home-place__sub">Motos, ciclomotores y cuatriciclos.</p>
+              <p class="home-place__count">
+                <strong>{motoQuestionCount}</strong>
+                preguntas
+              </p>
+              <div class="home-chips" aria-label="Temas incluidos">
+                {motoTopics.map((topic) => <span class="home-chip">{topic}</span>)}
+              </div>
+              <div class="home-place__actions">
+                <a class="home-btn home-btn--primary" href="/test-de-conducir/categoria-a/#test-moto">Practicar</a>
+                <a class="home-btn home-btn--secondary" href="/test-de-conducir/categoria-a/">Estudiar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="home-soon">
+          {
+            upcomingTests.map((test) => (
+              <article class="home-soon__card">
+                <div class="home-soon__ico" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5"/><path d="M12 17h.01"/></svg>
+                </div>
+                <div class="home-soon__copy">
+                  <span class="home-soon__tag">Próximamente</span>
+                  <h3>Test teórico {test.licenseClass}</h3>
+                  <p>
+                    {test.subtitle}. Todavía no hay preguntas publicadas para practicar.
+                  </p>
+                </div>
+                <a class="home-btn home-btn--secondary" href={`/test-de-conducir/${test.slug}/`}>
+                  Más info
+                </a>
+              </article>
+            ))
+          }
+        </div>
       </div>
-      <div class="card-grid">
+    </section>
+
+    <section class="home-section home-section--white" aria-labelledby="requisitos">
+      <div class="home-wrap home-split">
+        <div>
+          <p class="home-kicker">Alcance real</p>
+          <h2 id="requisitos">Preguntas explicadas, con la fuente a la vista</h2>
+          <p class="home-lede">
+            Son {questionCount} preguntas por ciudad, armadas para practicar y contrastadas con
+            normas y guías oficiales. No reproducen el banco del examen ni garantizan la aprobación.
+          </p>
+          <p class="home-note">
+            Solo elegí tu ciudad y empezá. No pedimos registro ni datos personales. El historial de
+            prácticas queda en tu dispositivo. Hoy podés practicar autos (clase B1) en práctica
+            general, CABA y Córdoba Capital, y motos (categoría A). Las categorías E y D están
+            anunciadas y todavía no tienen preguntas.
+          </p>
+          <a class="home-btn home-btn--secondary" href="/fuentes-y-metodologia/">
+            Ver fuentes y metodología
+          </a>
+        </div>
         {
-          cards.map(({ jurisdiction, bank }) => (
-            <JurisdictionCard jurisdiction={jurisdiction} bank={bank} />
-          ))
+          example && exampleSource && (
+            <article class="home-q" aria-label="Ejemplo ilustrativo de una pregunta real">
+              <span class="home-q__label">Ejemplo ilustrativo</span>
+              <h3>{example.prompt}</h3>
+              <ul class="home-q__options">
+                {example.options.map((option) => {
+                  const correct = option.id === example.correctOptionId;
+                  return (
+                    <li data-correct={String(correct)}>
+                      <span>{option.text}</span>
+                      {correct && (
+                        <span class="home-q__ok" aria-hidden="true">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12.5 10 17l9-10"/></svg>
+                        </span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+              <div class="home-q__source">
+                <strong>{exampleSource.title.split(':')[0]} · {exampleSource.locator}</strong>
+                <a href={exampleSource.url}>Ver la fuente</a>
+              </div>
+            </article>
+          )
         }
-        <CategoriaACard questionCount={motoQuestionCount} />
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="proximamente" class="section-block section-block--soft" aria-labelledby="proximamente-titulo">
-    <div class="container">
-      <div class="section-head">
-        <p class="kicker">Próximamente</p>
-        <h2 id="proximamente-titulo">Otras categorías, próximamente</h2>
-        <p class="lede">
-          Estas categorías ya están anunciadas. Todavía no hay preguntas para practicarlas.
-        </p>
+    <section class="home-section" aria-labelledby="faq-titulo">
+      <div class="home-wrap">
+        <div class="home-head">
+          <p class="home-kicker">Dudas frecuentes</p>
+          <h2 id="faq-titulo">Preguntas frecuentes</h2>
+          <p class="home-lede">Lo esencial sobre qué es este sitio y hasta dónde llega.</p>
+        </div>
+        <div class="home-faq">
+          <details>
+            <summary>¿Esto es el examen oficial?</summary>
+            <p>
+              No. Es práctica independiente. No reproduce un examen oficial ni garantiza la
+              aprobación.
+            </p>
+          </details>
+          <details>
+            <summary>¿Cuántas preguntas hay?</summary>
+            <p>
+              {questionCount} en cada banco (práctica general, CABA y Córdoba Capital). Podés
+              practicar con 10, 20 o las {questionCount}. Si elegís {questionCount}, usás todas las
+              disponibles: no se generan preguntas nuevas al azar.
+            </p>
+          </details>
+          <details>
+            <summary>¿Qué categorías se pueden practicar?</summary>
+            <p>
+              Autos (clase B1) en práctica general, CABA y Córdoba Capital, y motos (categoría A).
+              Las categorías E (carga) y D (pasajeros) están anunciadas y todavía no tienen
+              preguntas.
+            </p>
+          </details>
+          <details>
+            <summary>¿Córdoba Capital vale para toda la provincia?</summary>
+            <p>
+              No. El material se basa en la normativa de la ciudad de Córdoba. No aplica
+              automáticamente a otros municipios.
+            </p>
+          </details>
+          <details>
+            <summary>¿De dónde salen las respuestas?</summary>
+            <p>
+              Cada pregunta cita la fuente y el artículo o página usados para contrastar la
+              respuesta. El detalle está en <a href="/fuentes-y-metodologia/">Fuentes y metodología</a>.
+            </p>
+          </details>
+        </div>
       </div>
-      <div class="card-grid">
-        {upcomingTests.map((test) => <UpcomingTestCard test={test} />)}
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section-block section-block--paper" aria-labelledby="faq-titulo">
-    <div class="container">
-      <div class="section-head">
-        <p class="kicker">Dudas frecuentes</p>
-        <h2 id="faq-titulo">Preguntas frecuentes</h2>
-        <p class="lede">Lo esencial sobre qué es este sitio y hasta dónde llega.</p>
+    <section class="home-section home-section--white" aria-labelledby="cta-final">
+      <div class="home-wrap">
+        <div class="home-final">
+          <div class="home-ico home-ico--amarillo" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="2" width="6" height="20" rx="2"/><circle cx="12" cy="7" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="17" r="1.4" fill="currentColor"/></svg>
+          </div>
+          <div class="home-final__copy">
+            <h2 id="cta-final">¿Listo para practicar el teórico?</h2>
+            <p>Elegí la ciudad y practicá con explicación y fuente, antes de rendir.</p>
+          </div>
+          <a class="home-btn home-btn--primary" href="/#empezar">Empezar test →</a>
+        </div>
       </div>
-      <div class="faq">
-        <details open>
-          <summary>¿Esto es el examen oficial?</summary>
-          <p>
-            No. Es práctica independiente. No reproduce un examen oficial ni garantiza la aprobación.
-          </p>
-        </details>
-        <details>
-          <summary>¿Cuántas preguntas hay?</summary>
-          <p>
-            {questionCount} en cada banco (práctica general, CABA y Córdoba Capital). Podés practicar
-            con 10, 20 o las {questionCount}. Si elegís {questionCount}, usás todas las disponibles:
-            no se generan preguntas nuevas al azar.
-          </p>
-        </details>
-        <details>
-          <summary>¿Qué categorías se pueden practicar?</summary>
-          <p>
-            Autos (clase B1) en práctica general, CABA y Córdoba Capital, y motos (categoría A). Las
-            categorías E (carga) y D (pasajeros) están anunciadas y todavía no tienen preguntas.
-          </p>
-        </details>
-        <details>
-          <summary>¿Córdoba Capital vale para toda la provincia?</summary>
-          <p>
-            No. El material se basa en la normativa de la ciudad de Córdoba. No aplica automáticamente
-            a otros municipios.
-          </p>
-        </details>
-        <details>
-          <summary>¿De dónde salen las respuestas?</summary>
-          <p>
-            Cada pregunta cita la fuente y el artículo o página usados para contrastar la respuesta.
-            El detalle está en <a href="/fuentes-y-metodologia/">Fuentes y metodología</a>.
-          </p>
-        </details>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </Layout>

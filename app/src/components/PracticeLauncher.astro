@@ -7,15 +7,34 @@ interface Props {
   questionCount: number;
   motoQuestionCount: number;
   notice: string;
+  variant?: 'default' | 'home';
 }
 
-const { jurisdictions, upcomingTests, questionCount, motoQuestionCount, notice } = Astro.props;
+const {
+  jurisdictions,
+  upcomingTests,
+  questionCount,
+  motoQuestionCount,
+  notice,
+  variant = 'default',
+} = Astro.props;
+const isHome = variant === 'home';
 const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
 ---
 
-<form class="card launch-card" id="empezar" method="get" action={`/practicar/${defaultSlug}/`}>
+<form
+  class:list={[isHome ? 'home-launch' : 'card launch-card']}
+  id={isHome ? undefined : 'empezar'}
+  method="get"
+  action={`/practicar/${defaultSlug}/`}
+>
+  {
+    isHome && <h2 class="home-launch__title">Empezá en 2 pasos</h2>
+  }
   <div class="launch-field">
-    <label for="launch-category" id="launch-vehicle-label">Categoría</label>
+    <label for="launch-category" id="launch-vehicle-label">
+      {isHome ? '1. Categoría' : 'Categoría'}
+    </label>
     <div class="launch-select">
       <svg class="launch-select__icon" data-icon="auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
         <path d="M3 13l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5"></path>
@@ -48,7 +67,7 @@ const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
   </div>
 
   <div class="launch-field" id="launch-place-field">
-    <label for="launch-place">¿Dónde vas a rendir?</label>
+    <label for="launch-place">{isHome ? '2. ¿Dónde vas a rendir?' : '¿Dónde vas a rendir?'}</label>
     <div class="launch-select">
       <svg class="launch-select__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
         <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"></path>
@@ -69,8 +88,13 @@ const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
     </p>
   </div>
 
-  <button class="btn btn--primary btn--block btn--lg" type="submit">
-    Empezar a practicar
+  <button
+    class:list={[
+      isHome ? 'home-btn home-btn--primary home-btn--block' : 'btn btn--primary btn--block btn--lg',
+    ]}
+    type="submit"
+  >
+    {isHome ? 'Empezar test →' : 'Empezar a practicar'}
   </button>
   <p class="launch-hint" id="launch-hint">
     {questionCount} preguntas por ciudad · Sin registro · {notice}
@@ -117,7 +141,8 @@ const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
     notice,
   }}
 >
-  const form = document.getElementById('empezar');
+  const root = document.getElementById('empezar');
+  const form = root instanceof HTMLFormElement ? root : root?.querySelector('form') ?? null;
   const place = document.getElementById('launch-place');
   const placeField = document.getElementById('launch-place-field');
   const category = document.getElementById('launch-category');

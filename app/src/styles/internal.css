@@ -514,6 +514,10 @@ body.site-practice .site-footer__cta {
   display: none;
 }
 
+body.site-practice main.site-main {
+  padding-bottom: 80px;
+}
+
 body.site-internal .section .card-grid {
   grid-template-columns: 1fr 1fr;
 }
@@ -638,5 +642,9 @@ body.site-internal .quiz-meta {
   body.site-internal .page-shell > .section:nth-child(even) {
     padding-top: 48px;
     padding-bottom: 48px;
+  }
+
+  body.site-practice main.site-main {
+    padding-bottom: 64px;
   }
 }

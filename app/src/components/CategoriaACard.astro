@@ -1,0 +1,19 @@
+---
+interface Props {
+  questionCount: number;
+}
+
+const { questionCount } = Astro.props;
+---
+
+<article class="card jurisdiction-card">
+  <p class="kicker" style="margin-bottom:0.4rem;">Test teórico · Motos</p>
+  <h2>Categoría A</h2>
+  <p class="muted">Ciclomotores, motos, triciclos y cuatriciclos.</p>
+  <p>
+    <strong>{questionCount} preguntas</strong> con explicación y fuente oficial.
+  </p>
+  <div class="btn-row" style="margin-top: 1.15rem;">
+    <a class="btn btn--primary" href="/test-de-conducir/categoria-a/">Practicar</a>
+  </div>
+</article>

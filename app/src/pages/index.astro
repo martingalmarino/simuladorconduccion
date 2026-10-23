@@ -4,6 +4,8 @@ import JurisdictionCard from '../components/JurisdictionCard.astro';
 import PracticeLauncher from '../components/PracticeLauncher.astro';
 import Illustrations from '../components/Illustrations.astro';
 import UpcomingTestCard from '../components/UpcomingTestCard.astro';
+import CategoriaACard from '../components/CategoriaACard.astro';
+import bancoCategoriaA from '../data/preguntas-categoria-a.json';
 import { getBank, getSiteConfig, getUpcomingTests } from '../lib/content';
 import { absoluteUrl, getSiteRuntime } from '../lib/site';
 import { topicLabel } from '../lib/topics';
@@ -16,6 +18,7 @@ const cards = config.jurisdictions.map((j) => ({
 }));
 const upcomingTests = getUpcomingTests();
 const questionCount = cards[0]?.bank.questions.length ?? 20;
+const motoQuestionCount = bancoCategoriaA.preguntas.length;
 const sampleTopics = [
   ...new Set(cards.flatMap((c) => c.bank.questions.map((q) => q.topic))),
 ].slice(0, 8);
@@ -60,6 +63,7 @@ const jsonLd = [
       jurisdictions={config.jurisdictions}
       upcomingTests={upcomingTests}
       questionCount={questionCount}
+      motoQuestionCount={motoQuestionCount}
       notice="Práctica independiente"
     />
 
@@ -114,7 +118,8 @@ const jsonLd = [
         </p>
         <p class="muted">
           Hoy podés practicar <strong>autos (clase B1)</strong> en práctica general, CABA y Córdoba
-          Capital. Las categorías A, E y D están anunciadas y todavía no tienen preguntas.
+          Capital, y <strong>motos (categoría A)</strong>. Las categorías E y D están anunciadas y
+          todavía no tienen preguntas.
         </p>
       </div>
       <div class="split__visual">
@@ -207,7 +212,8 @@ const jsonLd = [
         <p class="kicker">Jurisdicciones</p>
         <h2 id="jurisdicciones-titulo">Elegí dónde vas a practicar</h2>
         <p class="lede">
-          Hoy hay práctica para autos en dos ciudades. Cada una usa su propia normativa local.
+          Hoy hay práctica para autos en dos ciudades y para motos (categoría A). Cada ciudad usa su
+          propia normativa local.
         </p>
       </div>
       <div class="card-grid">
@@ -216,6 +222,7 @@ const jsonLd = [
             <JurisdictionCard jurisdiction={jurisdiction} bank={bank} />
           ))
         }
+        <CategoriaACard questionCount={motoQuestionCount} />
       </div>
     </div>
   </section>
@@ -258,10 +265,10 @@ const jsonLd = [
           </p>
         </details>
         <details>
-          <summary>¿Por qué solo se puede practicar autos?</summary>
+          <summary>¿Qué categorías se pueden practicar?</summary>
           <p>
-            Por ahora el material publicado es para autos (clase B1). Las categorías A (motos), E
-            (carga) y D (pasajeros) están anunciadas y todavía no tienen preguntas.
+            Autos (clase B1) en práctica general, CABA y Córdoba Capital, y motos (categoría A). Las
+            categorías E (carga) y D (pasajeros) están anunciadas y todavía no tienen preguntas.
           </p>
         </details>
         <details>

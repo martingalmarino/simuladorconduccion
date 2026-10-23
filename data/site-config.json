@@ -105,20 +105,11 @@
     }
   ],
   "plannedClasses": [
-    "A",
     "C",
     "D",
     "E"
   ],
   "upcomingTests": [
-    {
-      "id": "upcoming-a",
-      "slug": "categoria-a",
-      "licenseClass": "A",
-      "title": "Test teórico categoría A",
-      "subtitle": "Motovehículos de dos ruedas",
-      "status": "proximamente"
-    },
     {
       "id": "upcoming-e",
       "slug": "categoria-e",

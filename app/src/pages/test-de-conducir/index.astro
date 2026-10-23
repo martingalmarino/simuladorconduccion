@@ -3,6 +3,8 @@ import Layout from '../../components/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import JurisdictionCard from '../../components/JurisdictionCard.astro';
 import UpcomingTestCard from '../../components/UpcomingTestCard.astro';
+import CategoriaACard from '../../components/CategoriaACard.astro';
+import bancoCategoriaA from '../../data/preguntas-categoria-a.json';
 import { getBank, getSiteConfig, getUpcomingTests } from '../../lib/content';
 import { absoluteUrl, getSiteRuntime } from '../../lib/site';
 
@@ -22,7 +24,7 @@ const jsonLd = [
     name: 'Elegí dónde vas a rendir',
     inLanguage: runtime.locale,
     description:
-      'Directorio de bancos de práctica para el test teórico de autos: CABA y Córdoba Capital.',
+      'Directorio de práctica: marco nacional, CABA, Córdoba Capital y motos (categoría A).',
     ...(pageUrl ? { url: pageUrl } : {}),
   },
   {
@@ -48,7 +50,7 @@ const jsonLd = [
 
 <Layout
   title="Tests de conducir por jurisdicción: elegí dónde practicar"
-  description="Elegí práctica general (marco nacional) o el banco de tu ciudad: CABA y Córdoba Capital. Preguntas para autos, con explicación y fuente."
+  description="Elegí práctica general, el banco de tu ciudad o el test de motos (categoría A). Preguntas con explicación y fuente."
   pathname="/test-de-conducir/"
   jsonLd={jsonLd}
 >
@@ -63,7 +65,7 @@ const jsonLd = [
   <h1>Elegí dónde vas a rendir</h1>
   <p class="lede">
     Hay un banco de práctica general sobre el marco nacional y bancos locales para CABA y Córdoba
-    Capital. No mezclamos normas entre ellos. Hoy la práctica publicada es para autos (clase B1).
+    Capital. No mezclamos normas entre ellos. También está el test de motos (categoría A).
   </p>
 
   <div class="card-grid">
@@ -72,6 +74,7 @@ const jsonLd = [
         <JurisdictionCard jurisdiction={jurisdiction} bank={bank} />
       ))
     }
+    <CategoriaACard questionCount={bancoCategoriaA.preguntas.length} />
   </div>
 
   <section class="section" aria-labelledby="proximamente-directorio">

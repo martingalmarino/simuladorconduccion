@@ -7,11 +7,15 @@ const INDEXABLE_PATHS = [
   '/test-de-conducir/argentina/',
   '/test-de-conducir/caba/',
   '/test-de-conducir/cordoba-capital/',
+  '/test-de-conducir/categoria-a/',
   '/fuentes-y-metodologia/',
 ];
 
 /** Fecha real de publicación del sitio en el dominio, no la hora del build. */
 const LASTMOD = '2026-10-22';
+const LASTMOD_BY_PATH: Record<string, string> = {
+  '/test-de-conducir/categoria-a/': '2026-10-23',
+};
 
 export const GET: APIRoute = () => {
   const runtime = getSiteRuntime();
@@ -30,7 +34,8 @@ export const GET: APIRoute = () => {
 
   const urls = INDEXABLE_PATHS.map((path) => {
     const loc = new URL(withTrailingSlash(path), runtime.siteUrl!).toString();
-    return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${LASTMOD}</lastmod>\n  </url>`;
+    const lastmod = LASTMOD_BY_PATH[path] ?? LASTMOD;
+    return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
   }).join('\n');
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;

@@ -1,0 +1,426 @@
+---
+import PageShell from '../../../components/categoria-a/PageShell.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import QuizCategoria from '../../../components/QuizCategoria.astro';
+import banco from '../../../data/preguntas-categoria-a.json';
+
+const pathname = '/test-de-conducir/categoria-a/';
+const pageUrl = `https://www.practicavial.com.ar${pathname}`;
+const total = banco.preguntas.length;
+const title = 'Test teórico de moto (categoría A): subclases y requisitos';
+let description = `Practicá el teórico de moto (categoría A) con ${total} preguntas explicadas: subclases A.1 a A.3, casco, velocidades y edades, con fuente oficial. Gratis.`;
+if (description.length > 155) description = description.replace(/ Gratis\.$/, '');
+if (title.length > 60 || description.length > 155) {
+  throw new Error(`Meta fuera de límite: title ${title.length}, description ${description.length}`);
+}
+
+const quizHeading = `Practicá el test de moto: ${total} preguntas con respuesta explicada`;
+
+const faq = [
+  {
+    question: '¿Qué licencia necesito para una moto de 125 cc?',
+    answer:
+      'La subclase A.1.2, que cubre motos de hasta 150 cc u 11 kW. La edad mínima es de 17 años, según la ANSV.',
+  },
+  {
+    question: '¿Desde qué edad puedo sacar la licencia de moto?',
+    answer:
+      'Desde los 16 años para ciclomotores de hasta 50 cc sin pasajero (A.1.1). Para motos de hasta 150 cc, desde los 17; de más de 150 hasta 300 cc, desde los 19; y de más de 300 cc, desde los 21.',
+  },
+  {
+    question: '¿La categoría A incluye cuatriciclos?',
+    answer:
+      'Sí. Los triciclos y cuatriciclos sin cabina van en A.2 y los que tienen cabina y volante, en A.3.',
+  },
+  {
+    question: '¿El teórico de moto es distinto del de auto?',
+    answer:
+      'Comparte la normativa general de la Ley 24.449 y suma temas propios de los motovehículos, como el casco obligatorio. El contenido exacto lo define cada municipio.',
+  },
+  {
+    question: '¿Qué necesito para una moto de más de 300 cc?',
+    answer:
+      'La subclase A.1.4. Pide 21 años y haber tenido 2 años la A.1.3, o 1 año si sos mayor de 21.',
+  },
+  {
+    question: '¿La moto tiene que llevar matafuego y balizas?',
+    answer:
+      'No. La Ley 24.449 exige matafuego y balizas portátiles a los automotores, excepto a las motocicletas (art. 40 inc. f).',
+  },
+];
+
+const subclases = [
+  ['A.1.1', 'Ciclomotor hasta 50 cc o 4 kW', '16'],
+  ['A.1.2', 'Moto hasta 150 cc o 11 kW', '17'],
+  [
+    'A.1.3',
+    'Moto de más de 150 cc y hasta 300 cc (2 años en A.1.2, salvo mayores de 21)',
+    '19',
+  ],
+  [
+    'A.1.4',
+    'Moto de más de 300 cc (2 años en A.1.3, o 1 año para mayores de 21)',
+    '21',
+  ],
+  ['A.2.1', 'Triciclo/cuatriciclo sin cabina hasta 300 cc', '17'],
+  ['A.2.2', 'Triciclo/cuatriciclo sin cabina de más de 300 cc', '19'],
+  ['A.3', 'Triciclo/cuatriciclo con cabina y volante', '17'],
+];
+
+const temasMoto = [
+  {
+    title: 'Casco y anteojos',
+    text: 'Todos los ocupantes deben usar casco normalizado y, si la moto no tiene parabrisas, el conductor tiene que usar anteojos (art. 40 inc. j). Manejar con un ocupante sin casco bien colocado es falta grave (art. 77 inc. s). La reglamentación exige certificación ECE R22-05.',
+  },
+  {
+    title: 'Documentación',
+    text: 'Licencia, cédula y seguro obligatorio (arts. 40 y 68). A diferencia del auto, la moto no lleva matafuego ni balizas (art. 40 inc. f).',
+  },
+  {
+    title: 'Velocidades',
+    text: '110 km/h en zona rural, 120 en semiautopista y 130 en autopista. En la ciudad, 40 km/h en calles y 60 en avenidas (art. 51).',
+  },
+  {
+    title: 'Ciclomotores',
+    text: 'No pueden circular por autopistas ni semiautopistas (art. 46). Los menores de 18 no pueden manejarlos en zonas céntricas ni en vías rápidas (art. 48 inc. e).',
+  },
+  {
+    title: 'Conducción segura',
+    text: 'Está prohibido zigzaguear, circular agarrado de otro vehículo o pegado detrás de otro automotor (art. 48 inc. d y m), y la alcoholemia permitida es cero (art. 48 inc. a).',
+  },
+  {
+    title: 'Neumáticos',
+    text: 'Profundidad mínima del dibujo: 1 mm en motos y 0,5 mm en ciclomotores (reglamentación, texto del Decreto 196/2025).',
+  },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: title,
+      description,
+      inLanguage: 'es-AR',
+      dateModified: '2026-10-23',
+      spatialCoverage: { '@type': 'Country', name: 'Argentina' },
+      about: [
+        {
+          '@type': 'Legislation',
+          name: 'Ley 24.449 de Tránsito y Seguridad Vial',
+          url: 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm',
+        },
+        {
+          '@type': 'Legislation',
+          name: 'Decreto 196/2025',
+          url: 'https://www.argentina.gob.ar/normativa/nacional/decreto-196-2025-410682/texto',
+        },
+      ],
+      citation: ['https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases'],
+      breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+      mainEntity: { '@id': `${pageUrl}#quiz` },
+    },
+    {
+      '@type': 'Quiz',
+      '@id': `${pageUrl}#quiz`,
+      name: 'Test teórico de moto: licencia categoría A',
+      inLanguage: 'es-AR',
+      isAccessibleForFree: true,
+      educationalLevel: 'Licencia de conducir clase A',
+      about: { '@type': 'Thing', name: 'Licencia Nacional de Conducir clase A' },
+      numberOfQuestions: total,
+      hasPart: banco.preguntas.map((pregunta) => ({
+        '@type': 'Question',
+        eduQuestionType: 'Multiple choice',
+        name: pregunta.pregunta,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: pregunta.opciones[pregunta.correcta],
+        },
+        suggestedAnswer: pregunta.opciones
+          .filter((_, index) => index !== pregunta.correcta)
+          .map((text) => ({ '@type': 'Answer', text })),
+        citation: pregunta.fuente.url,
+      })),
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Inicio',
+          item: 'https://www.practicavial.com.ar/',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Test de conducir',
+          item: 'https://www.practicavial.com.ar/test-de-conducir/',
+        },
+        { '@type': 'ListItem', position: 3, name: 'Categoría A' },
+      ],
+    },
+  ],
+};
+---
+
+<PageShell
+  title={title}
+  description={description}
+  pathname={pathname}
+  exactTitle={true}
+  jsonLd={jsonLd}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Inicio', href: '/' },
+      { label: 'Test de conducir', href: '/test-de-conducir/' },
+      { label: 'Categoría A' },
+    ]}
+  />
+
+  <h1>Test teórico de moto: licencia categoría A</h1>
+  <p class="lede">
+    La categoría A habilita a manejar ciclomotores, motos, triciclos y cuatriciclos. Practicá el
+    teórico con preguntas basadas en la Ley 24.449, su reglamentación y la ANSV: cada respuesta
+    tiene explicación y su fuente oficial. Abajo tenés también las subclases según la cilindrada y
+    la edad mínima de cada una.
+  </p>
+
+  <aside class="card respuesta-rapida" aria-label="Respuesta rápida">
+    <p class="kicker">Respuesta rápida</p>
+    <p>
+      La licencia categoría A es para motovehículos. Se divide en A.1 (motos de dos ruedas, por
+      cilindrada), A.2 (triciclos y cuatriciclos sin cabina) y A.3 (triciclos y cuatriciclos con
+      cabina y volante). La edad mínima va de 16 años (ciclomotor de hasta 50 cc, sin pasajero) a
+      21 años (motos de más de 300 cc).
+    </p>
+  </aside>
+
+  <section class="section" aria-labelledby="test-moto">
+    <h2 id="test-moto">{quizHeading}</h2>
+    <QuizCategoria preguntas={banco.preguntas} />
+  </section>
+
+  <section class="section" aria-labelledby="subclases">
+    <h2 id="subclases">Subclases de la categoría A</h2>
+    <div class="subclass-wrap">
+      <table class="subclass-table">
+        <thead>
+          <tr>
+            <th scope="col">Subclase</th>
+            <th scope="col">Vehículo</th>
+            <th scope="col">Edad mínima</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            subclases.map(([codigo, vehiculo, edad]) => (
+              <tr>
+                <th scope="row">{codigo}</th>
+                <td>{vehiculo}</td>
+                <td>{edad}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="muted subclass-note">
+      Fuente:
+      <a
+        href="https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+        target="_blank"
+        rel="noopener">ANSV, Clases y subclases</a
+      >. La Ley 24.449 (art. 16) exige 2 años de habilitación previa para motos de más de 150 cc,
+      salvo para mayores de 21.
+    </p>
+  </section>
+
+  <section class="section" aria-labelledby="requisitos">
+    <h2 id="requisitos">Requisitos y edades</h2>
+    <ul class="requisitos">
+      <li>
+        <strong>Edad:</strong> 16 años para ciclomotor sin pasajero y 17 para el resto de la clase A
+        (Ley 24.449, art. 11). Los menores necesitan autorización de su representante legal (art. 17).
+      </li>
+      <li>
+        <strong>Conductores principiantes:</strong> durante los primeros 6 meses, cartel identificatorio
+        y prohibición de circular por zonas céntricas, autopistas y semiautopistas. Si cometés faltas
+        graves en los primeros 2 años, la licencia se suspende (Decreto 779/95, art. 13 inc. d, texto
+        del Decreto 196/2025).
+      </li>
+    </ul>
+    <p class="muted">
+      Los cursos, exámenes, tasas y turnos los define cada municipio. Consultá en tu Centro de
+      Emisión de Licencias.
+    </p>
+  </section>
+
+  <section class="section" aria-labelledby="que-se-pregunta">
+    <h2 id="que-se-pregunta">Qué se pregunta en el teórico de moto</h2>
+    <p>
+      El teórico de moto comparte la base del examen de auto (señales, prioridades, velocidades,
+      alcohol cero) y suma reglas propias de los motovehículos.
+    </p>
+    {
+      temasMoto.map((tema) => (
+        <div class="tema-bloque">
+          <h3>{tema.title}</h3>
+          <p>{tema.text}</p>
+        </div>
+      ))
+    }
+  </section>
+
+  <section class="section" aria-labelledby="faq">
+    <h2 id="faq">Preguntas frecuentes</h2>
+    <div class="faq">
+      {
+        faq.map((item) => (
+          <details>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="fuentes">
+    <h2 id="fuentes">Fuentes oficiales</h2>
+    <ul class="source-list">
+      <li>
+        <a
+          href="https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+          target="_blank"
+          rel="noopener">ANSV, Clases y subclases</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+          target="_blank"
+          rel="noopener">Ley 24.449 (Infoleg, texto actualizado)</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.argentina.gob.ar/normativa/nacional/decreto-196-2025-410682/texto"
+          target="_blank"
+          rel="noopener">Decreto 196/2025</a
+        >
+      </li>
+      <li>
+        <a href="/fuentes-y-metodologia/">Metodología</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="otras-practicas">
+    <h2 id="otras-practicas">Otras prácticas</h2>
+    <ul>
+      <li>
+        <a href="/test-de-conducir/argentina/">Test de conducir de Argentina (auto B1)</a>
+      </li>
+      <li><a href="/test-de-conducir/caba/">Test de conducir CABA</a></li>
+      <li><a href="/test-de-conducir/cordoba-capital/">Test de conducir Córdoba Capital</a></li>
+      <li><a href="/test-de-conducir/categoria-d/">Test categoría D (pasajeros)</a></li>
+      <li><a href="/test-de-conducir/categoria-e/">Test categoría E</a></li>
+    </ul>
+  </section>
+
+  <p class="actualizado">
+    Actualizado: <time datetime="2026-10-23">23/10/2026</time>
+  </p>
+  <p>
+    Práctica independiente. No es el examen oficial; el contenido y la modalidad del examen dependen
+    de cada municipio.
+  </p>
+</PageShell>
+
+<style>
+  .respuesta-rapida p:last-child {
+    margin: 0;
+  }
+
+  .subclass-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--td-line);
+    border-radius: 16px;
+    background: var(--td-paper);
+    box-shadow: var(--td-shadow);
+  }
+
+  .subclass-table {
+    width: 100%;
+    min-width: 36rem;
+    border-collapse: collapse;
+  }
+
+  .subclass-table th,
+  .subclass-table td {
+    text-align: left;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--td-line);
+    vertical-align: top;
+  }
+
+  .subclass-table thead th {
+    background: var(--td-bg-soft);
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .subclass-table tbody tr:last-child th,
+  .subclass-table tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .subclass-table td:last-child,
+  .subclass-table th:last-child {
+    white-space: nowrap;
+  }
+
+  .subclass-note {
+    margin-top: 0.85rem;
+  }
+
+  .requisitos {
+    margin: 0 0 1rem;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .tema-bloque + .tema-bloque {
+    margin-top: 1.25rem;
+  }
+
+  .tema-bloque h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .tema-bloque p {
+    margin: 0;
+  }
+
+  .actualizado {
+    margin-top: 2.5rem;
+  }
+</style>

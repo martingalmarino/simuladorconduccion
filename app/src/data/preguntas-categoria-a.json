@@ -1,0 +1,763 @@
+{
+  "categoria": "A",
+  "descripcion": "Motovehículos: ciclomotores y motos (A.1), triciclos y cuatriciclos sin cabina (A.2) y con cabina y volante (A.3). Banco de práctica basado solo en normativa nacional.",
+  "nota": "Práctica independiente. No es el examen oficial. Revisar con el texto vigente antes de publicar.",
+  "preguntas": [
+    {
+      "id": "a-01",
+      "tema": "Licencia",
+      "pregunta": "¿Para qué vehículos es la licencia clase A?",
+      "opciones": [
+        "Tractores agrícolas",
+        "Ciclomotores, motocicletas y triciclos motorizados",
+        "Automóviles y camionetas",
+        "Camiones sin acoplado"
+      ],
+      "correcta": 1,
+      "explicacion": "El artículo 16 define la clase A para ciclomotores, motocicletas y triciclos motorizados.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 16",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-02",
+      "tema": "Licencia",
+      "pregunta": "¿Qué subclase habilita a manejar un ciclomotor de hasta 50 cc?",
+      "opciones": [
+        "A.1.2",
+        "A.2.1",
+        "A.3",
+        "A.1.1"
+      ],
+      "correcta": 3,
+      "explicacion": "Según la ANSV, la A.1.1 corresponde a ciclomotores de hasta 50 cc o 4 kW.",
+      "fuente": {
+        "norma": "ANSV, Clases y subclases",
+        "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-03",
+      "tema": "Licencia",
+      "pregunta": "Querés manejar una moto de 125 cc. ¿Qué subclase necesitás como mínimo?",
+      "opciones": [
+        "A.1.2",
+        "A.1.1",
+        "A.1.4",
+        "A.1.3"
+      ],
+      "correcta": 0,
+      "explicacion": "La A.1.2 cubre motos de hasta 150 cc u 11 kW.",
+      "fuente": {
+        "norma": "ANSV, Clases y subclases",
+        "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-04",
+      "tema": "Licencia",
+      "pregunta": "¿Qué subclase corresponde a una moto de 250 cc?",
+      "opciones": [
+        "A.2.1",
+        "A.1.4",
+        "A.1.2",
+        "A.1.3"
+      ],
+      "correcta": 3,
+      "explicacion": "La A.1.3 cubre motos de más de 150 cc y hasta 300 cc.",
+      "fuente": {
+        "norma": "ANSV, Clases y subclases",
+        "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-05",
+      "tema": "Licencia",
+      "pregunta": "¿Qué subclase corresponde a una moto de 600 cc?",
+      "opciones": [
+        "A.1.4",
+        "A.1.2",
+        "A.1.3",
+        "A.2.2"
+      ],
+      "correcta": 0,
+      "explicacion": "La A.1.4 cubre motos de más de 300 cc.",
+      "fuente": {
+        "norma": "ANSV, Clases y subclases",
+        "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-06",
+      "tema": "Licencia",
+      "pregunta": "Un cuatriciclo sin cabina de 250 cc, ¿en qué subclase entra?",
+      "opciones": [
+        "A.2.2",
+        "A.3",
+        "A.1.3",
+        "A.2.1"
+      ],
+      "correcta": 3,
+      "explicacion": "La A.2.1 es para triciclos y cuatriciclos sin cabina de hasta 300 cc.",
+      "fuente": {
+        "norma": "ANSV, Clases y subclases",
+        "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-07",
+      "tema": "Licencia",
+      "pregunta": "¿Qué subclase corresponde a un triciclo sin cabina de más de 300 cc?",
+      "opciones": [
+        "A.2.2",
+        "A.1.4",
+        "A.3",
+        "A.2.1"
+      ],
+      "correcta": 0,
+      "explicacion": "La A.2.2 es para triciclos y cuatriciclos sin cabina de más de 300 cc.",
+      "fuente": {
+        "norma": "ANSV, Clases y subclases",
+        "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-08",
+      "tema": "Licencia",
+      "pregunta": "¿Qué subclase corresponde a un cuatriciclo con cabina y volante?",
+      "opciones": [
+        "B.1",
+        "A.2.1",
+        "A.3",
+        "A.2.2"
+      ],
+      "correcta": 2,
+      "explicacion": "La A.3 es para triciclos y cuatriciclos con cabina y volante.",
+      "fuente": {
+        "norma": "ANSV, Clases y subclases",
+        "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-09",
+      "tema": "Licencia",
+      "pregunta": "Para una moto de más de 150 cc, ¿qué exige la ley a quien tiene menos de 21 años?",
+      "opciones": [
+        "Haber tenido 2 años la habilitación para motos de menor potencia",
+        "Haber tenido la clase B",
+        "Nada especial",
+        "Un curso de 6 meses"
+      ],
+      "correcta": 0,
+      "explicacion": "El artículo 16 exige haber tenido 2 años de habilitación para motos de menor potencia, salvo para mayores de 21.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 16",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-10",
+      "tema": "Licencia",
+      "pregunta": "Tenés 25 años y querés manejar una moto de más de 300 cc (A.1.4). ¿Qué antigüedad previa pide la ANSV?",
+      "opciones": [
+        "1 año en A.1.3",
+        "5 años en cualquier clase",
+        "2 años en A.1.3",
+        "Ninguna"
+      ],
+      "correcta": 0,
+      "explicacion": "La A.1.4 pide 2 años en A.1.3, o 1 año si sos mayor de 21.",
+      "fuente": {
+        "norma": "ANSV, Clases y subclases",
+        "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-11",
+      "tema": "Edad",
+      "pregunta": "¿Desde qué edad se puede manejar un ciclomotor sin llevar pasajero?",
+      "opciones": [
+        "18 años",
+        "14 años",
+        "16 años",
+        "17 años"
+      ],
+      "correcta": 2,
+      "explicacion": "El artículo 11 permite manejar ciclomotores desde los 16 años si no llevan pasajero.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 11 inc. c",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-12",
+      "tema": "Edad",
+      "pregunta": "¿Cuál es la edad mínima general para la clase A (fuera del ciclomotor sin pasajero)?",
+      "opciones": [
+        "21 años",
+        "17 años",
+        "18 años",
+        "16 años"
+      ],
+      "correcta": 1,
+      "explicacion": "El artículo 11 fija 17 años para las clases que no son C, D ni E.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 11 inc. b",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-13",
+      "tema": "Edad",
+      "pregunta": "¿Desde qué edad se puede obtener la A.1.4 (motos de más de 300 cc)?",
+      "opciones": [
+        "21 años",
+        "19 años",
+        "17 años",
+        "18 años"
+      ],
+      "correcta": 0,
+      "explicacion": "La ANSV indica 21 años para la A.1.4.",
+      "fuente": {
+        "norma": "ANSV, Clases y subclases",
+        "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-14",
+      "tema": "Edad",
+      "pregunta": "¿Qué edad mínima indica la ANSV para la A.1.3 (motos de más de 150 cc y hasta 300 cc)?",
+      "opciones": [
+        "18 años",
+        "21 años",
+        "17 años",
+        "19 años"
+      ],
+      "correcta": 3,
+      "explicacion": "La ANSV fija 19 años para la A.1.3.",
+      "fuente": {
+        "norma": "ANSV, Clases y subclases",
+        "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-15",
+      "tema": "Edad",
+      "pregunta": "Un menor de 18 años con ciclomotor, ¿por dónde NO puede circular?",
+      "opciones": [
+        "Por zonas céntricas, de gran concentración de vehículos o vías rápidas",
+        "Puede circular por cualquier lado",
+        "Por calles de tierra",
+        "Por calles de barrio"
+      ],
+      "correcta": 0,
+      "explicacion": "El artículo 48 prohíbe a los menores de 18 manejar ciclomotores en zonas céntricas, de gran concentración de vehículos o vías rápidas.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 48 inc. e",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-16",
+      "tema": "Definiciones",
+      "pregunta": "Según la ley, ¿qué es un ciclomotor?",
+      "opciones": [
+        "Una moto de hasta 125 cc",
+        "Una motocicleta de hasta 50 cc que no puede superar los 50 km/h",
+        "Una bicicleta con pedales",
+        "Cualquier moto eléctrica"
+      ],
+      "correcta": 1,
+      "explicacion": "El artículo 5 define el ciclomotor como una motocicleta de hasta 50 cc que no puede superar los 50 km/h.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 5 inc. ll",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-17",
+      "tema": "Definiciones",
+      "pregunta": "Según la ley, ¿qué es una motocicleta?",
+      "opciones": [
+        "Un vehículo de dos ruedas con motor de más de 50 cc",
+        "Una moto de más de 150 cc",
+        "Cualquier vehículo de dos ruedas",
+        "Un vehículo de tres ruedas"
+      ],
+      "correcta": 0,
+      "explicacion": "El artículo 5 define la motocicleta como un vehículo de dos ruedas con motor a tracción propia de más de 50 cc.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 5 inc. ñ",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-18",
+      "tema": "Casco",
+      "pregunta": "¿Quiénes deben usar casco normalizado en una moto?",
+      "opciones": [
+        "Solo en ruta",
+        "Solo el conductor",
+        "Solo el acompañante",
+        "Todos los ocupantes"
+      ],
+      "correcta": 3,
+      "explicacion": "El artículo 40 exige que los ocupantes de una motocicleta lleven cascos normalizados.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 40 inc. j",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-19",
+      "tema": "Casco",
+      "pregunta": "Si la moto no tiene parabrisas, ¿qué más debe usar el conductor?",
+      "opciones": [
+        "Rodilleras",
+        "Guantes",
+        "Chaleco reflectivo",
+        "Anteojos"
+      ],
+      "correcta": 3,
+      "explicacion": "El artículo 40 exige que el conductor use anteojos si la moto no tiene parabrisas.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 40 inc. j",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-20",
+      "tema": "Casco",
+      "pregunta": "¿Qué norma de certificación deben cumplir los cascos según la reglamentación vigente?",
+      "opciones": [
+        "No hay norma",
+        "ECE R22-05",
+        "DOT FMVSS 218",
+        "IRAM 3620"
+      ],
+      "correcta": 1,
+      "explicacion": "La reglamentación (art. 29, según el Decreto 196/2025) remite a la certificación ECE R22-05.",
+      "fuente": {
+        "norma": "Decreto 779/95 (texto según Decreto 196/2025), art. 29 inc. I",
+        "url": "https://www.argentina.gob.ar/normativa/nacional/decreto-196-2025-410682/texto"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-21",
+      "tema": "Casco",
+      "pregunta": "Manejar una moto con un ocupante que no tiene el casco bien colocado y sujetado es:",
+      "opciones": [
+        "Una falta leve",
+        "No es falta",
+        "Una falta grave",
+        "Solo una advertencia"
+      ],
+      "correcta": 2,
+      "explicacion": "El artículo 77 incluye entre las faltas graves conducir una moto sin que algún ocupante use el casco reglamentario bien colocado y sujetado.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 77 inc. s",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-22",
+      "tema": "Casco",
+      "pregunta": "Al vender una moto nueva, ¿con qué debe estar equipada antes de salir a circular?",
+      "opciones": [
+        "Con casco",
+        "Con un matafuego",
+        "Con un baúl",
+        "Con balizas"
+      ],
+      "correcta": 0,
+      "explicacion": "El artículo 29 dispone que las motocicletas deben estar equipadas con casco antes de ser libradas a la circulación.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 29 inc. i",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-23",
+      "tema": "Documentación",
+      "pregunta": "¿Qué elemento obligatorio para los autos NO se le exige a la moto?",
+      "opciones": [
+        "Patente",
+        "Seguro",
+        "Matafuego y balizas portátiles",
+        "Licencia"
+      ],
+      "correcta": 2,
+      "explicacion": "El artículo 40 exige matafuego y balizas portátiles, excepto a las motocicletas.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 40 inc. f",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-24",
+      "tema": "Documentación",
+      "pregunta": "¿El seguro obligatorio también rige para las motos?",
+      "opciones": [
+        "Solo para más de 150 cc",
+        "No",
+        "Solo en ruta",
+        "Sí, en las mismas condiciones que para los automotores"
+      ],
+      "correcta": 3,
+      "explicacion": "El artículo 68 hace obligatorio el seguro para las motocicletas en las mismas condiciones que para los automotores.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 68",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-25",
+      "tema": "Documentación",
+      "pregunta": "¿Cómo podés mostrar el comprobante del seguro en un control?",
+      "opciones": [
+        "Solo con una fotocopia certificada",
+        "Solo en papel original",
+        "En papel impreso o en formato digital",
+        "No hace falta llevarlo"
+      ],
+      "correcta": 2,
+      "explicacion": "El artículo 40 inc. c permite exhibirlo impreso o en formato digital.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 40 inc. c (Ley 27.510)",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-26",
+      "tema": "Documentación",
+      "pregunta": "Para circular en moto, ¿qué tiene que llevar el conductor?",
+      "opciones": [
+        "Nada si el vehículo es suyo",
+        "La licencia de la clase correspondiente, la cédula del vehículo y el comprobante de seguro",
+        "Solo la cédula",
+        "Solo el DNI"
+      ],
+      "correcta": 1,
+      "explicacion": "El artículo 40 exige la licencia correspondiente, la cédula del vehículo y el comprobante del seguro vigente.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 40 inc. a, b y c",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-27",
+      "tema": "Circulación",
+      "pregunta": "¿Pueden circular los ciclomotores por autopistas?",
+      "opciones": [
+        "Sí, por el carril derecho",
+        "No",
+        "Solo con acompañante",
+        "Solo de día"
+      ],
+      "correcta": 1,
+      "explicacion": "El artículo 46 prohíbe la circulación de ciclomotores en autopistas, y la regla también rige en semiautopistas.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 46 inc. b",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-28",
+      "tema": "Circulación",
+      "pregunta": "¿Qué está prohibido para quienes manejan ciclomotores y motos?",
+      "opciones": [
+        "Usar luces bajas",
+        "Circular agarrados de otros vehículos o pegados inmediatamente detrás de otros automotores",
+        "Circular por la derecha",
+        "Usar casco integral"
+      ],
+      "correcta": 1,
+      "explicacion": "El artículo 48 inc. m prohíbe circular asido de otros vehículos o enfilado inmediatamente detrás de otros automotores.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 48 inc. m",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-29",
+      "tema": "Circulación",
+      "pregunta": "¿Qué maniobras prohíbe la ley, por ejemplo, en el tránsito en moto?",
+      "opciones": [
+        "Mantener la derecha",
+        "Hacer movimientos zigzagueantes o maniobras caprichosas e intempestivas",
+        "Respetar la distancia",
+        "Señalizar los giros"
+      ],
+      "correcta": 1,
+      "explicacion": "El artículo 48 inc. d prohíbe frenar arbitraria y bruscamente, zigzaguear y hacer maniobras caprichosas e intempestivas.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 48 inc. d",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-30",
+      "tema": "Luces",
+      "pregunta": "En rutas nacionales, ¿cuándo deben ir encendidas las luces bajas o diurnas?",
+      "opciones": [
+        "Siempre, de día y de noche",
+        "Solo de noche",
+        "Solo con lluvia",
+        "Solo en túneles"
+      ],
+      "correcta": 0,
+      "explicacion": "El artículo 47 inc. a exige luces bajas o diurnas encendidas en rutas nacionales de día y de noche.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 47 inc. a",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-31",
+      "tema": "Alcohol",
+      "pregunta": "¿Qué alcoholemia se permite para manejar una moto?",
+      "opciones": [
+        "1 g/l",
+        "0,2 g/l",
+        "Cero",
+        "0,5 g/l"
+      ],
+      "correcta": 2,
+      "explicacion": "Desde la Ley 27.714, está prohibido manejar cualquier vehículo con una alcoholemia superior a cero.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 48 inc. a (Ley 27.714)",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-32",
+      "tema": "Velocidad",
+      "pregunta": "En zona rural, ¿cuál es la velocidad máxima para motocicletas?",
+      "opciones": [
+        "80 km/h",
+        "110 km/h",
+        "90 km/h",
+        "130 km/h"
+      ],
+      "correcta": 1,
+      "explicacion": "El artículo 51 fija 110 km/h en zona rural para motocicletas, automóviles y camionetas.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 51 inc. b",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-33",
+      "tema": "Velocidad",
+      "pregunta": "En autopista, ¿cuál es la velocidad máxima para motocicletas?",
+      "opciones": [
+        "130 km/h",
+        "110 km/h",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "correcta": 0,
+      "explicacion": "El artículo 51 inc. d permite hasta 130 km/h a motocicletas y automóviles en autopista.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 51 inc. d",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-34",
+      "tema": "Velocidad",
+      "pregunta": "En semiautopista, ¿cuál es la velocidad máxima para motocicletas?",
+      "opciones": [
+        "110 km/h",
+        "130 km/h",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "correcta": 3,
+      "explicacion": "El artículo 51 inc. c fija 120 km/h para motocicletas y automóviles en semiautopista.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 51 inc. c",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-35",
+      "tema": "Velocidad",
+      "pregunta": "En zona urbana, sin otra señalización, ¿cuál es la velocidad máxima en calles?",
+      "opciones": [
+        "40 km/h",
+        "50 km/h",
+        "30 km/h",
+        "60 km/h"
+      ],
+      "correcta": 0,
+      "explicacion": "El artículo 51 fija 40 km/h en calles y 60 km/h en avenidas.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 51 inc. a",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-36",
+      "tema": "Velocidad",
+      "pregunta": "¿Cuál es la velocidad máxima en zonas de escuelas?",
+      "opciones": [
+        "20 km/h",
+        "40 km/h",
+        "10 km/h",
+        "30 km/h"
+      ],
+      "correcta": 0,
+      "explicacion": "El artículo 51 fija 20 km/h cerca de establecimientos escolares mientras están en funcionamiento.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 51 inc. e.3",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-37",
+      "tema": "Vehículo",
+      "pregunta": "¿Cuál es la profundidad mínima del dibujo de los neumáticos de una motocicleta?",
+      "opciones": [
+        "0,5 mm",
+        "1,6 mm",
+        "1 mm",
+        "3 mm"
+      ],
+      "correcta": 2,
+      "explicacion": "La reglamentación fija 1 mm para motocicletas, 0,5 mm para ciclomotores y 1,6 mm como regla general.",
+      "fuente": {
+        "norma": "Decreto 779/95 (texto según Decreto 196/2025), art. 29 (neumáticos, punto 4.3)",
+        "url": "https://www.argentina.gob.ar/normativa/nacional/decreto-196-2025-410682/texto"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-38",
+      "tema": "Vehículo",
+      "pregunta": "¿Cuál es la profundidad mínima del dibujo de los neumáticos de un ciclomotor?",
+      "opciones": [
+        "1,6 mm",
+        "1 mm",
+        "2 mm",
+        "0,5 mm"
+      ],
+      "correcta": 3,
+      "explicacion": "La reglamentación fija 0,5 mm para ciclomotores.",
+      "fuente": {
+        "norma": "Decreto 779/95 (texto según Decreto 196/2025), art. 29 (neumáticos, punto 4.3)",
+        "url": "https://www.argentina.gob.ar/normativa/nacional/decreto-196-2025-410682/texto"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-39",
+      "tema": "Principiantes",
+      "pregunta": "Durante los primeros 6 meses, ¿qué debe hacer un conductor principiante?",
+      "opciones": [
+        "Nada especial",
+        "Llevar un cartel que lo identifique y no circular por zonas céntricas, autopistas ni semiautopistas",
+        "Circular solo de noche",
+        "Ir siempre acompañado"
+      ],
+      "correcta": 1,
+      "explicacion": "La reglamentación exige el cartel de principiante y prohíbe circular por zonas céntricas, autopistas y semiautopistas durante los primeros 6 meses.",
+      "fuente": {
+        "norma": "Decreto 779/95 (texto según Decreto 196/2025), art. 13 inc. d",
+        "url": "https://www.argentina.gob.ar/normativa/nacional/decreto-196-2025-410682/texto"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-40",
+      "tema": "Principiantes",
+      "pregunta": "¿Qué pasa si cometés faltas graves en los primeros 2 años de la licencia?",
+      "opciones": [
+        "Nada",
+        "Te cobran solo una multa",
+        "Te dan un año más de principiante",
+        "La licencia se suspende y puede corresponder rendir de nuevo el examen teórico práctico"
+      ],
+      "correcta": 3,
+      "explicacion": "La reglamentación dispone la suspensión de la licencia y, en su caso, un nuevo examen teórico práctico.",
+      "fuente": {
+        "norma": "Decreto 779/95 (texto según Decreto 196/2025), art. 13 inc. d",
+        "url": "https://www.argentina.gob.ar/normativa/nacional/decreto-196-2025-410682/texto"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-41",
+      "tema": "Prioridades",
+      "pregunta": "En una esquina sin semáforo ni señales, ¿quién tiene prioridad?",
+      "opciones": [
+        "El que viene por la izquierda",
+        "El vehículo más grande",
+        "El que cruza desde la derecha",
+        "El que va más rápido"
+      ],
+      "correcta": 2,
+      "explicacion": "El artículo 41 da prioridad al que cruza desde la derecha, salvo las excepciones de la ley.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 41",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    },
+    {
+      "id": "a-42",
+      "tema": "Prioridades",
+      "pregunta": "¿Ante quién pierde la prioridad el que viene por la derecha?",
+      "opciones": [
+        "Nunca la pierde",
+        "Ante cualquier auto",
+        "Ante una moto que viene por la izquierda",
+        "Ante los peatones que cruzan por la senda peatonal"
+      ],
+      "correcta": 3,
+      "explicacion": "Entre las excepciones del artículo 41 están los peatones que cruzan lícitamente por la senda peatonal.",
+      "fuente": {
+        "norma": "Ley 24.449, art. 41 inc. e",
+        "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm"
+      },
+      "verificado": "2026-10-23"
+    }
+  ]
+}

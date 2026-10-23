@@ -1,0 +1,98 @@
+---
+import { getSiteConfig, getUpcomingTests } from '../../lib/content';
+import BrandLogo from '../BrandLogo.astro';
+
+const config = getSiteConfig();
+const upcomingTests = getUpcomingTests();
+---
+
+<footer class="site-footer">
+  <div class="site-footer__cta">
+    <div class="container">
+      <div class="footer-cta">
+        <div class="footer-cta__copy">
+          <h2>¿Listo para practicar el teórico?</h2>
+          <p>Elegí la ciudad y practicá con explicación y fuente, antes de rendir.</p>
+        </div>
+        <a class="btn btn--primary btn--lg" href="/#empezar">Empezar a practicar</a>
+        <ul class="footer-cta__points">
+          <li>
+            <span aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M7 16V8m5 8V5m5 11v-6"/></svg>
+            </span>
+            Aprender
+          </li>
+          <li>
+            <span aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            Práctica
+          </li>
+          <li>
+            <span aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5V6a2 2 0 0 1 2-2h9l5 5v10.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.5z"/><path d="M14 4v5h5"/></svg>
+            </span>
+            Fuentes citadas
+          </li>
+          <li>
+            <span aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </span>
+            Argentina y ciudades
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="brand" href="/" aria-label={`${config.siteName} · practicavial.com.ar`}>
+        <BrandLogo />
+      </a>
+      <p>
+        practicavial.com.ar · Práctica independiente del examen teórico de conducir. No es un organismo
+        público ni un examen oficial.
+      </p>
+    </div>
+    <div>
+      <h3>Práctica</h3>
+      <ul>
+        <li><a href="/test-de-conducir/argentina/">Práctica general</a></li>
+        <li><a href="/test-de-conducir/caba/">Test CABA</a></li>
+        <li><a href="/test-de-conducir/cordoba-capital/">Test Córdoba Capital</a></li>
+        <li><a href="/practicar/argentina/">Practicar Argentina</a></li>
+        <li><a href="/practicar/caba/">Practicar CABA</a></li>
+        <li><a href="/practicar/cordoba-capital/">Practicar Córdoba</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Sitio</h3>
+      <ul>
+        <li><a href="/test-de-conducir/">Tests por ciudad</a></li>
+        <li><a href="/#como-practicar">Cómo practicar</a></li>
+        <li><a href="/fuentes-y-metodologia/">Fuentes y metodología</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Otras categorías</h3>
+      <ul>
+        {
+          upcomingTests
+            .filter((test) => test.slug !== 'categoria-a')
+            .map((test) => (
+              <li>
+                <a href={`/test-de-conducir/${test.slug}/`}>
+                  Categoría {test.licenseClass} · {test.subtitle}
+                </a>
+              </li>
+            ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <p style="margin:0;">{config.notice}</p>
+  </div>
+</footer>

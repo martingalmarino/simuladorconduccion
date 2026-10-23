@@ -1,0 +1,45 @@
+---
+import SEOHead from '../SEOHead.astro';
+import Header from '../Header.astro';
+import FooterCategoriaA from './FooterCategoriaA.astro';
+import { getSiteRuntime } from '../../lib/site';
+import '../../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  pathname: string;
+  exactTitle?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const runtime = getSiteRuntime();
+const { title, description, pathname, exactTitle = false, jsonLd } = Astro.props;
+---
+
+<!doctype html>
+<html lang={runtime.locale}>
+  <head>
+    <SEOHead
+      title={title}
+      description={description}
+      pathname={pathname}
+      exactTitle={exactTitle}
+      jsonLd={jsonLd}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Header />
+    <main id="contenido" class="site-main page-shell">
+      <slot />
+    </main>
+    <div class="ad-slot-reserve" aria-hidden="true"></div>
+    <FooterCategoriaA />
+  </body>
+</html>

@@ -1,0 +1,415 @@
+---
+import './quiz/quiz.css';
+
+export interface PreguntaCategoria {
+  id: string;
+  tema: string;
+  pregunta: string;
+  opciones: string[];
+  correcta: number;
+  explicacion: string;
+  fuente: { norma: string; url: string };
+}
+
+interface Props {
+  preguntas: PreguntaCategoria[];
+}
+
+const { preguntas } = Astro.props;
+
+for (const pregunta of preguntas) {
+  if (pregunta.opciones.length !== 4 || pregunta.correcta < 0 || pregunta.correcta > 3) {
+    throw new Error(`Pregunta inválida en el banco de categoría A: ${pregunta.id}`);
+  }
+}
+
+const temas = [...new Set(preguntas.map((pregunta) => pregunta.tema))];
+const datos = JSON.stringify(
+  preguntas.map((pregunta) => ({
+    id: pregunta.id,
+    tema: pregunta.tema,
+    pregunta: pregunta.pregunta,
+    opciones: pregunta.opciones,
+    correcta: pregunta.correcta,
+    explicacion: pregunta.explicacion,
+    norma: pregunta.fuente.norma,
+    url: pregunta.fuente.url,
+  })),
+).replace(/</g, '\\u003c');
+---
+
+<div class="quiz-app" data-quiz-categoria>
+  <div class="quiz-tools">
+    <p id="filtro-tema" class="quiz-tools__label">Filtrar por tema</p>
+    <div class="topic-chips" role="group" aria-labelledby="filtro-tema">
+      <button type="button" class="chip" data-tema="todos" aria-pressed="true">Todos</button>
+      {
+        temas.map((tema) => (
+          <button type="button" class="chip" data-tema={tema} aria-pressed="false">
+            {tema}
+          </button>
+        ))
+      }
+    </div>
+    <button type="button" class="btn btn--secondary" data-shuffle aria-pressed="false">
+      Mezclar preguntas
+    </button>
+  </div>
+
+  <div data-stage>
+    <p class="muted">Cargando las preguntas…</p>
+  </div>
+  <p class="sr-only" data-live aria-live="polite"></p>
+</div>
+
+<details class="banco-preguntas card">
+  <summary>Ver todas las preguntas y respuestas</summary>
+  <ol class="banco-lista">
+    {
+      preguntas.map((pregunta) => (
+        <li id={`banco-${pregunta.id}`}>
+          <p>
+            <span class="muted">{pregunta.tema}</span>
+          </p>
+          <p>
+            <strong>{pregunta.pregunta}</strong>
+          </p>
+          <p>
+            <strong>Respuesta correcta:</strong> {pregunta.opciones[pregunta.correcta]}
+          </p>
+          <p>{pregunta.explicacion}</p>
+          <p>
+            Fuente:{' '}
+            <a href={pregunta.fuente.url} target="_blank" rel="noopener">
+              {pregunta.fuente.norma}
+            </a>
+          </p>
+        </li>
+      ))
+    }
+  </ol>
+</details>
+
+<script is:inline type="application/json" id="quiz-categoria-a-data" set:html={datos} />
+
+<script>
+  const dataEl = document.getElementById('quiz-categoria-a-data');
+  const root = document.querySelector('[data-quiz-categoria]');
+  if (dataEl && root && dataEl.textContent) {
+    const bank = JSON.parse(dataEl.textContent);
+    const stage = root.querySelector('[data-stage]');
+    const live = root.querySelector('[data-live]');
+    const shuffleBtn = root.querySelector('[data-shuffle]');
+    const filterButtons = [...root.querySelectorAll('[data-tema]')];
+
+    const identidad = () => bank.map((_, index) => index);
+    let tema = 'todos';
+    let orden = identidad();
+    let cursor = 0;
+    let aciertos = 0;
+    let respondida = false;
+    let elegida = null;
+    let fase = 'pregunta';
+    let enfocar = false;
+
+    const el = (tag, props = {}, children = []) => {
+      const node = document.createElement(tag);
+      for (const [key, value] of Object.entries(props)) {
+        if (value == null || value === false) continue;
+        if (key === 'className') node.className = String(value);
+        else if (key === 'onClick') node.addEventListener('click', value);
+        else if (key === 'disabled') node.disabled = true;
+        else node.setAttribute(key, value === true ? '' : String(value));
+      }
+      for (const child of children) {
+        if (child == null || child === false) continue;
+        node.append(typeof child === 'string' ? document.createTextNode(child) : child);
+      }
+      return node;
+    };
+
+    const barajar = (lista) => {
+      const next = lista.slice();
+      for (let i = next.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [next[i], next[j]] = [next[j], next[i]];
+      }
+      return next;
+    };
+
+    const visibles = () =>
+      tema === 'todos' ? orden.slice() : orden.filter((index) => bank[index].tema === tema);
+
+    const anunciar = (texto) => {
+      if (!live) return;
+      live.textContent = '';
+      window.setTimeout(() => {
+        live.textContent = texto;
+      }, 30);
+    };
+
+    const renderResultado = (total) => {
+      const heading = el('h3', { id: 'quiz-resultado', className: 'quiz-question', tabindex: '-1' }, [
+        'Resultado',
+      ]);
+      const section = el('section', { className: 'card results-summary', 'aria-labelledby': 'quiz-resultado' }, [
+        heading,
+        el('p', {}, [`Acertaste ${aciertos} de ${total}.`]),
+        el('div', { className: 'quiz-nav' }, [
+          el(
+            'button',
+            { type: 'button', className: 'btn btn--primary', onClick: () => reiniciar(true) },
+            ['Reiniciar'],
+          ),
+        ]),
+      ]);
+      stage.replaceChildren(section);
+      if (enfocar) heading.focus();
+      anunciar(`Resultado: acertaste ${aciertos} de ${total}.`);
+    };
+
+    const render = () => {
+      if (!stage) return;
+      const lista = visibles();
+      const total = lista.length;
+      if (total === 0) {
+        stage.replaceChildren(el('p', {}, ['No hay preguntas para este tema.']));
+        return;
+      }
+      if (fase === 'resultado') {
+        renderResultado(total);
+        return;
+      }
+
+      const pregunta = bank[lista[cursor]];
+      const numero = cursor + 1;
+      const heading = el('h3', { id: 'quiz-pregunta', className: 'quiz-question', tabindex: '-1' }, [
+        pregunta.pregunta,
+      ]);
+      const fill = el('div', { className: 'quiz-progress__fill' });
+      fill.style.width = `${(numero / total) * 100}%`;
+
+      const opciones = pregunta.opciones.map((texto, index) => {
+        let state = null;
+        if (respondida) {
+          if (index === pregunta.correcta) state = 'correct';
+          else if (index === elegida) state = 'incorrect';
+        }
+        const selected = respondida && index === elegida;
+        return el(
+          'button',
+          {
+            type: 'button',
+            className: 'quiz-option',
+            'data-selected': selected ? 'true' : 'false',
+            'data-state': state,
+            'aria-pressed': selected ? 'true' : 'false',
+            disabled: respondida,
+            onClick: () => elegir(index),
+          },
+          [
+            el('span', { className: 'quiz-option__marker', 'aria-hidden': 'true' }),
+            el('span', {}, [
+              texto,
+              respondida && index === pregunta.correcta
+                ? el('span', { className: 'sr-only' }, [' (respuesta correcta)'])
+                : null,
+            ]),
+          ],
+        );
+      });
+
+      const feedback = respondida
+        ? el(
+            'div',
+            {
+              className: `quiz-feedback ${
+                elegida === pregunta.correcta ? 'quiz-feedback--ok' : 'quiz-feedback--err'
+              }`,
+              role: 'status',
+            },
+            [
+              el('p', {}, [
+                el('strong', {}, [elegida === pregunta.correcta ? 'Correcto' : 'Incorrecto']),
+              ]),
+              el('p', {}, [pregunta.explicacion]),
+              el('p', {}, [
+                'Fuente: ',
+                el(
+                  'a',
+                  { href: pregunta.url, target: '_blank', rel: 'noopener' },
+                  [pregunta.norma],
+                ),
+              ]),
+            ],
+          )
+        : null;
+
+      const section = el('section', { className: 'card quiz-card', 'aria-labelledby': 'quiz-pregunta' }, [
+        el('div', { className: 'quiz-progress' }, [
+          el('p', { className: 'muted' }, [`Pregunta ${numero} de ${total}`]),
+          el(
+            'div',
+            {
+              className: 'quiz-progress__bar',
+              role: 'progressbar',
+              'aria-valuemin': '1',
+              'aria-valuemax': String(total),
+              'aria-valuenow': String(numero),
+              'aria-label': 'Progreso de la práctica',
+            },
+            [fill],
+          ),
+        ]),
+        el('p', { className: 'muted' }, [pregunta.tema]),
+        heading,
+        el('div', { className: 'quiz-options', role: 'group', 'aria-label': 'Opciones' }, opciones),
+        feedback,
+        el('div', { className: 'quiz-nav' }, [
+          el(
+            'button',
+            {
+              type: 'button',
+              className: 'btn btn--primary',
+              disabled: !respondida,
+              onClick: siguiente,
+            },
+            ['Siguiente'],
+          ),
+        ]),
+      ]);
+
+      stage.replaceChildren(section);
+      if (enfocar) heading.focus();
+    };
+
+    function elegir(index) {
+      if (respondida) return;
+      const pregunta = bank[visibles()[cursor]];
+      elegida = index;
+      respondida = true;
+      const ok = index === pregunta.correcta;
+      if (ok) aciertos += 1;
+      anunciar(
+        ok
+          ? `Respuesta correcta. ${pregunta.explicacion} Fuente: ${pregunta.norma}.`
+          : `Respuesta incorrecta. ${pregunta.explicacion} Fuente: ${pregunta.norma}.`,
+      );
+      enfocar = false;
+      render();
+    }
+
+    function siguiente() {
+      if (!respondida) return;
+      const total = visibles().length;
+      if (cursor >= total - 1) fase = 'resultado';
+      else {
+        cursor += 1;
+        respondida = false;
+        elegida = null;
+      }
+      enfocar = true;
+      render();
+    }
+
+    function reiniciar(moverFoco = true) {
+      cursor = 0;
+      aciertos = 0;
+      respondida = false;
+      elegida = null;
+      fase = 'pregunta';
+      enfocar = moverFoco === true;
+      render();
+    }
+
+    for (const button of filterButtons) {
+      button.addEventListener('click', () => {
+        tema = button.getAttribute('data-tema') || 'todos';
+        for (const other of filterButtons) {
+          other.setAttribute('aria-pressed', other === button ? 'true' : 'false');
+        }
+        reiniciar(false);
+      });
+    }
+
+    if (shuffleBtn) {
+      shuffleBtn.addEventListener('click', () => {
+        const activo = shuffleBtn.getAttribute('aria-pressed') !== 'true';
+        shuffleBtn.setAttribute('aria-pressed', activo ? 'true' : 'false');
+        orden = activo ? barajar(identidad()) : identidad();
+        reiniciar(false);
+      });
+    }
+
+    enfocar = false;
+    render();
+  }
+</script>
+
+<style>
+  .quiz-tools {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .quiz-tools__label {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .quiz-tools > .btn {
+    justify-self: start;
+  }
+
+  button.chip {
+    font: inherit;
+    cursor: pointer;
+    color: var(--td-ink);
+  }
+
+  button.chip[aria-pressed='true'] {
+    border-color: var(--td-blue);
+    background: var(--td-soft);
+    color: var(--td-blue);
+  }
+
+  .banco-preguntas {
+    margin-top: 1.25rem;
+  }
+
+  .banco-preguntas summary {
+    cursor: pointer;
+    font-weight: 700;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .banco-lista {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .banco-lista li {
+    border-top: 1px solid var(--td-line);
+    padding-top: 1rem;
+  }
+
+  .banco-lista p {
+    margin: 0 0 0.45rem;
+  }
+
+  :global(.quiz-question) {
+    font-size: 1.2rem;
+    max-width: none;
+    margin-top: 0.35rem;
+  }
+
+  :global(.quiz-card) :global(.muted) {
+    margin: 0 0 0.35rem;
+  }
+</style>

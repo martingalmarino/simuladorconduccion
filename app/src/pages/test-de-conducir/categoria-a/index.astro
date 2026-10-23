@@ -1,6 +1,7 @@
 ---
 import PageShell from '../../../components/categoria-a/PageShell.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import FactCards from '../../../components/FactCards.astro';
 import QuizCategoria from '../../../components/QuizCategoria.astro';
 import RoadSigns from '../../../components/ui/RoadSigns.astro';
 import banco from '../../../data/preguntas-categoria-a.json';
@@ -16,6 +17,7 @@ if (title.length > 60 || description.length > 155) {
 }
 
 const quizHeading = `Practicá el test de moto: ${total} preguntas con respuesta explicada`;
+const actualizado = '2026-10-23';
 
 const faq = [
   {
@@ -94,6 +96,12 @@ const temasMoto = [
     text: 'Profundidad mínima del dibujo: 1 mm en motos y 0,5 mm en ciclomotores (reglamentación, texto del Decreto 196/2025).',
   },
 ];
+
+const grupos = [...new Set(banco.preguntas.map((pregunta) => pregunta.tema))].map((tema) => ({
+  tema,
+  preguntas: banco.preguntas.filter((pregunta) => pregunta.tema === tema),
+}));
+let questionIndex = 0;
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -192,40 +200,136 @@ const jsonLd = {
   </script>
   <div class="guide-hero">
     <div>
-  <Breadcrumbs
-    items={[
-      { label: 'Inicio', href: '/' },
-      { label: 'Test de conducir', href: '/test-de-conducir/' },
-      { label: 'Categoría A' },
-    ]}
-  />
+      <Breadcrumbs
+        items={[
+          { label: 'Inicio', href: '/' },
+          { label: 'Tests', href: '/test-de-conducir/' },
+          { label: 'Categoría A' },
+        ]}
+      />
 
-  <h1>Test teórico de moto: licencia categoría A</h1>
-  <p class="lede">
-    La categoría A habilita a manejar ciclomotores, motos, triciclos y cuatriciclos. Practicá el
-    teórico con preguntas basadas en la Ley 24.449, su reglamentación y la ANSV: cada respuesta
-    tiene explicación y su fuente oficial. Abajo tenés también las subclases según la cilindrada y
-    la edad mínima de cada una.
-  </p>
-
+      <h1>Test teórico de moto: licencia categoría A</h1>
+      <p class="lede">
+        La categoría A habilita a manejar ciclomotores, motos, triciclos y cuatriciclos. Practicá el
+        teórico con preguntas basadas en la Ley 24.449, su reglamentación y la ANSV: cada respuesta
+        tiene explicación y su fuente oficial. Abajo tenés también las subclases según la cilindrada y
+        la edad mínima de cada una.
+      </p>
+      <p class="muted">
+        Actualizado: <time datetime={actualizado}>23/10/2026</time>
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#test-moto">Empezar a practicar</a>
+        <a class="btn btn--secondary" href="#banco-completo">Ver las {total} preguntas</a>
+      </div>
     </div>
-    <div class="guide-hero__aside">
-  <aside class="card respuesta-rapida" aria-label="Respuesta rápida">
-    <p class="kicker">Respuesta rápida</p>
-    <p>
-      La licencia categoría A es para motovehículos. Se divide en A.1 (motos de dos ruedas, por
-      cilindrada), A.2 (triciclos y cuatriciclos sin cabina) y A.3 (triciclos y cuatriciclos con
-      cabina y volante). La edad mínima va de 16 años (ciclomotor de hasta 50 cc, sin pasajero) a
-      21 años (motos de más de 300 cc).
-    </p>
-  </aside>
     <RoadSigns />
-    </div>
   </div>
 
-  <section class="section" aria-labelledby="test-moto">
-    <h2 id="test-moto">{quizHeading}</h2>
-    <QuizCategoria preguntas={banco.preguntas} />
+  <section class="section" aria-labelledby="respuesta-rapida">
+    <h2 id="respuesta-rapida">¿Cómo es el teórico de moto?</h2>
+    <FactCards
+      cards={[
+        {
+          title: 'Qué habilita',
+          icon: 'list',
+          items: [
+            'A.1: ciclomotores y motos de dos ruedas',
+            'A.2: triciclos y cuatriciclos sin cabina',
+            'A.3: triciclos y cuatriciclos con cabina y volante',
+          ],
+        },
+        {
+          title: 'Edades mínimas',
+          icon: 'calendar',
+          items: [
+            '16 años: ciclomotor de hasta 50 cc, sin pasajero',
+            '17 años: motos de hasta 150 cc, A.2.1 y A.3',
+            '19 años: motos de más de 150 cc y hasta 300 cc, y A.2.2',
+            '21 años: motos de más de 300 cc',
+          ],
+        },
+        {
+          title: 'Qué se estudia',
+          icon: 'book',
+          items: ['Ley 24.449', 'Su reglamentación', 'Decreto 196/2025', 'ANSV'],
+        },
+        {
+          title: 'Principiantes',
+          icon: 'user',
+          items: [
+            'Durante los primeros 6 meses, cartel identificatorio',
+            'Prohibición de circular por zonas céntricas, autopistas y semiautopistas',
+          ],
+          note: 'Los cursos, exámenes y turnos los define cada municipio',
+        },
+      ]}
+    />
+  </section>
+
+  <section id="test-moto" class="section" aria-labelledby="test-moto-titulo">
+    <h2 id="test-moto-titulo">{quizHeading}</h2>
+    <div class="card quiz-frame">
+      <QuizCategoria preguntas={banco.preguntas} />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="temas-moto">
+    <h2 id="temas-moto">Temas del teórico de moto que practicás</h2>
+    <div class="topic-chips">
+      {grupos.map((grupo) => <span class="chip">{grupo.tema} ({grupo.preguntas.length})</span>)}
+    </div>
+  </section>
+
+  <section id="banco-completo" class="section" aria-labelledby="banco-moto-titulo">
+    <h2 id="banco-moto-titulo">{total} preguntas del test de moto con respuestas</h2>
+    <p class="muted">Cada pregunta incluye la respuesta correcta, la explicación y la fuente.</p>
+    {
+      grupos.map((grupo) => (
+        <div class="stack" style="margin-top:1.5rem;">
+          <h3 style="font-size:1.15rem;">{grupo.tema}</h3>
+          {grupo.preguntas.map((pregunta) => {
+            questionIndex += 1;
+            const index = questionIndex;
+            return (
+              <article class="card study-question" id={`banco-${pregunta.id}`}>
+                <p class="muted study-question__kicker">
+                  Pregunta {index} · {pregunta.tema}
+                </p>
+                <h3>{pregunta.pregunta}</h3>
+                <ol class="study-options">
+                  {pregunta.opciones.map((texto, optionIndex) => (
+                    <li data-correct={optionIndex === pregunta.correcta ? 'true' : 'false'}>
+                      {texto}
+                      {optionIndex === pregunta.correcta && (
+                        <span class="sr-only"> (respuesta correcta)</span>
+                      )}
+                    </li>
+                  ))}
+                </ol>
+                <details>
+                  <summary>Ver respuesta y explicación</summary>
+                  <div class="stack" style="margin-top:0.75rem;">
+                    <p>
+                      <strong>Respuesta correcta:</strong> {pregunta.opciones[pregunta.correcta]}
+                    </p>
+                    <p>{pregunta.explicacion}</p>
+                    <ul class="source-list">
+                      <li>
+                        <a href={pregunta.fuente.url} target="_blank" rel="noopener noreferrer">
+                          {pregunta.fuente.norma}
+                        </a>
+                        <span class="muted"> · consultado {pregunta.verificado}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+              </article>
+            );
+          })}
+        </div>
+      ))
+    }
   </section>
 
   <section class="section" aria-labelledby="subclases">
@@ -265,19 +369,40 @@ const jsonLd = {
 
   <section class="section" aria-labelledby="requisitos">
     <h2 id="requisitos">Requisitos y edades</h2>
-    <ul class="requisitos">
-      <li>
-        <strong>Edad:</strong> 16 años para ciclomotor sin pasajero y 17 para el resto de la clase A
-        (Ley 24.449, art. 11). Los menores necesitan autorización de su representante legal (art. 17).
-      </li>
-      <li>
-        <strong>Conductores principiantes:</strong> durante los primeros 6 meses, cartel identificatorio
-        y prohibición de circular por zonas céntricas, autopistas y semiautopistas. Si cometés faltas
-        graves en los primeros 2 años, la licencia se suspende (Decreto 779/95, art. 13 inc. d, texto
-        del Decreto 196/2025).
-      </li>
-    </ul>
-    <p class="muted">
+    <div class="fact-grid">
+      <article class="fact-card">
+        <div class="fact-card__head">
+          <span class="fact-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="5" width="16" height="15" rx="2" />
+              <path d="M8 3.5v3M16 3.5v3M4 10h16" />
+            </svg>
+          </span>
+          <h3>Edad</h3>
+        </div>
+        <p>
+          16 años para ciclomotor sin pasajero y 17 para el resto de la clase A (Ley 24.449, art.
+          11). Los menores necesitan autorización de su representante legal (art. 17).
+        </p>
+      </article>
+      <article class="fact-card">
+        <div class="fact-card__head">
+          <span class="fact-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="3.2" />
+              <path d="M5.5 19.2c1.4-2.6 3.7-3.9 6.5-3.9s5.1 1.3 6.5 3.9" />
+            </svg>
+          </span>
+          <h3>Conductores principiantes</h3>
+        </div>
+        <p>
+          Durante los primeros 6 meses, cartel identificatorio y prohibición de circular por zonas
+          céntricas, autopistas y semiautopistas. Si cometés faltas graves en los primeros 2 años, la
+          licencia se suspende (Decreto 779/95, art. 13 inc. d, texto del Decreto 196/2025).
+        </p>
+      </article>
+    </div>
+    <p class="muted requisitos-note">
       Los cursos, exámenes, tasas y turnos los define cada municipio. Consultá en tu Centro de
       Emisión de Licencias.
     </p>
@@ -289,22 +414,32 @@ const jsonLd = {
       El teórico de moto comparte la base del examen de auto (señales, prioridades, velocidades,
       alcohol cero) y suma reglas propias de los motovehículos.
     </p>
-    {
-      temasMoto.map((tema) => (
-        <div class="tema-bloque">
-          <h3>{tema.title}</h3>
-          <p>{tema.text}</p>
-        </div>
-      ))
-    }
+    <div class="fact-grid">
+      {
+        temasMoto.map((tema) => (
+          <article class="fact-card">
+            <div class="fact-card__head">
+              <span class="fact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
+              </span>
+              <h3>{tema.title}</h3>
+            </div>
+            <p>{tema.text}</p>
+          </article>
+        ))
+      }
+    </div>
   </section>
 
   <section class="section" aria-labelledby="faq">
     <h2 id="faq">Preguntas frecuentes</h2>
     <div class="faq">
       {
-        faq.map((item) => (
-          <details>
+        faq.map((item, index) => (
+          <details open={index === 0}>
             <summary>{item.question}</summary>
             <p>{item.answer}</p>
           </details>
@@ -314,7 +449,7 @@ const jsonLd = {
   </section>
 
   <section class="section" aria-labelledby="fuentes">
-    <h2 id="fuentes">Fuentes oficiales</h2>
+    <h2 id="fuentes">Fuentes oficiales consultadas</h2>
     <ul class="source-list">
       <li>
         <a
@@ -322,6 +457,7 @@ const jsonLd = {
           target="_blank"
           rel="noopener">ANSV, Clases y subclases</a
         >
+        <!-- TODO: fecha de consulta -->
       </li>
       <li>
         <a
@@ -329,6 +465,7 @@ const jsonLd = {
           target="_blank"
           rel="noopener">Ley 24.449 (Infoleg, texto actualizado)</a
         >
+        <!-- TODO: fecha de consulta -->
       </li>
       <li>
         <a
@@ -336,9 +473,11 @@ const jsonLd = {
           target="_blank"
           rel="noopener">Decreto 196/2025</a
         >
+        <!-- TODO: fecha de consulta -->
       </li>
       <li>
         <a href="/fuentes-y-metodologia/">Metodología</a>
+        <!-- TODO: fecha de consulta -->
       </li>
     </ul>
   </section>
@@ -354,86 +493,36 @@ const jsonLd = {
       <li><a href="/test-de-conducir/categoria-d/">Test categoría D (pasajeros)</a></li>
       <li><a href="/test-de-conducir/categoria-e/">Test categoría E</a></li>
     </ul>
+    <p class="muted">
+      Práctica independiente. No es el examen oficial; el contenido y la modalidad del examen dependen
+      de cada municipio.
+    </p>
   </section>
-
-  <p class="actualizado">
-    Actualizado: <time datetime="2026-10-23">23/10/2026</time>
-  </p>
-  <p>
-    Práctica independiente. No es el examen oficial; el contenido y la modalidad del examen dependen
-    de cada municipio.
-  </p>
 </PageShell>
 
 <style>
-  .respuesta-rapida p:last-child {
-    margin: 0;
+  .quiz-frame :global(.quiz-app) {
+    max-width: none;
   }
 
-  .subclass-wrap {
-    overflow-x: auto;
-    border: 1px solid var(--td-line);
-    border-radius: 16px;
-    background: var(--td-paper);
-    box-shadow: var(--td-shadow);
+  .quiz-frame :global(.quiz-card),
+  .quiz-frame :global(.results-summary) {
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    background: transparent;
+  }
+
+  .fact-card > p {
+    margin: 0;
   }
 
   .subclass-table {
-    width: 100%;
     min-width: 36rem;
-    border-collapse: collapse;
   }
 
-  .subclass-table th,
-  .subclass-table td {
-    text-align: left;
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid var(--td-line);
-    vertical-align: top;
-  }
-
-  .subclass-table thead th {
-    background: var(--td-bg-soft);
-    font-size: 0.82rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  .subclass-table tbody tr:last-child th,
-  .subclass-table tbody tr:last-child td {
-    border-bottom: 0;
-  }
-
-  .subclass-table td:last-child,
-  .subclass-table th:last-child {
-    white-space: nowrap;
-  }
-
-  .subclass-note {
+  .subclass-note,
+  .requisitos-note {
     margin-top: 0.85rem;
-  }
-
-  .requisitos {
-    margin: 0 0 1rem;
-    padding-left: 1.2rem;
-    display: grid;
-    gap: 0.75rem;
-  }
-
-  .tema-bloque + .tema-bloque {
-    margin-top: 1.25rem;
-  }
-
-  .tema-bloque h3 {
-    font-size: 1.15rem;
-    margin-bottom: 0.35rem;
-  }
-
-  .tema-bloque p {
-    margin: 0;
-  }
-
-  .actualizado {
-    margin-top: 2.5rem;
   }
 </style>

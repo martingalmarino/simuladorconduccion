@@ -62,34 +62,6 @@ const datos = JSON.stringify(
   <p class="sr-only" data-live aria-live="polite"></p>
 </div>
 
-<details class="banco-preguntas card">
-  <summary>Ver todas las preguntas y respuestas</summary>
-  <ol class="banco-lista">
-    {
-      preguntas.map((pregunta) => (
-        <li id={`banco-${pregunta.id}`}>
-          <p>
-            <span class="muted">{pregunta.tema}</span>
-          </p>
-          <p>
-            <strong>{pregunta.pregunta}</strong>
-          </p>
-          <p>
-            <strong>Respuesta correcta:</strong> {pregunta.opciones[pregunta.correcta]}
-          </p>
-          <p>{pregunta.explicacion}</p>
-          <p>
-            Fuente:{' '}
-            <a href={pregunta.fuente.url} target="_blank" rel="noopener">
-              {pregunta.fuente.norma}
-            </a>
-          </p>
-        </li>
-      ))
-    }
-  </ol>
-</details>
-
 <script is:inline type="application/json" id="quiz-categoria-a-data" set:html={datos} />
 
 <script>
@@ -372,35 +344,6 @@ const datos = JSON.stringify(
     border-color: var(--td-blue);
     background: var(--td-soft);
     color: var(--td-blue);
-  }
-
-  .banco-preguntas {
-    margin-top: 1.25rem;
-  }
-
-  .banco-preguntas summary {
-    cursor: pointer;
-    font-weight: 700;
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-  }
-
-  .banco-lista {
-    list-style: none;
-    margin: 0.5rem 0 0;
-    padding: 0;
-    display: grid;
-    gap: 1rem;
-  }
-
-  .banco-lista li {
-    border-top: 1px solid var(--td-line);
-    padding-top: 1rem;
-  }
-
-  .banco-lista p {
-    margin: 0 0 0.45rem;
   }
 
   :global(.quiz-question) {

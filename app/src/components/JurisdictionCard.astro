@@ -28,7 +28,7 @@ const topics = [...new Set(bank.questions.map((q) => q.topic))];
   <div class="topic-chips" aria-label="Temas incluidos">
     {topics.slice(0, 6).map((topic) => <span class="chip">{topicLabel(topic)}</span>)}
   </div>
-  <div class="btn-row" style="margin-top: 1.15rem;">
+  <div class="btn-row">
     <a class="btn btn--primary" href={`/practicar/${jurisdiction.slug}/`}>Empezar a practicar</a>
     <a class="btn btn--secondary" href={`/test-de-conducir/${jurisdiction.slug}/`}>Estudiar</a>
   </div>

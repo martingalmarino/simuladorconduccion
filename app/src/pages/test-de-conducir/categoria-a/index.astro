@@ -184,6 +184,11 @@ const jsonLd = {
   exactTitle={true}
   jsonLd={jsonLd}
 >
+  <script is:inline>
+    if (location.href.endsWith('?')) {
+      history.replaceState(null, '', location.pathname + location.hash);
+    }
+  </script>
   <Breadcrumbs
     items={[
       { label: 'Inicio', href: '/' },

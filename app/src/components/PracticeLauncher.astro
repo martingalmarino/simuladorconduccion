@@ -146,6 +146,11 @@ const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
     };
     place.addEventListener('change', sync);
     category.addEventListener('change', sync);
+    form.addEventListener('submit', (event) => {
+      if (category.value !== 'a') return;
+      event.preventDefault();
+      window.location.assign('/test-de-conducir/categoria-a/');
+    });
     sync();
   }
 </script>

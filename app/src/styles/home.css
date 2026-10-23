@@ -771,6 +771,31 @@ footer.site-footer.site-footer--home a:hover {
   .home-steps {
     grid-template-columns: 1fr 1fr;
   }
+
+  .home-soon__card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "ico copy"
+      "btn btn";
+    align-items: start;
+    gap: 12px 16px;
+    padding: 20px;
+  }
+
+  .home-soon__ico {
+    grid-area: ico;
+  }
+
+  .home-soon__copy {
+    grid-area: copy;
+  }
+
+  .home-soon__card .home-btn {
+    grid-area: btn;
+    width: 100%;
+    margin: 4px 0 0;
+  }
 }
 
 @media (max-width: 960px) {
@@ -814,6 +839,10 @@ footer.site-footer.site-footer--home a:hover {
     width: auto;
     margin: 0;
   }
+
+  .home-soon {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
@@ -836,19 +865,9 @@ footer.site-footer.site-footer--home a:hover {
 
   .home-steps,
   .home-places,
-  .home-soon,
   .home-split,
   .home-hero__grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .home-soon__card {
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .home-soon__card .home-btn {
-    margin-left: 0;
   }
 
   .home-final {

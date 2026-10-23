@@ -1,19 +1,27 @@
 ---
+import banco from '../data/preguntas-categoria-a.json';
+
 interface Props {
   questionCount: number;
 }
 
 const { questionCount } = Astro.props;
+const topics = [...new Set(banco.preguntas.map((item) => item.tema))].slice(0, 6);
 ---
 
 <article class="card jurisdiction-card jurisdiction-card--categoria-a">
-  <p class="kicker" style="margin-bottom:0.4rem;">Test teórico · Motos</p>
+  <p class="kicker">Test teórico · Motos</p>
   <h2>Categoría A</h2>
   <p class="muted">Ciclomotores, motos, triciclos y cuatriciclos.</p>
-  <p>
-    <strong>{questionCount} preguntas</strong> con explicación y fuente oficial.
+  <p class="jurisdiction-card__count">
+    <strong>{questionCount} preguntas</strong> para practicar.
   </p>
+  <p class="jurisdiction-card__coverage">Con explicación y fuente oficial.</p>
+  <div class="topic-chips" aria-label="Temas incluidos">
+    {topics.map((topic) => <span class="chip">{topic}</span>)}
+  </div>
   <div class="btn-row">
-    <a class="btn btn--primary" href="/test-de-conducir/categoria-a/">Practicar</a>
+    <a class="btn btn--primary" href="/test-de-conducir/categoria-a/#test-moto">Empezar a practicar</a>
+    <a class="btn btn--secondary" href="/test-de-conducir/categoria-a/">Estudiar</a>
   </div>
 </article>

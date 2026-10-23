@@ -265,6 +265,34 @@ body.site-internal .jurisdiction-card .chip:last-child:nth-child(odd) {
   grid-column: 1 / -1;
 }
 
+body.site-internal .jurisdiction-card .kicker {
+  margin-bottom: 0.4rem;
+}
+
+body.site-internal .jurisdiction-card h2 {
+  min-height: 2.3em;
+  margin-bottom: 0.35rem;
+}
+
+body.site-internal .jurisdiction-card .muted {
+  min-height: 3.2em;
+  margin: 0 0 0.75rem;
+}
+
+body.site-internal .jurisdiction-card__count,
+body.site-internal .jurisdiction-card__coverage {
+  margin: 0;
+}
+
+body.site-internal .jurisdiction-card__coverage {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin-top: 0.35rem;
+  min-height: 4.8em;
+}
+
 body.site-internal .jurisdiction-card strong {
   color: var(--azul);
   font-family: Nunito, Inter, system-ui, sans-serif;
@@ -623,7 +651,7 @@ body.site-internal .quiz-meta {
 
 @media (min-width: 1025px) {
   body.site-internal .page-shell > .card-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

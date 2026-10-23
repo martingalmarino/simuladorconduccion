@@ -12,19 +12,13 @@ const topics = [...new Set(bank.questions.map((q) => q.topic))];
 ---
 
 <article class:list={['card', 'jurisdiction-card', `jurisdiction-card--${jurisdiction.slug}`]}>
-  {
-    jurisdiction.scopeKind !== 'national-framework' && (
-      <p class="kicker" style="margin-bottom:0.4rem;">
-        Autos · B1
-      </p>
-    )
-  }
+  <p class="kicker">Autos · B1</p>
   <h2>{jurisdiction.label}</h2>
   <p class="muted">{jurisdiction.geographicScope}</p>
-  <p>
+  <p class="jurisdiction-card__count">
     <strong>{bank.questions.length} preguntas</strong> para practicar.
-    {' '}{bank.coverage}
   </p>
+  <p class="jurisdiction-card__coverage">{bank.coverage}</p>
   <div class="topic-chips" aria-label="Temas incluidos">
     {topics.slice(0, 6).map((topic) => <span class="chip">{topicLabel(topic)}</span>)}
   </div>

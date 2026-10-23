@@ -1,17 +1,12 @@
 ---
 import Layout from '../../components/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { getUpcomingTests } from '../../lib/content';
 import RoadSigns from '../../components/ui/RoadSigns.astro';
 import type { UpcomingTest } from '../../types/content';
 
 export function getStaticPaths() {
-  return getUpcomingTests()
-    .filter((test) => test.slug !== 'categoria-a')
-    .map((test) => ({
-      params: { slug: test.slug },
-      props: { test },
-    }));
+  // Sin preguntas publicadas, estas rutas no se generan.
+  return [];
 }
 
 interface Props {

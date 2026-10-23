@@ -1,0 +1,31 @@
+---
+import Layout from '../../components/Layout.astro';
+import { SITE, responsibleName } from '../../config/site';
+
+const owner = responsibleName();
+const title = 'Aviso legal: sitio no oficial | Práctica Vial';
+const description =
+  'Práctica Vial es un sitio privado e independiente. No pertenece ni está avalado por ningún organismo público.';
+---
+
+<Layout title={title} description={description} pathname="/aviso-legal/">
+  <article class="legal-page">
+    <h1>Aviso legal: sitio no oficial</h1>
+    <p>
+      Práctica Vial (www.practicavial.com.ar) es un sitio privado e independiente. No pertenece, no
+      representa ni está avalado por el Gobierno de la Nación, la Agencia Nacional de Seguridad
+      Vial, el Gobierno de la Ciudad de Buenos Aires, la Municipalidad de Córdoba ni por ningún otro
+      organismo público.
+    </p>
+    <p>
+      Los nombres de jurisdicciones y normas se usan solo para describir el contenido de práctica.
+      Los enlaces a sitios .gob.ar llevan a las fuentes oficiales que usamos para verificar las
+      respuestas.
+    </p>
+    <p>El material es de práctica: no es el examen oficial ni garantiza su aprobación.</p>
+    <p>
+      Responsable: {owner} · <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+    </p>
+    <p><a class="legal-back" href="/">Volver al inicio</a></p>
+  </article>
+</Layout>

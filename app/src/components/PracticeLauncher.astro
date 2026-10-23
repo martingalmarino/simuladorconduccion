@@ -1,9 +1,8 @@
 ---
-import type { JurisdictionConfig, UpcomingTest } from '../types/content';
+import type { JurisdictionConfig } from '../types/content';
 
 interface Props {
   jurisdictions: JurisdictionConfig[];
-  upcomingTests: UpcomingTest[];
   questionCount: number;
   motoQuestionCount: number;
   notice: string;
@@ -12,7 +11,6 @@ interface Props {
 
 const {
   jurisdictions,
-  upcomingTests,
   questionCount,
   motoQuestionCount,
   notice,
@@ -51,19 +49,6 @@ const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
         <option value="a">Motos · Categoría A</option>
       </select>
     </div>
-    {
-      upcomingTests.length > 0 && (
-        <p class="launch-upcoming-note">
-          Próximamente:{' '}
-          {upcomingTests.map((test, index) => (
-            <span>
-              {index > 0 ? ' · ' : ''}
-              <a href={`/test-de-conducir/${test.slug}/`}>Categoría {test.licenseClass}</a>
-            </span>
-          ))}
-        </p>
-      )
-    }
   </div>
 
   <div class="launch-field" id="launch-place-field">
@@ -112,15 +97,6 @@ const defaultSlug = jurisdictions[0]?.slug ?? 'caba';
   .launch-select__value {
     font-weight: 600;
     color: var(--td-ink);
-  }
-  .launch-upcoming-note {
-    margin: 0.55rem 0 0;
-    font-size: 0.82rem;
-    color: var(--td-muted);
-    line-height: 1.45;
-  }
-  .launch-upcoming-note a {
-    font-weight: 700;
   }
   .launch-scope {
     margin: 0.45rem 0 0;

@@ -41,6 +41,15 @@ function scoreFromSession(session: PracticeSession): ScoreSummary {
   return computeScore(session.questionIds, session.answers, correctById, topicsById);
 }
 
+function IndependenceNote() {
+  return (
+    <p className="independence-note">
+      Sitio independiente de práctica. No es el examen oficial ni un organismo público.{' '}
+      <a href="/aviso-legal/">Ver aviso legal.</a>
+    </p>
+  );
+}
+
 export default function QuizApp(props: QuizAppProps) {
   const { jurisdiction, questions, practiceModes, contentVersion, notice } = props;
   const [phase, setPhase] = useState<Phase>('setup');
@@ -266,6 +275,7 @@ export default function QuizApp(props: QuizAppProps) {
           <h1 id={headingId} style={{ maxWidth: 'none', fontSize: '1.6rem' }}>
             Configurá tu práctica
           </h1>
+          <IndependenceNote />
           <p className="muted">{notice}</p>
           <p className="muted">
             Hay {questions.length} preguntas disponibles. Si elegís {questions.length}, practicás
@@ -518,6 +528,7 @@ export default function QuizApp(props: QuizAppProps) {
           <h1 id={headingId} style={{ maxWidth: 'none', fontSize: '1.6rem' }}>
             Resultado de la práctica
           </h1>
+          <IndependenceNote />
           <p className="muted">
             Esto es un ejercicio de repaso, no un veredicto de examen oficial. No usamos un umbral de
             “aprobado”.

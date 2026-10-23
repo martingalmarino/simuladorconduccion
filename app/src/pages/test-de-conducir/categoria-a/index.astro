@@ -4,6 +4,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import FactCards from '../../../components/FactCards.astro';
 import QuizCategoria from '../../../components/QuizCategoria.astro';
 import RoadSigns from '../../../components/ui/RoadSigns.astro';
+import IndependenceNote from '../../../components/IndependenceNote.astro';
 import banco from '../../../data/preguntas-categoria-a.json';
 
 const pathname = '/test-de-conducir/categoria-a/';
@@ -209,6 +210,7 @@ const jsonLd = {
       />
 
       <h1>Test teórico de moto: licencia categoría A</h1>
+      <IndependenceNote />
       <p class="lede">
         La categoría A habilita a manejar ciclomotores, motos, triciclos y cuatriciclos. Practicá el
         teórico con preguntas basadas en la Ley 24.449, su reglamentación y la ANSV: cada respuesta
@@ -490,8 +492,6 @@ const jsonLd = {
       </li>
       <li><a href="/test-de-conducir/caba/">Test de conducir CABA</a></li>
       <li><a href="/test-de-conducir/cordoba-capital/">Test de conducir Córdoba Capital</a></li>
-      <li><a href="/test-de-conducir/categoria-d/">Test categoría D (pasajeros)</a></li>
-      <li><a href="/test-de-conducir/categoria-e/">Test categoría E</a></li>
     </ul>
     <p class="muted">
       Práctica independiente. No es el examen oficial; el contenido y la modalidad del examen dependen

@@ -1,0 +1,57 @@
+---
+import Layout from '../../components/Layout.astro';
+import { SITE, responsibleName } from '../../config/site';
+
+const owner = responsibleName();
+const showOwner = !SITE.ownerName.startsWith('TODO');
+const title = 'Acerca de Práctica Vial';
+const description =
+  'Práctica Vial es un sitio independiente para preparar el examen teórico de la licencia de conducir en Argentina.';
+---
+
+<Layout title={title} description={description} pathname="/acerca/">
+  <article class="legal-page">
+    <h1>Acerca de Práctica Vial</h1>
+    <p>
+      Práctica Vial es un sitio independiente para preparar el examen teórico de la licencia de
+      conducir en Argentina.
+    </p>
+
+    <h2>Qué hacemos</h2>
+    <ul>
+      <li>
+        Bancos de preguntas de práctica para la normativa nacional (Ley 24.449 y su reglamentación),
+        CABA y Córdoba Capital, y un test para motos (categoría A).
+      </li>
+      <li>
+        Cada respuesta tiene su explicación y la fuente con el artículo o la página que la respalda.
+        El método está detallado en <a href="/fuentes-y-metodologia/">Fuentes y metodología</a>.
+      </li>
+      <li>Es gratis, no pide registro y tu historial queda en tu dispositivo.</li>
+    </ul>
+
+    <h2>Qué no somos</h2>
+    <p>
+      No somos un organismo público ni un centro emisor de licencias. No reproducimos el examen
+      oficial ni garantizamos la aprobación. Para turnos, requisitos y trámites, consultá siempre el
+      sitio oficial de tu jurisdicción.
+    </p>
+
+    {
+      showOwner && (
+        <>
+          <h2>Quién está detrás</h2>
+          <p>{owner}.</p>
+        </>
+      )
+    }
+
+    <p>
+      ¿Encontraste un error en una pregunta? Escribinos a{' '}
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. Revisamos cada reporte contra
+      la fuente citada.
+    </p>
+
+    <p><a class="legal-back" href="/">Volver al inicio</a></p>
+  </article>
+</Layout>

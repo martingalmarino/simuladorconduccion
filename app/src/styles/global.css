@@ -1113,6 +1113,61 @@ a.btn--ghost {
   min-height: 0;
 }
 
+.independence-note {
+  margin: 0.85rem 0 1rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--td-line);
+  border-radius: 12px;
+  background: var(--td-paper);
+  color: var(--td-muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.independence-note a {
+  color: var(--td-blue);
+  font-weight: 700;
+}
+
+.legal-page {
+  max-width: 42rem;
+}
+
+.legal-page .legal-updated {
+  margin-top: 0;
+  color: var(--td-muted);
+  font-size: 0.92rem;
+}
+
+.legal-page h2 {
+  margin: 1.75rem 0 0.45rem;
+  font-size: 1.2rem;
+}
+
+.legal-page p,
+.legal-page li {
+  line-height: 1.6;
+}
+
+.legal-page ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.legal-page li + li {
+  margin-top: 0.45rem;
+}
+
+.legal-page a {
+  overflow-wrap: anywhere;
+}
+
+.legal-back {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
 @media (max-width: 900px) {
   .site-footer__inner {
     grid-template-columns: 1fr 1fr;

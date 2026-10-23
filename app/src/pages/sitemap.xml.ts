@@ -9,12 +9,22 @@ const INDEXABLE_PATHS = [
   '/test-de-conducir/cordoba-capital/',
   '/test-de-conducir/categoria-a/',
   '/fuentes-y-metodologia/',
+  '/privacidad/',
+  '/terminos/',
+  '/acerca/',
+  '/contacto/',
+  '/aviso-legal/',
 ];
 
 /** Fecha real de publicación del sitio en el dominio, no la hora del build. */
 const LASTMOD = '2026-10-22';
 const LASTMOD_BY_PATH: Record<string, string> = {
   '/test-de-conducir/categoria-a/': '2026-10-23',
+  '/privacidad/': '2026-10-23',
+  '/terminos/': '2026-10-23',
+  '/acerca/': '2026-10-23',
+  '/contacto/': '2026-10-23',
+  '/aviso-legal/': '2026-10-23',
 };
 
 export const GET: APIRoute = () => {

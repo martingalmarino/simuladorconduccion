@@ -2,11 +2,10 @@
 import Layout from '../../components/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import JurisdictionCard from '../../components/JurisdictionCard.astro';
-import UpcomingTestCard from '../../components/UpcomingTestCard.astro';
 import CategoriaACard from '../../components/CategoriaACard.astro';
 import RoadSigns from '../../components/ui/RoadSigns.astro';
 import bancoCategoriaA from '../../data/preguntas-categoria-a.json';
-import { getBank, getSiteConfig, getUpcomingTests } from '../../lib/content';
+import { getBank, getSiteConfig } from '../../lib/content';
 import { absoluteUrl, getSiteRuntime } from '../../lib/site';
 
 const config = getSiteConfig();
@@ -15,7 +14,6 @@ const cards = config.jurisdictions.map((j) => ({
   jurisdiction: j,
   bank: getBank(j.bankId),
 }));
-const upcomingTests = getUpcomingTests();
 const pageUrl = absoluteUrl('/test-de-conducir/');
 
 const jsonLd = [
@@ -82,16 +80,6 @@ const jsonLd = [
     }
     <CategoriaACard questionCount={bancoCategoriaA.preguntas.length} />
   </div>
-
-  <section class="section" aria-labelledby="proximamente-directorio">
-    <h2 id="proximamente-directorio">Próximamente</h2>
-    <p class="lede">
-      Categorías anunciadas. Todavía no hay preguntas para practicarlas.
-    </p>
-    <div class="card-grid">
-      {upcomingTests.map((test) => <UpcomingTestCard test={test} />)}
-    </div>
-  </section>
 
   <section class="section notice callout">
     <p style="margin:0;">

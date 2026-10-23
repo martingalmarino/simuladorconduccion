@@ -12,6 +12,7 @@ import {
 import { formatSourceDate, studyGraph, type FaqItem } from '../../../lib/studyGraph';
 import { topicLabel } from '../../../lib/topics';
 import RoadSigns from '../../../components/ui/RoadSigns.astro';
+import IndependenceNote from '../../../components/IndependenceNote.astro';
 
 const slug = 'argentina';
 const jurisdiction = requireJurisdiction(slug);
@@ -103,6 +104,7 @@ const jsonLd = studyGraph({
   />
 
   <h1>Test de conducir Argentina: 50 preguntas del teórico nacional</h1>
+  <IndependenceNote />
   <p class="lede">
     Practicá para el examen teórico de la Licencia Nacional de Conducir con 50 preguntas para autos
     (clase B1) basadas en la Ley Nacional de Tránsito 24.449 y su reglamentación (Decreto 779/95).

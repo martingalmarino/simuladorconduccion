@@ -1,0 +1,27 @@
+---
+import Layout from '../../components/Layout.astro';
+import { SITE } from '../../config/site';
+
+const title = 'Contacto | Práctica Vial';
+const description =
+  'Escribinos para reportar un error en una pregunta o hacer una consulta. No gestionamos turnos ni licencias.';
+---
+
+<Layout title={title} description={description} pathname="/contacto/">
+  <article class="legal-page">
+    <h1>Contacto</h1>
+    <p>¿Encontraste un error, tenés una sugerencia o querés consultar algo? Escribinos a:</p>
+    <p>
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+    </p>
+    <p>
+      Para reportar un error en una pregunta, indicá el test (por ejemplo CABA o Córdoba), el texto
+      de la pregunta y, si podés, la norma que lo respalda.
+    </p>
+    <p>
+      <strong>Importante:</strong> no somos un organismo oficial. No gestionamos turnos, licencias ni
+      resultados de exámenes. Para eso, contactá a la autoridad de tránsito de tu jurisdicción.
+    </p>
+    <p><a class="legal-back" href="/">Volver al inicio</a></p>
+  </article>
+</Layout>

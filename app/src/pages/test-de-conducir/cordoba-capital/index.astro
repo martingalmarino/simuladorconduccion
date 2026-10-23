@@ -12,6 +12,7 @@ import {
 import { formatSourceDate, studyGraph, type FaqItem } from '../../../lib/studyGraph';
 import { topicLabel } from '../../../lib/topics';
 import RoadSigns from '../../../components/ui/RoadSigns.astro';
+import IndependenceNote from '../../../components/IndependenceNote.astro';
 
 const slug = 'cordoba-capital';
 const jurisdiction = requireJurisdiction(slug);
@@ -102,6 +103,7 @@ const jsonLd = studyGraph({
   />
 
   <h1>Test de conducir Córdoba Capital: preguntero del examen teórico</h1>
+  <IndependenceNote />
   <p class="lede">
     Prepará el examen teórico de manejo de la Municipalidad de Córdoba con 50 preguntas para autos
     (clase B1). Están basadas en el Código de Tránsito municipal (Ordenanza 9981) y en la Guía de

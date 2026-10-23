@@ -12,6 +12,7 @@ import {
 import { formatSourceDate, studyGraph, type FaqItem } from '../../../lib/studyGraph';
 import { topicLabel } from '../../../lib/topics';
 import RoadSigns from '../../../components/ui/RoadSigns.astro';
+import IndependenceNote from '../../../components/IndependenceNote.astro';
 
 const slug = 'caba';
 const jurisdiction = requireJurisdiction(slug);
@@ -102,6 +103,7 @@ const jsonLd = studyGraph({
   />
 
   <h1>Test de conducir CABA: practicá el examen teórico de auto (B1)</h1>
+  <IndependenceNote />
   <p class="lede">
     Prepará el examen teórico de la licencia de conducir en la Ciudad de Buenos Aires con 50
     preguntas para autos (clase B1). Están basadas en el Código de Tránsito y Transporte de CABA (Ley

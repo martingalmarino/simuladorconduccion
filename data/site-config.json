@@ -109,24 +109,7 @@
     "D",
     "E"
   ],
-  "upcomingTests": [
-    {
-      "id": "upcoming-e",
-      "slug": "categoria-e",
-      "licenseClass": "E",
-      "title": "Test teórico categoría E",
-      "subtitle": "Carga, Camiones y maquinaria no agrícola",
-      "status": "proximamente"
-    },
-    {
-      "id": "upcoming-d",
-      "slug": "categoria-d",
-      "licenseClass": "D",
-      "title": "Test teórico categoría D",
-      "subtitle": "Transporte de pasajeros",
-      "status": "proximamente"
-    }
-  ],
+  "upcomingTests": [],
   "notice": "Práctica independiente del teórico. No es un examen oficial ni garantiza la aprobación.",
   "launchReview": {
     "humanContentReviewComplete": false,

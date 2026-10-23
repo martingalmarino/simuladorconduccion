@@ -1,0 +1,66 @@
+---
+import Layout from '../../components/Layout.astro';
+import { SITE, responsibleName } from '../../config/site';
+
+const owner = responsibleName();
+const title = 'Términos y condiciones de uso | Práctica Vial';
+const description =
+  'Condiciones de uso de Práctica Vial, una herramienta independiente para practicar el examen teórico de conducir.';
+---
+
+<Layout title={title} description={description} pathname="/terminos/">
+  <article class="legal-page">
+    <h1>Términos y condiciones de uso</h1>
+    <p class="legal-updated">Última actualización: {SITE.lastLegalUpdate}</p>
+    <p>Al usar www.practicavial.com.ar aceptás estos términos.</p>
+
+    <h2>1. Qué es el sitio</h2>
+    <p>
+      Práctica Vial es una herramienta gratuita e independiente para practicar el examen teórico de
+      conducir. No es un organismo público, no tiene vínculo con ningún municipio, provincia ni con
+      la Agencia Nacional de Seguridad Vial, y no emite licencias.
+    </p>
+
+    <h2>2. Sin garantías</h2>
+    <p>
+      Las preguntas son material de práctica elaborado a partir de normativa pública citada en cada
+      respuesta. No reproducen el banco oficial de ningún examen ni garantizan la aprobación. La
+      normativa puede cambiar: ante cualquier duda, manda la fuente oficial.
+    </p>
+
+    <h2>3. Uso permitido</h2>
+    <p>
+      Podés usar el sitio para estudiar en forma personal. No está permitido copiar masivamente el
+      contenido, hacer scraping automatizado ni republicarlo sin autorización.
+    </p>
+
+    <h2>4. Propiedad intelectual</h2>
+    <p>
+      Los textos, explicaciones, diseño y código del sitio pertenecen {SITE.ownerName.startsWith('TODO')
+        ? 'al equipo de Práctica Vial'
+        : `a ${owner}`}. Las normas citadas son de dominio público.
+    </p>
+
+    <h2>5. Enlaces externos</h2>
+    <p>Enlazamos sitios oficiales y de terceros que no controlamos.</p>
+
+    <h2>6. Publicidad</h2>
+    <p>El sitio puede mostrar anuncios de terceros. No respaldamos los productos anunciados.</p>
+
+    <h2>7. Responsabilidad</h2>
+    <p>
+      El sitio se ofrece "tal cual". No respondemos por decisiones tomadas solo en base al contenido
+      de práctica.
+    </p>
+
+    <h2>8. Ley aplicable</h2>
+    <p>Estos términos se rigen por las leyes de la República Argentina.</p>
+
+    <h2>9. Contacto</h2>
+    <p>
+      <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+    </p>
+
+    <p><a class="legal-back" href="/">Volver al inicio</a></p>
+  </article>
+</Layout>

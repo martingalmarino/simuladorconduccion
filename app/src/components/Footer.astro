@@ -1,8 +1,7 @@
 ---
-import { getSiteConfig, getUpcomingTests } from '../lib/content';
+import { getSiteConfig } from '../lib/content';
 
 const config = getSiteConfig();
-const upcomingTests = getUpcomingTests();
 const isHome = Astro.url.pathname === '/';
 ---
 
@@ -70,7 +69,7 @@ const isHome = Astro.url.pathname === '/';
       </a>
       <p>
         practicavial.com.ar · Práctica independiente del examen teórico de conducir. No es un organismo
-        público ni un examen oficial.
+        público ni un examen oficial. <a href="/aviso-legal/">Ver aviso legal</a>.
       </p>
     </div>
     <div>
@@ -94,17 +93,13 @@ const isHome = Astro.url.pathname === '/';
       </ul>
     </div>
     <div>
-      <h3>Próximamente</h3>
+      <h3>Legal</h3>
       <ul>
-        {
-          upcomingTests.map((test) => (
-            <li>
-              <a href={`/test-de-conducir/${test.slug}/`}>
-                Categoría {test.licenseClass} · {test.subtitle}
-              </a>
-            </li>
-          ))
-        }
+        <li><a href="/acerca/">Acerca de</a></li>
+        <li><a href="/contacto/">Contacto</a></li>
+        <li><a href="/privacidad/">Privacidad</a></li>
+        <li><a href="/terminos/">Términos</a></li>
+        <li><a href="/aviso-legal/">Aviso legal</a></li>
       </ul>
     </div>
   </div>

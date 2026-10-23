@@ -2,7 +2,7 @@
 import Layout from '../components/Layout.astro';
 import PracticeLauncher from '../components/PracticeLauncher.astro';
 import bancoCategoriaA from '../data/preguntas-categoria-a.json';
-import { getBank, getSiteConfig, getUpcomingTests, resolveQuestionSources } from '../lib/content';
+import { getBank, getSiteConfig, resolveQuestionSources } from '../lib/content';
 import { absoluteUrl, getSiteRuntime } from '../lib/site';
 import { topicLabel } from '../lib/topics';
 import '../styles/home.css';
@@ -13,7 +13,6 @@ const cards = config.jurisdictions.map((j) => ({
   jurisdiction: j,
   bank: getBank(j.bankId),
 }));
-const upcomingTests = getUpcomingTests();
 const questionCount = cards[0]?.bank.questions.length ?? 20;
 const motoQuestionCount = bancoCategoriaA.preguntas.length;
 const motoTopics = [...new Set(bancoCategoriaA.preguntas.map((item) => item.tema))].slice(0, 2);
@@ -127,7 +126,6 @@ const jsonLd = [
         <PracticeLauncher
           variant="home"
           jurisdictions={config.jurisdictions}
-          upcomingTests={upcomingTests}
           questionCount={questionCount}
           motoQuestionCount={motoQuestionCount}
           notice="Práctica independiente"
@@ -263,28 +261,6 @@ const jsonLd = [
             </div>
           </article>
         </div>
-
-        <div class="home-soon">
-          {
-            upcomingTests.map((test) => (
-              <article class="home-soon__card">
-                <div class="home-soon__ico" aria-hidden="true">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5"/><path d="M12 17h.01"/></svg>
-                </div>
-                <div class="home-soon__copy">
-                  <span class="home-soon__tag">Próximamente</span>
-                  <h3>Test teórico {test.licenseClass}</h3>
-                  <p>
-                    {test.subtitle}. Todavía no hay preguntas publicadas para practicar.
-                  </p>
-                </div>
-                <a class="home-btn home-btn--secondary" href={`/test-de-conducir/${test.slug}/`}>
-                  Más info
-                </a>
-              </article>
-            ))
-          }
-        </div>
       </div>
     </section>
 
@@ -300,8 +276,7 @@ const jsonLd = [
           <p class="home-note">
             Solo elegí tu ciudad y empezá. No pedimos registro ni datos personales. El historial de
             prácticas queda en tu dispositivo. Hoy podés practicar autos (clase B1) en práctica
-            general, CABA y Córdoba Capital, y motos (categoría A). Las categorías E y D están
-            anunciadas y todavía no tienen preguntas.
+            general, CABA y Córdoba Capital, y motos (categoría A).
           </p>
           <a class="home-btn home-btn--secondary" href="/fuentes-y-metodologia/">
             Ver fuentes y metodología
@@ -364,8 +339,6 @@ const jsonLd = [
             <summary>¿Qué categorías se pueden practicar?</summary>
             <p>
               Autos (clase B1) en práctica general, CABA y Córdoba Capital, y motos (categoría A).
-              Las categorías E (carga) y D (pasajeros) están anunciadas y todavía no tienen
-              preguntas.
             </p>
           </details>
           <details>
